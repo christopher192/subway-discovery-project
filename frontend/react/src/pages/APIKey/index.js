@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { NavLink } from "react-router-dom";
 import {
   Button,
   Card,
@@ -21,7 +22,7 @@ import DeleteModal from "../../Components/Common/DeleteModal";
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 import Widgets from "./Widgets";
 import TableContainer from "../../Components/Common/TableContainer";
-import { APIKeys, CreatedBy, ExpiryDate, Name, Status, CreatedDate } from "./APIKeyCol";
+import { APIKeys, CreatedBy, CreatedDate, ExpiryDate, Name, Status } from "./APIKeyCol";
 import { useDispatch, useSelector } from "react-redux";
 import { getAPIKey } from "../../slices/thunks";
 import { createSelector } from "reselect";
@@ -36,16 +37,17 @@ const APIKey = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const onClickDelete = () => {
+  const onClickDelete = (order) => {
     setDeleteModal(true);
   };
-
-
-  const apikeyData = createSelector(
+  const apiKeySelector = createSelector(
     (state) => state.APIKey,
     (apiKey) => apiKey.apiKey
   );
-  const APIKey = useSelector(apikeyData);
+  
+// Inside your component
+const apiKey = useSelector(apiKeySelector);
+
 
   useEffect(() => {
     dispatch(getAPIKey());
@@ -246,13 +248,13 @@ const APIKey = () => {
                   <div>
                     <TableContainer
                       columns={columns}
-                      data={APIKey || []}
-                      // hadleApiKey={hadleApiClicks}
+                      data={apiKey || []}
                       customPageSize={8}
-                      divClass="table-responsive table-card mb-3  "
-                      tableClass="table align-middle table-nowrap mb-0"
-                      theadClass="table-light"
+                      divClass="table-responsive table-card mb-1"
+                      tableClass="align-middle table-nowrap"
+                      theadClass="table-light text-muted"
                     />
+                    
                   </div>
                 </CardBody>
               </Card>

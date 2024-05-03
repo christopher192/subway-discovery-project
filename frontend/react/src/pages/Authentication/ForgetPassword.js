@@ -35,11 +35,9 @@ const ForgetPasswordPage = props => {
       email: Yup.string().required("Please Enter Your Email"),
     }),
     onSubmit: (values) => {
-      dispatch(userForgetPassword(values, props.history));
+      dispatch(userForgetPassword(values, props.router.navigate));
     }
   });
-
-
   const selectLayoutState = (state) => state.ForgetPassword;
   const selectLayoutProperties = createSelector(
     selectLayoutState,
@@ -53,11 +51,12 @@ const ForgetPasswordPage = props => {
     forgetError, forgetSuccessMsg
   } = useSelector(selectLayoutProperties);
 
-  document.title = "Reset Password | Velzon - React Admin & Dashboard Template";
+
+document.title="Reset Password | Velzon - React Admin & Dashboard Template";
+
   return (
     <ParticlesAuth>
-      <div className="auth-page-content mt-lg-5">
-
+      <div className="auth-page-content">
         <Container>
           <Row>
             <Col lg={12}>
@@ -87,7 +86,7 @@ const ForgetPasswordPage = props => {
                       colors="primary:#0ab39c"
                       className="avatar-xl"
                       style={{ width: "120px", height: "120px" }}
-                    >
+                      >
                     </lord-icon>
 
                   </div>

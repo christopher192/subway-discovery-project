@@ -8,9 +8,8 @@ import {
     Horizontal
 } from "./BoxplotCharts";
 
-
 const BoxplotCharts = () => {
-    document.title = "Boxplot Charts | Velzon - React Admin & Dashboard Template";
+  document.title="Boxplot Charts | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -34,7 +33,7 @@ const BoxplotCharts = () => {
                                     <h4 className="card-title mb-0">Boxplot with Scatter Chart</h4>
                                 </CardHeader>
                                 <CardBody>
-                                    <Scatter dataColors='["--vz-danger", "--vz-info", "--vz-danger", "--vz-primary"]' />
+                                    <Scatter dataColors='["--vz-danger", "--vz-info", "--vz-danger", "--vz-primary"]'/>
                                 </CardBody>
                             </Card>
                         </Col>

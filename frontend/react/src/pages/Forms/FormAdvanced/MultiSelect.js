@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import DualListBox from "react-dual-listbox";
 import "react-dual-listbox/lib/react-dual-listbox.css";
 import { Col, Row } from 'reactstrap';
+
+
+
 const options = [
     { value: "apple", label: "Apple" },
     { value: "banana", label: "Banana" },
@@ -16,6 +19,8 @@ const options = [
     { value: "orange", label: "Orange" },
     { value: "papaya", label: "Papaya" },
   ];
+  
+
   const Optgroup = [
     {
       label: "Cars",
@@ -39,6 +44,7 @@ const options = [
       ],
     },
   ];
+
   const OptgroupFilter = [
     {
       label: "Skoda",
@@ -58,7 +64,7 @@ const options = [
       ],
     },
   ];
-const DualListbox = () => {
+const MultiSelect = () => {
     const [selected, setSelected] = useState(["apple", "blueberry", "cherry"]);
     const [selectedOptGroup, setSelectedOptGroup] = useState([
       "hyundai",
@@ -109,6 +115,7 @@ const DualListbox = () => {
                 if (filterInput === "") {
                   return true;
                 }
+
                 return new RegExp(filterInput, "i").test(Optgroup.label);
               }}
               filterPlaceholder="Search..."
@@ -149,6 +156,7 @@ const DualListbox = () => {
                 if (filterInput === "") {
                   return true;
                 }
+
                 return new RegExp(filterInput, "i").test(Optgroup.label);
               }}
               filterPlaceholder="Search..."
@@ -180,4 +188,5 @@ const DualListbox = () => {
     </React.Fragment>
   )
 }
-export default DualListbox
+
+export default MultiSelect

@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
+  Button,
   Card,
   CardBody,
   Col,
+  Container,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
@@ -12,6 +14,7 @@ import {
   Row,
   UncontrolledDropdown,
 } from "reactstrap";
+import Select from "react-select";
 import Flatpickr from "react-flatpickr";
 import { jobGrid } from "../../../../common/data/appsJobs";
 import BreadCrumb from "../../../../Components/Common/BreadCrumb";
@@ -19,51 +22,46 @@ import Pagination from "../../../../Components/Common/Pagination";
 
 const JobGrid = () => {
   document.title = "Job Grid | Velzon -  Admin & Dashboard Template";
+  const sortbyname = [
+    {
+      options: [
+        { label: "All", value: "All" },
+        { label: "Today", value: "Today" },
+        { label: "Yesterday", value: "Yesterday" },
+        { label: "Last 7 Days", value: "Last 7 Days" },
+        { label: "Last 30 Days", value: "Last 30 Days" },
+        { label: "Thise Month", value: "Thise Month" },
+        { label: "Last Year", value: "Last Year" },
+      ],
+    },
+  ];
+  const option = [
+    {
+      options: [
+        { label: "All", value: "All" },
+        { label: "Active", value: "Active" },
+        { label: "New", value: "New" },
+        { label: "Close", value: "Close" },
+      ],
+    },
+  ];
 
   const [jobGridData, setJobGridData] = useState();
   const [currentPage, setCurrentPage] = useState(1);
-  const [favouritebtn, setFavouritebtn] = useState(false);
-
-  const favouriteBtn = (ele) => {
-    if (ele.closest("button").classList.contains("active")) {
-      ele.closest("button").classList.remove("active");
-    } else {
-      ele.closest("button").classList.add("active");
-    }
-  };
-
   //pagination
   const perPageData = 7;
   const indexOfLast = currentPage * perPageData;
   const indexOfFirst = indexOfLast - perPageData;
   const currentdata = useMemo(() => jobGrid?.slice(indexOfFirst, indexOfLast), [indexOfFirst, indexOfLast])
-
   useEffect(() => {
     setJobGridData(currentdata)
   }, [currentdata]);
 
-  const OnchangeHandler = (e, name) => {
-    let search = e.target.value;
-    if (search) {
-      setJobGridData(
-        jobGrid.filter((data) =>
-          Object.values(data).some(
-            (field) =>
-              typeof field === 'string' &&
-              field.toLowerCase().includes(search?.toLowerCase()),
-          )
-        )
-      )
-    } else {
-      setJobGridData(currentdata)
-    }
-  }
-
   return (
     <React.Fragment>
       <div className="page-content">
-        <div className="container-fluid">
-          <BreadCrumb title="Job Grid Lists" pageTitle="Jobs" />
+        <Container fluid>
+          <BreadCrumb title="Job Grid List" pageTitle="Jobs" />
 
           <Row>
             <Col lg={12}>
@@ -79,7 +77,6 @@ const JobGrid = () => {
                             id="searchJob"
                             autoComplete="off"
                             placeholder="Search for jobs or companies..."
-                            onChange={e => OnchangeHandler(e)}
                           />
                           <i className="ri-search-line search-icon"></i>
                         </div>
@@ -87,7 +84,7 @@ const JobGrid = () => {
 
                       <Col xxl={3} sm={4}>
                         <Flatpickr
-                          className="form-control"
+                          // className="form-control"
                           id="datepicker-publish-input"
                           placeholder="Select a date"
                           options={{
@@ -101,52 +98,32 @@ const JobGrid = () => {
 
                       <Col xxl={2} sm={4}>
                         <div className="input-light">
-                          <select
-                            className="form-control"
-                            data-choices
-                            data-choices-search-false
-                            name="choices-idType"
-                            id="idType"
-                          >
-                            <option value="all" defaultValue>
-                              All
-                            </option>
-                            <option value="Full Time">Full Time</option>
-                            <option value="Part Time">Part Time</option>
-                            <option value="Intership">Intership</option>
-                            <option value="Freelance">Freelance</option>
-                          </select>
+                          <Select
+                            className="js-example-basic-single mb-0"
+                            options={sortbyname}
+                          ></Select>
                         </div>
                       </Col>
 
                       <Col xxl={2} sm={4}>
                         <div className="input-light">
-                          <select
-                            className="form-control"
-                            data-choices
-                            data-choices-search-false
-                            name="choices-single-default"
-                            id="idStatus"
-                          >
-                            <option value="all" defaultValue>
-                              All
-                            </option>
-                            <option value="Active">Active</option>
-                            <option value="New">New</option>
-                            <option value="Close">Close</option>
-                          </select>
+                          <Select
+                            className="js-example-basic-single mb-0"
+                            options={option}
+                          ></Select>
                         </div>
                       </Col>
 
                       <Col xxl={1} sm={4}>
-                        <button
+                        <Button
                           type="button"
-                          className="btn btn-primary w-100"
+                          color="primary"
+                          className="btn y w-100"
                         //   onclick="filterData();"
                         >
                           <i className="ri-equalizer-fill me-1 align-bottom"></i>{" "}
                           Filters
-                        </button>
+                        </Button>
                       </Col>
                     </Row>
                   </Form>
@@ -160,7 +137,7 @@ const JobGrid = () => {
               <div className="d-flex align-items-center mb-4">
                 <div className="flex-grow-1">
                   <p className="text-muted fs-14 mb-0">
-                    Result: <span id="total-result">7</span>
+                    Result: <span id="total-result"></span>
                   </p>
                 </div>
                 <div className="flex-shrink-0">
@@ -174,22 +151,15 @@ const JobGrid = () => {
                     >
                       All View
                     </DropdownToggle>
-                    <DropdownMenu
-                      className="dropdown-menu"
-                      aria-labelledby="dropdownMenuLink"
-                    >
+                    <DropdownMenu aria-labelledby="dropdownMenuLink">
                       <li>
-                        <DropdownItem className="dropdown-item" href="#">
-                          Action
-                        </DropdownItem>
+                        <DropdownItem href="#">Action</DropdownItem>
                       </li>
                       <li>
-                        <DropdownItem className="dropdown-item" href="#">
-                          Another action
-                        </DropdownItem>
+                        <DropdownItem href="#">Another action</DropdownItem>
                       </li>
                       <li>
-                        <DropdownItem className="dropdown-item" href="#">
+                        <DropdownItem href="#">
                           Something else here
                         </DropdownItem>
                       </li>
@@ -211,81 +181,81 @@ const JobGrid = () => {
                     Don't miss your opportunity to improve your skills!
                   </p>
                   <div className="mt-5 pt-2">
-                    <button type="button" className="btn btn-light w-100">
+                    <Button type="button" className="btn btn-light w-100">
                       View More{" "}
                       <i className="ri-arrow-right-line align-bottom"></i>
-                    </button>
+                    </Button>
                   </div>
                 </CardBody>
               </Card>
             </Col>
-            {(jobGridData || []).map((item, key) => (
-              <Col lg={3} md={6} key={key}>
-                <Card>
-                  <CardBody>
-                    <button
-                      type="button"
-                      className="btn btn-icon btn-soft-primary float-end"
-                      data-bs-toggle="button"
-                      aria-pressed="true"
-                      onClick={(e) => favouriteBtn(e.target)}
-                    >
-                      <i className="mdi mdi-cards-heart fs-16"></i>
-                    </button>
-                    <div className="avatar-sm mb-4">
-                      <div className="avatar-title bg-light rounded">
-                        <img
-                          src={item.companyLogo}
-                          alt=""
-                          className="avatar-xxs"
-                        />
-                      </div>
-                    </div>
-                    <Link to="#">
-                      <h5>{item.jobTitle}</h5>
-                    </Link>
-                    <p className="text-muted">{item.companyName} </p>
-                    <div className="d-flex gap-4 mb-3">
-                      <div>
-                        <i className="ri-map-pin-2-line text-primary me-1 align-bottom"></i>{" "}
-                        {item.location}
-                      </div>
-                      <div>
-                        <i className="ri-time-line text-primary me-1 align-bottom"></i>{" "}
-                        {item.postDate}
-                      </div>
-                    </div>
-                    <p className="text-muted">{item.description}</p>
-                    <div className="hstack gap-2">
-                      {item.requirement.map((subItem, key) => (
-                        <React.Fragment key={key}>
-                          {
-                            subItem === "Full Time" ?
-                              <span className="badge bg-success-subtle text-success">{subItem}</span>
-                              :
-                              subItem === "Freelance" ?
-                                <span className="badge bg-primary-subtle text-primary">{subItem}</span>
-                                :
-                                <span className="badge bg-danger-subtle  text-danger">{subItem}</span>
-                          }
-                        </React.Fragment>
-                      ))}
-                    </div>
-                    <div className="mt-4 hstack gap-2">
-                      <Link to="#" className="btn btn-soft-primary w-100">
-                        Apply Job
-                      </Link>
-                      <Link
-                        href="/apps-job-details"
-                        className="btn btn-soft-success w-100"
+            {
+              (jobGridData || []).map((item, key) => (
+                <Col lg={3} md={6} key={key}>
+                  <Card>
+                    <CardBody>
+                      <button
+                        type="button"
+                        className="btn btn-icon btn-soft-primary float-end"
+                        data-bs-toggle="button"
+                        aria-pressed="true"
                       >
-                        Overview
+                        <i className="mdi mdi-cards-heart fs-16"></i>
+                      </button>
+                      <div className="avatar-sm mb-4">
+                        <div className="avatar-title bg-light rounded">
+                          <img
+                            src={item.companyLogo}
+                            alt=""
+                            className="avatar-xxs"
+                          />
+                        </div>
+                      </div>
+                      <Link to="#!">
+                        <h5>{item.jobTitle}</h5>
                       </Link>
-                    </div>
-                  </CardBody>
-                </Card>
-              </Col>
-            ))}
+                      <p className="text-muted">{item.companyName} </p>
+                      <div className="d-flex gap-4 mb-3">
+                        <div>
+                          <i className="ri-map-pin-2-line text-primary me-1 align-bottom"></i>{" "}
+                          {item.location}
+                        </div>
+                        <div>
+                          <i className="ri-time-line text-primary me-1 align-bottom"></i>{" "}
+                          {item.postDate}
+                        </div>
+                      </div>
+                      <p className="text-muted">{item.description}</p>
+                      <div className="hstack gap-2">
+                        {item.requirement.map((subItem, key) => (
+                          <React.Fragment key={key}>
+                            {
+                              subItem === "Full Time" ?
+                                <span className="badge bg-success-subtle text-success">{subItem}</span>
+                                :
+                                subItem === " Freelance" ?
+                                  <span className="badge bg-primary-subtle text-primary">{subItem}</span>
+                                  :
+                                  <span className="badge bg-danger-subtle text-danger">{subItem}</span>
+                            }
+                          </React.Fragment>
+                        ))}
+                      </div>
+                      <div className="mt-4 hstack gap-2">
+                        <Link to="#!" className="btn btn-soft-primary w-100">
+                          Apply Job
+                        </Link>
+                        <Link
+                          to="/apps-job-details"
+                          className="btn btn-soft-success w-100"
+                        >
+                          Overview
+                        </Link>
+                      </div>
+                    </CardBody>
+                  </Card>
+                </Col>
+              ))}
           </Row>
 
           <Pagination
@@ -293,10 +263,9 @@ const JobGrid = () => {
             data={jobGrid}
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
-            className="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0"
+            className="pagination pagination-separated pagination-md justify-content-center justify-content-sm-start mb-0"
           />
-
-        </div>
+        </Container>
       </div>
     </React.Fragment>
   );

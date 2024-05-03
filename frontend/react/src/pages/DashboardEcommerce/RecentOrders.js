@@ -46,7 +46,7 @@ const RecentOrders = () => {
                                         </td>
                                         <td>{item.product}</td>
                                         <td>
-                                            <span className="text-success">${item.amount}.00</span>
+                                            <span className="text-success">${item.amount}</span>
                                         </td>
                                         <td>{item.vendor}</td>
                                         <td>

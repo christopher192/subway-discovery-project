@@ -5,7 +5,7 @@ import Flatpickr from "react-flatpickr";
 import Dragula from 'react-dragula';
 import { ToastContainer } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import taskImg from "../../assets/images/task.png";
+import taskImg from "../../assets/images/task.png"
 import DeleteModal from '../../Components/Common/DeleteModal';
 
 //redux
@@ -42,17 +42,17 @@ import { createSelector } from 'reselect';
 const Status = ({ status }) => {
     switch (status) {
         case "New":
-            return <span className="badge bg-info-subtle  text-info text-uppercase">{status}</span>;
+            return <span className="badge bg-info-subtle text-info text-uppercase">{status}</span>;
         case "Pending":
-            return <span className="badge bg-warning-subtle  text-warning text-uppercase">{status}</span>;
+            return <span className="badge bg-warning-subtle text-warning text-uppercase">{status}</span>;
         case "Inprogress":
-            return <span className="badge bg-secondary-subtle text-secondary  text-uppercase">{status}</span>;
+            return <span className="badge bg-secondary-subtle text-secondary text-uppercase">{status}</span>;
         case "Completed":
             return <span className="badge bg-success-subtle text-success text-uppercase">{status}</span>;
         default:
             return <span className="badge bg-success-subtle text-success text-uppercase">{status}</span>;
     }
-};
+}
 
 const Priority = ({ priority }) => {
     switch (priority) {
@@ -65,26 +65,26 @@ const Priority = ({ priority }) => {
         default:
             return <span className="badge bg-success text-uppercase">{priority}</span>;
     }
-};
+}
 
 const ToDoList = () => {
     document.title = "To Do Lists | Velzon - React Admin & Dashboard Template";
 
     const dispatch = useDispatch();
 
-        const selectLayoutState = (state) => state.Todos;
-        const selectLayoutProperties = createSelector(
-            selectLayoutState,
-            (state) => ({
-                todos: state.todos,
-                projects: state.projects,
-            })
-        );
-        // Inside your component
-        const {
-            todos, projects
-        } = useSelector(selectLayoutProperties);
+    const selectLayoutState = (state) => state.Todos;
+  const selectLayoutProperties = createSelector(
+      selectLayoutState,
+      (layout) => ({
+        todos: layout.todos,
+         projects: layout.projects,
+      }));
 
+  // Inside your component
+  const {
+    todos, 
+    projects
+  } = useSelector(selectLayoutProperties);
 
     const [deleteModal, setDeleteModal] = useState(false);
 
@@ -97,7 +97,6 @@ const ToDoList = () => {
     useEffect(() => {
         dispatch(onGetProjects());
     }, [dispatch]);
-
 
     // To do Task List
     // To dos
@@ -112,7 +111,7 @@ const ToDoList = () => {
 
     useEffect(() => {
         setTodo(todos);
-        setTaskList(todos);
+        setTaskList(todos)
     }, [todos]);
 
     const toggle = useCallback(() => {
@@ -152,7 +151,7 @@ const ToDoList = () => {
     // Add To do
     const handleTodoClicks = () => {
         setTodo("");
-        setModalTodo(!modalTodo);
+        setModalTodo(!modalTodo)
         setIsEdit(false);
         toggle();
     };
@@ -167,6 +166,7 @@ const ToDoList = () => {
         if (todo) {
             dispatch(onDeleteTodo(todo.id));
             setDeleteModal(false);
+           
         }
     };
 
@@ -204,12 +204,13 @@ const ToDoList = () => {
 
         function filterItems(arr, query) {
             return arr.filter(function (el) {
-                return el.task.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-            });
+                return el.task.toLowerCase().indexOf(query.toLowerCase()) !== -1
+            })
         }
 
         let filterData = filterItems(todos, inputVal);
         setTaskList(filterData);
+
         if (filterData.length === 0) {
             document.getElementById("noresult").style.display = "block";
             document.getElementById("todo-task").style.display = "none";
@@ -217,12 +218,12 @@ const ToDoList = () => {
             document.getElementById("noresult").style.display = "none";
             document.getElementById("todo-task").style.display = "block";
         }
-    };
+    }
 
     const taskSort = (e) => {
         if (e) {
-            setTaskList([...todos].sort((a, b) => a.id - b.id));
-            setTaskList([...todos].sort((a, b) => {
+            setTaskList(todos.sort((a, b) => a.id - b.id))
+            setTaskList(todos.sort((a, b) => {
                 let x = a.task.toLowerCase();
                 let y = b.task.toLowerCase();
                 if (x < y) {
@@ -233,32 +234,30 @@ const ToDoList = () => {
                 } else {
                     return 0;
                 }
-            }));
+            }))
         }
-    };
+    }
 
     const changeTaskStatus = (e) => {
         const activeTask = e.target.value;
         let activeTaskList;
         if (e.target.checked) {
             activeTaskList = taskList.map((item) => {
-                const tasks = Object.assign({}, item);
-                if (tasks.id === activeTask) {
-                    tasks.status = "Completed";
+                if (item.id === activeTask) {
+                    item.status = "Completed"
                 }
-                return tasks;
-            });
+                return item;
+            })
         } else {
             activeTaskList = taskList.map((item) => {
-                const tasks = Object.assign({}, item);
-                if (tasks.id === activeTask) {
-                    tasks.status = "Inprogress";
+                if (item.id === activeTask) {
+                    item.status = "Inprogress"
                 }
-                return tasks;
-            });
+                return item;
+            })
         }
-        setTaskList(activeTaskList);
-    };
+        setTaskList(activeTaskList)
+    }
 
     // Project validation
     // validation
@@ -285,6 +284,7 @@ const ToDoList = () => {
         },
     });
 
+
     // To do Task List validation
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -298,9 +298,6 @@ const ToDoList = () => {
         },
         validationSchema: Yup.object({
             task: Yup.string().required("Please Enter Task"),
-            // dueDate: Yup.string().required("Please Enter Date"),
-            // status: Yup.string().required("Please Enter Status"),
-            // priority: Yup.string().required("Please Enter Priority"),
         }),
         onSubmit: (values) => {
             if (isEdit) {
@@ -327,7 +324,7 @@ const ToDoList = () => {
                 dispatch(onAddNewTodo(newTodo));
                 validation.resetForm();
             }
-            toggle();
+            toggle()
         },
     });
 
@@ -348,7 +345,7 @@ const ToDoList = () => {
     const assigned = [
         { id: 1, img: avatar2, name: "James Forbes" },
         { id: 2, img: avatar3, name: "John Robles" },
-    ];
+    ]
 
     const assignee = [
         { id: 1, img: avatar2, name: "James Forbes" },
@@ -361,9 +358,9 @@ const ToDoList = () => {
         { id: 8, img: avatar7, name: "Johnnie Walton" },
         { id: 9, img: avatar8, name: "Donna Weston" },
         { id: 10, img: avatar9, name: "Diego Norris" },
-    ];
+    ]
 
-    const [droplist, setDroplist] = useState(false);
+    const [droplist, setDroplist] = useState(false)
 
     const dragulaDecorator = (componentBackingInstance) => {
         if (componentBackingInstance) {
@@ -387,7 +384,7 @@ const ToDoList = () => {
                         <div className="file-manager-sidebar">
                             <div className="p-4 d-flex flex-column h-100">
                                 <div className="mb-3">
-                                    <button className="btn btn-success w-100" onClick={() => setModalProject(true)}><i className="ri-add-line align-bottom"></i> Add Project</button>
+                                    <button className="btn btn-info w-100" onClick={() => setModalProject(true)}><i className="ri-add-line align-bottom"></i> Add Project</button>
                                 </div>
 
                                 <SimpleBar className="px-4 mx-n4" style={{ height: "calc(100vh - 468px)" }}>
@@ -395,7 +392,7 @@ const ToDoList = () => {
                                         {(projects || []).map((item, key) => (
 
                                             <li key={key}>
-                                                <Link to="#" className="nav-link fs-13" id={"todos" + key}>{item.title}</Link>
+                                                <Link to="#" className="nav-link fs-14" id={"todos" + key}>{item.title}</Link>
                                                 <UncontrolledCollapse toggler={"#todos" + key}>
                                                     <ul className="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
                                                         {(item.subItem || []).map((item, key) => (<li key={key}>
@@ -404,6 +401,7 @@ const ToDoList = () => {
                                                     </ul>
                                                 </UncontrolledCollapse>
                                             </li>))}
+
                                     </ul>
                                 </SimpleBar>
 
@@ -681,6 +679,7 @@ const ToDoList = () => {
                     <form className="needs-validation createProject-form" onSubmit={(e) => {
                         e.preventDefault();
                         projectValidation.handleSubmit();
+                        setModalProject(false)
                         return false;
                     }}>
                         <div className="mb-4">
@@ -708,6 +707,7 @@ const ToDoList = () => {
                     </form>
                 </ModalBody>
             </Modal>
+
 
         </React.Fragment >
     );

@@ -1,5 +1,14 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  UncontrolledDropdown,
+} from "reactstrap";
 import ReactApexChart from "react-apexcharts";
 import getChartColorsArray from "../../../Components/Common/ChartsDynamicColor";
 
@@ -92,11 +101,11 @@ const VisitorGraph = ({ dataColors }) => {
   };
   return (
     <React.Fragment>
-      <Col className="col-xl-8">
-        <Card className="card">
-          <CardHeader className="card-header">
+      <Col xl={8}>
+        <Card>
+          <CardHeader>
             <div className="d-flex">
-              <h5 className="card-title mb-0 flex-grow-1  ">Visitor Graph</h5>
+              <h5 className="card-title mb-0 flex-grow-1">Visitor Graph</h5>
               <div className="flex-shrink-0">
                 <UncontrolledDropdown className="card-header-dropdown">
                   <DropdownToggle
@@ -123,7 +132,7 @@ const VisitorGraph = ({ dataColors }) => {
               </div>
             </div>
           </CardHeader>
-          <CardBody className="card-body">
+          <CardBody>
             <ReactApexChart dir="ltr"
               className="apex-charts"
               series={series}

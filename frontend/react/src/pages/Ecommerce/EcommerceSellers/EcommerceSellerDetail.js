@@ -22,13 +22,14 @@ import TableContainer from "../../../Components/Common/TableContainer";
 //Import actions
 import { getProducts as onGetProducts } from "../../../slices/thunks";
 
+
 import {
   Rating,
   Published,
   Price,
 } from "../EcommerceProducts/EcommerceProductCol";
 
-import Revenue from "../../DashboardEcommerce/Revenue";
+import Revenue from "./Revenue";
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
@@ -38,24 +39,23 @@ import { createSelector } from "reselect";
 const EcommerceSellerDetail = () => {
   const dispatch = useDispatch();
 
-  const ecomsellerData = createSelector(
+  const selectDashboardData = createSelector(
     (state) => state.Ecommerce,
     (products) => products.products
   );
-  // Inside your component
-  const products = useSelector(ecomsellerData);
+  
+// Inside your component
+const products  = useSelector(selectDashboardData);
 
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    if (products && !products.length) {
-      dispatch(onGetProducts());
-    }
-  }, [dispatch, products]);
-
-  useEffect(() => {
     setProductList(products);
   }, [products]);
+
+  useEffect(() => {
+    dispatch(onGetProducts());
+  }, [dispatch]);
 
   const columns = useMemo(
     () => [
@@ -179,7 +179,8 @@ const EcommerceSellerDetail = () => {
     ],
     []
   );
-  document.title = "Sellers Details | Velzon - React Admin & Dashboard Template";
+
+  document.title="Sellers Details | Velzon - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
@@ -451,7 +452,7 @@ const EcommerceSellerDetail = () => {
             <div className="col-xxl-9">
               <Revenue />
 
-              <Row className="g-4 mb-1">
+              <Row className="g-4 mb-3">
                 <div className="col-sm-auto">
                   <div>
                     <a

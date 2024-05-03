@@ -183,7 +183,6 @@ const CountriesCharts = ({ dataColors, series }) => {
                 fontSize: '12px',
                 fontWeight: 400,
                 colors: ['#adb5bd']
-                // colors:['#878a99']
             }
         },
 

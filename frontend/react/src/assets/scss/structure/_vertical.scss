@@ -863,7 +863,7 @@
     &[data-layout-style="detached"] {
 
         @media (min-width: 1024.1px) {
-            &:is([data-sidebar="light"],[data-sidebar="dark"], [data-sidebar="gradient"], [data-sidebar="gradient-2"], [data-sidebar="gradient-3"], [data-sidebar="gradient-4"]) {
+            &:is([data-sidebar="light"], [data-sidebar="dark"], [data-sidebar="gradient"], [data-sidebar="gradient-2"], [data-sidebar="gradient-3"], [data-sidebar="gradient-4"]) {
                 .logo-dark {
                     display: none;
                 }
@@ -934,8 +934,8 @@
     }
 }
 
-@if $sidebar-gradient-mode { 
-    
+@if $sidebar-gradient-mode {
+
     .bg-vertical-gradient {
         background: $vertical-menu-bg-gradient;
         ;

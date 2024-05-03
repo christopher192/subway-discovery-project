@@ -1,9 +1,10 @@
 import React from 'react'
 import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import BreadCrumb from '../../../../Components/Common/BreadCrumb';
-import { FunnelChartCode, PyramidChartCode } from './Funnellchart';
+import { FunnelChartCode, PyramidChartCode } from './FunnelCharts';
 
-const FunnelChart = () => {
+
+const FunnelCharts = () => {
     document.title = "Apex Funnel Charts | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
@@ -40,4 +41,4 @@ const FunnelChart = () => {
     )
 }
 
-export default FunnelChart
+export default FunnelCharts

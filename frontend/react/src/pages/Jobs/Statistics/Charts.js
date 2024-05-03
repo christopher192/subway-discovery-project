@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 import getChartColorsArray from "../../../Components/Common/ChartsDynamicColor";
 
 const Charts = ({ seriesData, dataColors }) => {
-  var StatisticsColors = getChartColorsArray(dataColors);
+  const widgetsColors = getChartColorsArray(dataColors)
   const options = {
     chart: {
       width: 140,
@@ -32,7 +32,7 @@ const Charts = ({ seriesData, dataColors }) => {
         stops: [50, 100, 100, 100],
       },
     },
-    colors: StatisticsColors,
+    colors: widgetsColors,
   };
   return (
     <React.Fragment>

@@ -18,7 +18,7 @@ const TodosSlice = createSlice({
       state.error = action.payload.error || null;
     });
     builder.addCase(addNewTodo.fulfilled, (state, action) => {
-      state.todos.unshift(action.payload);
+      state.todos.push(action.payload);
     });
     builder.addCase(addNewTodo.rejected, (state, action) => {
       state.error = action.payload.error || null;
@@ -35,7 +35,7 @@ const TodosSlice = createSlice({
     });
     builder.addCase(deleteTodo.fulfilled, (state, action) => {
       state.todos = state.todos.filter(
-        todo => (todo.id + "") !== (action.payload + "")
+        todo => (todo.id + '') !== (action.payload + '')
       );
     });
     builder.addCase(deleteTodo.rejected, (state, action) => {
@@ -48,7 +48,7 @@ const TodosSlice = createSlice({
       state.error = action.payload.error || null;
     });
     builder.addCase(addNewProject.fulfilled, (state, action) => {
-      state.projects.unshift(action.payload);
+      state.projects.push(action.payload);
     });
     builder.addCase(addNewProject.rejected, (state, action) => {
       state.error = action.payload.error || null;

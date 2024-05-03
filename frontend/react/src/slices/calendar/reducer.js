@@ -23,7 +23,7 @@ const calendarSlice = createSlice({
     });
 
     builder.addCase(addNewEvent.fulfilled, (state, action) => {
-      state.events.unshift(action.payload);
+      state.events.push(action.payload);
     });
     builder.addCase(addNewEvent.rejected, (state, action) => {
       state.error = action.payload.error || null;
@@ -46,6 +46,7 @@ const calendarSlice = createSlice({
         (event) => event.id !== action.payload
       );
     });
+    
     builder.addCase(deleteEvent.rejected, (state, action) => {
       state.error = action.payload.error || null;
     });

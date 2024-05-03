@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
-
 //redux
 import { useSelector, useDispatch } from "react-redux";
 import TableContainer from '../../../Components/Common/TableContainer';
 import { getTransationList } from "../../../slices/thunks";
+// import { transactions } from "../../../common/data/cryptoPage";
 
 import {
     FromCol,
@@ -20,12 +20,14 @@ import { createSelector } from 'reselect';
 const AllTransactions = () => {
     const dispatch = useDispatch();
 
-    const transactionData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.Crypto,
         (transationList) => transationList.transationList
       );
+      
     // Inside your component
-    const transationList = useSelector(transactionData);
+    const  transationList   = useSelector(selectDashboardData);
+
 
     useEffect(() => {
         dispatch(getTransationList());
@@ -51,7 +53,6 @@ const AllTransactions = () => {
         setTransation(
             transationList.filter((item) => item.type === e));
     };
-
 
     const columns = useMemo(
         () => [

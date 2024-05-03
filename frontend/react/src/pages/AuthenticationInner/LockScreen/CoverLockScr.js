@@ -11,7 +11,6 @@ const CoverLockScreen = () => {
 document.title="Lock Screen | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
-                
                 <div className="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
                     <div className="bg-overlay"></div>
 

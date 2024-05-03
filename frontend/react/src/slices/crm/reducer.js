@@ -27,7 +27,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(addNewContact.fulfilled, (state, action) => {
-      state.crmcontacts.unshift(action.payload.data);
+      state.crmcontacts.push(action.payload.data);
       state.isCompaniesCreated = true;
       state.isCompaniesAdd = true;
       state.isCompaniesAddFail = false;
@@ -81,7 +81,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(addNewCompanies.fulfilled, (state, action) => {
-      state.companies.unshift(action.payload);
+      state.companies.push(action.payload);
       state.isCompaniesCreated = false;
       state.isCompaniesSuccess = true;
     });
@@ -95,7 +95,7 @@ const crmSlice = createSlice({
 
     builder.addCase(updateCompanies.fulfilled, (state, action) => {
       state.companies = state.companies.map(company =>
-        company._id === action.payload.data._id ? { ...company, ...action.payload.data } : company);
+        company._id.toString() === action.payload.data._id.toString() ? { ...company, ...action.payload.data } : company);
       state.isCompaniesUpdate = true;
       state.isCompaniesUpdateFail = false;
     });
@@ -140,7 +140,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(addNewLead.fulfilled, (state, action) => {
-      state.leads.unshift(action.payload.data);
+      state.leads.push(action.payload.data);
       state.isLeadCreated = true;
       state.isLeadsAdd = true;
       state.isLeadsAddFail = false;

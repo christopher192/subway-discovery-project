@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
 import { Navigate, Route } from "react-router-dom";
-import { setAuthorization } from "../helpers/api_helper";
+import {setAuthorization} from "../helpers/api_helper";
 import { useDispatch } from "react-redux";
 
 import { useProfile } from "../Components/Hooks/UserHooks";
 
-import { logoutUser } from "../slices/auth/login/thunk";
+import { logoutUser } from "../slices/thunks";
 
-const AuthProtected = (props) =>{
+const AuthProtected = (props) => {
   const dispatch = useDispatch();
   const { userProfile, loading, token } = useProfile();
-  
   useEffect(() => {
     if (userProfile && !loading && token) {
       setAuthorization(token);
@@ -20,14 +19,15 @@ const AuthProtected = (props) =>{
   }, [token, userProfile, loading, dispatch]);
 
   /*
-    Navigate is un-auth access protected routes via url
+    redirect is un-auth access protected routes via url
     */
 
-  if (!userProfile && loading && !token) {
-    return (
-      <Navigate to={{ pathname: "/login", state: { from: props.location } }} />
-    );
-  }
+  // temporarily disable authorization and authentication
+  // if (!userProfile && loading && !token) {
+  //   return (
+  //     <Navigate to={{ pathname: "/login", state: { from: props.location } }} />
+  //   );
+  // }
 
   return <>{props.children}</>;
 };

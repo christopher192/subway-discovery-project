@@ -28,6 +28,7 @@ import TableContainer from "../../../Components/Common/TableContainer";
 import { Link } from "react-router-dom";
 import {
   AppId,
+  Name,
   Designation,
   Contact,
   Status,
@@ -62,26 +63,47 @@ const Application = () => {
 
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
+  const [application, setApplication] = useState([]);
   const [deleteModal, setDeleteModal] = useState(false);
   const [deleteModalMulti, setDeleteModalMulti] = useState(false);
 
   const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true);
 
   const onClickDelete = (order) => {
     setDeleteModal(true);
   };
 
-  const selectapplistData = createSelector(
+  const selectDashboardData = createSelector(
     (state) => state.Jobs,
     (appList) => appList.appList
   );
-  // Inside your component
-  const appList = useSelector(selectapplistData);
+  
+// Inside your component
+const appList = useSelector(selectDashboardData);
+
 
   useEffect(() => {
     dispatch(getApplicationList());
   }, [dispatch]);
+
+
+  const handleApplicationClick = useCallback((arg) => {
+    const application = arg;
+
+    setApplication({
+      _id: application.id,
+      company: application.company,
+      Designation: application.Designation,
+      date: application.date,
+      contact: application.contact,
+      type: application.type,
+      status: application.status,
+    });
+  });
+  const hadleApplicationClicks = () => {
+    setApplication("");
+  };
 
   const columns = useMemo(
     () => [
@@ -210,6 +232,7 @@ const Application = () => {
     ],
     []
   );
+
   return (
     <React.Fragment>
       <div className="page-content">
@@ -237,9 +260,8 @@ const Application = () => {
                     <div className="flex-shrink-0">
                       <div className="d-flex gap-1 flex-wrap">
                         <Button
-                          color="success"
                           type="button"
-                          className="add-btn"
+                          className="btn btn-success add-btn"
                           data-bs-toggle="modal"
                           id="create-btn"
                           data-bs-target="#showModal"
@@ -247,7 +269,7 @@ const Application = () => {
                           <i className="ri-add-line align-bottom me-1"></i>{" "}
                           Create Application
                         </Button>
-                        <Button color="info" type="button">
+                        <Button type="button" className="btn btn-info">
                           <i className="ri-file-download-line align-bottom me-1"></i>{" "}
                           Import
                         </Button>
@@ -258,7 +280,7 @@ const Application = () => {
                 <CardBody className="border border-dashed border-end-0 border-start-0">
                   <Form>
                     <Row className="g-3">
-                      <Col xxl={5} sm={6}>
+                      <Col className="col-xxl-5 col-sm-6">
                         <div className="search-box">
                           <Input
                             type="text"
@@ -268,7 +290,7 @@ const Application = () => {
                           <i className="ri-search-line search-icon"></i>
                         </div>
                       </Col>
-                      <Col xxl={2} sm={6}>
+                      <Col className="col-xxl-2 col-sm-6">
                         <div>
                           <Flatpickr
                             className="form-control"
@@ -283,7 +305,7 @@ const Application = () => {
                           />
                         </div>
                       </Col>
-                      <Col xxl={2} sm={4}>
+                      <Col className="col-xxl-2 col-sm-4">
                         <div>
                           <Select
                             options={option}
@@ -292,7 +314,7 @@ const Application = () => {
                           ></Select>
                         </div>
                       </Col>
-                      <Col xxl={2} sm={4}>
+                      <Col className="col-xxl-2 col-sm-4">
                         <div>
                           <Select
                             options={option1}
@@ -301,13 +323,13 @@ const Application = () => {
                           ></Select>
                         </div>
                       </Col>
-                      <Col xxl={1} sm={4}>
+                      <Col className="col-xxl-1 col-sm-4">
                         <div>
                           <Button
                             type="button"
                             color="primary"
                             className="btn w-100"
-                          // onclick=""
+                            // onclick=""
                           >
                             {" "}
                             <i className="ri-equalizer-fill me-1 align-bottom"></i>
@@ -391,6 +413,7 @@ const Application = () => {
                     <TableContainer
                       columns={columns}
                       data={appList || []}
+                      hadleApplicationClick={hadleApplicationClicks}
                       customPageSize={8}
                       divClass="table-responsive table-card mb-1"
                       tableClass="align-middle table-nowrap"
@@ -588,15 +611,15 @@ const Application = () => {
                                 Close
                               </Button>
                               <Button
-                                color="success"
                                 type="submit"
+                                className="btn btn-success"
                                 id="add-btn"
                               >
                                 Add
                               </Button>
                               <Button
-                                color="success"
                                 type="button"
+                                className="btn btn-success"
                                 id="edit-btn"
                               >
                                 Update

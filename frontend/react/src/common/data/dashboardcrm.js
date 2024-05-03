@@ -31,7 +31,7 @@ const crmWidgets = [
     },
     {
         id: 3,
-        label: "Lead Conversation",
+        label: "Lead Coversation",
         badge: "ri-arrow-down-circle-line text-danger",
         icon: "ri-pulse-line",
         counter: "32.89",

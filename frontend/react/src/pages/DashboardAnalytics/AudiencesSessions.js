@@ -10,12 +10,15 @@ const AudiencesSessions = () => {
 
     const [chartData, setchartData] = useState([]);
 
-    const sessionsData = createSelector(
+     
+    const selectDashboardData = createSelector(
         (state) => state.DashboardAnalytics,
         (audiencesSessionsData) => audiencesSessionsData.audiencesSessionsData
       );
+      
     // Inside your component
-    const audiencesSessionsData = useSelector(sessionsData);
+    const  audiencesSessionsData  = useSelector(selectDashboardData);
+
 
     useEffect(() => {
         setchartData(audiencesSessionsData);
@@ -30,7 +33,6 @@ const AudiencesSessions = () => {
     useEffect(() => {
         dispatch(getAudiencesSessionsChartsData("today"));
     }, [dispatch]);
-
     return (
         <React.Fragment>
             <Col xl={6}>
@@ -53,7 +55,9 @@ const AudiencesSessions = () => {
                     </CardHeader>
                     <div className="card-body p-0">
                         <div>
-                            <AudiencesSessionsCharts series={chartData} dataColors='["--vz-success", "--vz-info"]' />
+                            <div id="audiences-sessions-country-charts" className="apex-charts" dir="ltr">
+                                <AudiencesSessionsCharts series={chartData} dataColors='["--vz-success", "--vz-info"]' />
+                            </div>
                         </div>
                     </div>
                 </Card>

@@ -48,27 +48,30 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 
 import Loader from "../../../Components/Common/Loader";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast,ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createSelector } from "reselect";
 
 const CrmLeads = () => {
   const dispatch = useDispatch();
-
   const selectLayoutState = (state) => state.Crm;
-  const crmleadsProperties = createSelector(
+  const selectLayoutProperties = createSelector(
     selectLayoutState,
     (state) => ({
       leads: state.leads,
+      isLeadCreated: state.isLeadCreated,
       isLeadsSuccess: state.isLeadsSuccess,
       error: state.error,
     })
   );
+
   // Inside your component
   const {
-    leads, isLeadsSuccess, error
-  } = useSelector(crmleadsProperties);
-
+    leads,
+    isLeadCreated,
+    isLeadsSuccess,
+    error
+  } = useSelector(selectLayoutProperties);
 
   useEffect(() => {
     if (leads && !leads.length) {
@@ -101,11 +104,11 @@ const CrmLeads = () => {
   const [tag, setTag] = useState([]);
   const [assignTag, setAssignTag] = useState([]);
 
-  const handlestag = (tags) => {
+  function handlestag(tags) {
     setTag(tags);
     const assigned = tags.map((item) => item.value);
     setAssignTag(assigned);
-  };
+  }
 
   const tags = [
     { label: "Exiting", value: "Exiting" },
@@ -225,25 +228,26 @@ const CrmLeads = () => {
       tags: lead.tags,
     });
 
+    // Node API 
+    // useEffect(() => {
+    //   if (isLeadCreated) {
+    //     setLead(null);
+    //     dispatch(onGetLeads());
+    //   }
+    // }, [
+    //   dispatch,
+    //   isLeadCreated,
+    // ]);
+
     setIsEdit(true);
     toggle();
   }, [toggle]);
-
-  // Node API 
-  // useEffect(() => {
-  //   if (isLeadCreated) {
-  //     setLead(null);
-  //     dispatch(onGetLeads());
-  //   }
-  // }, [
-  //   dispatch,
-  //   isLeadCreated,
-  // ]);
 
   const handleValidDate = date => {
     const date1 = moment(new Date(date)).format("DD MMM Y");
     return date1;
   };
+
 
   // Checked All
   const checkedAll = useCallback(() => {
@@ -282,7 +286,7 @@ const CrmLeads = () => {
     setSelectedCheckBoxDelete(ele);
   };
 
-  // Column
+  // Customber Column
   const columns = useMemo(
     () => [
       {
@@ -457,7 +461,7 @@ const CrmLeads = () => {
                         {isMultiDeleteButton && <button className="btn btn-soft-danger"
                           onClick={() => setDeleteModalMulti(true)}
                         ><i className="ri-delete-bin-2-line"></i></button>}
-                        <button type="button" className="btn btn-info" onClick={toggleInfo}>
+                        <button type="button" className="btn btn-secondary" onClick={toggleInfo}>
                           <i className="ri-filter-3-line align-bottom me-1"></i>{" "}
                           Fliters
                         </button>
@@ -521,14 +525,13 @@ const CrmLeads = () => {
                         data={(leads || [])}
                         isGlobalFilter={false}
                         isAddUserList={false}
-                        customPageSize={8}
+                        customPageSize={10}
                         className="custom-header-css"
                         divClass="table-responsive table-card mb-0"
                         tableClass="align-middle table-nowrap"
                         theadClass="table-light"
                         handleLeadClick={handleLeadClicks}
                         isLeadsFilter={false}
-                        SearchPlaceholder='Search for'
                       />
                     ) : (<Loader error={error} />)
                     }
@@ -738,7 +741,6 @@ const CrmLeads = () => {
                                 className="mb-0"
                                 options={tags}
                                 id="taginput-choices"
-                                defaultValue={validation.values.tags}
                               >
                               </Select>
 
@@ -801,7 +803,7 @@ const CrmLeads = () => {
         show={isInfoDetails}
         onCloseClick={() => setIsInfoDetails(false)}
       />
-    </React.Fragment >
+    </React.Fragment>
   );
 };
 

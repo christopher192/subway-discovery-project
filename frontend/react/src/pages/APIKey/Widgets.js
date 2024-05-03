@@ -1,20 +1,20 @@
 import React from "react";
-import { Card, CardBody, Col, Progress } from "reactstrap";
+import { Button, Card, CardBody, Col, Progress } from "reactstrap";
 import FeatherIcon from "feather-icons-react";
 import CountUp from "react-countup";
 
 const Widgets = () => {
   return (
     <React.Fragment>
-      <Col className="col-lg-4">
-        <Card className="card card-height-100">
-          <CardBody className="card-body">
+      <Col lg={4}>
+        <Card className="card-height-100">
+          <CardBody>
             <h5 className="card-title mb-3">Developer Plan</h5>
             <div className="progress animated-progress custom-progress mb-1">
               <Progress
                 value={38}
-                color="primary"
-                className="progress-bar bg-info"
+                color="secondary"
+                className="progress-bar bg-secondary"
                 role="progressbar"
                 style={{ width: "38%" }}
                 aria-valuenow="38"
@@ -24,21 +24,22 @@ const Widgets = () => {
             </div>
             <p className="text-muted mb-2">You used 215 of 2000 of your API</p>
             <div className="text-end">
-              <button
+              <Button
+                color="primary"
                 type="button"
-                className="btn btn-success btn-sm create-btn"
+                className="btn  btn-sm create-btn"
                 data-bs-toggle="modal"
                 data-bs-target="#api-key-modal"
               >
                 Create API Key
-              </button>
+              </Button>
             </div>
           </CardBody>
         </Card>
       </Col>
-      <Col className="col-lg-4">
-        <Card className="card card-animate card-height-100">
-          <CardBody className="card-body">
+      <Col lg={4}>
+        <Card className="card-animate card-height-100">
+          <CardBody>
             <div className="d-flex justify-content-between">
               <div>
                 <p className="fw-semibold text-muted mb-0">
@@ -68,17 +69,17 @@ const Widgets = () => {
           </CardBody>
         </Card>
       </Col>
-      <Col className="col-lg-4">
-        <Card className="card card-animate card-height-100">
-          <CardBody className="card-body">
+      <Col lg={4}>
+        <Card className="card-animate card-height-100">
+          <CardBody>
             <div className="d-flex justify-content-between">
               <div>
                 <p className="fw-semibold text-muted mb-0">
                   Failed conversions
                 </p>
-                <h1 className="mt-4 ff-secondary fw-bold">
+                <h2 className="mt-4 ff-secondary fw-bold">
                   <CountUp start={0} end={8} duration={3} />
-                </h1>
+                </h2>
                 <p className="mb-0 text-muted">
                   <span className="badge bg-light text-danger mb-0">
                     <i className="ri-arrow-down-line align-middle"></i> 25.87 %{" "}

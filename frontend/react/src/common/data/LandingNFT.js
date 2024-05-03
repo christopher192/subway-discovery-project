@@ -17,31 +17,31 @@ import avatar10 from "../../assets/images/users/avatar-10.jpg";
 import img01 from "../../assets/images/nft/img-01.jpg";
 import img02 from "../../assets/images/nft/img-02.jpg";
 import img03 from "../../assets/images/nft/img-03.jpg";
-// import img04 from "../../assets/images/nft/gif/img-4.gif";
+import img04 from "../../assets/images/nft/gif/img-4.gif";
 import img05 from "../../assets/images/nft/img-05.jpg";
 import img06 from "../../assets/images/nft/img-06.jpg";
 
-// import gifImg01 from "../../assets/images/nft/gif/img-1.gif";
+import gifImg01 from "../../assets/images/nft/gif/img-1.gif";
 
 const connectData = [
     {
         img: metamask,
         title: "Metamask",
-        btn:"Connect",
         textContent: "MetaMask is a popular cryptocurrency wallet known for its ease of use, availability on both desktops.",
+        btname: "Connect Wallet"
     },
     {
         img: coinbase,
         title: "Coinbase Wallet",
-        btn:"Change",
         textContent: "Coinbase Wallet is a self-custody wallet that gives you complete control of your crypto for your Wallet.",
         bgColor: true,
+        btname: "Change Wallet"
     },
     {
         img: binance,
         title: "Binance",
-        btn:"Connect",
         textContent: "Binance is considered a safe exchange that allows user account protection via the use of Two Authentication.",
+        btname: "Connect Wallet"
     },
 ];
 
@@ -72,7 +72,7 @@ const discoverItemsData = [
         cardImg: avatar10,
         author: "Diana Kohler",
         title: "Owners",
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: gifImg01,
         likes: "8.34k",
         price: "701.38 ETH",
         category: "Long-tailed macaque",
@@ -127,7 +127,7 @@ const productData = [
     },
     {
         id: 3,
-        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+        img: img04,
         likes: "15.93k",
         title: "Evolved Reality",
         category: "Video",

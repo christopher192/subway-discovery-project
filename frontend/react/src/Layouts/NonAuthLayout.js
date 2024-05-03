@@ -6,24 +6,24 @@ import { useSelector } from "react-redux";
 import { createSelector } from 'reselect';
 
 const NonAuthLayout = ({ children }) => {
-
     const nonauthData = createSelector(
         (state) => state.Layout,
-        (state) => ({
-            layoutModeType: state.layoutModeType})
+        (layoutModeType) => layoutModeType.layoutModeType
       );
+      
     // Inside your component
-    const {layoutModeType} = useSelector(nonauthData);
+    const layoutModeType= useSelector(nonauthData);
 
+const element = document.getElementsByTagName('head')[0];
     useEffect(() => {
         if (layoutModeType === "dark") {
-            document.body.setAttribute("data-bs-theme", "dark");
+            element.setAttribute("data-bs-theme", "dark");
         } else {
-            document.body.setAttribute("data-bs-theme", "light");
+            element.setAttribute("data-bs-theme", "light");
         }
         return () => {
-            document.body.removeAttribute("data-bs-theme");
-        };
+            element.removeAttribute("data-bs-theme")
+        }
     }, [layoutModeType]);
     return (
         <div>

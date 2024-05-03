@@ -34,7 +34,7 @@ import { useFormik } from "formik";
 import { isEmpty } from "lodash";
 import { Link } from 'react-router-dom';
 
-import { toast, ToastContainer } from 'react-toastify';
+import { toast,ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from "../../../Components/Common/Loader";
 import { createSelector } from 'reselect';
@@ -50,23 +50,27 @@ const Assigned = [
   { id: 8, imgId: "tonya-noble", img: "avatar-10.jpg", name: "Tonya Noble" },
 ];
 
+
 const AllTasks = () => {
   const dispatch = useDispatch();
 
   const selectLayoutState = (state) => state.Tasks;
   const selectLayoutProperties = createSelector(
-    selectLayoutState,
-    (state) => ({
-      taskList: state.taskList,
-      isTaskSuccess: state.isTaskSuccess,
-      error: state.error,
-    })
-  );
+      selectLayoutState,
+      (layout) => ({
+        taskList: layout.taskList,
+          isTaskCreated: layout.isTaskCreated,
+           isTaskSuccess: layout.isTaskSuccess,
+          error: layout.error,
+      }));
+
   // Inside your component
   const {
-    taskList, isTaskSuccess, error
+    taskList, 
+    isTaskCreated, 
+    isTaskSuccess, 
+    error ,
   } = useSelector(selectLayoutProperties);
-
 
   const [isEdit, setIsEdit] = useState(false);
   const [task, setTask] = useState([]);
@@ -75,6 +79,7 @@ const AllTasks = () => {
   // Delete Task
   const [deleteModal, setDeleteModal] = useState(false);
   const [deleteModalMulti, setDeleteModalMulti] = useState(false);
+
   const [modal, setModal] = useState(false);
 
   const toggle = useCallback(() => {
@@ -193,6 +198,7 @@ const AllTasks = () => {
     toggle();
   };
 
+  // Get Data
   useEffect(() => {
     if (!isEmpty(taskList)) setTaskList(taskList);
   }, [taskList]);
@@ -262,6 +268,7 @@ const AllTasks = () => {
     ele.length > 0 ? setIsMultiDeleteButton(true) : setIsMultiDeleteButton(false);
     setSelectedCheckBoxDelete(ele);
   };
+  
 
   const columns = useMemo(
     () => [
@@ -376,7 +383,6 @@ const AllTasks = () => {
     ],
     [handleCustomerClick, checkedAll]
   );
-
   const defaultdate = () => {
     let d = new Date(),
       months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -394,17 +400,17 @@ const AllTasks = () => {
   return (
     <React.Fragment>
       <DeleteModal
-        show={deleteModal}
-        onDeleteClick={handleDeleteTask}
-        onCloseClick={() => setDeleteModal(false)}
-      />
-      <DeleteModal
         show={deleteModalMulti}
         onDeleteClick={() => {
           deleteMultiple();
           setDeleteModalMulti(false);
         }}
         onCloseClick={() => setDeleteModalMulti(false)}
+      />
+      <DeleteModal
+        show={deleteModal}
+        onDeleteClick={handleDeleteTask}
+        onCloseClick={() => setDeleteModal(false)}
       />
       <div className="row">
         <Col lg={12}>
@@ -415,27 +421,28 @@ const AllTasks = () => {
                 <div className="flex-shrink-0">
                   <div className="d-flex flex-wrap gap-2">
                     <button className="btn btn-danger add-btn me-1" onClick={() => { setIsEdit(false); toggle(); }}><i className="ri-add-line align-bottom me-1"></i> Create Task</button>
-                    {isMultiDeleteButton && <button className="btn btn-soft-danger" onClick={() => setDeleteModalMulti(true)}><i className="ri-delete-bin-2-line"></i></button>}
+                    {isMultiDeleteButton && <button className="btn btn-secondary" onClick={() => setDeleteModalMulti(true)}><i className="ri-delete-bin-2-line"></i></button>}
                   </div>
                 </div>
               </div>
             </div>
+            
             <div className="card-body pt-0">
               {isTaskSuccess && taskList.length ? (
                 <TableContainer
                   columns={columns}
-                  data={(TaskList || [])}
+                  data={(taskList || [])}
                   isGlobalFilter={true}
                   isAddUserList={false}
                   customPageSize={8}
                   className="custom-header-css"
                   divClass="table-responsive table-card mb-3"
                   tableClass="align-middle table-nowrap mb-0"
-                  theadClass="table-light table-nowrap"
+                  theadClass="table-light text-muted table-nowrap"
                   thClass="table-light text-muted"
                   handleTaskClick={handleTaskClicks}
                   isTaskListFilter={true}
-                  SearchPlaceholder='Search for tasks or something...'
+                  SearchPlaceholder="Search for tasks or something..."
                 />
               ) : (<Loader error={error} />)
               }

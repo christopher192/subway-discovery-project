@@ -22,7 +22,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(addNewProduct.fulfilled, (state, action) => {
-      state.products.unshift(action.payload);
+      state.products.push(action.payload);
     });
 
     builder.addCase(addNewProduct.rejected, (state, action) => {
@@ -62,7 +62,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(addNewOrder.fulfilled, (state, action) => {
-      state.orders.unshift(action.payload.data);
+      state.orders.push(action.payload.data);
       state.isOrderCreated = true;
     });
 
@@ -113,7 +113,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(addNewCustomer.fulfilled, (state, action) => {
-      state.customers.unshift(action.payload.data);
+      state.customers.push(action.payload.data);
       state.isCustomerCreated = true;
     });
     builder.addCase(addNewCustomer.rejected, (state, action) => {

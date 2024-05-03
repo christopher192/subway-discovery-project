@@ -11,7 +11,7 @@ const Categories = () => {
           <Row className="justify-content-center">
             <Col lg={7} >
               <div className="text-center mb-5">
-                <h1 className="mb-3 ff-secondary fw-bold text-capitalize lh-base">
+                <h1 className="mb-3 fw-semibold text-capitalize lh-base">
                   High demand jobs{" "}
                   <span className="text-primary">Categories</span> fratured
                 </h1>

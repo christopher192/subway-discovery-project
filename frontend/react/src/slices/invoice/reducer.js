@@ -22,7 +22,7 @@ const InvoiceSlice = createSlice({
       state.isInvoiceSuccess = false;
     });
     builder.addCase(addNewInvoice.fulfilled, (state, action) => {
-      state.invoices.unshift(action.payload);
+      state.invoices.push(action.payload);
       state.isInvoiceCreated = true;
     });
     builder.addCase(addNewInvoice.rejected, (state, action) => {

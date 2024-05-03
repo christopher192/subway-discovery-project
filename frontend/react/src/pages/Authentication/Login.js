@@ -20,21 +20,23 @@ import { createSelector } from 'reselect';
 
 const Login = (props) => {
     const dispatch = useDispatch();
-
-    const selectLayoutState = (state) => state;
-    const loginpageData = createSelector(
-        selectLayoutState,
-        (state) => ({
-            user: state.Account.user,
-            error: state.Login.error,
-            loading: state.Login.loading,
-            errorMsg: state.Login.errorMsg,
-        })
-    );
-    // Inside your component
-    const {
-        user, error, loading, errorMsg
-    } = useSelector(loginpageData);
+    const selectLayoutState = (state) => state.Account;
+const selectLayoutProperties = createSelector(
+    selectLayoutState,
+    (layout) => ({
+        user: layout.user,
+           errorMsg: layout.errorMsg,
+            loading:layout.loading,
+            error: layout.error,
+    })
+  );
+  // Inside your component
+const {
+    user, 
+    errorMsg, 
+    loading, 
+    error
+} = useSelector(selectLayoutProperties);
 
     const [userLogin, setUserLogin] = useState([]);
     const [passwordShow, setPasswordShow] = useState(false);
@@ -42,8 +44,8 @@ const Login = (props) => {
 
     useEffect(() => {
         if (user && user) {
-            const updatedUserData = process.env.REACT_APP_DEFAULTAUTH === "firebase" ? user.multiFactor.user.email : user.email;
-            const updatedUserPassword = process.env.REACT_APP_DEFAULTAUTH === "firebase" ? "" : user.confirm_password;
+            const updatedUserData = process.env.REACT_APP_DEFAULTAUTH === "firebase" ? user.multiFactor.user.email : user.user.email;
+            const updatedUserPassword = process.env.REACT_APP_DEFAULTAUTH === "firebase" ? "" : user.user.confirm_password;
             setUserLogin({
                 email: updatedUserData,
                 password: updatedUserPassword
@@ -88,11 +90,13 @@ const Login = (props) => {
             }, 3000);
         }
     }, [dispatch, errorMsg]);
+
     document.title = "Basic SignIn | Velzon - React Admin & Dashboard Template";
+
     return (
         <React.Fragment>
             <ParticlesAuth>
-                <div className="auth-page-content mt-lg-5">
+                <div className="auth-page-content">
                     <Container>
                         <Row>
                             <Col lg={12}>
@@ -165,7 +169,7 @@ const Login = (props) => {
                                                         {validation.touched.password && validation.errors.password ? (
                                                             <FormFeedback type="invalid">{validation.errors.password}</FormFeedback>
                                                         ) : null}
-                                                        <button className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted" type="button" id="password-addon" onClick={() => setPasswordShow(!passwordShow)}><i className="ri-eye-fill align-middle"></i></button>
+                                                        <button className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted" type="button" onClick={() => setPasswordShow(!passwordShow)} id="password-addon"><i className="ri-eye-fill align-middle"></i></button>
                                                     </div>
                                                 </div>
 
@@ -193,7 +197,7 @@ const Login = (props) => {
                                                                 e.preventDefault();
                                                                 socialResponse("facebook");
                                                             }}
-                                                        >
+                                                            >
                                                             <i className="ri-facebook-fill fs-16" />
                                                         </Link>
                                                         <Link
@@ -203,9 +207,11 @@ const Login = (props) => {
                                                                 e.preventDefault();
                                                                 socialResponse("google");
                                                             }}
-                                                        >
+                                                            >
                                                             <i className="ri-google-fill fs-16" />
                                                         </Link>
+                                                        {/* <Button color="primary" className="btn-icon"><i className="ri-facebook-fill fs-16"></i></Button>{" "} */}
+                                                        {/* <Button color="danger" className="btn-icon"><i className="ri-google-fill fs-16"></i></Button>{" "} */}
                                                         <Button color="dark" className="btn-icon"><i className="ri-github-fill fs-16"></i></Button>{" "}
                                                         <Button color="info" className="btn-icon"><i className="ri-twitter-fill fs-16"></i></Button>
                                                     </div>

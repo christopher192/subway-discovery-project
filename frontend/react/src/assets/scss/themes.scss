@@ -1,7 +1,7 @@
 @import "../scss/icons.scss";
-@import "../scss/config/default/bootstrap.scss";
-@import "../scss/config/default/app.scss";
-@import "../scss/config/default/custom.scss";
+@import "../scss/config/saas/bootstrap.scss";
+@import "../scss/config/saas/app.scss";
+@import "../scss/config/saas/custom.scss";
 @import"./shepherd.css";
 @import "./mermaid.min.css";
 
@@ -10,7 +10,6 @@
 // @import "../scss/rtl/layouts-rtl";
 // @import "../scss/rtl/plugins-rtl";
 // @import "../scss/rtl/pages-rtl";
-
 
 //Rigthsidebar offcanvas
 .offcanvas-header-dark {
@@ -36,10 +35,11 @@ body {
 .noUi-connect,
 .noUi-horizontal {
   height: 2px !important;
+  background: #13c56b !important;
 }
 
 .noUi-handle {
-  background: #0ab39c !important;
+  background: #13c56b !important;
   border: 2px solid var(--vz-card-bg) !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -114,10 +114,10 @@ body {
 }
 
 .rangeslider-horizontal .rangeslider__fill {
-  background-color: #405189 !important;
+  background-color: #6691e7 !important;
 }
 
-// .Toastify__toast {
+// .Toastify__toast{
 //   min-height: 43px !important;
 //   max-height: 43px !important;
 // }
@@ -126,7 +126,7 @@ body {
 $value in $theme-colors {
   .simplebar-track-#{$color} {
     .simplebar-scrollbar:before {
-      background: $value  !important;
+      background: $value !important;
     }
   }
 }
@@ -144,17 +144,40 @@ $value in $theme-colors {
   height: 250px !important;
 }
 
-[data-layout="horizontal"] .chat-conversation{
+[data-layout="horizontal"] .chat-conversation {
   &.chatwidgets {
     height: 250px !important;
   }
 }
 
-// authentication
-
+// Authentication pages 
 #tsparticles {
   canvas {
     position: absolute !important;
+  }
+}
+
+// landing page
+.process-card {
+  .process-arrow-img {
+    left: auto;
+    right: 75%;
+    transform: scaleX(-1);
+  }
+}
+
+.icon-effect {
+  &::before {
+    left: auto;
+    right: 0;
+  }
+}
+
+.marketplace-swiper {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 22px;
   }
 }
 
@@ -173,6 +196,7 @@ $value in $theme-colors {
   transform: translateX(-50%);
 }
 
+// Toast
 .Toastify {
   .Toastify__toast {
     min-height: 43px;
@@ -189,128 +213,155 @@ $value in $theme-colors {
 
 // Tranfer List
 
-.rdl-filter, .rdl-control{
+.rdl-filter,
+.rdl-control {
   background-color: $input-bg;
   border: 1px solid $input-border-color !important;
   color: $input-color !important;
 }
 
-.rdl-move{
+.rdl-move {
   background: var(--#{$prefix}light) !important;
   border: 1px solid var(--#{$prefix}light) !important;
   color: var(--#{$prefix}body-color) !important;
 }
 
 .react-dual-listbox {
-  input:disabled, select:disabled{
+
+  input:disabled,
+  select:disabled {
     background-color: $input-disabled-bg !important;
     border: 1px solid $input-border-color !important;
   }
 }
 
-.css-26l3qy-menu{
+.css-26l3qy-menu {
   background-color: var(--#{$prefix}gray-200) !important;
   border-color: var(--#{$prefix}border-color) !important;
 }
 
-.css-1n7v3ny-option{
+.css-1n7v3ny-option {
   background-color: var(--#{$prefix}gray-300) !important;
   border-color: var(--#{$prefix}border-color) !important;
 }
 
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--#{$prefix}input-bg) inset !important;
+  background-color: var(--#{$prefix}input-bg) !important;
+  color: var(--#{$prefix}body-color) !important;
+  -webkit-text-fill-color: var(--#{$prefix}body-color) !important;
+}
 
 
-//datatables
-.kbunWL, .ddeqMG {
-  .cFDtZf, .efrTRK {
-      color: $table-color;
+
+// datatables
+.kbunWL,
+.ddeqMG {
+
+  .cFDtZf,
+  .efrTRK {
+    color: $table-color;
   }
-  
+
   :is(.kdYplh, .dUdLgu) {
-      background-color: var(--#{$prefix}secondary-bg);
-      border-bottom-color: var(--#{$prefix}border-color);
+    background-color: var(--#{$prefix}secondary-bg);
+    border-bottom-color: var(--#{$prefix}border-color);
   }
-  
+
   .dUdLgu {
-      color: $table-color;
-      &:not(:last-of-type) {
-          border-bottom-color: var(--#{$prefix}border-color);
-      }
+    color: $table-color;
+
+    &:not(:last-of-type) {
+      border-bottom-color: var(--#{$prefix}border-color);
+    }
   }
 }
 
 .card-body {
   .fjmwMg {
+    color: $table-color;
+    background-color: var(--#{$prefix}secondary-bg);
+    border-top-color: var(--#{$prefix}border-color);
+
+    .flbsZw {
       color: $table-color;
-      background-color: var(--#{$prefix}secondary-bg);
-      border-top-color: var(--#{$prefix}border-color);
-      
-      .flbsZw{
-          color: $table-color;
-          fill: $table-color;
-          &:disabled{
-              color: var(--#{$prefix}tertiary-color);
-              fill: var(--#{$prefix}tertiary-color);
-          }
+      fill: $table-color;
+
+      &:disabled {
+        color: var(--#{$prefix}tertiary-color);
+        fill: var(--#{$prefix}tertiary-color);
       }
+    }
   }
 }
 
 //react select
-.css-b62m3t-container{
+.css-b62m3t-container {
   .css-13cymwt-control {
-      background-color: var(--#{$prefix}secondary-bg);
-      color: var(--#{$prefix}body-color);
-      border-color: var(--#{$prefix}border-color);
-      &:hover, &:focus {
-          border-color: var(--#{$prefix}primary);
-      }
-      
-      .css-1p3m7a8-multiValue {
-          color: var(--#{$prefix}white);
-          background-color: var(--#{$prefix}primary);
-          .css-wsp0cs-MultiValueGeneric{
-              color: var(--#{$prefix}white);
-          }
+    background-color: var(--#{$prefix}secondary-bg);
+    color: var(--#{$prefix}body-color);
+    border-color: var(--#{$prefix}border-color);
 
-          .css-1u9des2-indicatorSeparator{
-              border-color: var(--#{$prefix}border-color);
-          }
+    &:hover,
+    &:focus {
+      border-color: var(--#{$prefix}primary);
+    }
+
+    .css-1p3m7a8-multiValue {
+      color: var(--#{$prefix}white);
+      background-color: var(--#{$prefix}primary);
+
+      .css-wsp0cs-MultiValueGeneric {
+        color: var(--#{$prefix}white);
       }
+
+      .css-1u9des2-indicatorSeparator {
+        border-color: var(--#{$prefix}border-color);
+      }
+    }
   }
 
   :is(.css-qbdosj-Input, .css-1dimb5e-singleValue) {
-      color: var(--#{$prefix}body-color);
+    color: var(--#{$prefix}body-color);
   }
 
-  .css-t3ipsp-control{
-      background-color: var(--#{$prefix}secondary-bg);
-      color: var(--#{$prefix}body-color);
-      border-color: var(--#{$prefix}border-color);
+  .css-t3ipsp-control {
+    background-color: var(--#{$prefix}secondary-bg);
+    color: var(--#{$prefix}body-color);
+    border-color: var(--#{$prefix}border-color);
 
-      .css-1p3m7a8-multiValue {
-          color: var(--#{$prefix}white);
-          background-color: var(--#{$prefix}primary);
-          .css-wsp0cs-MultiValueGeneric{
-              color: var(--#{$prefix}white);
-          }
+    .css-1p3m7a8-multiValue {
+      color: var(--#{$prefix}white);
+      background-color: var(--#{$prefix}primary);
 
-          .css-1u9des2-indicatorSeparator{
-              border-color: var(--#{$prefix}border-color);
-          }
+      .css-wsp0cs-MultiValueGeneric {
+        color: var(--#{$prefix}white);
       }
+
+      .css-1u9des2-indicatorSeparator {
+        border-color: var(--#{$prefix}border-color);
+      }
+    }
   }
 
-  .css-1nmdiq5-menu{
-      background-color: var(--#{$prefix}secondary-bg);
-      color: var(--#{$prefix}body-color);
-      border-color: var(--#{$prefix}border-color);
-      .css-d7l1ni-option {
-          color: $white;
-          background-color: var(--#{$prefix}primary);
-          &:hover, &:active, &:focus {
-              background-color: var(--#{$prefix}primary);
-          }
+  .css-1nmdiq5-menu {
+    background-color: var(--#{$prefix}secondary-bg);
+    color: var(--#{$prefix}body-color);
+    border-color: var(--#{$prefix}border-color);
+
+    .css-d7l1ni-option {
+      color: $white;
+      background-color: var(--#{$prefix}primary);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var(--#{$prefix}primary);
       }
+    }
   }
 }

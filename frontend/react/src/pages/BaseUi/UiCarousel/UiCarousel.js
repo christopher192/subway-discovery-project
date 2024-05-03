@@ -16,9 +16,8 @@ import DisableTouch from './CarouselTypes/disableTouch';
 import SlideDark from './CarouselTypes/slideDark';
 import { SlideOnlyExample, WithControlExample, WithIndicatorExample, WithCaptionExample, CrossFadeExample, InduvidualIntervalExample, DisableTouchExample, DarkVariantExample } from './UiCarouselCode';
 
-
 const UiCarousel = () => {
-    document.title="Carousel | Velzon - React Admin & Dashboard Template";
+document.title="Carousel | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <UiContent />
@@ -29,7 +28,8 @@ const UiCarousel = () => {
                         <Col xl={6}>
                             <Card>
                                 <PreviewCardHeader title="Slides Only" />
-                                <CardBody>                                    
+                                <CardBody> 
+                                <p className="text-muted">Use<code> slide</code> class to set carousel with slides. Note the presence of the <code>d-block</code> and <code>w-100</code> class on carousel images to prevent browser default image alignment.</p>                                      
                                     <div className="live-preview">
                                         <Slide />
                                     </div>
@@ -46,7 +46,8 @@ const UiCarousel = () => {
                         <Col xl={6}>
                             <Card>
                                 <PreviewCardHeader title="With Controls" />
-                                <CardBody>                                    
+                                <CardBody> 
+                                <p className="text-muted">Use<code> carousel-control-prev</code> and <code>carousel-control-next </code>class with &lt;button&gt; or &lt;a&gt; tag element to show carousel with control navigation.</p>                                  
                                     <div className="live-preview">
                                         <Slidewithcontrol />
                                     </div>
@@ -67,7 +68,8 @@ const UiCarousel = () => {
                             <Card>
                                 <PreviewCardHeader title="with Indicators" />
 
-                                <CardBody>                                    
+                                <CardBody>  
+                                <p className='text-muted'>Use <code>carousel-indicators</code> class with &gt;ol&lt; element to show carousel with indicators.</p>                                   
                                     <div className="live-preview">
                                         <Slidewithindicator />
                                     </div>
@@ -87,7 +89,8 @@ const UiCarousel = () => {
                         <Col xl={6}>
                             <Card>
                                 <PreviewCardHeader title="with Captions" />
-                                <CardBody>                                    
+                                <CardBody> 
+                                <p className='text-muted'>Use <code>carousel-caption</code> class to add captions to the carousel.</p>                                    
                                     <div className="live-preview" >
                                         <Slidewithcaption />
                                     </div>
@@ -107,7 +110,8 @@ const UiCarousel = () => {
                         <Col xl={6}>
                             <Card>
                                 <PreviewCardHeader title="Crossfade Animation" />
-                                <CardBody>                                    
+                                <CardBody>   
+                                <p className='text-muted'>Use <code>carousel-fade</code> class to the carousel to animate slides with a fade transition instead of a slide.</p>                                  
                                     <div className="live-preview">
                                         <CrossfadeAnimation />
                                     </div>
@@ -128,7 +132,8 @@ const UiCarousel = () => {
                             <Card>
                                 <PreviewCardHeader title="Individual carousel-item Interval" />
 
-                                <CardBody>                                    
+                                <CardBody>  
+                                <p className='text-muted'>Use<code> data-bs-interval=" " </code>to a carousel-item to change the amount of time to delay between automatically cycling to the next item.</p>                                    
                                     <div className="live-preview">
                                         <IndividualInterval />
                                     </div>
@@ -149,7 +154,8 @@ const UiCarousel = () => {
                         <Col xl={6}>
                             <Card>
                                 <PreviewCardHeader title="Disable Touch Swiping" />
-                                <CardBody>                                    
+                                <CardBody>   
+                                <p className='text-muted'>Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the <code>data-bs-touch</code> attribute. The example below also does not include the<code>data-bs-ride</code>  attribute and has<code>data-bs-interval="false"</code>  so it doesn’t autoplay.</p>                                    
                                     <div className="live-preview">
                                         <DisableTouch />
                                     </div>
@@ -167,7 +173,8 @@ const UiCarousel = () => {
                         <Col xl={6}>
                             <Card>
                                 <PreviewCardHeader title="Dark Variant" />
-                                <CardBody>                                    
+                                <CardBody>  
+                                <p className='text-muted'>Use<code> carousel-dark</code> class to the carousel for darker controls, indicators, and captions.</p>                                    
                                     <div className="live-preview">
                                         <SlideDark />
                                     </div>

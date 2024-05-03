@@ -11,7 +11,7 @@ const CTA = () => {
                     <Row className="align-items-center gy-4">
                         <Col className="col-sm">
                             <div>
-                                <h4 className="text-white mb-0 fw-semibold">Create and Sell Your NFT's</h4>
+                                <h4 className="text-white mb-0 fw-bold">Create and Sell Your NFT's</h4>
                             </div>
                         </Col>
 

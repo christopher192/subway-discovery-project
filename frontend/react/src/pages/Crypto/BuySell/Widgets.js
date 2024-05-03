@@ -24,7 +24,10 @@ const Widgets = () => {
                 <div className="flex-shrink-0 avatar-sm">
                   <div
                     className={
-                      "avatar-title fs-22 rounded bg-" +item.iconClass +"-subtle text-" +item.iconClass
+                      "avatar-title fs-22 rounded bg-" +
+                      item.iconClass +
+                      "-subtle text-" +
+                      item.iconClass
                     }
                   >
                     <i className={item.icon}></i>

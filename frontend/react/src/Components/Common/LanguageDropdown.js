@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
-import { get } from "lodash";
+import { get, map } from "lodash";
 
 //i18n
 import i18n from "../../i18n";
@@ -40,7 +40,7 @@ const LanguageDropdown = () => {
                     />
                 </DropdownToggle>
                 <DropdownMenu className="notify-item language py-2">
-                    {Object.keys(languages).map(key => (
+                    {map(Object.keys(languages), key => (
                         <DropdownItem
                             key={key}
                             onClick={() => changeLanguageAction(key)}

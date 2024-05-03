@@ -13,7 +13,7 @@ const JobDescription = () => {
             A Product Designer of a company is responsible for the user
             experience of a product, which usually includes taking direction on
             the business goals and objectives from product management. Product
-            Designers are typically associated with the vis ual or tactile
+            Designers are typically associated with the visual or tactile
             aspects of a product but sometimes they can also play a role in the
             information architecture and system design of a product.
           </p>
@@ -75,22 +75,22 @@ const JobDescription = () => {
               <h5 className="mb-0">Share this job:</h5>
             </li>
             <li className="list-inline-item">
-              <Link to="#" className="btn btn-icon btn-soft-info">
+              <Link to="#!" className="btn btn-icon btn-soft-info">
                 <i className="ri-facebook-line"></i>
               </Link>
             </li>
             <li className="list-inline-item">
-              <Link to="#" className="btn btn-icon btn-soft-success">
+              <Link to="#!" className="btn btn-icon btn-soft-success">
                 <i className="ri-whatsapp-line"></i>
               </Link>
             </li>
             <li className="list-inline-item">
-              <Link to="#" className="btn btn-icon btn-soft-secondary">
+              <Link to="#!" className="btn btn-icon btn-soft-secondary">
                 <i className="ri-twitter-line"></i>
               </Link>
             </li>
             <li className="list-inline-item">
-              <Link to="#" className="btn btn-icon btn-soft-danger">
+              <Link to="#!" className="btn btn-icon btn-soft-danger">
                 <i className="ri-mail-line"></i>
               </Link>
             </li>

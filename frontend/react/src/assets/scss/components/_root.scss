@@ -22,7 +22,7 @@
     //page title 
     --#{$prefix}page-title-box-shadow:                              #{$page-title-box-shadow};
     --#{$prefix}page-title-border:                                  #{$page-title-border};
-
+    
     // Topbar - Dark
     &[data-topbar="dark"] {
         --#{$prefix}header-bg:                                      #{$dark-header-bg};
@@ -55,10 +55,9 @@
     --#{$prefix}footer-bg:                                          #{$footer-bg};
     --#{$prefix}footer-color:                                       #{$footer-color};
 
-        //form
+    //form
         --#{$prefix}input-bg-custom:                                #{$input-bg-custom};
         --#{$prefix}input-border-custom:                            #{$input-border-custom};
-
 }
 
 //sidebar light theme

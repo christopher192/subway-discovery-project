@@ -63,7 +63,7 @@ const cryptoSlider = [
         change: "+13.11%",
         changeClass: "success",
         coinName: "btc",
-        chartsColor: "#0ab39c",
+        chartsColor: "#13c56b",
         series: [{
             name: "Bitcoin",
             data: [85, 68, 35, 90, 8, 11, 26, 54]
@@ -77,7 +77,7 @@ const cryptoSlider = [
         change: "+15.08%",
         changeClass: "success",
         coinName: "ltc",
-        chartsColor: "#0ab39c",
+        chartsColor: "#13c56b",
         series: [{
             name: "Litecoin",
             data: [25, 50, 41, 87, 12, 36, 9, 54]
@@ -86,14 +86,14 @@ const cryptoSlider = [
     {
         id: 3,
         img: etcCoin,
-        label: "Ethereum",
+        label: "Eathereum",
         price: "$3,312,870",
         change: "+08.57%",
         changeClass: "success",
         coinName: "etc",
-        chartsColor: "#0ab39c",
+        chartsColor: "#13c56b",
         series: [{
-            name: "Ethereum",
+            name: "Eathereum",
             data: [36, 21, 65, 22, 35, 50, 29, 44]
         }],
     },
@@ -119,7 +119,7 @@ const cryptoSlider = [
         change: "+12.07%",
         changeClass: "success",
         coinName: "dash",
-        chartsColor: "#0ab39c",
+        chartsColor: "#13c56b",
         series: [{
             name: "Dash",
             data: [24, 68, 39, 86, 29, 42, 11, 58]
@@ -133,7 +133,7 @@ const cryptoSlider = [
         change: "+14.99%",
         changeClass: "success",
         coinName: "usdt",
-        chartsColor: "#0ab39c",
+        chartsColor: "#13c56b",
         series: [{
             name: "Dash",
             data: [13, 76, 12, 85, 25, 60, 9, 54]
@@ -181,7 +181,7 @@ const currencies = [
     {
         id: 3,
         img: ethCoin,
-        coinName: "Ethereum",
+        coinName: "Eathereum",
         price: "33,847.961",
         iconClass: "success",
         icon: "mdi mdi-trending-up",
@@ -264,7 +264,7 @@ const recentActivity = [
         id: 3,
         feaIcon: "send",
         feaIconClass: "warning",
-        label: "Sent Ethereum",
+        label: "Sent Eathereum",
         caption: " Sofia Cunha",
         captionColor: "warning",
         coinActivity: "-0.09025182",
@@ -314,7 +314,7 @@ const recentActivity = [
         id: 9,
         feaIcon: "send",
         feaIconClass: "warning",
-        label: "Sent Ethereum",
+        label: "Sent Eathereum",
         caption: " Sofia Cunha",
         captionColor: "warning",
         coinActivity: "-0.09025182",
@@ -350,7 +350,7 @@ const topPerformers = [
     {
         id: 2,
         img: ethCoin,
-        coinName: "Ethereum",
+        coinName: "Eathereum",
         marketCap: "27.4",
         price: "08,256.04",
         change: "+$51.19",

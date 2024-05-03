@@ -5,7 +5,6 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import FeatherIcon from 'feather-icons-react';
 
-
 //SimpleBar
 import SimpleBar from "simplebar-react";
 
@@ -40,14 +39,15 @@ const EmailSidebar = () => {
               }}
             >
               <FeatherIcon icon="plus-circle" className="icon-xs me-1 icon-dual-light" />
-
+              
               Compose
             </button>
           </div>
 
           <SimpleBar
             className="mx-n4 px-4 email-menu-sidebar-scroll"
-            data-simplebar>
+            data-simplebar
+          >
             <div className="mail-list mt-3">
               <Link to="#" className="active">
                 <i className="ri-inbox-archive-fill me-3 align-middle fw-medium"></i>{" "}
@@ -118,8 +118,8 @@ const EmailSidebar = () => {
               </Link>
               <h5 className="fs-12 text-uppercase text-muted mb-3">Chat</h5>
 
-              <div className="mt-2 vstack gap-3 email-chat-list mx-n4">
-                <Link to="#" className="d-flex align-items-center active">
+              <div className="mt-2 vstack gap-3">
+                <Link to="#" className="d-flex align-items-center">
                   <div className="flex-shrink-0 me-2 avatar-xs">
                     <img
                       className="img-fluid rounded-circle"
@@ -129,7 +129,7 @@ const EmailSidebar = () => {
                   </div>
 
                   <div className="flex-grow-1 chat-user-box overflow-hidden">
-                    <h5 className="fs-13 text-truncate mb-0">Scott Median</h5>
+                    <h5 className="fs-12 text-truncate mb-0">Scott Median</h5>
                     <small className="text-muted text-truncate mb-0">
                       Hello ! are you there?
                     </small>
@@ -146,7 +146,7 @@ const EmailSidebar = () => {
                   </div>
 
                   <div className="flex-grow-1 chat-user-box overflow-hidden">
-                    <h5 className="fs-13 text-truncate mb-0">Julian Rosa</h5>
+                    <h5 className="fs-12 text-truncate mb-0">Julian Rosa</h5>
                     <small className="text-muted text-truncate mb-0">
                       What about our next..
                     </small>
@@ -163,7 +163,7 @@ const EmailSidebar = () => {
                   </div>
 
                   <div className="flex-grow-1 chat-user-box overflow-hidden">
-                    <h5 className="fs-13 text-truncate mb-0">David Medina</h5>
+                    <h5 className="fs-12 text-truncate mb-0">David Medina</h5>
                     <small className="text-muted text-truncate mb-0">
                       Yeah everything is fine
                     </small>
@@ -180,7 +180,7 @@ const EmailSidebar = () => {
                   </div>
 
                   <div className="flex-grow-1 chat-user-box overflow-hidden">
-                    <h5 className="fs-13 text-truncate mb-0">Jay Baker</h5>
+                    <h5 className="fs-12 text-truncate mb-0">Jay Baker</h5>
                     <small className="text-muted text-truncate mb-0">
                       Wow that's great
                     </small>
@@ -191,7 +191,7 @@ const EmailSidebar = () => {
           </SimpleBar>
 
           <div className="mt-auto">
-            <h5 className="fs-13">1.75 GB of 10 GB used</h5>
+            <h5 className="fs-12">1.75 GB of 10 GB used</h5>
             <Progress color="success" className="progress-sm" value={25} />
           </div>
         </div>
@@ -257,9 +257,9 @@ const EmailSidebar = () => {
                   // You can store the "editor" and use when it is needed.
                   
                 }}
-                // onChange={(event, editor) => {
-                //   editor.getData();
-                // }}
+                onChange={(event, editor) => {
+                  editor.getData();
+                }}
               />
             </div>
           </div>

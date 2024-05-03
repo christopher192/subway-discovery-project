@@ -12,7 +12,7 @@ import { BasicRaterExample, RaterWithStepExample, CustomMsgExample, ReadOnlyRate
 const UiRatings = () => {
     const [customize, setcustomize] = useState("");
     const [reset, setreset] = useState("");
-    
+
     document.title="Ratings | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>

@@ -15,12 +15,13 @@ const LiveUsers = () => {
     const [countryData, setcountryData] = useState([]);
     const [periodType, setPeriodType] = useState("halfyearly");
 
-    const liveuserData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.DashboardAnalytics,
         (chartData) => chartData.chartData
       );
+      
     // Inside your component
-    const chartData = useSelector(liveuserData);
+    const chartData  = useSelector(selectDashboardData);
 
     useEffect(() => {
         setcountryData(chartData);
@@ -55,7 +56,7 @@ const LiveUsers = () => {
                                     className="text-center"
                                     style={{ height: "252px" }}
                                 >
-                                     <div id="world_map_line_markers" className="custom-vector-map">
+                                   <div id="world_map_line_markers" className="custom-vector-map">
                                         <VectorMap {...world} />
                                     </div>
                                 </div>
@@ -116,7 +117,11 @@ const LiveUsers = () => {
                             </div>
                             <div className="card-body p-0">
                                 <div>
-                                    <CountriesCharts series={countryData} dataColors='["--vz-info", "--vz-info", "--vz-info", "--vz-info", "--vz-danger", "--vz-info", "--vz-info", "--vz-info", "--vz-info", "--vz-info"]' />
+                                    <div
+                                        id="countries_charts"
+                                        className="apex-charts" dir="ltr">
+                                        <CountriesCharts series={countryData} dataColors='["--vz-info", "--vz-info", "--vz-info", "--vz-info", "--vz-danger", "--vz-info", "--vz-info", "--vz-info", "--vz-info", "--vz-info"]' />
+                                    </div>
                                 </div>
                             </div>
                         </Card>

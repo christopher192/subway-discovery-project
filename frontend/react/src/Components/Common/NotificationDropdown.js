@@ -105,15 +105,14 @@ const NotificationDropdown = () => {
                                         </div>
                                         <div className="px-2 fs-15">
                                             <div className="form-check notification-check">
-                                                <input className="form-check-input" type="checkbox" value="" id="all-notification-check01" />
-                                                <label className="form-check-label" htmlFor="all-notification-check01"></label>
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check01" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check01"></label>
                                             </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="text-reset notification-item d-block dropdown-item position-relative active">
+                                <div className="text-reset notification-item d-block dropdown-item position-relative">
                                     <div className="d-flex">
                                         <img src={avatar2}
                                             className="me-3 rounded-circle avatar-xs" alt="user-pic" />
@@ -129,10 +128,9 @@ const NotificationDropdown = () => {
                                         </div>
                                         <div className="px-2 fs-15">
                                             <div className="form-check notification-check">
-                                                <input className="form-check-input" type="checkbox" value="" id="all-notification-check02"/>
-                                                <label className="form-check-label" htmlFor="all-notification-check02"></label>
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check02" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check02"></label>
                                             </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
                                         </div>
                                     </div>
                                 </div>
@@ -155,10 +153,9 @@ const NotificationDropdown = () => {
                                         </div>
                                         <div className="px-2 fs-15">
                                             <div className="form-check notification-check">
-                                                <input className="form-check-input" type="checkbox" value="" id="all-notification-check03" />
-                                                <label className="form-check-label" htmlFor="all-notification-check03"></label>
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check03" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check03"></label>
                                             </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
                                         </div>
                                     </div>
                                 </div>
@@ -177,10 +174,9 @@ const NotificationDropdown = () => {
                                         </div>
                                         <div className="px-2 fs-15">
                                             <div className="form-check notification-check">
-                                                <input className="form-check-input" type="checkbox" value="" id="all-notification-check04" />
-                                                <label className="form-check-label" htmlFor="all-notification-check04"></label>
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check04" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check04"></label>
                                             </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
                                         </div>
                                     </div>
                                 </div>
@@ -209,11 +205,10 @@ const NotificationDropdown = () => {
                                             </p>
                                         </div>
                                         <div className="px-2 fs-15">
-                                        <div className="form-check notification-check">
-                                                    <input className="form-check-input" type="checkbox" value="" id="messages-notification-check01" />
-                                                    <label className="form-check-label" htmlFor="messages-notification-check01"></label>
-                                                </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
+                                            <div className="form-check notification-check">
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check01" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check01"></label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -233,11 +228,10 @@ const NotificationDropdown = () => {
                                             </p>
                                         </div>
                                         <div className="px-2 fs-15">
-                                        <div className="form-check notification-check">
-                                                    <input className="form-check-input" type="checkbox" value="" id="messages-notification-check02" />
-                                                    <label className="form-check-label" htmlFor="messages-notification-check02"></label>
-                                                </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
+                                            <div className="form-check notification-check">
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check02" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check02"></label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -256,11 +250,10 @@ const NotificationDropdown = () => {
                                             </p>
                                         </div>
                                         <div className="px-2 fs-15">
-                                        <div className="form-check notification-check">
-                                                    <input className="form-check-input" type="checkbox" value="" id="messages-notification-check03" />
-                                                    <label className="form-check-label" htmlFor="messages-notification-check03"></label>
-                                                </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
+                                            <div className="form-check notification-check">
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check03" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check03"></label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -279,11 +272,10 @@ const NotificationDropdown = () => {
                                             </p>
                                         </div>
                                         <div className="px-2 fs-15">
-                                        <div className="form-check notification-check">
-                                                    <input className="form-check-input" type="checkbox" value="" id="messages-notification-check04" />
-                                                    <label className="form-check-label" htmlFor="messages-notification-check04"></label>
-                                                </div>
-                                            {/* <input className="form-check-input" type="checkbox" /> */}
+                                            <div className="form-check notification-check">
+                                                <input className="form-check-input" type="checkbox" value="" id="messages-notification-check04" />
+                                                <label className="form-check-label" htmlFor="messages-notification-check04"></label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

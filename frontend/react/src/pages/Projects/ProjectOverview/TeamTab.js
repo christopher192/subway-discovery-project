@@ -67,7 +67,7 @@ const TeamTab = () => {
                                         <img src={avatar2} alt="" className="img-fluid d-block rounded-circle" />
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Nancy Martino</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Nancy Martino</h5></Link>
                                         <p className="text-muted mb-0">Team Leader & HR</p>
                                     </div>
                                 </div>
@@ -75,11 +75,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <Row className="text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">225</h5>
+                                        <h5 className="fs-15 mb-1">225</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">197</h5>
+                                        <h5 className="fs-15 mb-1">197</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </Row>
@@ -124,7 +124,7 @@ const TeamTab = () => {
                                         </div>
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Henry Baird</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Henry Baird</h5></Link>
                                         <p className="text-muted mb-0">Full Stack Developer</p>
                                     </div>
                                 </div>
@@ -132,11 +132,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <Row className="text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">352</h5>
+                                        <h5 className="fs-15 mb-1">352</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">376</h5>
+                                        <h5 className="fs-15 mb-1">376</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </Row>
@@ -179,7 +179,7 @@ const TeamTab = () => {
                                         <img src={avatar3} alt="" className="img-fluid d-block rounded-circle" />
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Frank Hook</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Frank Hook</h5></Link>
                                         <p className="text-muted mb-0">Project Manager</p>
                                     </div>
                                 </div>
@@ -187,11 +187,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <Row className="text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">164</h5>
+                                        <h5 className="fs-15 mb-1">164</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">182</h5>
+                                        <h5 className="fs-15 mb-1">182</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </Row>
@@ -234,7 +234,7 @@ const TeamTab = () => {
                                         <img src={avatar8} alt="" className="img-fluid d-block rounded-circle" />
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Jennifer Carter</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Jennifer Carter</h5></Link>
                                         <p className="text-muted mb-0">UI/UX Designer</p>
                                     </div>
                                 </div>
@@ -242,11 +242,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <Row className="text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">225</h5>
+                                        <h5 className="fs-15 mb-1">225</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">197</h5>
+                                        <h5 className="fs-15 mb-1">197</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </Row>
@@ -291,7 +291,7 @@ const TeamTab = () => {
                                         </div>
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Megan Elmore</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Megan Elmore</h5></Link>
                                         <p className="text-muted mb-0">Team Leader & Web Developer</p>
                                     </div>
                                 </div>
@@ -299,11 +299,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <Row className="text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">201</h5>
+                                        <h5 className="fs-15 mb-1">201</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">263</h5>
+                                        <h5 className="fs-15 mb-1">263</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </Row>
@@ -346,7 +346,7 @@ const TeamTab = () => {
                                         <img src={avatar4} alt="" className="img-fluid d-block rounded-circle" />
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Alexis Clarke</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Alexis Clarke</h5></Link>
                                         <p className="text-muted mb-0">Backend Developer</p>
                                     </div>
                                 </div>
@@ -354,11 +354,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <Row className="text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">132</h5>
+                                        <h5 className="fs-15 mb-1">132</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">147</h5>
+                                        <h5 className="fs-15 mb-1">147</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </Row>
@@ -403,7 +403,7 @@ const TeamTab = () => {
                                         </div>
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Nathan Cole</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Nathan Cole</h5></Link>
                                         <p className="text-muted mb-0">Front-End Developer</p>
                                     </div>
                                 </div>
@@ -411,11 +411,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <div className="row text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">352</h5>
+                                        <h5 className="fs-15 mb-1">352</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">376</h5>
+                                        <h5 className="fs-15 mb-1">376</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </div>
@@ -458,7 +458,7 @@ const TeamTab = () => {
                                         <img src={avatar7} alt="" className="img-fluid d-block rounded-circle" />
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Joseph Parker</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Joseph Parker</h5></Link>
                                         <p className="text-muted mb-0">Team Leader & HR</p>
                                     </div>
                                 </div>
@@ -466,11 +466,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <div className="row text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">64</h5>
+                                        <h5 className="fs-15 mb-1">64</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">93</h5>
+                                        <h5 className="fs-15 mb-1">93</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </div>
@@ -513,7 +513,7 @@ const TeamTab = () => {
                                         <img src={avatar5} alt="" className="img-fluid d-block rounded-circle" />
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Erica Kernan</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Erica Kernan</h5></Link>
                                         <p className="text-muted mb-0">Web Designer</p>
                                     </div>
                                 </div>
@@ -521,11 +521,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <div className="row text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">345</h5>
+                                        <h5 className="fs-15 mb-1">345</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">298</h5>
+                                        <h5 className="fs-15 mb-1">298</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </div>
@@ -570,7 +570,7 @@ const TeamTab = () => {
                                         </div>
                                     </div>
                                     <div className="team-content">
-                                        <Link to="#" className="d-block"><h5 className="fs-16 mb-1">Donald Palmer</h5></Link>
+                                        <Link to="#" className="d-block"><h5 className="fs-15 mb-1">Donald Palmer</h5></Link>
                                         <p className="text-muted mb-0">Wed Developer</p>
                                     </div>
                                 </div>
@@ -578,11 +578,11 @@ const TeamTab = () => {
                             <Col lg={4}>
                                 <div className="row text-muted text-center">
                                     <Col xs={6} className="border-end border-end-dashed">
-                                        <h5 className="mb-1">97</h5>
+                                        <h5 className="fs-15 mb-1">97</h5>
                                         <p className="text-muted mb-0">Projects</p>
                                     </Col>
                                     <Col xs={6}>
-                                        <h5 className="mb-1">135</h5>
+                                        <h5 className="fs-15 mb-1">135</h5>
                                         <p className="text-muted mb-0">Tasks</p>
                                     </Col>
                                 </div>

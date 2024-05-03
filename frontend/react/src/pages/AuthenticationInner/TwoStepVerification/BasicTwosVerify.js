@@ -6,7 +6,6 @@ import ParticlesAuth from "../ParticlesAuth";
 //import images
 import logoLight from "../../../assets/images/logo-light.png";
 
-
 const BasicTwosVerify = () => {
     document.title = "Two Step Verification | Velzon - React Admin & Dashboard Template";
 

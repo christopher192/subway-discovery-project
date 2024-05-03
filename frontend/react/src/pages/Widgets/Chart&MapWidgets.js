@@ -3,7 +3,6 @@ import { Alert, Button, Card, CardBody, CardHeader, Col, DropdownItem, DropdownM
 import { Link } from 'react-router-dom';
 
 import CountUp from "react-countup";
-
 import { VectorMap } from '@south-paw/react-vector-maps'
 import world from '../../common/world.svg.json';
 
@@ -36,8 +35,8 @@ const ChartMapWidgets = () => {
                         <CardBody>
                             <div id="users-by-country" style={{ height: "252px" }}>
                             <div id="world_map_line_markers" className="custom-vector-map">
-                                      <VectorMap {...world} />
-                                  </div>
+                                    <VectorMap {...world} />
+                                </div>
                             </div>
 
                             <div className="table-responsive table-card mt-3">
@@ -188,8 +187,8 @@ const ChartMapWidgets = () => {
                         <CardBody>
                             <div id="sales-by-locations" style={{ height: "269px" }}>
                             <div id="world_map_line_markers" className="custom-vector-map">
-                                        <VectorMap {...world} />
-                                    </div>
+                                    <VectorMap {...world} />
+                                </div>
                             </div>
                             <div className="px-2 py-2 mt-1">
                                 <p className="mb-1">New Maxico <span className="float-end">75%</span></p>
@@ -269,7 +268,7 @@ const ChartMapWidgets = () => {
                         <CardBody>
                             <div id="color_heatmap" className="apex-charts mt-n3" dir="ltr">
                                 {/* Top Referrals Pages Chart */}
-                                <TopReferralsPagesCharts dataColors='["--vz-success", "--vz-info", "--vz-primary", "--vz-warning", "--vz-secondary"]' />
+                                <TopReferralsPagesCharts dataColors='["--vz-info", "--vz-success", "--vz-primary", "--vz-warning", "--vz-danger"]' />
                             </div>
 
                             <Row className="g-3">
@@ -292,7 +291,7 @@ const ChartMapWidgets = () => {
                                     </div>
                                     <div className="d-flex">
                                         <div className="flex-grow-1">
-                                            <p className="text-truncate text-muted fs-14 mb-0"><i className="mdi mdi-circle align-middle text-secondary me-2"></i>Other</p>
+                                            <p className="text-truncate text-muted fs-14 mb-0"><i className="mdi mdi-circle align-middle text-danger me-2"></i>Other</p>
                                         </div>
                                         <div className="flex-shrink-0">
                                             <p className="mb-0">17.58%</p>

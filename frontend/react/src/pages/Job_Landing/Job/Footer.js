@@ -14,7 +14,7 @@ const Footer = () => {
                 <div>
                   <img src={LogoLight} alt="logo light" height="17" />
                 </div>
-                <div className="mt-4 fs-13">
+                <div className="mt-4 fs-15">
                   <p>Premium Multipurpose Admin & Dashboard Template</p>
                   <p>
                     You can build any type of web application like eCommerce,

@@ -26,7 +26,7 @@ const Pricing = () => {
                     <Row className="justify-content-center mt-4">
                         <Col lg={5}>
                             <div className="text-center mb-4">
-                                <h4 className="fw-semibold fs-22">Plans & Pricing</h4>
+                                <h4 className=" fs-22">Plans & Pricing</h4>
                                 <p className="text-muted mb-4 fs-15">Simple pricing. No hidden fees. Advanced features for you business.</p>
 
                                 <div className="d-inline-flex">
@@ -135,7 +135,7 @@ const Pricing = () => {
                                                         <i className={`ri-${price1.storageClassSymbol}-circle-fill fs-15 align-middle`}></i>
                                                     </div>
                                                     <div className="flex-grow-1">
-                                                        <b>{price1.limit}</b> Storage
+                                                        <b>{price1.storage}</b> Storage
                                                     </div>
                                                 </div>
                                             </li>
@@ -162,7 +162,7 @@ const Pricing = () => {
                     <Row className="justify-content-center mt-5">
                         <Col lg={5}>
                             <div className="text-center mb-4 pb-2">
-                                <h4 className="fw-semibold fs-22">Choose the plan that's right for you</h4>
+                                <h4 className=" fs-22">Choose the plan that's right for you</h4>
                                 <p className="text-muted mb-4 fs-15">Simple pricing. No hidden fees. Advanced features for you business.</p>
                             </div>
                         </Col>
@@ -281,7 +281,7 @@ const Pricing = () => {
                     <Row className="justify-content-center mt-5">
                         <Col lg={4}>
                             <div className="text-center mb-4 pb-2">
-                                <h4 className="fw-semibold fs-22">Simple Pricing Plan</h4>
+                                <h4 className=" fs-22">Simple Pricing Plan</h4>
                                 <p className="text-muted mb-4 fs-15">Simple pricing. No hidden fees. Advanced features for you business.</p>
 
                             </div>
@@ -304,7 +304,7 @@ const Pricing = () => {
                                                 </div>
 
                                                 <div className="py-4">
-                                                    <h2><sup><small>$</small></sup>{price3.rate} <span className="fs-13 text-muted"> /Per month</span></h2>
+                                                    <h2><sup><small>$</small></sup>{price3.rate}<span className="fs-13 text-muted"> /Per month</span></h2>
                                                 </div>
 
                                                 <div className="text-center plan-btn mt-2">

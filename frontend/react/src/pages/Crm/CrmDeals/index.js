@@ -23,22 +23,21 @@ import BreadCrumb from "../../../Components/Common/BreadCrumb";
 import Select from "react-select";
 import LeadDiscover from "./leadDiscover";
 
-// Import actions
+//Import actions
 import { getDeals as onGetDeals } from "../../../slices/thunks";
-// redux
+//redux
 import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from "reselect";
 
 const CrmDeals = () => {
   const dispatch = useDispatch();
-
-
-  const crmdealsData = createSelector(
+  const selectDashboardData = createSelector(
     (state) => state.Crm,
     (deals) => deals.deals
   );
-  // Inside your component
-  const deals = useSelector(crmdealsData);
+  
+// Inside your component
+const deals = useSelector(selectDashboardData);
 
   useEffect(() => {
     if (deals && !deals.length) {
@@ -49,9 +48,9 @@ const CrmDeals = () => {
   const [sortBy, setsortBy] = useState("Owner");
   const [modal, setModal] = useState(false);
 
-  const handlesortBy = (sortBy) => {
+  function handlesortBy(sortBy) {
     setsortBy(sortBy);
-  };
+  }
 
   const sortbyname = [
     {
@@ -70,12 +69,11 @@ const CrmDeals = () => {
       setModal(true);
     }
   };
-  document.title = "Deals | Velzon - React Admin & Dashboard Template";
+  document.title="Deals | Velzon - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
       <div className="page-content">
-
         <Container fluid>
           <BreadCrumb title="Deals" pageTitle="CRM" />
           <Card>
@@ -103,7 +101,6 @@ const CrmDeals = () => {
                         }}
                         options={sortbyname}
                         id="choices-single-default"
-                        defaultInputValue="Owner"
                       ></Select>
                     </div>
                     <button className="btn btn-success" onClick={toggle}>
@@ -173,7 +170,6 @@ const CrmDeals = () => {
               <div className="invalid-feedback">
                 Please write an deals owner name.
               </div>
-
             </div>
 
             <div className="mb-3">
@@ -241,10 +237,10 @@ const CrmDeals = () => {
             <Button
               type="button"
               color="light"
-              id="close-modal"
               onClick={() => {
                 setModal(false);
               }}
+              id="close-modal"
             >
               Close
             </Button>

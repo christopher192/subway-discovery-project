@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 //Import Breadcrumb
 import BreadCrumb from "../../Components/Common/BreadCrumb";
-
+import FeatherIcon from 'feather-icons-react';
 import {
   Container,
   Form,
@@ -98,8 +98,7 @@ const EcommerceCheckout = () => {
       ],
     },
   ];
-
-  document.title = "Checkout | Velzon - React Admin & Dashboard Template";
+  document.title="Checkout | Velzon - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
@@ -119,7 +118,7 @@ const EcommerceCheckout = () => {
                       >
                         <NavItem role="presentation">
                           <NavLink href="#"
-                            className={classnames({ active: activeTab === 1, done: (activeTab <= 4 && activeTab >= 0) }, "p-3 fs-15")}
+                            className={classnames({ active: activeTab === 1, done: (activeTab <= 4 && activeTab >= 0) }, "fs-15 p-3")}
                             onClick={() => { toggleTab(1); }}
                           >
                             <i className="ri-user-2-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"></i>
@@ -128,25 +127,25 @@ const EcommerceCheckout = () => {
                         </NavItem>
                         <NavItem role="presentation">
                           <NavLink href="#"
-                            className={classnames({ active: activeTab === 2, done: activeTab <= 4 && activeTab > 1 }, "p-3 fs-15")}
+                            className={classnames({ active: activeTab === 2, done: activeTab <= 4 && activeTab > 1 }, "fs-15 p-3")}
                             onClick={() => { toggleTab(2); }}
                           >
-                            <i className="ri-truck-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"> </i>
+                            <i className="ri-truck-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"></i>
                             Shipping Info
                           </NavLink>
                         </NavItem>
                         <NavItem role="presentation">
                           <NavLink href="#"
-                            className={classnames({ active: activeTab === 3, done: activeTab <= 4 && activeTab > 2 }, "p-3 fs-15")}
+                            className={classnames({ active: activeTab === 3, done: activeTab <= 4 && activeTab > 2 }, "fs-15 p-3")}
                             onClick={() => { toggleTab(3); }}
                           >
-                            <i className="ri-bank-card-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"> </i>
-                             Payment Info
+                            <i className="ri-bank-card-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"></i>
+                            Payment Info
                           </NavLink>
                         </NavItem>
                         <NavItem role="presentation">
                           <NavLink href="#"
-                            className={classnames({ active: activeTab === 4, done: activeTab <= 4 && activeTab > 3 }, "p-3 fs-15")}
+                            className={classnames({ active: activeTab === 4, done: activeTab <= 4 && activeTab > 3 }, "fs-15 p-3")}
                             onClick={() => { toggleTab(4); }}
                           >
                             <i className="ri-checkbox-circle-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"></i>
@@ -210,7 +209,7 @@ const EcommerceCheckout = () => {
                                   className="form-label"
                                 >
                                   Email
-                                  <span className="text-muted"> (Optional)</span>
+                                  <span className="text-muted">(Optional)</span>
                                 </Label>
                                 <Input
                                   type="email"
@@ -267,7 +266,6 @@ const EcommerceCheckout = () => {
                                   }}
                                   options={productCountry}
                                   id="country"
-                                  defaultInputValue="United States"
                                 ></Select>
                               </div>
                             </Col>
@@ -284,7 +282,6 @@ const EcommerceCheckout = () => {
                                     handleSelectState();
                                   }}
                                   options={productState}
-                                  defaultInputValue="California"
                                 ></Select>
                               </div>
                             </Col>
@@ -462,7 +459,7 @@ const EcommerceCheckout = () => {
                                     className="form-check-label"
                                     htmlFor="shippingMethod01"
                                   >
-                                    <span className="fs-20 float-end mt-2 text-wrap d-block fw-semibold">
+                                    <span className="fs-20 float-end mt-2 text-wrap d-block">
                                       Free
                                     </span>
                                     <span className="fs-14 mb-1 text-wrap d-block">
@@ -487,7 +484,7 @@ const EcommerceCheckout = () => {
                                     className="form-check-label"
                                     htmlFor="shippingMethod02"
                                   >
-                                    <span className="fs-20 float-end mt-2 text-wrap d-block fw-semibold">
+                                    <span className="fs-20 float-end mt-2 text-wrap d-block">
                                       $24.99
                                     </span>
                                     <span className="fs-14 mb-1 text-wrap d-block">
@@ -674,10 +671,12 @@ const EcommerceCheckout = () => {
                             </Row>
                           </Card>
                           <div className="text-muted mt-2 fst-italic">
-                            <i
-                              data-feather="lock"
+
+                            <FeatherIcon
+                              icon="lock"
                               className="text-muted icon-xs"
-                            ></i>{" "}
+                            />{" "}
+
                             Your transaction is secured with SSL encryption
                           </div>
                         </div>
@@ -724,12 +723,12 @@ const EcommerceCheckout = () => {
 
                           <h3 className="fw-semibold">
                             Order ID:{" "}
-                            <a
-                              href="apps-ecommerce-order-details"
+                            <Link
+                              to ="/apps-ecommerce-order-details"
                               className="text-decoration-underline"
                             >
                               VZ2451
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                       </TabPane>
@@ -847,11 +846,11 @@ const EcommerceCheckout = () => {
             <lord-icon
               src="https://cdn.lordicon.com/gsqxdxog.json"
               trigger="loop"
-              colors="primary:#f7b84b,secondary:#f06548"
+              colors="primary:#0ab39c,secondary:#405189"
               style={{ width: "100px", height: "100px" }}
             ></lord-icon>
             <div className="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-              <h4>Are you sure ?</h4>
+              <h4>Are you Sure ?</h4>
               <p className="text-muted mx-4 mb-0">
                 Are you Sure You want to Remove this Address ?
               </p>

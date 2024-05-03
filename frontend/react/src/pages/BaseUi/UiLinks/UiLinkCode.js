@@ -19,7 +19,7 @@ const defaultListCode =
 
 <p><Link to="#" className="link-light">Light link</Link></p>
 
-<p><Link to="#" className="text-body">Dark link</Link></p>
+<p><Link to="#" className="text-dark">Dark link</Link></p>
 
 <p><Link to="#" className="link-body-emphasis mb-0">Emphasis link</Link></p>
 `;
@@ -49,7 +49,7 @@ const utilitiesCode =
 
 <p><Link to="#" className="link-light link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Light link</Link></p>
 
-<p><Link to="#" className="text-body link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Dark link</Link></p>
+<p><Link to="#" className="text-dark link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Dark link</Link></p>
 
 <p><Link to="#" className="link-body-emphasis link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-75-hover mb-0">Emphasis link</Link></p>
 

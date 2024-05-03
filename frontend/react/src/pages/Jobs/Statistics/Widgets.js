@@ -7,8 +7,8 @@ const Widgets = () => {
   return (
     <React.Fragment>
       {jobWidgets.map((item, key) => (
-        <Col className="col-xl-3 col-md-6" key={key}>
-          <Card className="card card-height-100">
+        <Col xl={3} md={6} key={key}>
+          <Card className="card-height-100">
             <div className="d-flex">
               <div className="flex-grow-1 p-3">
                 <h5 className="mb-3">{item.lable}</h5>
@@ -23,7 +23,7 @@ const Widgets = () => {
                 </p>
               </div>
               <div>
-                <Charts seriesData={item.series} dataColors={item.chartColor} />
+                <Charts seriesData={item.series} dataColors={item.iconColor} />
               </div>
             </div>
           </Card>

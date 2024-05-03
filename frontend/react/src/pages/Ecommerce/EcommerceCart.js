@@ -17,8 +17,8 @@ import {
 } from "reactstrap";
 
 const EcommerceCart = () => {
+  
   const [productList, setproductList] = useState(shoppingCart);
-
   const [charge, setCharge] = useState(0);
   const [tax, setTax] = useState(0);
   const [dis, setDis] = useState(0);
@@ -66,7 +66,8 @@ const EcommerceCart = () => {
     );
   }
 
-document.title ="Shopping Cart | Velzon - React Admin & Dashboard Template";
+  document.title="Shopping Cart | Velzon - React Admin & Dashboard Template";
+
   return (
     <React.Fragment>
       <div className="page-content">
@@ -253,7 +254,7 @@ document.title ="Shopping Cart | Velzon - React Admin & Dashboard Template";
                           <tr>
                             <td>Sub Total :</td>
                             <td className="text-end" id="cart-subtotal">
-                            $ {subTotal}
+                              $ {subTotal}
                             </td>
                           </tr>
                           <tr>
@@ -262,26 +263,26 @@ document.title ="Shopping Cart | Velzon - React Admin & Dashboard Template";
                               <span className="text-muted">(VELZON15)</span> :{" "}
                             </td>
                             <td className="text-end" id="cart-discount">
-                            - $ {dis}
+                              - $ {dis}
                             </td>
                           </tr>
                           <tr>
                             <td>Shipping Charge :</td>
                             <td className="text-end" id="cart-shipping">
-                            $ {charge}
+                              $ {charge}
                             </td>
                           </tr>
                           <tr>
                             <td>Estimated Tax (12.5%) : </td>
                             <td className="text-end" id="cart-tax">
-                            $ {tax}
+                              $ {tax}
                             </td>
                           </tr>
                           <tr className="table-active">
                             <th>Total (USD) :</th>
                             <td className="text-end">
                               <span className="fw-semibold" id="cart-total">
-                              ${subTotal + charge + tax - dis}
+                                ${subTotal + charge + tax - dis}
                               </span>
                             </td>
                           </tr>
@@ -296,7 +297,7 @@ document.title ="Shopping Cart | Velzon - React Admin & Dashboard Template";
                     <lord-icon
                       src="https://cdn.lordicon.com/nkmsrxys.json"
                       trigger="loop"
-                      colors="primary:#121331,secondary:#f06548"
+                      colors="primary:#121331,secondary:#ed5e5e"
                       style={{ width: "80px", height: "80px" }}
                     ></lord-icon>
                     <div className="ms-2">

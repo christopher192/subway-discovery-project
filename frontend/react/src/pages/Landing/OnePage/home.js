@@ -32,7 +32,7 @@ const Home = () => {
                     <Row className="justify-content-center">
                         <Col lg={8} sm={10}>
                             <div className="text-center mt-lg-5 pt-5">
-                                <h1 className="display-6 fw-semibold mb-3 lh-base">The better way to manage your website with <span
+                                <h1 className="display-6 fw-bold mb-3 lh-base">The better way to manage your website with <span
                                     className="text-success">Velzon </span></h1>
                                 <p className="lead text-muted lh-base">Velzon is a fully responsive, multipurpose and premium Bootstrap 5 Admin & Dashboard Template built in multiple frameworks.</p>
 

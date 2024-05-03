@@ -35,23 +35,22 @@ const UserProfile = () => {
 
   const [userName, setUserName] = useState("Admin");
 
-
-
   const selectLayoutState = (state) => state.Profile;
   const userprofileData = createSelector(
     selectLayoutState,
-    (state) => ({
-      user: state.user,
-      success: state.success,
-      error: state.error
+    (userpro) => ({
+      user: userpro.user,
+      success: userpro.success,
+      error: userpro.error
     })
   );
-  // Inside your component
-  const {
-    user, success, error 
-  } = useSelector(userprofileData);
 
-
+// Inside your component
+const {
+  user,
+  success,
+  error
+} = useSelector(userprofileData);  
 
   useEffect(() => {
     if (sessionStorage.getItem("authUser")) {
@@ -73,8 +72,6 @@ const UserProfile = () => {
     }
   }, [dispatch, user]);
 
-
-
   const validation = useFormik({
     // enableReinitialize : use this flag when initial values needs to be changed
     enableReinitialize: true,
@@ -94,7 +91,7 @@ const UserProfile = () => {
   document.title = "Profile | Velzon - React Admin & Dashboard Template";
   return (
     <React.Fragment>
-      <div className="page-content mt-lg-5">
+      <div className="page-content">
         <Container fluid>
           <Row>
             <Col lg="12">

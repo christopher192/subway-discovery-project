@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardBody, Col, Row } from "reactstrap";
+import { Card, CardBody, Col, Row, Button } from "reactstrap";
 import { overviewJobs } from "../../../../common/data/appsJobs";
 
 const RelatedJobs = () => {
@@ -13,7 +13,7 @@ const RelatedJobs = () => {
               <h5 className="mb-0">Related Jobs</h5>
             </div>
             <div className="flex-shrink-0">
-              <Link to="#" className="btn btn-ghost-secondary">
+              <Link to="#!" className="btn btn-ghost-success">
                 View All{" "}
                 <i className="ri-arrow-right-line ms-1 align-bottom"></i>
               </Link>
@@ -33,11 +33,11 @@ const RelatedJobs = () => {
                   <i className="mdi mdi-cards-heart fs-16"></i>
                 </button>
                 <div className="avatar-sm mb-4">
-                  <div className={`avatar-title bg-${item.color}-subtle rounded`}>
+                  <div className={`avatar-title bg-${item.bground}-subtle rounded`}>
                     <img src={item.companyLogo} alt="" className="avatar-xxs" />
                   </div>
                 </div>
-                <Link to="#">
+                <Link to="#!">
                   <h5>{item.jobTitle}</h5>
                 </Link>
                 <p className="text-muted">{item.companyName}</p>
@@ -57,16 +57,16 @@ const RelatedJobs = () => {
                 <p className="text-muted">{item.description}</p>
 
                 <div className="hstack gap-2">
-                  <span className="badge bg-warning-subtle text-warning">{item.s1}</span>
+                  <span className="badge bg-success-subtle text-success">{item.s1}</span>
                   <span className="badge bg-primary-subtle text-primary">{item.s2}</span>
                   <span className="badge bg-danger-subtle text-danger">{item.s3}</span>
                 </div>
 
                 <div className="mt-4 hstack gap-2">
-                  <Link to="#" className="btn btn-soft-primary w-100">
+                  <Link to="#!" className="btn btn-soft-primary w-100">
                     Apply Job
                   </Link>
-                  <Link to="#" className="btn btn-soft-info w-100">
+                  <Link to="#!" className="btn btn-soft-success w-100">
                     Overview
                   </Link>
                 </div>

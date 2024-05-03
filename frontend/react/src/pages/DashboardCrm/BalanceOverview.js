@@ -14,6 +14,7 @@ const BalanceOverview = () => {
         (state) => state.DashboardCRM,
         (balanceOverviewData) => balanceOverviewData.balanceOverviewData
       );
+      
     // Inside your component
     const balanceOverviewData = useSelector(selectDashboardData);
 
@@ -31,7 +32,6 @@ const BalanceOverview = () => {
     useEffect(() => {
         dispatch(getBalanceChartsData("today"));
     }, [dispatch]);
-
     return (
         <React.Fragment>
             <Col xxl={6}>
@@ -67,7 +67,7 @@ const BalanceOverview = () => {
                         </ul>
 
                         <div id="revenue-expenses-charts" dir="ltr">
-                            <BalanceOverviewCharts series={chartData} dataColors='["--vz-success", "--vz-danger"]'/>
+                            <BalanceOverviewCharts series={chartData} dataColors='["--vz-success", "--vz-danger"]' />
                         </div>
                     </CardBody>
                 </Card>

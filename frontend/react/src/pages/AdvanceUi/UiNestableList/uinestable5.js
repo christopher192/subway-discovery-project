@@ -67,7 +67,7 @@ class Uinestable5 extends React.Component {
                                             <img src={avatar1} alt="" className="img-fluid rounded-circle" />
                                         </div>
                                         <div className="flex-grow-1">
-                                            <h5 className="fs-14 mb-0">Daryl Wolcott</h5>
+                                            <h5 className="fs-13 mb-0">Daryl Wolcott</h5>
                                             <p className="text-muted mb-0">CEO</p>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@ class Uinestable5 extends React.Component {
                                                     <img src={avatar2} alt="" className="img-fluid rounded-circle" />
                                                 </div>
                                                 <div className="flex-grow-1">
-                                                    <h5 className="fs-14 mb-0">Jacob Stanfield</h5>
+                                                    <h5 className="fs-13 mb-0">Jacob Stanfield</h5>
                                                     <p className="text-muted mb-0">Project Manager</p>
                                                 </div>
                                             </div>
@@ -92,7 +92,7 @@ class Uinestable5 extends React.Component {
                                                                         <img src={item.img} alt="" className="img-fluid rounded-circle" />
                                                                     </div>
                                                                     <div className="flex-grow-1">
-                                                                        <h5 className="fs-14 mb-0">{item.name}</h5>
+                                                                        <h5 className="fs-13 mb-0">{item.name}</h5>
                                                                         <p className="text-muted mb-0">{item.designation}</p>
                                                                     </div>
                                                                 </div>
@@ -105,7 +105,7 @@ class Uinestable5 extends React.Component {
                                                                                 </div>
                                                                             </div>
                                                                             <div className="flex-grow-1">
-                                                                                <h5 className="fs-14 mb-0">{item.name}</h5>
+                                                                                <h5 className="fs-13 mb-0">{item.name}</h5>
                                                                                 <p className="text-muted mb-0">{item.designation}</p>
                                                                             </div>
                                                                         </div>

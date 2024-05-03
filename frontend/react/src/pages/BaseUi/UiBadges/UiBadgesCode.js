@@ -33,22 +33,21 @@ const DefaultBadgesExample = () => (
 
 const softBadgesCode =
     `
-<span className="badge bg-primary-subtle text-primary">Primary</span>
+    <span className="badge bg-primary-subtle text-primary">Primary</span>
 
-<span className="badge bg-secondary-subtle text-secondary ">Secondary</span>
+    <span className="badge bg-secondary-subtle text-secondary">Secondary</span>
 
-<span className="badge bg-success-subtle text-success">Success</span>
+    <span className="badge bg-success-subtle text-success">Success</span>
 
-<span className="badge bg-info-subtle text-info">Info</span>
+    <span className="badge bg-info-subtle text-info">Info</span>
 
-<span className="badge bg-warning-subtle text-warning">Warning</span>
+    <span className="badge bg-warning-subtle text-warning">Warning</span>
 
-<span className="badge bg-danger-subtle text-danger">Danger</span>
+    <span className="badge bg-danger-subtle text-danger">Danger</span>
 
-<span className="badge bg-dark-subtle text-body">Dark</span>
+    <span className="badge bg-dark-subtle text-dark">Dark</span>
 
-<span className="badge bg-light-subtle text-body">Light</span>
-
+    <span className="badge bg-light-subtle text-body">Light</span>
 `;
 
 const SoftBadgesExample = () => (
@@ -75,9 +74,7 @@ const outlineBadgesCode =
 
 <span className="badge border border-danger text-danger">Danger</span>
 
-<span className="badge border border-dark text-body">Dark</span>
-    
-<span className="badge border border-light text-body">Light</span> 
+<span className="badge border border-dark text-body">Dark</span>    
 `;
 
 const OutlineBadgesExample = () => (
@@ -181,7 +178,7 @@ const roundSoftBadgesCode =
     `
 <span className="badge rounded-pill bg-primary-subtle text-primary">Primary</span>
 
-<span className="badge rounded-pill bg-secondary-subtle text-secondary ">Secondary</span>
+<span className="badge rounded-pill bg-secondary-subtle text-secondary">Secondary</span>
 
 <span className="badge rounded-pill bg-success-subtle text-success">Success</span>
 
@@ -193,7 +190,7 @@ const roundSoftBadgesCode =
 
 <span className="badge rounded-pill bg-dark-subtle text-body">Dark</span>
 
-<span className="badge rounded-pill bg-light-subtle">Light</span>
+<span className="badge rounded-pill bg-light-subtle text-body">Light</span>
 `;
 
 const RoundSoftBadgesExample = () => (
@@ -211,19 +208,19 @@ const softBorderBadgesCode =
     `
 <span className="badge bg-primary-subtle text-primary badge-border">Primary</span>
 
-<span className="badge bg-secondary-subtle text-secondary  badge-border">Secondary</span>
+<span className="badge bg-secondary-subtle text-secondary badge-border">Secondary</span>
 
 <span className="badge bg-success-subtle text-success badge-border">Success</span>
 
-<span className="badge bg-info-subtle  text-info badge-border">Info</span>
+<span className="badge bg-info-subtle text-info badge-border">Info</span>
 
-<span className="badge bg-warning-subtle  text-warning badge-border">Warning</span>
+<span className="badge bg-warning-subtle text-warning badge-border">Warning</span>
 
-<span className="badge bg-danger-subtle  text-danger badge-border">Danger</span>
+<span className="badge bg-danger-subtle text-danger badge-border">Danger</span>
 
-<span className="badge bg-dark-subtle badge-border">Dark</span>
+<span className="badge bg-dark-subtle text-body badge-border">Dark</span>
 
-<span className="badge bg-light-subtle badge-border">Light</span>
+<span className="badge bg-light-subtle text-body badge-border">Light</span>
 `;
 
 const SoftBorderBadgesExample = () => (
@@ -238,22 +235,21 @@ const SoftBorderBadgesExample = () => (
 // Outline Pill Badges
 const outlinePillBadgesCode =
     `
-<span className="badge rounded-pill border border-primary text-primary">Primary</span>
+<span className="badge rounded-pill bborder border-primary text-primary">Primary</span>
 
-<span className="badge rounded-pill border border-secondary text-secondary">Secondary</span>
+<span className="badge rounded-pill bborder border-secondary text-secondary">Secondary</span>
 
-<span className="badge rounded-pill border border-success text-success">Success</span>
+<span className="badge rounded-pill bborder border-success text-success">Success</span>
 
-<span className="badge rounded-pill border border-info text-info">Info</span>
+<span className="badge rounded-pill bborder border-info text-info">Info</span>
 
-<span className="badge rounded-pill border border-warning text-warning">Warning</span>
+<span className="badge rounded-pill bborder border-warning text-warning">Warning</span>
 
-<span className="badge rounded-pill border border-danger text-danger">Danger</span>
+<span className="badge rounded-pill bborder border-danger text-danger">Danger</span>
 
 <span className="badge rounded-pill border border-dark text-body">Dark</span>
 
 <span className="badge rounded-pill border border-light text-body">Light</span>
-
 `;
 
 const OutlinePillBadgesExample = () => (

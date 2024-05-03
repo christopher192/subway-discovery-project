@@ -21,6 +21,7 @@ const MyPortfolio = () => {
         (state) => state.DashboardCrypto,
         (portfolioData) => portfolioData.portfolioData
       );
+      
     // Inside your component
     const portfolioData = useSelector(selectDashboardData);
 
@@ -45,7 +46,7 @@ const MyPortfolio = () => {
                     <div className="card-header border-0 align-items-center d-flex">
                         <h4 className="card-title mb-0 flex-grow-1">My Portfolio</h4>
                         <div>
-                            <UncontrolledDropdown >
+                            <UncontrolledDropdown direction='start'>
                                 <DropdownToggle tag="button" className="btn btn-soft-primary btn-sm" >
                                     <span className="text-uppercase">{seletedMonth}<i className="mdi mdi-chevron-down align-middle ms-1"></i></span>
                                 </DropdownToggle>
@@ -58,7 +59,9 @@ const MyPortfolio = () => {
                         </div>
                     </div>
                     <div className="card-body">
-                        <PortfolioCharts series={chartData} dataColors='["--vz-primary", "--vz-info", "--vz-warning", "--vz-success"]' />
+                        <div id="portfolio_donut_charts" className="apex-charts" dir="ltr">
+                            <PortfolioCharts series={chartData} dataColors ='["--vz-primary", "--vz-info", "--vz-warning", "--vz-success"]'/>
+                        </div>
 
                         <ul className="list-group list-group-flush border-dashed mb-0 mt-3 pt-2">
                             <li className="list-group-item px-0">

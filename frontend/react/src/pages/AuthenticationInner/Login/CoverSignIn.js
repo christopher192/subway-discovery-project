@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { Card, Col, Container, Input, Label, Row ,Button} from 'reactstrap';
 import AuthSlider from '../authCarousel';
 
-
 const CoverSignIn = () => {
 document.title="Cover SignIn | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
                 <div className="bg-overlay"></div>
+
                 <div className="auth-page-content overflow-hidden pt-lg-5">
                     <Container>
                         <Row>
@@ -30,7 +30,7 @@ document.title="Cover SignIn | Velzon - React Admin & Dashboard Template";
 
                                                         <div className="mb-3">
                                                             <Label htmlFor="username" className="form-label">Username</Label>
-                                                            <Input type="text" className="form-control" id="username" placeholder="Enter username" />
+                                                            <Input type="text" className="form-control" id="username" placeholder="Enter username" required/>
                                                         </div>
 
                                                         <div className="mb-3">
@@ -39,7 +39,7 @@ document.title="Cover SignIn | Velzon - React Admin & Dashboard Template";
                                                             </div>
                                                             <Label className="form-label" htmlFor="password-input">Password</Label>
                                                             <div className="position-relative auth-pass-inputgroup mb-3">
-                                                                <Input type="password" className="form-control pe-5 password-input" placeholder="Enter password" id="password-input" />
+                                                                <Input type="password" className="form-control pe-5 password-input" placeholder="Enter password" id="password-input" required/>
                                                                 <button className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i className="ri-eye-fill align-middle"></i></button>
                                                             </div>
                                                         </div>

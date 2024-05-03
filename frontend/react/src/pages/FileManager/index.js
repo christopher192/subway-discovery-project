@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Card, CardBody, Col, Container, DropdownItem, DropdownMenu, DropdownToggle, FormFeedback, Input, Modal, ModalBody, ModalHeader, Row, UncontrolledDropdown } from 'reactstrap';
-import SimpleBar from 'simplebar-react';
+import { Card, CardBody, Col, Container, DropdownItem, DropdownMenu, DropdownToggle, FormFeedback, Modal, ModalBody, ModalHeader, Row, UncontrolledDropdown } from 'reactstrap';
+// import SimpleBar from 'simplebar-react';
 import { ToastContainer } from 'react-toastify';
 import SimpleDonutCharts from './FileManagerCharts';
 import DeleteModal from '../../Components/Common/DeleteModal';
@@ -34,16 +34,18 @@ const FileManager = () => {
     const selectLayoutState = (state) => state.FileManager;
     const selectLayoutProperties = createSelector(
         selectLayoutState,
-        (state) => ({
-            folders: state.folders,
-            files: state.files,
+        (layout) => ({
+            folders: layout.folders,
+            files: layout.files
+
         })
     );
+
     // Inside your component
     const {
-        folders, files
+        folders, 
+        files 
     } = useSelector(selectLayoutProperties);
-
 
     const [deleteModal, setDeleteModal] = useState(false);
 
@@ -89,7 +91,7 @@ const FileManager = () => {
     // Add Folder
     const handleFolderClicks = () => {
         setFolder("");
-        setModalFolder(!modalFolder);
+        setModalFolder(!modalFolder)
         setIsEdit(false);
         folderToggle();
     };
@@ -106,13 +108,13 @@ const FileManager = () => {
             if (folder) {
                 dispatch(onDeleteFolder(folder.id));
                 setDeleteModal(false);
-                setDeleteAlt(false);
+                setDeleteAlt(false)
             }
         } else {
             if (file) {
                 dispatch(onDeleteFile(file.id));
                 setDeleteModal(false);
-                sidebarClose("file-detail-show");
+                sidebarClose("file-detail-show")
             }
         }
 
@@ -123,7 +125,7 @@ const FileManager = () => {
     const [modalFile, setModalFile] = useState(false);
 
 
-    const [fileList, setFileList] = useState(files);
+    const [fileList, setFileList] = useState(files)
 
     useEffect(() => {
         dispatch(onGetFiles());
@@ -131,7 +133,7 @@ const FileManager = () => {
 
     useEffect(() => {
         setFile(files);
-        setFileList(files);
+        setFileList(files)
     }, [files]);
 
     const fileToggle = useCallback(() => {
@@ -161,7 +163,7 @@ const FileManager = () => {
     // Add File
     const handleFileClicks = () => {
         setFile("");
-        setModalFile(!modalFile);
+        setModalFile(!modalFile)
         setIsEdit(false);
         fileToggle();
     };
@@ -178,8 +180,9 @@ const FileManager = () => {
     const [filterActive, setFilterActive] = useState("");
 
     const fileCategory = (e, ele) => {
-        setFilterActive(ele);
+        setFilterActive(ele)
         document.getElementById("folder-list").style.display = "none";
+
         setFileList(
             files.filter((item) => item.fileType === e)
         );
@@ -199,7 +202,7 @@ const FileManager = () => {
     }
 
     useEffect(() => {
-        sidebarOpen("file-detail-show");
+        sidebarOpen("file-detail-show")
     }, []);
 
     const favouriteBtn = (ele) => {
@@ -211,9 +214,9 @@ const FileManager = () => {
     };
 
     const fileSidebar = () => {
-        document.getElementById("folder-overview").style.display = "none";
-        document.getElementById("file-overview").style.display = "block";
-    };
+        document.getElementById("folder-overview").style.display = "none"
+        document.getElementById("file-overview").style.display = "block"
+    }
 
     // Folder validation
     const folderValidation = useFormik({
@@ -251,7 +254,7 @@ const FileManager = () => {
                 dispatch(onAddNewFolder(newFolder));
                 folderValidation.resetForm();
             }
-            folderToggle();
+            folderToggle()
         },
     });
 
@@ -323,13 +326,13 @@ const FileManager = () => {
                         <div className="file-manager-sidebar">
                             <div className="p-3 d-flex flex-column h-100">
                                 <div className="mb-3">
-                                    <h5 className="mb-0 fw-semibold">My Drive</h5>
+                                    <h5 className="mb-0 fw-bold">My Drive</h5>
                                 </div>
                                 <div className="search-box">
                                     <input type="text" className="form-control bg-light border-light" placeholder="Search here..." />
                                     <i className="ri-search-2-line search-icon"></i>
                                 </div>
-                                <SimpleBar className="mt-3 mx-n4 px-4 file-menu-sidebar-scroll">
+                                <div className="mx-n3 pt-4 px-4 file-manager-content-scroll">
                                     <ul className="list-unstyled file-manager-menu">
                                         <li>
                                             <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
@@ -338,40 +341,40 @@ const FileManager = () => {
                                             <div className="collapse show" id="collapseExample">
                                                 <ul className="sub-menu list-unstyled">
                                                     <li>
-                                                        <Link to="#">Assets</Link>
+                                                        <a href="#!">Assets</a>
                                                     </li>
                                                     <li>
-                                                        <Link to="#">Marketing</Link>
+                                                        <a href="#!">Marketing</a>
                                                     </li>
                                                     <li>
-                                                        <Link to="#">Personal</Link>
+                                                        <a href="#!">Personal</a>
                                                     </li>
                                                     <li>
-                                                        <Link to="#">Projects</Link>
+                                                        <a href="#!">Projects</a>
                                                     </li>
                                                     <li>
-                                                        <Link to="#">Templates</Link>
+                                                        <a href="#!">Templates</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li>
-                                            <Link to="#" className={filterActive === "Documents" ? "active" : ""} onClick={() => fileCategory("Documents", "Documents")}><i className="ri-file-list-2-line align-bottom me-2"></i> <span className="file-list-link">Documents</span></Link>
+                                            <a href="#!" className={filterActive === "Documents" ? "active" : ""} onClick={() => fileCategory("Documents", "Documents")}><i className="ri-file-list-2-line align-bottom me-2"></i> <span className="file-list-link">Documents</span></a>
                                         </li>
                                         <li>
-                                            <Link to="#" className={filterActive === "Media" ? "active" : ""} onClick={() => fileCategory("Media", "Media")}><i className="ri-image-2-line align-bottom me-2"></i> <span className="file-list-link">Media</span></Link>
+                                            <a href="#!" className={filterActive === "Media" ? "active" : ""} onClick={() => fileCategory("Media", "Media")}><i className="ri-image-2-line align-bottom me-2"></i> <span className="file-list-link">Media</span></a>
                                         </li>
                                         <li>
-                                            <Link to="#" className={filterActive === "Recents" ? "active" : ""} onClick={() => fileCategory("Media", "Recents")}><i className="ri-history-line align-bottom me-2"></i> <span className="file-list-link">Recent</span></Link>
+                                            <a href="#!" className={filterActive === "Recents" ? "active" : ""} onClick={() => fileCategory("Media", "Recents")}><i className="ri-history-line align-bottom me-2"></i> <span className="file-list-link">Recents</span></a>
                                         </li>
                                         <li>
-                                            <Link to="#" className={filterActive === "Important" ? "active" : ""} onClick={() => fileCategory("Documents", "Important")}><i className="ri-star-line align-bottom me-2"></i> <span className="file-list-link">Important</span></Link>
+                                            <a href="#!" className={filterActive === "Important" ? "active" : ""} onClick={() => fileCategory("Documents", "Important")}><i className="ri-star-line align-bottom me-2"></i> <span className="file-list-link">Important</span></a>
                                         </li>
                                         <li>
-                                            <Link to="#" className={filterActive === "Deleted" ? "active" : ""} onClick={() => fileCategory("Deleted", "Deleted")}><i className="ri-delete-bin-line align-bottom me-2"></i> <span className="file-list-link">Deleted</span></Link>
+                                            <a href="#!" className={filterActive === "Deleted" ? "active" : ""} onClick={() => fileCategory("Deleted", "Deleted")}><i className="ri-delete-bin-line align-bottom me-2"></i> <span className="file-list-link">Deleted</span></a>
                                         </li>
                                     </ul>
-                                </SimpleBar>
+                                </div>
 
                                 <div className="mt-auto">
                                     <h6 className="fs-11 text-muted text-uppercase mb-3">Storage Status</h6>
@@ -390,9 +393,9 @@ const FileManager = () => {
                             </div>
                         </div>
                         <div className="file-manager-content w-100 p-3 py-0">
-                            <div className="mx-n3 pt-4 px-4 file-manager-content-scroll overflow-x-hidden overflow-y-auto">
+                            <div className="mx-n3 pt-4 px-4 file-manager-content-scroll">
                                 <div id="folder-list" className="mb-2">
-                                    <Row className="justify-content-beetwen g-2 mb-4">
+                                    <Row className="justify-content-beetwen g-2 mb-3">
 
                                         <Col>
                                             <div className="d-flex align-items-center">
@@ -441,7 +444,7 @@ const FileManager = () => {
                                                                 <DropdownMenu className="dropdown-menu-end">
                                                                     <DropdownItem className="view-item-btn">Open</DropdownItem>
                                                                     <DropdownItem className="edit-folder-list" onClick={() => handleFolderClick(item)}>Rename</DropdownItem>
-                                                                    <DropdownItem onClick={() => { onClickFolderDelete(item); setDeleteAlt(true); }}>Delete</DropdownItem>
+                                                                    <DropdownItem onClick={() => { onClickFolderDelete(item); setDeleteAlt(true) }}>Delete</DropdownItem>
                                                                 </DropdownMenu>
                                                             </UncontrolledDropdown>
 
@@ -507,7 +510,7 @@ const FileManager = () => {
                                                                         <i className="ri-more-fill align-bottom" />
                                                                     </DropdownToggle>
                                                                     <DropdownMenu className="dropdown-menu-end">
-                                                                        <DropdownItem className="viewfile-list" onClick={() => { setSidebarData(item); fileSidebar(); sidebarOpen("file-detail-show"); }}>View</DropdownItem>
+                                                                        <DropdownItem className="viewfile-list" onClick={() => { setSidebarData(item); fileSidebar(); sidebarOpen("file-detail-show") }}>View</DropdownItem>
                                                                         <DropdownItem className="edit-list" onClick={() => handleFileClick(item)}>Rename</DropdownItem>
                                                                         <DropdownItem divider />
                                                                         <DropdownItem className="remove-list" onClick={() => onClickFileDelete(item)}>Delete</DropdownItem>
@@ -551,10 +554,10 @@ const FileManager = () => {
                             </div>
                         </div>
                         <div className="file-manager-detail-content p-3 py-0">
-                            <SimpleBar className="mx-n3 pt-3 px-3 file-detail-content-scroll">
+                            <div className="mx-n3 pt-4 px-4 file-manager-content-scroll">
                                 <div id="folder-overview">
                                     <div className="d-flex align-items-center pb-3 border-bottom border-bottom-dashed">
-                                        <h5 className="flex-grow-1 fw-semibold mb-0">Overview</h5>
+                                        <h5 className="flex-grow-1 fw-bold mb-0">Overview</h5>
                                         <div>
                                             <button type="button" className="btn btn-soft-danger btn-icon btn-sm fs-16 close-btn-overview" onClick={() => sidebarClose("file-detail-show")}>
                                                 <i className="ri-close-fill align-bottom"></i>
@@ -725,7 +728,7 @@ const FileManager = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </SimpleBar>
+                            </div>
                         </div>
                     </div>
                 </Container>
@@ -746,13 +749,13 @@ const FileManager = () => {
                             <label htmlFor="foldername-input" className="form-label">Folder Name</label>
                             <input type="text" className="form-control" id="foldername-input"
                                 name='folderName'
-                                placeholder="Enter folder name"
-                                // validate={{
-                                //     required: { value: true },
-                                // }}
+                                validate={{
+                                    required: { value: true },
+                                }}
                                 onChange={folderValidation.handleChange}
                                 onBlur={folderValidation.handleBlur}
                                 value={folderValidation.values.folderName || ""}
+                                placeholder="Enter folder name"
                             // invalid={folderValidation.touched.folderName && folderValidation.errors.folderName ? true : false}
                             />
                             {folderValidation.touched.folderName && folderValidation.errors.folderName ? (
@@ -783,10 +786,10 @@ const FileManager = () => {
                             <label htmlFor="filename-input" className="form-label">File Name</label>
                             <input type="text" className="form-control" id="filename-input"
                                 name="fileName"
-                                placeholder="Enter file name"
-                                // validate={{
-                                //     required: { value: true },
-                                // }}
+                                placeholder="Enter file name" 
+                                validate={{
+                                    required: { value: true },
+                                }}
                                 onChange={fileValidation.handleChange}
                                 onBlur={fileValidation.handleBlur}
                                 value={fileValidation.values.fileName || ""}

@@ -344,9 +344,8 @@ const UiAccordions = () => {
     const t_coll9 = () => {
         setcoll9(!coll9);
     };
+document.title="Accordions | Velzon - React Admin & Dashboard Template";
 
-    document.title="Accordions | Velzon - React Admin & Dashboard Template";
-    
     return (
         <React.Fragment>
             <UiContent />
@@ -360,13 +359,13 @@ const UiAccordions = () => {
                                 <PreviewCardHeader title="Default Accordion" />
 
                                 <CardBody>
-                                    <p className="text-muted">A Default Accordian Example.</p>
+                                    <p className="text-muted">Use the <code>accordion </code>class to expand/collapse the accordion content.</p>
                                     <div className="live-preview">
                                         <Accordion id="default-accordion-example">
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingOne">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !col1 })} type="button" onClick={t_col1} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !col1 })} type="button" onClick={t_col1} style={{ cursor: "pointer" }} >
                                                         How to create a group booking ?
                                                     </button>
                                                 </h2>
@@ -380,7 +379,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingTwo">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !col2 })} type="button" onClick={t_col2} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !col2 })} type="button" onClick={t_col2} style={{ cursor: "pointer" }} >
                                                         Why do we use it ?
                                                     </button>
                                                 </h2>
@@ -394,7 +393,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingThree">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !col3 })} type="button" onClick={t_col3} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !col3 })} type="button" onClick={t_col3} style={{ cursor: "pointer" }} >
                                                         Where does it come from ?
                                                     </button>
                                                 </h2>
@@ -430,7 +429,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingOne">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !col4 })} type="button" onClick={t_col4} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !col4 })} type="button" onClick={t_col4} style={{ cursor: "pointer" }} >
                                                         How do I set up my profile ?
                                                     </button>
                                                 </h2>
@@ -444,7 +443,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingTwo">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !col5 })} type="button" onClick={t_col5} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !col5 })} type="button" onClick={t_col5} style={{ cursor: "pointer" }} >
                                                         What can I do with my project ?
                                                     </button>
                                                 </h2>
@@ -458,7 +457,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingThree">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !col6 })} type="button" onClick={t_col6} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !col6 })} type="button" onClick={t_col6} style={{ cursor: "pointer" }} >
                                                         Where can I go to edit voice settings
                                                     </button>
                                                 </h2>
@@ -494,7 +493,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingOne">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !iconCol1 })} type="button" onClick={t_iconCol1} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !iconCol1 })} type="button" onClick={t_iconCol1} style={{ cursor: "pointer" }} >
                                                         <i className="ri-global-line me-2"></i> How Does Age Verification Work?
                                                     </button>
                                                 </h2>
@@ -508,7 +507,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingTwo">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !iconCol2 })} type="button" onClick={t_iconCol2} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !iconCol2 })} type="button" onClick={t_iconCol2} style={{ cursor: "pointer" }} >
                                                         <i className="ri-user-location-line me-2"></i> How Does Link Tracking Work?
                                                     </button>
                                                 </h2>
@@ -522,7 +521,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingThree">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !iconCol3 })} type="button" onClick={t_iconCol3} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !iconCol3 })} type="button" onClick={t_iconCol3} style={{ cursor: "pointer" }} >
                                                         <i className="ri-pen-nib-line me-2"></i> How Do I Set Up the Drip Feature?
                                                     </button>
                                                 </h2>
@@ -556,7 +555,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionwithouticonExample1">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !iconCol4 })} type="button" onClick={t_iconCol4} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !iconCol4 })} type="button" onClick={t_iconCol4} style={{ cursor: "pointer" }} >
                                                         <i className="ri-global-line me-2"></i> How Does Age Verification Work?
                                                     </button>
                                                 </h2>
@@ -570,7 +569,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionwithouticonExample2">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !iconCol5 })} type="button" onClick={t_iconCol5} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !iconCol5 })} type="button" onClick={t_iconCol5} style={{ cursor: "pointer" }} >
                                                         <i className="ri-user-location-line me-2"></i> How Does Link Tracking Work?
                                                     </button>
                                                 </h2>
@@ -584,7 +583,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionwithouticonExample3">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !iconCol6 })} type="button" onClick={t_iconCol6} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !iconCol6 })} type="button" onClick={t_iconCol6} style={{ cursor: "pointer" }} >
                                                         <i className="ri-pen-nib-line me-2"></i> How Do I Set Up the Drip Feature?
                                                     </button>
                                                 </h2>
@@ -622,7 +621,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionwithouticonExample1">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !plusiconCol1 })} type="button" onClick={t_plusiconCol1} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !plusiconCol1 })} type="button" onClick={t_plusiconCol1} style={{ cursor: "pointer" }} >
                                                         What is User Interface Design?
                                                     </button>
                                                 </h2>
@@ -636,7 +635,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionwithplusExample2">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !plusiconCol2 })} type="button" onClick={t_plusiconCol2} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !plusiconCol2 })} type="button" onClick={t_plusiconCol2} style={{ cursor: "pointer" }} >
                                                         What is Digital Marketing?
                                                     </button>
                                                 </h2>
@@ -650,7 +649,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionwithplusExample3">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !plusiconCol3 })} type="button" onClick={t_plusiconCol3} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !plusiconCol3 })} type="button" onClick={t_plusiconCol3} style={{ cursor: "pointer" }} >
                                                         Where does it come from ?
                                                     </button>
                                                 </h2>
@@ -690,7 +689,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionlefticonExample1">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !lefticonCol1 })} type="button" onClick={t_lefticonCol1} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !lefticonCol1 })} type="button" onClick={t_lefticonCol1} style={{ cursor: "pointer" }} >
                                                         What is User Interface Design?
                                                     </button>
                                                 </h2>
@@ -704,7 +703,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionlefticonExample2">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !lefticonCol2 })} type="button" onClick={t_lefticonCol2} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !lefticonCol2 })} type="button" onClick={t_lefticonCol2} style={{ cursor: "pointer" }} >
                                                         What is Digital Marketing?
                                                     </button>
                                                 </h2>
@@ -718,7 +717,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionlefticonExample3">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !lefticonCol3 })} type="button" onClick={t_lefticonCol3} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !lefticonCol3 })} type="button" onClick={t_lefticonCol3} style={{ cursor: "pointer" }} >
                                                         Where does it come from ?
                                                     </button>
                                                 </h2>
@@ -756,7 +755,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionborderedExample1">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !borderCol1 })} type="button" onClick={t_borderCol1} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !borderCol1 })} type="button" onClick={t_borderCol1} style={{ cursor: "pointer" }} >
                                                         What is User Interface Design?
                                                     </button>
                                                 </h2>
@@ -770,7 +769,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionborderedExample2">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !borderCol2 })} type="button" onClick={t_borderCol2} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !borderCol2 })} type="button" onClick={t_borderCol2} style={{ cursor: "pointer" }} >
                                                         What is Digital Marketing?
                                                     </button>
                                                 </h2>
@@ -784,7 +783,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionborderedExample3">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !borderCol3 })} type="button" onClick={t_borderCol3} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !borderCol3 })} type="button" onClick={t_borderCol3} style={{ cursor: "pointer" }} >
                                                         Where does it come from ?
                                                     </button>
                                                 </h2>
@@ -824,7 +823,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="accordionnestingExample1">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !nestingCol1 })} type="button" onClick={t_nestingCol1} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !nestingCol1 })} type="button" onClick={t_nestingCol1} style={{ cursor: "pointer" }} >
                                                         How Do I Add Contacts/Subscribers?
                                                     </button>
                                                 </h2>
@@ -836,7 +835,7 @@ const UiAccordions = () => {
                                                             <AccordionItem>
                                                                 <h2 className="accordion-header" id="accordionnesting2Example1">
                                                                     <button
-                                                                        className={classnames("accordion-button", { collapsed: !anestingCol1 })} type="button" onClick={t_anestingCol1} style={{ cursor: "pointer" }} >
+                                                                        className={classnames("accordion-button fw-semibold", { collapsed: !anestingCol1 })} type="button" onClick={t_anestingCol1} style={{ cursor: "pointer" }} >
                                                                         How Do I Search For Contacts?
                                                                     </button>
                                                                 </h2>
@@ -848,7 +847,7 @@ const UiAccordions = () => {
                                                                             <AccordionItem>
                                                                                 <h2 className="accordion-header" id="accordionnesting4Example2">
                                                                                     <button
-                                                                                        className={classnames("accordion-button", { collapsed: !bnestingCol1 })} type="button" onClick={t_bnestingCol1} style={{ cursor: "pointer" }} >
+                                                                                        className={classnames("accordion-button fw-semibold", { collapsed: !bnestingCol1 })} type="button" onClick={t_bnestingCol1} style={{ cursor: "pointer" }} >
                                                                                         How do I reset my digital tide watch ?
                                                                                     </button>
                                                                                 </h2>
@@ -866,7 +865,7 @@ const UiAccordions = () => {
                                                             <AccordionItem>
                                                                 <h2 className="accordion-header" id="accordionnesting2Example2">
                                                                     <button
-                                                                        className={classnames("accordion-button", { collapsed: !anestingCol2 })} type="button" onClick={t_anestingCol2} style={{ cursor: "pointer" }} >
+                                                                        className={classnames("accordion-button fw-semibold", { collapsed: !anestingCol2 })} type="button" onClick={t_anestingCol2} style={{ cursor: "pointer" }} >
                                                                         How Do I Delete a Contact From My List?
                                                                     </button>
                                                                 </h2>
@@ -885,7 +884,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingTwo">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !nestingCol2 })} type="button" onClick={t_nestingCol2} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !nestingCol2 })} type="button" onClick={t_nestingCol2} style={{ cursor: "pointer" }} >
                                                         How Does Personalization Work?
                                                     </button>
                                                 </h2>
@@ -897,7 +896,7 @@ const UiAccordions = () => {
                                                             <div className="accordion-item mt-2">
                                                                 <h2 className="accordion-header" id="accordionnesting4Example2">
                                                                     <button
-                                                                        className={classnames("accordion-button", { collapsed: !a1nestingCol1 })} type="button" onClick={t_a1nestingCol1} style={{ cursor: "pointer" }} >
+                                                                        className={classnames("accordion-button fw-semibold", { collapsed: !a1nestingCol1 })} type="button" onClick={t_a1nestingCol1} style={{ cursor: "pointer" }} >
                                                                         Howe does temperature impact my watch?
                                                                     </button>
                                                                 </h2>
@@ -915,7 +914,7 @@ const UiAccordions = () => {
                                             <AccordionItem>
                                                 <h2 className="accordion-header" id="headingThree">
                                                     <button
-                                                        className={classnames("accordion-button", { collapsed: !nestingCol3 })} type="button" onClick={t_nestingCol3} style={{ cursor: "pointer" }} >
+                                                        className={classnames("accordion-button fw-semibold", { collapsed: !nestingCol3 })} type="button" onClick={t_nestingCol3} style={{ cursor: "pointer" }} >
                                                         What Happens When I Run Out of Messages?
                                                     </button>
                                                 </h2>
@@ -955,7 +954,7 @@ const UiAccordions = () => {
                                                     <AccordionItem>
                                                         <h2 className="accordion-header" id="accordionFillExample1">
                                                             <button
-                                                                className={classnames("accordion-button", { collapsed: !fillCol1 })} type="button" onClick={t_fillCol1} style={{ cursor: "pointer" }} >
+                                                                className={classnames("accordion-button fw-semibold", { collapsed: !fillCol1 })} type="button" onClick={t_fillCol1} style={{ cursor: "pointer" }} >
                                                                 What are webhooks?
                                                             </button>
                                                         </h2>
@@ -968,7 +967,7 @@ const UiAccordions = () => {
                                                     <AccordionItem>
                                                         <h2 className="accordion-header" id="accordionFillExample2">
                                                             <button
-                                                                className={classnames("accordion-button", { collapsed: !fillCol2 })} type="button" onClick={t_fillCol2} style={{ cursor: "pointer" }} >
+                                                                className={classnames("accordion-button fw-semibold", { collapsed: !fillCol2 })} type="button" onClick={t_fillCol2} style={{ cursor: "pointer" }} >
                                                                 Where can I find my Textword ID?
                                                             </button>
                                                         </h2>
@@ -982,7 +981,7 @@ const UiAccordions = () => {
                                                     <AccordionItem>
                                                         <h2 className="accordion-header" id="accordionFillExample3">
                                                             <button
-                                                                className={classnames("accordion-button", { collapsed: !fillCol3 })} type="button" onClick={t_fillCol3} style={{ cursor: "pointer" }} >
+                                                                className={classnames("accordion-button fw-semibold", { collapsed: !fillCol3 })} type="button" onClick={t_fillCol3} style={{ cursor: "pointer" }} >
                                                                 Where is your API documentation?
                                                             </button>
                                                         </h2>
@@ -1000,7 +999,7 @@ const UiAccordions = () => {
                                                     <AccordionItem>
                                                         <h2 className="accordion-header" id="accordionFill2Example1">
                                                             <button
-                                                                className={classnames("accordion-button", { collapsed: !fillCol4 })} type="button" onClick={t_fillCol4} style={{ cursor: "pointer" }} >
+                                                                className={classnames("accordion-button fw-semibold", { collapsed: !fillCol4 })} type="button" onClick={t_fillCol4} style={{ cursor: "pointer" }} >
                                                                 How Does Age Verification Work?
                                                             </button>
                                                         </h2>
@@ -1014,7 +1013,7 @@ const UiAccordions = () => {
                                                     <AccordionItem>
                                                         <h2 className="accordion-header" id="accordionFill2Example2">
                                                             <button
-                                                                className={classnames("accordion-button", { collapsed: !fillCol5 })} type="button" onClick={t_fillCol5} style={{ cursor: "pointer" }} >
+                                                                className={classnames("accordion-button fw-semibold", { collapsed: !fillCol5 })} type="button" onClick={t_fillCol5} style={{ cursor: "pointer" }} >
                                                                 What Kind of List Growth Should I Expect?
                                                             </button>
                                                         </h2>
@@ -1028,7 +1027,7 @@ const UiAccordions = () => {
                                                     <AccordionItem>
                                                         <h2 className="accordion-header" id="accordionFill2Example3">
                                                             <button
-                                                                className={classnames("accordion-button", { collapsed: !fillCol6 })} type="button" onClick={t_fillCol6} style={{ cursor: "pointer" }} >
+                                                                className={classnames("accordion-button fw-semibold", { collapsed: !fillCol6 })} type="button" onClick={t_fillCol6} style={{ cursor: "pointer" }} >
                                                                 How Do I Delete a Contact From My List?
                                                             </button>
                                                         </h2>
@@ -1061,7 +1060,8 @@ const UiAccordions = () => {
 
                                 <PreviewCardHeader title="Collapse Example" />
 
-                                <CardBody>                                    
+                                <CardBody>   
+                                <p className='text-muted'>You can use a link with the<code> href</code> attribute, or a button with the <code>data-bs-target</code> attribute. In both cases, the <code>data-bs-toggle="collapse"</code> is required.</p>                                   
                                     <div className="live-preview">
                                         <div className="d-flex gap-2 flex-wrap mb-3">
                                             <Link
@@ -1105,7 +1105,8 @@ const UiAccordions = () => {
 
                                 <PreviewCardHeader title="Horizontal Collapse" />
 
-                                <CardBody>                                    
+                                <CardBody> 
+                                    <p className='text-muted'>Use the <code>collapse-horizontal</code> class to transition the<code> width </code>instead of<code> height</code> and set a <code>width</code> on the immediate child element for horizontal collapse.</p>                                   
                                     <div className="live-preview">
                                         <p>
                                             <Button onClick={t_coll2} color="primary" style={{ cursor: "pointer" }} > Toggle Width Collapse </Button>

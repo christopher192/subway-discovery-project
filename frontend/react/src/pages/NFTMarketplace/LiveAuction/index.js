@@ -70,7 +70,7 @@ const LiveAuction = () => {
                                         <CardBody>
                                             <p className="fw-medium mb-0 float-end"><i className="mdi mdi-heart text-danger align-middle"></i> {item.likes}k </p>
                                             <h5 className="text-success"><i className="mdi mdi-ethereum"></i> {item.price} ETH </h5>
-                                            <h6 className="fs-16 mb-3"><Link to="/apps-nft-item-details">{item.title}</Link></h6>
+                                            <h6 className="fs-16 mb-3"><Link to="/apps-nft-item-details" className="text-body">{item.title}</Link></h6>
                                             <div>
                                                 <span className="text-muted float-end">Available: {item.available}</span>
                                                 <span className="text-muted">Sold: {item.sold}</span>
@@ -135,7 +135,7 @@ const LiveAuction = () => {
                                                         <div className="d-flex align-items-center">
                                                             <img src={item.img} alt="" className="avatar-sm object-fit-cover rounded-circle" />
                                                             <div className="ms-2">
-                                                                <Link to="#"><h6 className="fs-15 mb-1">{item.name}</h6></Link>
+                                                                <Link to="#!"><h6 className="fs-15 mb-1">{item.name}</h6></Link>
                                                                 <p className="mb-0 text-muted">{item.products} Products</p>
                                                             </div>
                                                         </div>

@@ -149,7 +149,6 @@ const InvoiceCreate = () => {
       contact: Yup.string().required("Please Enter a contact number"),
       invoiceId: Yup.string().required("This field is required"),
       name: Yup.string().required("Please Enter a Full name"),
-      // country: Yup.string().required("Please Enter a Country"),
       billing_address: Yup.string().required("Please Enter a Address"),
       billing_phone: Yup.string().required("Please Enter a Phone Number"),
       billing_taxno: Yup.string().required("Please Enter a tax Number"),
@@ -264,7 +263,7 @@ const InvoiceCreate = () => {
                           {validation.errors.postalcode && validation.touched.postalcode ? (
                             <FormFeedback type="invalid">{validation.errors.postalcode}</FormFeedback>
                           ) : null}
-                          
+
                         </div>
                       </div>
                     </Col>
@@ -301,7 +300,7 @@ const InvoiceCreate = () => {
                         {validation.errors.email && validation.touched.email ? (
                           <FormFeedback type="invalid">{validation.errors.email}</FormFeedback>
                         ) : null}
-                        
+
                       </div>
                       <div className="mb-2">
                         <Input
@@ -318,7 +317,7 @@ const InvoiceCreate = () => {
                         {validation.errors.website && validation.touched.website ? (
                           <FormFeedback type="invalid">{validation.errors.website}</FormFeedback>
                         ) : null}
-                        
+
                       </div>
                       <div>
                         <Input
@@ -336,7 +335,7 @@ const InvoiceCreate = () => {
                         {validation.errors.contact && validation.touched.contact ? (
                           <FormFeedback type="invalid">{validation.errors.contact}</FormFeedback>
                         ) : null}
-                        
+
                       </div>
                     </Col>
                   </Row>
@@ -353,7 +352,7 @@ const InvoiceCreate = () => {
                         value={validation.values.invoiceId || ""}
                         onBlur={validation.handleBlur}
                         onChange={validation.handleChange}
-                        placeholder="#VL20499516" 
+                        placeholder="#VL96900128"
                         invalid={validation.errors.invoiceId && validation.touched.invoiceId ? true : false}
                       />
                       {validation.errors.invoiceId && validation.touched.invoiceId ? (
@@ -367,7 +366,7 @@ const InvoiceCreate = () => {
                           name="date"
                           id="date-field"
                           className="form-control"
-                          placeholder="Select Date-time"
+                          placeholder="Select Date-Time"
                           options={{
                             altInput: true,
                             altFormat: "d M, Y",
@@ -377,7 +376,6 @@ const InvoiceCreate = () => {
                             dateformate(e)
                           }
                           value={validation.values.date || ""}
-
                         />
                         {validation.touched.date && validation.errors.date ? (
                           <FormFeedback type="invalid">{validation.errors.date}</FormFeedback>
@@ -411,7 +409,7 @@ const InvoiceCreate = () => {
                             {validation.errors.status}
                           </FormFeedback>
                         ) : null}
-                      
+
                       </div>
                     </Col>
                     <Col lg={3} sm={6}>
@@ -455,7 +453,7 @@ const InvoiceCreate = () => {
                         {validation.errors.name && validation.touched.name ? (
                           <FormFeedback type="invalid">{validation.errors.name}</FormFeedback>
                         ) : null}
-                        
+
                       </div>
                       <div className="mb-2">
                         <Input
@@ -473,7 +471,7 @@ const InvoiceCreate = () => {
                         {validation.errors.billing_address && validation.touched.billing_address ? (
                           <FormFeedback type="invalid">{validation.errors.billing_address}</FormFeedback>
                         ) : null}
-                        
+
                       </div>
                       <div className="mb-2">
                         <Input
@@ -491,7 +489,7 @@ const InvoiceCreate = () => {
                         {validation.errors.billing_phone && validation.touched.billing_phone ? (
                           <FormFeedback type="invalid">{validation.errors.billing_phone}</FormFeedback>
                         ) : null}
-                       
+
                       </div>
                       <div className="mb-3">
                         <Input
@@ -508,7 +506,7 @@ const InvoiceCreate = () => {
                         {validation.errors.billing_taxno && validation.touched.billing_taxno ? (
                           <FormFeedback type="invalid">{validation.errors.billing_taxno}</FormFeedback>
                         ) : null}
-                        
+
                       </div>
                       <div className="form-check">
                         <Input
@@ -548,7 +546,7 @@ const InvoiceCreate = () => {
                             {validation.errors.shipping_name && validation.touched.shipping_name ? (
                               <FormFeedback type="invalid">{validation.errors.shipping_name}</FormFeedback>
                             ) : null}
-                            
+
                           </div>
                           <div className="mb-2">
                             <Input
@@ -566,7 +564,7 @@ const InvoiceCreate = () => {
                             {validation.errors.shipping_address && validation.touched.shipping_address ? (
                               <FormFeedback type="invalid">{validation.errors.shipping_address}</FormFeedback>
                             ) : null}
-                            
+
                           </div>
                           <div className="mb-2">
                             <Input
@@ -584,7 +582,7 @@ const InvoiceCreate = () => {
                             {validation.errors.shipping_phone && validation.touched.shipping_phone ? (
                               <FormFeedback type="invalid">{validation.errors.shipping_phone}</FormFeedback>
                             ) : null}
-                            
+
                           </div>
                           <div>
                             <Input
@@ -601,7 +599,7 @@ const InvoiceCreate = () => {
                             {validation.errors.shipping_taxno && validation.touched.shipping_taxno ? (
                               <FormFeedback type="invalid">{validation.errors.shipping_taxno}</FormFeedback>
                             ) : null}
-                            
+
                           </div>
                         </Col>
                       </Row>
@@ -669,7 +667,7 @@ const InvoiceCreate = () => {
                               {validation.errors.product_name && validation.touched.product_name ? (
                                 <FormFeedback type="invalid">{validation.errors.product_name}</FormFeedback>
                               ) : null}
-                              
+
                             </div>
                             <Input
                               type="textarea"
@@ -885,19 +883,8 @@ const InvoiceCreate = () => {
                     >
                       NOTES
                     </Label>
-                    <Input
-                      type="textarea"
-                      className="form-control alert alert-info"
-                      id="exampleFormControlTextarea1"
-                      placeholder="Notes"
-                      rows="2"
-                      defaultValue="All accounts are to be paid within 7 days from receipt of
-                      invoice. To be paid by cheque or credit card or direct
-                      payment online. If account is not paid within 7 days the
-                      credits details supplied as confirmation of work
-                      undertaken will be charged the agreed quoted fee noted
-                      above."
-                    />
+                   
+                    <textarea className="form-control alert alert-info" id="exampleFormControlTextarea1" placeholder="Notes" rows="2" required>All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or credit card or direct payment online. If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed quoted fee noted above.</textarea>
                   </div>
                   <div className="hstack gap-2 justify-content-end d-print-none mt-4">
                     <button type="submit" className="btn btn-success">

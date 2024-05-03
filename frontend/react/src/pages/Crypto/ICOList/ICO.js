@@ -86,7 +86,7 @@ const ICO = () => {
                             <Col xxl={3} md={6}>
                                 <Card className="overflow-hidden">
                                     <CardBody className="bg-success-subtle">
-                                        <h5 className="fs-17 text-center mb-0">{item.title}</h5>
+                                        <h5 className="fs-15 text-center mb-0">{item.title}</h5>
                                     </CardBody>
                                 </Card>
                                 {(item.subItem || []).map((subItem, key) => (
@@ -99,7 +99,7 @@ const ICO = () => {
                                                     </div>
                                                 </div>
                                                 <div className="flex-grow-1 ms-3">
-                                                    <h5 className="fs-15 mb-1">{subItem.label}</h5>
+                                                    <h5 className="fs-14 mb-1">{subItem.label}</h5>
                                                     <p className="text-muted mb-2">{subItem.caption}</p>
                                                 </div>
                                                 <div>
@@ -123,7 +123,7 @@ const ICO = () => {
                                 <Col xxl={3} md={6}>
                                     <Card className="overflow-hidden">
                                         <CardBody className="bg-danger-subtle">
-                                            <h5 className="fs-17 text-center mb-0">{item.title}</h5>
+                                            <h5 className="fs-15 text-center mb-0">{item.title}</h5>
                                         </CardBody>
                                     </Card>
                                     {(item.subItem || []).map((subItem, key) => (
@@ -136,7 +136,7 @@ const ICO = () => {
                                                         </div>
                                                     </div>
                                                     <div className="flex-grow-1 ms-3">
-                                                        <h5 className="fs-15 mb-1">{subItem.label}</h5>
+                                                        <h5 className="fs-14 mb-1">{subItem.label}</h5>
                                                         <p className="text-muted mb-2">{subItem.caption}</p>
                                                     </div>
                                                     <div>
@@ -160,7 +160,7 @@ const ICO = () => {
                                     <Col xxl={3} md={6}>
                                         <Card className="overflow-hidden">
                                             <CardBody className="bg-primary-subtle">
-                                                <h5 className="fs-17 text-center mb-0">{item.title}</h5>
+                                                <h5 className="fs-15 text-center mb-0">{item.title}</h5>
                                             </CardBody>
                                         </Card>
                                         {(item.subItem || []).map((subItem, key) => (
@@ -173,7 +173,7 @@ const ICO = () => {
                                                             </div>
                                                         </div>
                                                         <div className="flex-grow-1 ms-3">
-                                                            <h5 className="fs-15 mb-1">{subItem.label}</h5>
+                                                            <h5 className="fs-14 mb-1">{subItem.label}</h5>
                                                             <p className="text-muted mb-2">{subItem.caption}</p>
                                                         </div>
                                                         <div>
@@ -197,7 +197,7 @@ const ICO = () => {
                                         <Col xxl={3} md={6}>
                                             <Card className="overflow-hidden">
                                                 <CardBody className="bg-info-subtle">
-                                                    <h5 className="fs-17 text-center mb-0">{item.title}</h5>
+                                                    <h5 className="fs-15 text-center mb-0">{item.title}</h5>
                                                 </CardBody>
                                             </Card>
                                             {(item.subItem || []).map((subItem, key) => (
@@ -211,7 +211,7 @@ const ICO = () => {
                                                                 </div>
                                                             </div>
                                                             <div className="flex-grow-1 ms-3">
-                                                                <h5 className="fs-15 mb-1">{subItem.label}</h5>
+                                                                <h5 className="fs-14 mb-1">{subItem.label}</h5>
                                                                 <p className="text-muted mb-2">{subItem.caption}</p>
                                                             </div>
                                                             <div className="me-4">

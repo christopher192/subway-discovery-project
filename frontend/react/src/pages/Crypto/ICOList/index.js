@@ -5,12 +5,12 @@ import Widgets from './Widgets';
 import ICO from './ICO';
 
 const ICOList = () => {
-    document.title="ICO LIST | Velzon - React Admin & Dashboard Template";
+  document.title="ICO List | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="ICO LIST" pageTitle="Crypto" />
+                    <BreadCrumb title="ICO List" pageTitle="Crypto" />
                     <Row>
                         <Widgets />
                     </Row>

@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardBody, Col, Container, Row } from "reactstrap";
+import { Button, Card, CardBody, Col, Container, Row } from "reactstrap";
 import BreadCrumb from "../../../Components/Common/BreadCrumb";
 
 const TermsCondition = () => {
-  document.title = "Terms & Condition | Velzon - React Admin & Dashboard Template";
+  document.title =
+    "Terms & Condition | Velzon - React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
           <BreadCrumb title="Terms & Condition" pageTitle="Pages" />
           <Row className="justify-content-center">
-            <Col lg={10}>
+            <Col className="col-lg-10">
               <Card>
                 <div className="bg-warning-subtle position-relative">
-                  <CardBody className="p-5">
+                  <CardBody className="card-body p-5">
                     <div className="text-center">
                       <h3>Term & Conditions</h3>
                       <p className="mb-0 text-muted">
@@ -22,30 +23,6 @@ const TermsCondition = () => {
                       </p>
                     </div>
                   </CardBody>
-                  {/* <div className="shape">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xmlnsXlink="http://www.w3.org/1999/xlink"
-                      width="1440"
-                      height="60"
-                      preserveAspectRatio="none"
-                      viewBox="0 0 1440 60"
-                    >
-                      <g mask='url("#SvgjsMask1001")' fill="none">
-                        <path
-                          d="M 0,4 C 144,13 432,48 720,49 C 1008,50 1296,17 1440,9L1440 60L0 60z"
-                          style={{ fill: "var(--vz-card-bg-custom)" }}
-                        ></path>
-                      </g>
-                      <defs>
-                        <mask id="SvgjsMask1001">
-                          <rect width="1440" height="60" fill="#ffffff"></rect>
-                        </mask>
-                      </defs>
-                    </svg>
-                  </div> */}
-
                   <div className="shape">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsxlink="http://www.w3.org/1999/xlink" xmlnssvgjs="http://svgjs.com/svgjs" width="1440" height="60" preserveAspectRatio="none" viewBox="0 0 1440 60">
                       <g mask="url(&quot;#SvgjsMask1001&quot;)" fill="none">
@@ -53,7 +30,7 @@ const TermsCondition = () => {
                       </g>
                       <defs>
                         <mask id="SvgjsMask1001">
-                          <rect width="1440" height="60" fill="#FFFFFF"></rect>
+                          <rect width="1440" height="60" fill="#ffffff"></rect>
                         </mask>
                       </defs>
                     </svg>
@@ -176,13 +153,15 @@ const TermsCondition = () => {
                   </div>
 
                   <div className="text-end">
-                    <Link to="#" className="btn btn-success me-2">
+                    <Button color="success" className="btn btn-success">
                       Accept
-                    </Link>
-                    <Link to="#" className="btn btn-outline-danger">
-                      <i className="ri-close-line align-bottom me-1"></i>{" "}
-                      Decline
-                    </Link>
+                    </Button>
+                    <Button
+                      color="outline-danger"
+                      className="btn btn-outline-danger m-1"
+                    >
+                      <i className="ri-close-line align-bottom "></i> Decline
+                    </Button>
                   </div>
                 </CardBody>
               </Card>

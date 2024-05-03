@@ -28,6 +28,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import BootstrapTheme from "@fullcalendar/bootstrap";
 import Flatpickr from "react-flatpickr";
+import listPlugin from '@fullcalendar/list';
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
@@ -38,7 +39,6 @@ import DeleteModal from "../../../Components/Common/DeleteModal";
 //Simple bar
 import SimpleBar from "simplebar-react";
 import UpcommingEvents from './UpcommingEvents';
-import listPlugin from '@fullcalendar/list';
 
 import {
   getEvents as onGetEvents,
@@ -61,22 +61,24 @@ const Calender = () => {
   const [isEditButton, setIsEditButton] = useState(true);
   const [upcommingevents, setUpcommingevents] = useState([]);
 
-
   const selectLayoutState = (state) => state.Calendar;
-  const calendarDataProperties = createSelector(
-    selectLayoutState,
-    (state) => ({
-      events: state.events,
-      categories: state.categories,
-      isEventUpdated: state.isEventUpdated,
-    })
-  );
-  // Inside your component
+  const selectLayoutProperties = createSelector(
+      selectLayoutState,
+      (calender) => ({
+        events: calender.events,
+        categories: calender.categories,
+        isEventUpdated : calender.isEventUpdated ,
+         
+      })
+    );
+  
+    // Inside your component
   const {
-    events, categories, isEventUpdated
-  } = useSelector(calendarDataProperties);
-
-
+    events,
+    categories,
+    isEventUpdated ,
+      
+  } = useSelector(selectLayoutProperties);  
   useEffect(() => {
     dispatch(onGetEvents());
     dispatch(onGetCategories());
@@ -86,13 +88,10 @@ const Calender = () => {
   }, [dispatch]);
 
   useEffect(() => {
-
     setUpcommingevents(events);
-
-    upcommingevents.slice().sort(function (o1, o2) {
+    Object.entries(upcommingevents).sort((o1, o2) => {
       return new Date(o1.start) - new Date(o2.start);
     });
-
   }, [events, upcommingevents]);
 
   useEffect(() => {
@@ -219,6 +218,7 @@ const Calender = () => {
   /**
    * On delete event
    */
+ 
   const handleDeleteEvent = () => {
     dispatch(onDeleteEvent(event.id));
     setDeleteModal(false);
@@ -284,7 +284,6 @@ const Calender = () => {
   });
 
   const submitOtherEvent = () => {
-
     document.getElementById("form-event").classList.remove("view-event");
 
     document
@@ -314,7 +313,7 @@ const Calender = () => {
     document
       .getElementById("event-description-tag")
       .classList.replace("d-block", "d-none");
-
+    // document.getElementById("btn-save-event").removeAttribute("hidden");
     setIsEditButton(true);
   };
 
@@ -364,6 +363,7 @@ const Calender = () => {
   };
 
   document.title = "Calendar | Velzon - React Admin & Dashboard Template";
+
   return (
     <React.Fragment>
       <DeleteModal
@@ -394,7 +394,7 @@ const Calender = () => {
                           Drag and drop your event or click in the calendar
                         </p>
                         {categories &&
-                          categories.map((category) => (
+                          categories.map((category, i) => (
                             <div
                               className={`bg-${category.type}-subtle external-event fc-event text-${category.type}`}
                               key={"cat-" + category.id}
@@ -420,9 +420,7 @@ const Calender = () => {
                       <div id="upcoming-event-list">
                         {upcommingevents &&
                           upcommingevents.map((event, key) => (
-                            <React.Fragment key={key}>
-                              <UpcommingEvents event={event} />
-                            </React.Fragment>
+                            <UpcommingEvents event={event} key={key} />
                           ))}
                       </div>
                     </SimpleBar>
@@ -582,6 +580,12 @@ const Calender = () => {
                             onChange={validation.handleChange}
                             onBlur={validation.handleBlur}
                             value={validation.values.category || ""}
+                          // invalid={
+                          //   validation.touched.category &&
+                          //   validation.errors.category
+                          //     ? true
+                          //     : false
+                          // }
                           >
                             <option value="bg-danger-subtle">Danger</option>
                             <option value="bg-success-subtle">Success</option>

@@ -7,7 +7,7 @@ const htmlHighlightCode =
 <!DOCTYPE html>
 <html>
     <head>
-        {document.title ="Velzon - Responsive Admin Dashboard Template"}
+        <title>Velzon - Responsive Admin Dashboard Template</title>
     </head>
     <body>
         <div>
@@ -33,7 +33,7 @@ const HtmlHighlightExample = () => (
 
 const cssHighlightCode =
 `body {
-    color: #212529; 
+    color: #363d48; 
     background-color: #f3f3f9;
     font-family: "Poppins",sans-serif;
 }

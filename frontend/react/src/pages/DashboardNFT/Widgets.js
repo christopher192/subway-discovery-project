@@ -17,7 +17,7 @@ const Widgets = () => {
                                 <h4 className="fs-18 lh-base mb-0">Discover, Collect, Sell and Create <br /> your own <span className="text-success">NFTs.</span> </h4>
                                 <p className="mb-0 mt-2 pt-1 text-muted">The world's first and largest digital marketplace.</p>
                                 <div className="d-flex gap-3 mt-4">
-                                    <Link to="/#" className="btn btn-primary">Discover Now </Link>
+                                    <Link to="/#" className="btn btn-secondary">Discover Now </Link>
                                     <Link to="/#" className="btn btn-success">Create Your Own</Link>
                                 </div>
                             </div>
@@ -43,8 +43,8 @@ const Widgets = () => {
                             </div>
                             <div className="d-flex align-items-center">
                                 <div className="avatar-sm flex-shrink-0">
-                                    <span className="avatar-title bg-info-subtle rounded fs-3">
-                                        <i className="bx bx-dollar-circle text-info"></i>
+                                    <span className="avatar-title bg-warning-subtle rounded fs-3">
+                                        <i className="bx bx-dollar-circle text-warning"></i>
                                     </span>
                                 </div>
                                 <div className="flex-grow-1 ps-3">
@@ -80,8 +80,8 @@ const Widgets = () => {
                             </div>
                             <div className="d-flex align-items-center">
                                 <div className="avatar-sm flex-shrink-0">
-                                    <span className="avatar-title bg-info-subtle rounded fs-3">
-                                        <i className="bx bx-wallet text-info"></i>
+                                    <span className="avatar-title bg-primary-subtle rounded fs-3">
+                                        <i className="bx bx-wallet text-primary"></i>
                                     </span>
                                 </div>
                                 <div className="flex-grow-1 ps-3">

@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // action
-import { registerUser, apiError, resetRegisterFlag } from "../../slices/thunks";
+import { registerUser, apiError,resetRegisterFlag } from "../../slices/thunks";
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
@@ -32,16 +32,21 @@ const Register = () => {
         initialValues: {
             email: '',
             first_name: '',
+            username: '',
             password: '',
-            confirm_password: ''
+            confirm_password: '',
         },
         validationSchema: Yup.object({
             email: Yup.string().required("Please Enter Your Email"),
             first_name: Yup.string().required("Please Enter Your Username"),
-              password: Yup.string().required("Please enter your password"),
-            confirm_password: Yup.string()
-                .oneOf([Yup.ref("password")], "Passwords do not match")
-                .required("Please confirm your password"),
+            password: Yup.string().required("Please Enter Your Password"),
+            confirm_password: Yup.string().when("password", {
+                is: val => (val && val.length > 0 ? true : false),
+                then: Yup.string().oneOf(
+                    [Yup.ref("password")],
+                    "Confirm Password Isn't Match"
+                )
+            })
         }),
         onSubmit: (values) => {
             dispatch(registerUser(values));
@@ -49,17 +54,21 @@ const Register = () => {
     });
 
     const selectLayoutState = (state) => state.Account;
-    const registerdatatype = createSelector(
-        selectLayoutState,
-        (account) => ({
-            success: account.success,
-            error: account.error
-        })
+    const registerData = createSelector(
+      selectLayoutState,
+      (accountState) => ({
+        registrationError: accountState.registrationError,
+        success: accountState.success,
+        error: accountState.error
+      })
     );
-    // Inside your component
-    const {
-        error, success
-    } = useSelector(registerdatatype);
+
+  // Inside your component
+const {
+    registrationError,
+    success,
+    error
+} = useSelector(registerData);    
 
     useEffect(() => {
         dispatch(apiError(""));
@@ -76,12 +85,12 @@ const Register = () => {
 
     }, [dispatch, success, error, history]);
 
-    document.title = "Basic SignUp | Velzon - React Admin & Dashboard Template";
+document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
             <ParticlesAuth>
-                <div className="auth-page-content mt-lg-5">
+                <div className="auth-page-content">
                     <Container>
                         <Row>
                             <Col lg={12}>
@@ -113,7 +122,6 @@ const Register = () => {
                                                     return false;
                                                 }}
                                                 className="needs-validation" action="#">
-
                                                 {success && success ? (
                                                     <>
                                                         {toast("Your Redirect To Login Page...", { position: "top-right", hideProgressBar: false, className: 'bg-success text-white', progress: undefined, toastId: "" })}
@@ -147,7 +155,7 @@ const Register = () => {
                                                     {validation.touched.email && validation.errors.email ? (
                                                         <FormFeedback type="invalid"><div>{validation.errors.email}</div></FormFeedback>
                                                     ) : null}
-
+                                                   
                                                 </div>
                                                 <div className="mb-3">
                                                     <Label htmlFor="username" className="form-label">Username <span className="text-danger">*</span></Label>
@@ -165,10 +173,10 @@ const Register = () => {
                                                     {validation.touched.first_name && validation.errors.first_name ? (
                                                         <FormFeedback type="invalid"><div>{validation.errors.first_name}</div></FormFeedback>
                                                     ) : null}
-
+                                                    
                                                 </div>
 
-                                                <div className="mb-3">
+                                                <div className="mb-2">
                                                     <Label htmlFor="userpassword" className="form-label">Password <span className="text-danger">*</span></Label>
                                                     <Input
                                                         name="password"
@@ -184,7 +192,7 @@ const Register = () => {
                                                     {validation.touched.password && validation.errors.password ? (
                                                         <FormFeedback type="invalid"><div>{validation.errors.password}</div></FormFeedback>
                                                     ) : null}
-
+                                                    
                                                 </div>
 
                                                 <div className="mb-2">
@@ -203,12 +211,11 @@ const Register = () => {
                                                     {validation.touched.confirm_password && validation.errors.confirm_password ? (
                                                         <FormFeedback type="invalid"><div>{validation.errors.confirm_password}</div></FormFeedback>
                                                     ) : null}
-
                                                 </div>
 
                                                 <div className="mb-4">
-                                                    <p className="mb-0 fs-12 text-muted fst-italic">By registering you agree to the Velzon
-                                                        <Link to="#" className="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</Link></p>
+                                                    <p className="mb-0 fs-12 text-muted fst-italic">By registering you agree to the Velzon 
+                                                    <Link to="#" className="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</Link></p>
                                                 </div>
 
                                                 <div className="mt-4">
@@ -231,9 +238,11 @@ const Register = () => {
                                         </div>
                                     </CardBody>
                                 </Card>
+
                                 <div className="mt-4 text-center">
                                     <p className="mb-0">Already have an account ? <Link to="/login" className="fw-semibold text-primary text-decoration-underline"> Signin </Link> </p>
                                 </div>
+
                             </Col>
                         </Row>
                     </Container>

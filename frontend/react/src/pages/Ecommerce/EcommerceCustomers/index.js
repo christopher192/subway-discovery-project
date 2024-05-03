@@ -14,18 +14,16 @@ import {
   Input,
   FormFeedback
 } from "reactstrap";
-
 import { Link } from "react-router-dom";
 import Flatpickr from "react-flatpickr";
 import { isEmpty } from "lodash";
 import * as moment from "moment";
 
+
 // Formik
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
-// Export Modal
-import ExportCSVModal from "../../../Components/Common/ExportCSVModal";
 
 //Import Breadcrumb
 import BreadCrumb from "../../../Components/Common/BreadCrumb";
@@ -45,27 +43,36 @@ import TableContainer from "../../../Components/Common/TableContainer";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from "../../../Components/Common/Loader";
+
+// Export Modal
+import ExportCSVModal from "../../../Components/Common/ExportCSVModal";
 import { createSelector } from "reselect";
 
 const EcommerceCustomers = () => {
   const dispatch = useDispatch();
 
   const selectLayoutState = (state) => state.Ecommerce;
-  const ecomCustomerProperties = createSelector(
-    selectLayoutState,
-    (ecom) => ({
-      customers: ecom.customers,
-      isCustomerSuccess: ecom.isCustomerSuccess,
-      error: ecom.error,
-    })
-  );
-  // Inside your component
+  const selectLayoutProperties = createSelector(
+      selectLayoutState,
+      (state) => ({
+        customers: state.customers,
+        isCustomerCreated: state.isCustomerCreated,
+          isCustomerSuccess: state.isCustomerSuccess,
+           error: state.error,
+      })
+    );
+  
+    // Inside your component
   const {
-    customers, isCustomerSuccess, error
-  } = useSelector(ecomCustomerProperties)
+    customers, 
+    isCustomerCreated, 
+    isCustomerSuccess, 
+    error
+  } = useSelector(selectLayoutProperties);   
 
   const [isEdit, setIsEdit] = useState(false);
   const [customer, setCustomer] = useState([]);
+  // const [customerList, setcustomerList] = useState([]);
 
   // Delete customer
   const [deleteModal, setDeleteModal] = useState(false);
@@ -79,6 +86,7 @@ const EcommerceCustomers = () => {
       setCustomer(null);
     } else {
       setModal(true);
+      // setDate(dateFormat());
     }
   }, [modal]);
 
@@ -97,6 +105,11 @@ const EcommerceCustomers = () => {
     setCustomer(customer);
     setDeleteModal(true);
   };
+
+  // useEffect(() => {
+  //   setcustomerList(customers);
+  // }, [customers]);
+
 
   // validation
   const validation = useFormik({
@@ -171,6 +184,9 @@ const EcommerceCustomers = () => {
     toggle();
   }, [toggle]);
 
+  // useEffect(() => {
+  //   if (!isEmpty(customers)) setcustomerList(customers);
+  // }, [customers]);
 
   useEffect(() => {
     if (customers && !customers.length) {
@@ -207,6 +223,7 @@ const EcommerceCustomers = () => {
   //   dispatch,
   //   isCustomerCreated,
   // ]);
+
 
   const handleValidDate = date => {
     const date1 = moment(new Date(date)).format("DD MMM Y");
@@ -250,7 +267,8 @@ const EcommerceCustomers = () => {
     setSelectedCheckBoxDelete(ele);
   };
 
-  // Customers Column
+
+  // Customber Column
   const columns = useMemo(
     () => [
       {
@@ -335,6 +353,7 @@ const EcommerceCustomers = () => {
     [handleCustomerClick, checkedAll]
   );
 
+
   const dateFormat = () => {
     let d = new Date(),
       months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -361,6 +380,7 @@ const EcommerceCustomers = () => {
           onCloseClick={() => setIsExportCSV(false)}
           data={customers}
         />
+
         <DeleteModal
           show={deleteModal}
           onDeleteClick={handleDeleteCustomer}
@@ -387,8 +407,8 @@ const EcommerceCustomers = () => {
                       </div>
                     </div>
                     <div className="col-sm-auto">
-                      <div>
-                        {isMultiDeleteButton && <button className="btn btn-soft-danger me-1"
+                      <div className="d-flex flex-wrap align-items-start gap-2">
+                        {isMultiDeleteButton && <button className="btn btn-soft-primary me-1"
                           onClick={() => setDeleteModalMulti(true)}
                         ><i className="ri-delete-bin-2-line"></i></button>}
                         <button
@@ -400,7 +420,7 @@ const EcommerceCustomers = () => {
                           <i className="ri-add-line align-bottom me-1"></i> Add
                           Customer
                         </button>{" "}
-                        <button type="button" className="btn btn-info" onClick={() => setIsExportCSV(true)}>
+                        <button type="button" className="btn btn-secondary" onClick={() => setIsExportCSV(true)}>
                           <i className="ri-file-download-line align-bottom me-1"></i>{" "}
                           Export
                         </button>
@@ -408,23 +428,27 @@ const EcommerceCustomers = () => {
                     </div>
                   </Row>
                 </CardHeader>
+                
                 <div className="card-body pt-0">
-                  <div>
+                <div>
                     {isCustomerSuccess && customers.length ? (
                       <TableContainer
                         columns={columns}
                         data={(customers || [])}
                         isGlobalFilter={true}
                         isAddUserList={false}
-                        customPageSize={8}
+                        customPageSize={10}
                         className="custom-header-css"
+                        theadClass="table-light text-muted"
                         handleCustomerClick={handleCustomerClicks}
                         isCustomerFilter={true}
-                        SearchPlaceholder='Search for customer, email, phone, status or something...'
+                        SearchPlaceholder="Search for customer, email, phone, status or something..."
                       />
                     ) : (<Loader error={error} />)
                     }
+
                   </div>
+
                   <Modal id="showModal" isOpen={modal} toggle={toggle} centered>
                     <ModalHeader className="bg-light p-3" toggle={toggle}>
                       {!!isEdit ? "Edit Customer" : "Add Customer"}

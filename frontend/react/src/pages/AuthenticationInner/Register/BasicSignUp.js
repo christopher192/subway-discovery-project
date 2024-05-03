@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardBody, Col, Container, Row, Form, FormFeedback, Input, Button } from 'reactstrap';
+import { Card, CardBody, Col, Container, Row, FormFeedback, Input, Button } from 'reactstrap';
 import ParticlesAuth from "../ParticlesAuth";
 
 //import images 
@@ -37,7 +37,7 @@ const BasicSignUp = () => {
     return (
         <React.Fragment>
             <ParticlesAuth>
-                <div className="auth-page-content mt-lg-5">
+                <div className="auth-page-content">
 
                     <Container>
                         <Row>
@@ -63,7 +63,7 @@ const BasicSignUp = () => {
                                             <p className="text-muted">Get your free velzon account now</p>
                                         </div>
                                         <div className="p-2 mt-4">
-                                            <Form onSubmit={validation.handleSubmit} className="needs-validation" action="#">
+                                            <form className="needs-validation" action="#">
 
                                                 <div className="mb-3">
                                                     <label htmlFor="useremail" className="form-label">Email <span className="text-danger">*</span></label>
@@ -131,7 +131,7 @@ const BasicSignUp = () => {
                                                         <button type="button" className="btn btn-info btn-icon waves-effect waves-light"><i className="ri-twitter-fill fs-16"></i></button>
                                                     </div>
                                                 </div>
-                                            </Form>
+                                            </form>
                                         </div>
                                     </CardBody>
                                 </Card>

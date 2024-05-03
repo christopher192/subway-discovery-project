@@ -5,8 +5,7 @@ import flagitaly from "../assets/images/flags/italy.svg";
 import flagrussia from "../assets/images/flags/russia.svg";
 import flagchina from "../assets/images/flags/china.svg";
 import flagfrench from "../assets/images/flags/french.svg";
-import flagarabic from "../assets/images/flags/ae.svg";
-
+import flagarabic from "../assets/images/flags/ar.svg";
 
 const languages = {
   sp: {

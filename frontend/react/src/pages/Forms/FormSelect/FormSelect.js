@@ -142,30 +142,7 @@ const FormSelect = () => {
         setselectedMulti3(selectedMulti3);
     }
 
-    document.title = "Form Select | Velzon - React Admin & Dashboard Template";
-
-    const customStyles = {
-        multiValue: (styles, { data }) => {
-            return {
-                ...styles,
-                backgroundColor: "#3762ea",
-            };
-        },
-        multiValueLabel: (styles, { data }) => ({
-            ...styles,
-            backgroundColor: "#405189",
-            color: "white",
-        }),
-        multiValueRemove: (styles, { data }) => ({
-            ...styles,
-            color: "white",
-            backgroundColor: "#405189",
-            ':hover': {
-                backgroundColor: "#405189",
-                color: 'white',
-            },
-        }),
-    }
+  document.title="Form Select | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
@@ -177,7 +154,8 @@ const FormSelect = () => {
                         <Col lg={12}>
                             <Card>
                                 <PreviewCardHeader title="Default Select" />
-                                <CardBody>
+                                <CardBody> 
+                                    <p className='text-muted'>Use<code> &lt;select&gt;</code> attribute with numerous options to show value with choice's option.</p>                                   
                                     <div className="live-preview">
                                         <Row>
                                             <Col lg={6} >
@@ -222,7 +200,8 @@ const FormSelect = () => {
                         <Col lg={12}>
                             <Card >
                                 <PreviewCardHeader title="Menu Size" />
-                                <CardBody>
+                                <CardBody>  
+                                <p className='text-muted'>Use<code> multiple</code> attribute to select multiple values and <code>size="your value"</code> attribute to show a number of choice option within a select area.</p>                                  
                                     <div className="live-preview">
                                         <Row className="gy-4">
                                             <Col lg={6}>
@@ -310,11 +289,12 @@ const FormSelect = () => {
                                 <CardHeader><h4 className="card-title mb-0">Choices</h4></CardHeader>
                                 <CardBody>
                                     <div>
-                                        <div>
+                                        <div>                                            
                                             <Row>
                                                 <Col lg={4} md={6}>
                                                     <div className="mb-3">
-                                                        <Label htmlFor="choices-single-default" className="form-label text-muted">Default</Label>
+                                                        <Label htmlFor="choices-single-default" className="form-label text-muted">Default</Label>    
+                                                        <p className="text-muted">Set <code>data-choices</code> attribute to set a default single select.</p>                                                       
                                                         <Select
                                                             value={selectedSingle}
                                                             onChange={() => {
@@ -328,7 +308,8 @@ const FormSelect = () => {
                                                 <Col lg={4} md={6}>
                                                     <div className="mb-3">
                                                         <Label htmlFor="choices-single-groups" className="form-label text-muted">Option
-                                                            Groups</Label>
+                                                            Groups</Label> 
+                                                             <p className='text-muted'>Set <code>data-choices data-choices-groups</code> attribute to set option group   </p>                                                        
                                                         <Select
                                                             value={selectedGroup}
                                                             // searchable
@@ -343,7 +324,8 @@ const FormSelect = () => {
                                                 <Col lg={4} md={6}>
                                                     <div className="mb-3">
                                                         <Label htmlFor="choices-single-no-search" className="form-label text-muted">Options added
-                                                            via config with no search</Label>
+                                                            via config with no search</Label> 
+                                                             <p className='text-muted'>Set<code> data-choices data-choices-search-false data-choices-removeItem</code>   </p>                                                                                                          
                                                         <Select
                                                             isClearable={true}
                                                             value={selectedGroup2}
@@ -358,7 +340,8 @@ const FormSelect = () => {
                                                 <Col lg={4} md={6}>
                                                     <div className="mb-3">
                                                         <Label htmlFor="choices-single-no-sorting" className="form-label text-muted">Options added
-                                                            via config with no sorting</Label>
+                                                            via config with no sorting</Label>  
+                                                            <p className='text-muted'>  Set<code> data-choices data-choices-sorting-false </code>attribute.   </p>                                                       
                                                         <Select
                                                             value={selectedNoSortingGroup}
                                                             onChange={() => {
@@ -376,15 +359,15 @@ const FormSelect = () => {
                                             <Row>
                                                 <Col lg={4} md={6}>
                                                     <div className="mb-3">
-                                                        <Label htmlFor="choices-multiple-default" className="form-label text-muted">Default</Label>
+                                                        <Label htmlFor="choices-multiple-default" className="form-label text-muted">Default</Label>   
+                                                        <p className='text-muted'>Set<code> data-choices multiple</code> attribute.  </p>                                                     
                                                         <Select
                                                             value={selectedMulti}
-                                                            isMulti={true}
+                                                            isMulti={true}                                                            
                                                             onChange={() => {
                                                                 handleMulti();
                                                             }}
                                                             options={SingleOptions}
-                                                            style={customStyles}
                                                         />
                                                     </div>
                                                 </Col>
@@ -392,7 +375,8 @@ const FormSelect = () => {
                                                 <Col lg={4} md={6}>
                                                     <div className="mb-3">
                                                         <Label htmlFor="choices-multiple-remove-button" className="form-label text-muted">With
-                                                            remove button</Label>
+                                                            remove button</Label> 
+                                                            <p className='text-muted'> Set<code> data-choices data-choices-removeItem multiple </code>attribute. </p>                                                        
                                                         <Select
                                                             value={selectedMulti2}
                                                             isMulti={true}
@@ -401,7 +385,6 @@ const FormSelect = () => {
                                                                 handleMulti2();
                                                             }}
                                                             options={SingleOptions}
-                                                            style={customStyles}
                                                         />
                                                     </div>
                                                 </Col>
@@ -409,7 +392,8 @@ const FormSelect = () => {
                                                 <Col lg={4} md={6}>
                                                     <div className="mb-3">
                                                         <Label htmlFor="choices-multiple-groups" className="form-label text-muted">Option
-                                                            groups</Label>
+                                                            groups</Label>   
+                                                            <p className='text-muted'> Set <code>data-choices data-choices-multiple-groups="true" multiple</code> attribute.  </p>                                                     
                                                         <Select
                                                             value={selectedMulti3}
                                                             isMulti={true}
@@ -427,28 +411,30 @@ const FormSelect = () => {
 
 
                                         <div className="mt-4">
-                                            <h5 className="fs-14 mb-3">Text inputs</h5>
+                                        <h5 className="fs-14 mb-3">Text inputs</h5>
                                             <Row>
-                                                <Col lg={4} md={6}>
-                                                    <div className="mb-3">
-                                                        <Label htmlFor="choices-text-remove-button" className="form-label text-muted">Set limit values with remove button</Label>
-                                                        <p className="text-muted">Set <code>data-choices data-choices-limit="Required Limit" </code> attribute.</p>
-                                                        <Input className="form-control" id="choices-text-remove-button" data-choices data-choices-limit="3" type="text" defaultValue="Task-1" />
-                                                    </div>
-                                                </Col>
-
-                                                <Col lg={4} md={6}>
-                                                    <div className="mb-3">
-                                                        <Label htmlFor="choices-text-unique-values" className="form-label text-muted">Unique values only, no pasting</Label>
-                                                        <p className="text-muted">Set <code>data-choices data-choices-text-unique-true</code> attribute.</p>
-                                                        <Input className="form-control" id="choices-text-unique-values" data-choices data-choices-text-unique-true type="text" defaultValue="Project-A, Project-B" />
-                                                    </div>
-                                                </Col>
-                                            </Row>
+                                        <Col lg={4} md={6}>
+                                            <div className="mb-3">
+                                                <Label htmlFor="choices-text-remove-button" className="form-label text-muted">Set limit values with remove button</Label>
+                                                <p className='text-muted'>Set<code>data-choices data-choices-limit="Required Limit" data-choices-removeItem</code> attribute.</p>
+                                                <input className="form-control" id="choices-text-remove-button" data-choices data-choices-limit="3" type="text" defaultValue="Task-1" />
+                                            </div>
+                                        </Col>
+                                        <Col lg={4} md={6}>
+                                            <div className="mb-3">
+                                                <Label htmlFor="choices-text-unique-values" className="form-label text-muted">Unique values only, no pasting</Label>
+                                                <p className='text-muted'>Set<code> data-choices data-choices-text-unique-true</code> attribute.</p>
+                                                <input className="form-control" id="choices-text-unique-values" data-choices data-choices-text-unique-true type="text" defaultValue="Project-A, Project-B" />
+                                            </div>
+                                        </Col>
+                                    </Row>
                                             <div>
-                                                <Label htmlFor="choices-text-disabled" className="form-label text-muted">Disabled</Label>
-                                                <p className="text-muted">Set <code>data-choices data-choices-text-disabled-true</code> attribute.</p>
-                                                <Input className="form-control" id="choices-text-disabled" data-choices data-choices-text-disabled-true type="text" defaultValue="josh@joshuajohnson.co.uk, joe@bloggs.co.uk" />
+                                                <Label htmlFor="choices-text-disabled" className="form-label text-muted">Disabled</Label>       
+                                                <p className='text-muted'>Set<code> data-choices data-choices-text-disabled-true</code> attribute.</p>                                           
+                                                <Select id={'dropdown'}
+                                                    options={options}
+                                                    isOptionDisabled={(option) => option.disabled}>
+                                                </Select>
                                             </div>
                                         </div>
                                     </div>
@@ -456,8 +442,6 @@ const FormSelect = () => {
                             </Card>
                         </Col>
                     </Row>
-
-
                 </div>
             </div>
 

@@ -19,7 +19,7 @@ const FileManagerSlice = createSlice({
     });
 
     builder.addCase(addNewFolder.fulfilled, (state, action) => {
-      state.folders.unshift(action.payload);
+      state.folders.push(action.payload);
     });
     builder.addCase(addNewFolder.rejected, (state, action) => {
       state.error = action.payload.error || null;
@@ -39,7 +39,7 @@ const FileManagerSlice = createSlice({
 
     builder.addCase(deleteFolder.fulfilled, (state, action) => {
       state.folders = state.folders.filter(
-        folder => (folder.id + "") !== (action.payload + "")
+        folder => (folder.id + '') !== (action.payload + '')
       );
     });
     builder.addCase(deleteFolder.rejected, (state, action) => {
@@ -54,7 +54,7 @@ const FileManagerSlice = createSlice({
     });
 
     builder.addCase(addNewFile.fulfilled, (state, action) => {
-      state.files.unshift(action.payload);
+      state.files.push(action.payload);
     });
 
     builder.addCase(addNewFile.rejected, (state, action) => {
@@ -62,10 +62,10 @@ const FileManagerSlice = createSlice({
     });
 
     builder.addCase(updateFile.fulfilled, (state, action) => {
-      state.files = state.files.map(files =>
-        files.id.toString() === action.payload.id.toString()
-          ? { ...files, ...action.payload }
-          : files
+      state.files = state.files.map(folder =>
+        folder.id.toString() === action.payload.id.toString()
+          ? { ...folder, ...action.payload }
+          : folder
       );
     });
 
@@ -75,7 +75,7 @@ const FileManagerSlice = createSlice({
 
     builder.addCase(deleteFile.fulfilled, (state, action) => {
       state.files = state.files.filter(
-        file => (file.id + "") !== (action.payload + "")
+        file => (file.id + '') !== (action.payload + '')
       );
     });
     builder.addCase(deleteFile.rejected, (state, action) => {

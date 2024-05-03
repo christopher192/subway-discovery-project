@@ -56,22 +56,25 @@ const EcommerceOrders = () => {
 
   const selectLayoutState = (state) => state.Ecommerce;
   const selectLayoutProperties = createSelector(
-    selectLayoutState,
-    (ecom) => ({
-      orders: ecom.orders,
-      isOrderSuccess: ecom.isOrderSuccess,
-      error: ecom.error,
-    })
-  );
-  // Inside your component
+      selectLayoutState,
+      (state) => ({
+        orders: state.orders,
+           isOrderCreated: state.isOrderCreated,
+          isOrderSuccess: state.isOrderSuccess,
+          error: state.error,
+      })
+    );
+  
+    // Inside your component
   const {
-    orders, isOrderSuccess, error
-  } = useSelector(selectLayoutProperties)
-
+    orders, 
+    isOrderCreated, 
+    isOrderSuccess, 
+    error
+  } = useSelector(selectLayoutProperties);  
 
   const [orderList, setOrderList] = useState([]);
   const [order, setOrder] = useState([]);
-  const [isExportCSV, setIsExportCSV] = useState(false);
 
   const orderstatus = [
     {
@@ -218,7 +221,7 @@ const EcommerceOrders = () => {
         validation.resetForm();
       } else {
         const newOrder = {
-          _id: (Math.floor(Math.random() * (30 - 20)) + 20).toString(),
+          _id: Math.floor(Math.random() * (30 - 20)) + 20,
           orderId: values["orderId"],
           customer: values["customer"],
           product: values["product"],
@@ -299,12 +302,10 @@ const EcommerceOrders = () => {
   //   isOrderCreated,
   // ]);
 
-
   // Checked All
   const checkedAll = useCallback(() => {
     const checkall = document.getElementById("checkBoxAll");
     const ele = document.querySelectorAll(".orderCheckBox");
-
     if (checkall.checked) {
       ele.forEach((ele) => {
         ele.checked = true;
@@ -327,8 +328,8 @@ const EcommerceOrders = () => {
       dispatch(onDeleteOrder(element.value));
       setTimeout(() => { toast.clearWaitingQueue(); }, 3000);
     });
-    checkall.checked = false;
     setIsMultiDeleteButton(false);
+    checkall.checked = false;
   };
 
   const deleteCheckbox = () => {
@@ -337,7 +338,8 @@ const EcommerceOrders = () => {
     setSelectedCheckBoxDelete(ele);
   };
 
-  // Column
+
+  // Customber Column
   const columns = useMemo(
     () => [
       {
@@ -482,7 +484,6 @@ const EcommerceOrders = () => {
     const date = dateString[2] + " " + dateString[1] + ", " + dateString[3];
     const orderDate = (date + ", " + time).toString();
     setDate(orderDate);
-
   };
 
   const handleValidDate = date => {
@@ -505,6 +506,8 @@ const EcommerceOrders = () => {
     return updateTime;
   };
 
+  const [isExportCSV, setIsExportCSV] = useState(false);
+
   document.title = "Orders | Velzon - React Admin & Dashboard Template";
   return (
     <div className="page-content">
@@ -513,11 +516,13 @@ const EcommerceOrders = () => {
         onCloseClick={() => setIsExportCSV(false)}
         data={orderList}
       />
+
       <DeleteModal
         show={deleteModal}
         onDeleteClick={handleDeleteOrder}
         onCloseClick={() => setDeleteModal(false)}
       />
+
       <DeleteModal
         show={deleteModalMulti}
         onDeleteClick={() => {
@@ -526,8 +531,8 @@ const EcommerceOrders = () => {
         }}
         onCloseClick={() => setDeleteModalMulti(false)}
       />
-      <Container fluid>
 
+      <Container fluid>
         <BreadCrumb title="Orders" pageTitle="Ecommerce" />
         <Row>
           <Col lg={12}>
@@ -561,11 +566,13 @@ const EcommerceOrders = () => {
                   </div>
                 </Row>
               </CardHeader>
+              
               <CardBody className="pt-0">
                 <div>
                   <Nav
                     className="nav-tabs nav-tabs-custom nav-success"
-                    role="tablist">
+                    role="tablist"
+                  >
                     <NavItem>
                       <NavLink
                         className={classnames(
@@ -645,6 +652,7 @@ const EcommerceOrders = () => {
                       </NavLink>
                     </NavItem>
                   </Nav>
+
                   {isOrderSuccess && orderList.length ? (
                     <TableContainer
                       columns={columns}
@@ -654,13 +662,15 @@ const EcommerceOrders = () => {
                       customPageSize={8}
                       divClass="table-responsive table-card mb-1"
                       tableClass="align-middle table-nowrap"
-                      theadClass="table-light text-muted"
+                      theadClass="table-light text-muted text-uppercase"
                       handleOrderClick={handleOrderClicks}
                       isOrderFilter={true}
-                      SearchPlaceholder='Search for order ID, customer, order status or something...'
+                      SearchPlaceholder="Search for order ID, customer, order status or something..."
                     />
                   ) : (<Loader error={error} />)
                   }
+
+
                 </div>
                 <Modal id="showModal" isOpen={modal} toggle={toggle} centered>
                   <ModalHeader className="bg-light p-3" toggle={toggle}>
@@ -749,7 +759,7 @@ const EcommerceOrders = () => {
                           value={
                             validation.values.product || ""
                           }
-                          required>
+                        >
                           {productname.map((item, key) => (
                             <React.Fragment key={key}>
                               {item.options.map((item, key) => (<option value={item.value} key={key}>{item.label}</option>))}
@@ -771,6 +781,7 @@ const EcommerceOrders = () => {
 
                         <Flatpickr
                           name="orderDate"
+                          // type="date"
                           className="form-control"
                           id="datepicker-publish-input"
                           placeholder="Select a date"
@@ -785,7 +796,6 @@ const EcommerceOrders = () => {
                           }
                           value={validation.values.orderDate || ""}
                         />
-
                         {validation.touched.orderDate && validation.errors.orderDate ? (
                           <FormFeedback type="invalid">{validation.errors.orderDate}</FormFeedback>
                         ) : null}

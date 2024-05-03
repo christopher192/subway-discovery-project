@@ -30,7 +30,7 @@ const Widgets = () => {
                                 </div>
                                 <div>
                                     <div className="avatar-sm flex-shrink-0">
-                                        <span className={"avatar-title rounded-circle fs-4 bg-" + item.iconClass + "-subtle text-" + item.iconClass}>
+                                        <span className={"avatar-title rounded-circle fs-4 bg-" + item.iconClass + "-subtle  text-" + item.iconClass}>
                                             <i className={item.icon}></i>
                                         </span>
                                     </div>

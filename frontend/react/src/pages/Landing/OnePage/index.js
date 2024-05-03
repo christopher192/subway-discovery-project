@@ -16,29 +16,30 @@ import Cta from './cta';
 import Footer from './footer';
 
 const Index = () => {
-    document.title = " Landing | Velzon - React Admin & Dashboard Template";
-    
-    window.onscroll = function () {
-        scrollFunction();
-    };
+document.title =" Landing | Velzon - React Admin & Dashboard Template";
 
-    const scrollFunction = () => {
-        const element = document.getElementById("back-to-top");
-        if (element) {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                element.style.display = "block";
-            } else {
-                element.style.display = "none";
-            }
+window.onscroll = function () {
+    scrollFunction();
+};
+
+const scrollFunction = () => {
+    const element = document.getElementById("back-to-top");
+    if (element) {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
         }
-    };
+    }
+};
 
-    const toTop = () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    };
+const toTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
+
     return (
-        <React.Fragment>
+        <React.Fragment>            
             <div className="layout-wrapper landing">
                 <Navbar />
                 <Home />

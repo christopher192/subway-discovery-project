@@ -11,12 +11,13 @@ const ProjectsOverview = () => {
 
     const [chartData, setchartData] = useState([]);
 
-    const selectprojectData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.DashboardProject,
         (projectData) => projectData.projectData
       );
+      
     // Inside your component
-    const projectData = useSelector(selectprojectData);
+    const projectData = useSelector(selectDashboardData);
 
 
     useEffect(() => {

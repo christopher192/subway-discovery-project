@@ -15,10 +15,10 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 //import Images
-import avatar5 from "../../../assets/images/users/avatar-5.jpg";
-import avatar4 from "../../../assets/images/users/avatar-4.jpg";
-import avatar3 from "../../../assets/images/users/avatar-3.jpg";
-import avatar7 from "../../../assets/images/users/avatar-7.jpg";
+import avatar5 from "../../../assets/images/users/avatar-5.jpg"; 
+import avatar4 from "../../../assets/images/users/avatar-4.jpg"; 
+import avatar3 from "../../../assets/images/users/avatar-3.jpg"; 
+import avatar7 from "../../../assets/images/users/avatar-7.jpg"; 
 
 import small2 from "../../../assets/images/small/img-2.jpg";
 import small3 from "../../../assets/images/small/img-3.jpg";
@@ -30,17 +30,17 @@ import small9 from "../../../assets/images/small/img-9.jpg";
 
 
 const Timeline = () => {
-
+    
     SwiperCore.use([FreeMode, Navigation, Thumbs]);
-    const [thumbsSwiper] = useState(null);
+  const [thumbsSwiper] = useState(null);
 
-    document.title = "Timeline | Velzon - React Admin & Dashboard Template";
+    document.title="Timeline | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="Timeline" pageTitle="Pages" />
+                <BreadCrumb title="Timeline" pageTitle="Pages" />       
                     <Row>
                         <Col lg={12}>
                             <div>
@@ -48,14 +48,14 @@ const Timeline = () => {
                                 <div className="timeline">
                                     <div className="timeline-item left">
                                         <i className="icon ri-stack-line"></i>
-                                        <div className="date">15 Dec 2021</div>
+                                        <div className="date fs-13">15 Dec 2021</div>
                                         <div className="content">
                                             <div className="d-flex">
                                                 <div className="flex-shrink-0">
-                                                    <img src={avatar5} alt="" className="avatar-sm rounded" />
+                                                    <img src={avatar5} alt="" className="avatar-sm rounded"/>
                                                 </div>
                                                 <div className="flex-grow-1 ms-3">
-                                                    <h5 className="fs-15">@Erica245 <small className="text-muted fs-13 fw-normal">- 10 min Ago</small></h5>
+                                                    <h5 className="fs-14">@Erica245 <small className="text-muted fs-13 fw-normal">- 10 min Ago</small></h5>
                                                     <p className="text-muted mb-2">Wish someone a sincere ‘good luck in your new job’ with these sweet messages. Make sure you pick out a good luck new job card to go with the words, and pop a beautiful bunch of flowers from our gift range in your basket, to make them feel super special.</p>
                                                     <div className="hstack gap-2">
                                                         <Link to="#" className="btn btn-sm btn-light"><span className="me-1">&#128293;</span> 19</Link>
@@ -67,9 +67,9 @@ const Timeline = () => {
                                     </div>
                                     <div className="timeline-item right">
                                         <i className="icon ri-vip-diamond-line"></i>
-                                        <div className="date">22 Oct 2021</div>
+                                        <div className="date fs-13">22 Oct 2021</div>
                                         <div className="content">
-                                            <h5>Adding a new event with attachments</h5>
+                                            <h5 className="fs-14">Adding a new event with attachments</h5>
                                             <p className="text-muted">Too much or too little spacing, as in the example below, can make things unpleasant for the reader.</p>
                                             <Row className="g-2">
                                                 <Col sm={6}>
@@ -106,16 +106,16 @@ const Timeline = () => {
                                     </div>
                                     <div className="timeline-item left">
                                         <i className="icon ri-gift-line"></i>
-                                        <div className="date">10 Jul 2021</div>
+                                        <div className="date fs-13">10 Jul 2021</div>
                                         <div className="content">
-                                            <h5>Create new project buildng product</h5>
+                                            <h5 className="fs-14">Create new project buildng product</h5>
                                             <p className="text-muted">Every team project can have a velzon. Use the velzon to share information with your team to understand and contribute to your project.</p>
                                             <div className="avatar-group mb-2">
                                                 <Link to="#" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="" data-bs-original-title="Christi">
-                                                    <img src={avatar4} alt="" className="rounded-circle avatar-xs" />
+                                                    <img src={avatar4} alt="" className="rounded-circle avatar-xs"/>
                                                 </Link>
                                                 <Link to="#" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="" data-bs-original-title="Frank Hook">
-                                                    <img src={avatar3} alt="" className="rounded-circle avatar-xs" />
+                                                    <img src={avatar3} alt="" className="rounded-circle avatar-xs"/>
                                                 </Link>
                                                 <Link to="#" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="" data-bs-original-title=" Ruby">
                                                     <div className="avatar-xs">
@@ -136,9 +136,9 @@ const Timeline = () => {
                                     </div>
                                     <div className="timeline-item right">
                                         <i className="icon ri-shield-star-line"></i>
-                                        <div className="date">18 May 2021</div>
+                                        <div className="date fs-13">18 May 2021</div>
                                         <div className="content">
-                                            <h5>Donald Palmer <small className="text-muted fs-13 fw-normal">- Has changed 2 attributes</small></h5>
+                                            <h5 className="fs-14">Donald Palmer <small className="text-muted fs-13 fw-normal">- Has changed 2 attributes</small></h5>
                                             <p className="text-muted fst-italic mb-2">" This is an awesome admin dashboard template. It is extremely well structured and uses state of the art components (e.g. one of the only templates using boostrap 5.1.3 so far). I integrated it into a Rails 6 project. Needs manual integration work of course but the template structure made it easy. "</p>
                                             <div className="hstack gap-2">
                                                 <Link to="#" className="btn btn-sm bg-light"><span className="me-1">&#128151;</span> 35</Link>
@@ -149,9 +149,9 @@ const Timeline = () => {
                                     </div>
                                     <div className="timeline-item left">
                                         <i className="icon ri-user-smile-line"></i>
-                                        <div className="date">10 Feb 2021</div>
+                                        <div className="date fs-13">10 Feb 2021</div>
                                         <div className="content">
-                                            <h5>Velzon admin dashboard templates layout upload</h5>
+                                            <h5 className="fs-14">Velzon admin dashboard templates layout upload</h5>
                                             <p className="text-muted">Powerful, clean & modern responsive bootstrap 5 admin template. The maximum file size for uploads in this demo :</p>
                                             <Row className="border border-dashed rounded gx-2 p-2">
                                                 <Col xs={3}>
@@ -171,9 +171,9 @@ const Timeline = () => {
                                     </div>
                                     <div className="timeline-item right">
                                         <i className="icon ri-fire-line"></i>
-                                        <div className="date">01 Jan 2021</div>
+                                        <div className="date fs-13">01 Jan 2021</div>
                                         <div className="content">
-                                            <h5>New ticket received <span className="badge bg-success-subtle text-success fs-10 align-middle ms-1">Completed</span></h5>
+                                            <h5 className="fs-14">New ticket received <span className="badge bg-success-subtle text-success fs-10 align-middle ms-1">Completed</span></h5>
                                             <p className="text-muted mb-2">
                                                 It is important for us that we receive email notifications when a ticket is created as our IT staff are mobile and will not always be looking at the dashboard for new tickets.
                                             </p>
@@ -206,7 +206,7 @@ const Timeline = () => {
                                                         <div className="d-flex">
                                                             <img src={avatar7} alt="" className="avatar-sm rounded" />
                                                             <div className="flex-grow-1 ms-3">
-                                                                <h5 className="mb-1">Frank hook joined with our company</h5>
+                                                                <h5 className="mb-1 fs-15">Frank hook joined with our company</h5>
                                                                 <p className="text-muted mb-0">It makes a statement, it’s impressive graphic design. Increase or decrease the letter spacing depending on the situation and try, try again until it looks right, and each letter has the perfect spot of its own. </p>
                                                             </div>
                                                         </div>
@@ -224,7 +224,7 @@ const Timeline = () => {
                                             <Col xs={12}>
                                                 <div className="timeline-box">
                                                     <div className="timeline-text">
-                                                        <h5>Trip planning</h5>
+                                                        <h5 className="fs-15">Trip planning</h5>
                                                         <p className="text-muted">In the trip planner, keep only one or two activities in a day if the purpose of the trip is to relax and take it easy during the vacation :</p>
                                                         <Row className="border border-dashed rounded gx-2 p-2">
                                                             <Col xs={3}>
@@ -262,7 +262,7 @@ const Timeline = () => {
                                             <Col xs={12}>
                                                 <div className="timeline-box">
                                                     <div className="timeline-text">
-                                                        <h5>Velzon - Project Discussion</h5>
+                                                        <h5 className="fs-15">Velzon - Project Discussion</h5>
                                                         <p className="text-muted mb-0">The purpose of the discussion is to interpret and describe the significance of your findings in light of what was already known about the research problem being investigated, and to explain any new understanding or fresh insights about the problem after you've taken the findings into consideration.</p>
                                                     </div>
                                                 </div>
@@ -278,7 +278,7 @@ const Timeline = () => {
                                             <Col xs={12}>
                                                 <div className="timeline-box">
                                                     <div className="timeline-text">
-                                                        <h5>Client Meeting (Nancy Martino)</h5>
+                                                        <h5 className="fs-15">Client Meeting (Nancy Martino)</h5>
                                                         <p className="text-muted mb-0">A client meeting, meaning, direct collaboration and communication with a customer, is the best way to understand their needs and how you can help support them.</p>
                                                     </div>
                                                 </div>
@@ -294,7 +294,7 @@ const Timeline = () => {
                                             <Col xs={12}>
                                                 <div className="timeline-box">
                                                     <div className="timeline-text">
-                                                        <h5>Designer & Developer Meeting</h5>
+                                                        <h5 className="fs-15">Designer & Developer Meeting</h5>
                                                         <ul className="mb-0 text-muted vstack gap-2">
                                                             <li>Last updates</li>
                                                             <li>Weekly Planning</li>
@@ -312,7 +312,7 @@ const Timeline = () => {
                                     <div className="timeline-launch">
                                         <div className="timeline-box">
                                             <div className="timeline-text">
-                                                <h5>Our Company Activity</h5>
+                                                <h5 className="fs-15">Our Company Activity</h5>
                                                 <p className="text-muted text-capitalize mb-0">Wow...!!! What a Journey So Far...!!!</p>
                                             </div>
                                         </div>
@@ -326,11 +326,11 @@ const Timeline = () => {
                             <div>
                                 <h5>Horizontal Timeline</h5>
                                 <div className="horizontal-timeline my-3">
-                                    <Swiper className="timelineSlider"
+                                <Swiper className="timelineSlider"
                                         navigation={true}
                                         thumbs={{ swiper: thumbsSwiper }}
                                         slidesPerView={5}
-                                    >
+                                    >                                      
                                         <div className="swiper-wrapper">
                                             <SwiperSlide>
                                                 <div className="card pt-2 border-0 item-box text-center">
@@ -430,11 +430,11 @@ const Timeline = () => {
                     </Row>
 
                 </Container>
-
+                
             </div>
         </React.Fragment>
-    );
-};
+    )
+}
 
 export default Timeline
 

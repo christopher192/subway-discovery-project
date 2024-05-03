@@ -65,7 +65,7 @@ const RecentNFTs = () => {
                                                             <img src={item.img} alt="" className="avatar-xs rounded-circle" />
                                                         </div>
                                                         <div className="flex-grow-1">
-                                                            <h6 className="mb-1"><Link to="/apps-nft-item-details">{item.title}</Link></h6>
+                                                            <h6 className="mb-1"><Link to="/apps-nft-item-details" className="text-body">{item.title}</Link></h6>
                                                             <p className="text-muted mb-0"> {item.category} </p>
                                                         </div>
                                                     </div>
@@ -139,14 +139,14 @@ const RecentNFTs = () => {
                                                 <img src={item.img} alt="" height="220" className="object-fit-cover w-100" />
                                                 <div className="content position-absolute bottom-0 m-2 p-2 start-0 end-0 rounded d-flex align-items-center">
                                                     <div className="flex-grow-1">
-                                                        <Link to="#">
+                                                        <Link to="#!">
                                                             <h5 className="text-white fs-16 mb-1">{item.category}</h5>
                                                         </Link>
                                                         <p className="text-white text-opacity-75 mb-0">{item.items} Items</p>
                                                     </div>
                                                     <div className="avatar-xxs">
                                                         <div className="avatar-title bg-white rounded-circle">
-                                                            <Link to="#" className="link-success"><i className="ri-arrow-right-line"></i></Link>
+                                                            <Link to="#!" className="link-success"><i className="ri-arrow-right-line"></i></Link>
                                                         </div>
                                                     </div>
                                                 </div>

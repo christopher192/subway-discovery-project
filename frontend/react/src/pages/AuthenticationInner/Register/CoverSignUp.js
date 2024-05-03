@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Col, Container, Row, Form, FormFeedback, Input, Button } from 'reactstrap';
+import { Card, Col, Container, Row, FormFeedback, Input, Button } from 'reactstrap';
 
 import AuthSlider from '../authCarousel';
 
@@ -31,6 +31,7 @@ const CoverSignUp = () => {
             // console.log(values);
         }
     });
+
     return (
         <React.Fragment>
             <div className="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
@@ -43,7 +44,7 @@ const CoverSignUp = () => {
                                     <Row className="justify-content-center g-0">
                                         <AuthSlider />
 
-                                        <Col lg={6}>
+                                        <div className="col-lg-6">
                                             <div className="p-lg-5 p-4">
                                                 <div>
                                                     <h5 className="text-primary">Register Account</h5>
@@ -51,7 +52,7 @@ const CoverSignUp = () => {
                                                 </div>
 
                                                 <div className="mt-4">
-                                                    <Form onSubmit={validation.handleSubmit} className="needs-validation" noValidate action="index">
+                                                    <form className="needs-validation" noValidate action="index">
 
                                                         <div className="mb-3">
                                                             <label htmlFor="useremail" className="form-label">Email <span className="text-danger">*</span></label>
@@ -119,14 +120,14 @@ const CoverSignUp = () => {
                                                                 <button type="button" className="btn btn-info btn-icon waves-effect waves-light"><i className="ri-twitter-fill fs-16"></i></button>
                                                             </div>
                                                         </div>
-                                                    </Form>
+                                                    </form>
                                                 </div>
 
                                                 <div className="mt-5 text-center">
                                                     <p className="mb-0">Already have an account ? <Link to="/auth-signin-cover" className="fw-semibold text-primary text-decoration-underline"> Signin</Link> </p>
                                                 </div>
                                             </div>
-                                        </Col>
+                                        </div>
                                     </Row>
                                 </Card>
                             </Col>
@@ -140,7 +141,7 @@ const CoverSignUp = () => {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="text-center">
-                                    <p className="mb-0">{new Date().getFullYear()} Velzon. Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                    <p className="mb-0">&copy; {new Date().getFullYear()} Velzon. Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                                 </div>
                             </div>
                         </div>

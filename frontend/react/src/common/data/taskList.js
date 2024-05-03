@@ -86,7 +86,7 @@ const allTask = [
         id: 2,
         taskId: "#VLZ453",
         project: "Skote - v1.0.0",
-        task: "Profile Page Satructure",
+        task: "Profile Page Structure",
         creater: "Mary Cousar",
         // subItem: [avatar10, avatar9, avatar5],
         subItem: [{ id: 1, img: avatar10 }, { id: 2, img: avatar9 }, { id: 3, img: avatar5 }],
@@ -234,7 +234,7 @@ const kanbanBoardData = [
             {
                 id: 11,
                 taskId: "#VL2436",
-                title: "Profile Page Satructure",
+                title: "Profile Page Structure",
                 desc: "Profile Page means a web page accessible to the public or to guests.",
                 progressBar: "15%",
                 date: "03 Jan, 2022",
@@ -513,4 +513,5 @@ const kanbanBoardData = [
         ]
     },
 ];
+
 export { taskWidgets, allTask, kanbanBoardData };

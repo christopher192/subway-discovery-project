@@ -13,7 +13,7 @@ const Widgets = () => {
                             <div className="d-flex justify-content-between">
                                 <div>
                                     <p className="fw-medium text-muted mb-0">{item.title}</p>
-                                    <h2 className="mt-4 ff-secondary fw-semibold">
+                                    <h2 className="mt-4 ff-secondary">
                                         <span className="counter-value" data-target="547">
                                             <CountUp
                                                 start={0}
@@ -25,7 +25,7 @@ const Widgets = () => {
                                             />
                                         </span>
                                     </h2>
-                                    <p className="mb-0 text-muted"><span className={"badge bg-" + item.percentageClass + "-subtle text-" + item.percentageClass + " mb-0"}>
+                                    <p className="mb-0 text-muted"><span className={"badge bg-light text-" + item.percentageClass + " mb-0"}>
                                         <i className={item.arrowIcon + " align-middle"}></i> {item.percentage}
                                     </span> vs. previous month</p>
                                 </div>

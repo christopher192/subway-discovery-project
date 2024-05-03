@@ -17,6 +17,7 @@ const Marketplace = () => {
             ele.closest("button").classList.add("active");
         }
     };
+
     return (
         <React.Fragment>
             <div className="page-content">
@@ -33,8 +34,8 @@ const Marketplace = () => {
                                                     {item.isChildren.map((item, key) => (<img src={item.img} alt="" className={"img-fluid rounded " + item.imgClass} key={key} />))}
                                                 </Col>))}
                                             </Row>
-                                            <Link to="#" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
-                                            <h5 className="mb-0 fs-16"><Link to="#">{item.category} <span className="badge bg-success-subtle text-success">{item.quantity}</span></Link></h5>
+                                            <Link to="#!" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
+                                            <h5 className="mb-0 fs-16"><Link to="#!" className="text-body">{item.category} <span className="badge bg-success-subtle text-success">{item.quantity}</span></Link></h5>
                                         </CardBody>
                                     </Card>
                                 </Col>))}
@@ -59,16 +60,13 @@ const Marketplace = () => {
                         </Col>
                     </Row>
 
-
                     <Row>
                         <Col lg={12}>
                             <Card className="overflow-hidden shadow-none">
                                 <CardBody className="bg-success-subtle text-success fw-semibold d-flex">
-                                    <marquee>
-                                        <div>
-                                            <span>NFT art is a digital asset that is collectable, unique, and non-transferrable, Cortes explained. Every NFT is unique in it's creative design and cannot be duplicated, making them limited and rare. NFTs get their value because the transaction proves ownership of the art.</span>
-                                        </div>
-                                    </marquee>
+                                <marquee className="fs-14">
+                                            NFT art is a digital asset that is collectable, unique, and non-transferrable, Cortes explained. Every NFT is unique in its creative design and cannot be duplicated, making them limited and rare. NFTs get their value because the transaction proves ownership of the art.
+                                        </marquee>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -78,7 +76,7 @@ const Marketplace = () => {
                         <Col lg={12}>
                             <div className="d-lg-flex align-items-center mb-4">
                                 <div className="flex-grow-1">
-                                    <h5 className="card-title mb-0 fw-semibold fs-16">Trending Artwork</h5>
+                                    <h5 className="card-title mb-0 fw-bold fs-17">Trending Artwork</h5>
                                 </div>
                                 <div className="flex-shrink-0 mt-4 mt-lg-0">
                                     <Link to="/apps-nft-explore" className="btn btn-soft-primary">View All <i className="ri-arrow-right-line align-bottom"></i></Link>
@@ -113,13 +111,13 @@ const Marketplace = () => {
                                             <img src={item.cardImg} alt="" className="img-fluid explore-img" />
                                             <div className="bg-overlay"></div>
                                             <div className="place-bid-btn">
-                                                <Link to="#" className="btn btn-success"><i className="ri-auction-fill align-bottom me-1"></i> Place Bid</Link>
+                                                <Link to="#!" className="btn btn-success"><i className="ri-auction-fill align-bottom me-1"></i> Place Bid</Link>
                                             </div>
                                         </div>
                                         <div className="mt-3">
                                             <p className="fw-medium mb-0 float-end"><i className="mdi mdi-heart text-danger align-middle"></i> {item.likes} </p>
                                             <h5 className="text-success"><i className="mdi mdi-ethereum"></i> {item.price} </h5>
-                                            <h6 className="fs-16 mb-0"><Link to="/apps-nft-item-details">{item.category}</Link></h6>
+                                            <h6 className="fs-16 mb-0"><Link to="/apps-nft-item-details" className="text-body">{item.category}</Link></h6>
                                         </div>
                                     </CardBody>
                                 </Card>
@@ -131,7 +129,7 @@ const Marketplace = () => {
                         <Col lg={12}>
                             <div className="d-lg-flex align-items-center mb-4">
                                 <div className="flex-grow-1">
-                                    <h5 className="card-title mb-0 fw-semibold fs-16">Recent NFTs Artwork</h5>
+                                    <h5 className="card-title mb-0 fw-bold fs-17">Recent NFTs Artwork</h5>
                                 </div>
                                 <div className="flex-shrink-0 mt-4 mt-lg-0">
                                     <Link to="/apps-nft-creators" className="btn btn-soft-primary">View All <i className="ri-arrow-right-line align-bottom"></i></Link>
@@ -151,12 +149,12 @@ const Marketplace = () => {
                                         <img src={item.img} alt="" className="card-img-top explore-img" />
                                         <div className="bg-overlay"></div>
                                         <div className="place-bid-btn">
-                                            <Link to="#" className="btn btn-success"><i className="ri-auction-fill align-bottom me-1"></i> Place Bid</Link>
+                                            <Link to="#!" className="btn btn-success"><i className="ri-auction-fill align-bottom me-1"></i> Place Bid</Link>
                                         </div>
                                     </div>
                                     <CardBody>
                                         <p className="fw-medium mb-0 float-end"><i className="mdi mdi-heart text-danger align-middle"></i> {item.likes} </p>
-                                        <h5 className="mb-1"><Link to="/apps-nft-item-details">{item.title}</Link></h5>
+                                        <h5 className="mb-1"><Link to="/apps-nft-item-details" className="text-body">{item.title}</Link></h5>
                                         <p className="text-muted mb-0">{item.category}</p>
                                     </CardBody>
                                     <div className="card-footer border-top border-top-dashed">
@@ -176,7 +174,7 @@ const Marketplace = () => {
                         <Col lg={12}>
                             <div className="d-lg-flex align-items-center mb-4">
                                 <div className="flex-grow-1">
-                                    <h5 className="card-title mb-0 fw-semibold fs-16">Popular Creators</h5>
+                                    <h5 className="card-title mb-0 fw-bold fs-17">Popular Creators</h5>
                                 </div>
                                 <div className="flex-shrink-0 mt-4 mt-lg-0">
                                     <Link to="/apps-nft-creators" className="btn btn-soft-primary">View All <i className="ri-arrow-right-line align-bottom"></i></Link>
@@ -192,7 +190,7 @@ const Marketplace = () => {
                                     <img src={item.cardImg} alt="" className="card-img-top object-fit-cover" height="120" />
                                     <CardBody className="text-center">
                                         <img src={item.img} alt="" className="avatar-md mt-n5 rounded-circle mx-auto d-block object-fit-cover" />
-                                        <h5 className="mt-3 mb-1"><Link to="#">{item.author}</Link></h5>
+                                        <h5 className="mt-3 mb-1"><Link to="#!" className="text-body">{item.author}</Link></h5>
                                         <p className="text-muted">{item.products} Products</p>
                                         <div>
                                             <button className={item.isFollow ? "btn btn-primary btn-sm" : "btn btn-soft-primary btn-sm"}>{item.isFollow ? "Follow" : "Unfollow"}</button>

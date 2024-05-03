@@ -3,13 +3,11 @@ import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import BreadCrumb from '../../../../Components/Common/BreadCrumb';
 import {SimpleRadar,MultipleRadar,PolygonRadar} from './RadarCharts';
 
-
 const RadarCharts = () => {
-    document.title="Radar Charts | Velzon - React Admin & Dashboard Template";
+  document.title="Radar Charts | Velzon - React Admin & Dashboard Template";
     return (
         <div className="page-content">
             <Container fluid>
-                
                 <BreadCrumb title="Radar Charts" pageTitle="Apexcharts" />
                 <Row>
                     <Col xl={6}>

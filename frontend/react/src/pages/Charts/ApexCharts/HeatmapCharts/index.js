@@ -11,7 +11,7 @@ import {
 
 
 const HeatmapCharts = () => {
-    document.title="Heatmap Charts | Velzon - React Admin & Dashboard Template";
+    document.title = "Heatmap Charts | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -25,7 +25,7 @@ const HeatmapCharts = () => {
                                 </CardHeader>
                                 <CardBody>
                                     <div className="live-preview">
-                                        <BasicHeatmap dataColors='["--vz-success", "--vz-card-custom"]'/>
+                                        <BasicHeatmap dataColors='["--vz-success"]' />
                                     </div>
                                 </CardBody>
                             </Card>
@@ -38,7 +38,7 @@ const HeatmapCharts = () => {
                                 </CardHeader>
 
                                 <CardBody>
-                                    <MultipleHeatmap dataColors='["--vz-primary", "--vz-secondary", "--vz-success", "--vz-info", "--vz-warning", "--vz-danger", "--vz-dark", "--vz-primary", "--vz-card-custom"]'/>
+                                    <MultipleHeatmap dataColors='["--vz-primary", "--vz-secondary", "--vz-success", "--vz-info", "--vz-warning", "--vz-danger", "--vz-dark", "--vz-primary", "--vz-card-bg-custom"]' />
                                 </CardBody>
                             </Card>
                         </Col>
@@ -53,7 +53,7 @@ const HeatmapCharts = () => {
                                 </div>
 
                                 <div className="card-body">
-                                    <ColorRange dataColors='["--vz-info", "--vz-success", "--vz-primary", "--vz-warning"]'/>
+                                    <ColorRange dataColors='["--vz-info", "--vz-success", "--vz-primary", "--vz-warning"]' />
                                 </div>
                             </Card>
                         </Col>
@@ -65,7 +65,7 @@ const HeatmapCharts = () => {
                                 </div>
 
                                 <div className="card-body">
-                                <RangeWithoutShades dataColors='["--vz-info", "--vz-primary"]'/>
+                                    <RangeWithoutShades dataColors='["--vz-info", "--vz-primary"]' />
                                 </div>
                             </Card>
                         </Col>

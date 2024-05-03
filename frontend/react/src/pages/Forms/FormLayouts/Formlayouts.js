@@ -9,16 +9,17 @@ import { Link } from 'react-router-dom';
 import { FormGrid, Gutters, VerticalForm, HorizontalForm, HorizontalFormLabelSizing, ColumnSizing, AutoSizing, InlineForms, FloatingLabels } from './FormlayoutsCode';
 
 //Import Flatepicker
+// import "flatpickr/dist/themes/material_blue.css"
 import Flatpickr from "react-flatpickr";
 
 const Formlayouts = () => {
-    document.title="Form Layouts | Velzon - React Admin & Dashboard Template";
+  document.title="Form Layout | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <UiContent />
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="Form Layouts" pageTitle="Forms" />
+                    <BreadCrumb title="Form Layout" pageTitle="Forms" />
                     <Row>
                         <Col xxl={6}>
                             <Card >
@@ -99,7 +100,7 @@ const Formlayouts = () => {
                         </Col>
 
                         <Col xxl={6}>
-                            <Card>
+                            <Card >
                                 <PreviewCardHeader title="Gutters" />
                                 <div className="card-body">
                                     <p className="text-muted">By adding <Link to="/docs/5.1/layout/gutters/" className="text-decoration-underline">gutter modifier classes</Link>, you can have control over the gutter width in as well the inline as block direction. <span className="fw-medium">Also requires the <code>$enable-grid-classes</code> Sass variable to be enabled</span> (on by default).</p>
@@ -171,7 +172,7 @@ const Formlayouts = () => {
                         <Col xxl={6}>
                             <Card >
                                 <PreviewCardHeader title="Vertical Form" />
-                                <CardBody>
+                                <CardBody>                                   
                                     <div className="live-preview">
                                         <Form action="#">
                                             <div className="mb-3">
@@ -222,7 +223,7 @@ const Formlayouts = () => {
                         <Col xxl={6}>
                             <Card>
                                 <PreviewCardHeader title="Horizontal Form" />
-                                <CardBody>
+                                <CardBody>                                   
                                     <div className="live-preview">
                                         <form action="#">
                                             <Row className="mb-3">
@@ -404,7 +405,7 @@ const Formlayouts = () => {
                         <Col lg={12}>
                             <Card>
                                 <PreviewCardHeader title="Auto Sizing" />
-                                <CardBody>
+                                <CardBody>                                    
                                     <div className="live-preview">
                                         <Form action="#">
                                             <Row className="gy-2 gx-3 mb-3 align-items-center">
@@ -509,7 +510,7 @@ const Formlayouts = () => {
                                                 <Col xs={12}>
                                                     <Label className="visually-hidden" htmlFor="inlineFormSelectPref">Preference</Label>
                                                     <select className="form-select" data-choices data-choices-sorting="true" id="inlineFormSelectPref">
-                                                        <option >Choose... </option>
+                                                        <option >Choose...</option>
                                                         <option defaultValue="1">One</option>
                                                         <option defaultValue="2">Two</option>
                                                         <option defaultValue="3">Three</option>

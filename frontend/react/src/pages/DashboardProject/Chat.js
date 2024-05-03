@@ -50,7 +50,7 @@ const Chat = () => {
                     <CardHeader className="align-items-center d-flex">
                         <h4 className="card-title mb-0 flex-grow-1">Chat</h4>
                         <div className="flex-shrink-0">
-                            <UncontrolledDropdown className="card-header-dropdown" >
+                            <UncontrolledDropdown className="card-header-dropdown" direction='start'>
                                 <DropdownToggle tag="a" className="text-reset" role="button">
                                     <span className="text-muted"><i className="ri-settings-4-line align-middle me-1"></i>Setting <i className="mdi mdi-chevron-down ms-1"></i></span>
                                 </DropdownToggle>
@@ -66,7 +66,7 @@ const Chat = () => {
 
                     <CardBody className="p-0">
                         <div id="users-chat">
-                        <PerfectScrollbar className="chat-conversation p-3" id="chat-conversation"
+                            <PerfectScrollbar className="chat-conversation p-3" id="chat-conversation"
                                 style={{ marginBottom: "1rem", maxHeight: "400px" }}
                                 containerRef={ref => setMessageBox(ref)}
                             >
@@ -108,12 +108,12 @@ const Chat = () => {
                             <div className="row g-2 mx-3 mt-2 mb-3">
                                 <div className="col">
                                     <div className="position-relative">
-                                        <input type="text" className="form-control border-light bg-light" placeholder="Enter Message..." 
-                                        value={text} onChange={e => setText(e.target.value)}/>
+                                        <input type="text" className="form-control border-light bg-light" placeholder="Enter Message..."
+                                            value={text} onChange={e => setText(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="col-auto">
-                                    <button type="submit" className="btn btn-info"  onClick={() => onSendMessage()}><span className="d-none d-sm-inline-block me-2">Send</span> <i className="mdi mdi-send float-end"></i></button>
+                                    <button type="submit" className="btn btn-info" onClick={() => onSendMessage()}><span className="d-none d-sm-inline-block me-2">Send</span> <i className="mdi mdi-send float-end"></i></button>
                                 </div>
                             </div>
                         </div>

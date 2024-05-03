@@ -60,7 +60,6 @@ const EcommerceAddProduct = (props) => {
   const [selectedFiles, setselectedFiles] = useState([]);
   const [selectedVisibility, setselectedVisibility] = useState(null);
 
-
   function handleAcceptedFiles(files) {
     files.map((file) =>
       Object.assign(file, {
@@ -70,7 +69,6 @@ const EcommerceAddProduct = (props) => {
     );
     setselectedFiles(files);
   }
-
 
   function handleSelectVisibility(selectedVisibility) {
     setselectedVisibility(selectedVisibility);
@@ -265,7 +263,7 @@ const EcommerceAddProduct = (props) => {
                 </CardHeader>
                 <CardBody>
                   <div className="mb-4">
-                    <h5 className="fs-14 mb-1">Product Image</h5>
+                    <h5 className="fs-15 mb-1">Product Image</h5>
                     <p className="text-muted">Add Product main Image.</p>
                     <div className="text-center">
                       <div className="position-relative d-inline-block">
@@ -288,7 +286,7 @@ const EcommerceAddProduct = (props) => {
                     </div>
                   </div>
                   <div>
-                    <h5 className="fs-14 mb-1">Product Gallery</h5>
+                    <h5 className="fs-15 mb-1">Product Gallery</h5>
                     <p className="text-muted">Add Product Gallery Images.</p>
 
                     <Dropzone
@@ -302,7 +300,7 @@ const EcommerceAddProduct = (props) => {
                             className="dz-message needsclick"
                             {...getRootProps()}
                           >
-                            <div className="mb-3 mt-5">
+                            <div className="mb-3">
                               <i className="display-4 text-muted ri-upload-cloud-2-fill" />
                             </div>
                             <h5>Drop files here or click to upload.</h5>
@@ -735,6 +733,17 @@ const EcommerceAddProduct = (props) => {
                   {validation.touched.publishedDate && validation.errors.publishedDate ? (
                     <FormFeedback type="invalid">{validation.errors.publishedDate}</FormFeedback>
                   ) : null}
+
+                  {/* <Flatpickr
+                    className="form-control"
+                    id="datepicker-publish-input"
+                    options={{
+                      altInput: true,
+                      altFormat: "F j, Y",
+                      mode: "multiple",
+                      dateFormat: "d.m.y",
+                    }}
+                  /> */}
                 </div>
               </CardBody>
             </Card>
@@ -777,6 +786,17 @@ const EcommerceAddProduct = (props) => {
                     {validation.errors.category}
                   </FormFeedback>
                 ) : null}
+
+
+                {/* <Select
+                  value={selectedGroup}
+                  onChange={() => {
+                    handleSelectGroup();
+                  }}
+                  options={productCategory}
+                  name="choices-category-input"
+                  classNamePrefix="select2-selection form-select"
+                /> */}
               </CardBody>
             </Card>
 

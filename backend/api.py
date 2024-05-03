@@ -1,12 +1,14 @@
 from flask import Flask, jsonify, abort
+from flask_cors import CORS
 import sqlite3
 
 app = Flask(__name__)
+CORS(app)
 
 # function to create a connection to the SQLite database
 def get_db_connection():
     try:
-        conn = sqlite3.connect('database.db')
+        conn = sqlite3.connect('../database.db')
         conn.row_factory = sqlite3.Row
         return conn
     except sqlite3.Error as e:

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import BreadCrumb from '../../../../Components/Common/BreadCrumb';
-import { RangeAreaBasicChartCode, RangeAreaChartCode } from './RangeChart';
+import { RangeAreaBasicChartCode, RangeAreaChartCode } from './RangeAreaCharts';
+
 
 const RangeArea = () => {
   document.title = "Apex Range Area Charts | Velzon - React Admin & Dashboard Template";

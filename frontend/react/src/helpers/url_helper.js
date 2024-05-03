@@ -100,12 +100,6 @@ export const ADD_NEW_TICKET = "/apps/ticket";
 export const UPDATE_TICKET = "/apps/ticket";
 export const DELETE_TICKET = "/apps/ticket";
 
-// kanban
-export const GET_TASKS = "/apps/tasks";
-export const ADD_TASKS = "/add/tasks";
-export const UPDATE_TASKS = "/update/tasks";
-export const DELETE_TASKS = "/delete/tasks";
-
 // Dashboard Analytics
 
 // Sessions by Countries
@@ -231,3 +225,9 @@ export const GET_APPLICATION_LIST = "/application-list";
 
 //JOB APPLICATION
 export const GET_API_KEY = "/api-key";
+
+// kanban
+export const GET_TASKS = "/apps/tasks";
+export const ADD_TASKS = "/add/tasks";
+export const UPDATE_TASKS = "/update/tasks";
+export const DELETE_TASKS = "/delete/tasks";

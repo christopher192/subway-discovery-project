@@ -30,7 +30,7 @@ const Comments = () => {
                             <NavItem>
                                 <NavLink
                                     href="#"
-                                    className={classnames({ active: activeTab === '1' })}
+                                    className={classnames({ active: activeTab === '1' }, "text-body")}
                                     onClick={() => { toggleTab('1'); }}
                                 >
                                     Comments (5)
@@ -39,7 +39,7 @@ const Comments = () => {
                             <NavItem>
                                 <NavLink
                                     href="#"
-                                    className={classnames({ active: activeTab === '2' })}
+                                    className={classnames({ active: activeTab === '2' }, "text-body")}
                                     onClick={() => { toggleTab('2'); }}
                                 >
                                     Attachments File (4)
@@ -48,7 +48,7 @@ const Comments = () => {
                             <NavItem>
                                 <NavLink
                                     href="#"
-                                    className={classnames({ active: activeTab === '3' })}
+                                    className={classnames({ active: activeTab === '3' }, "text-body")}
                                     onClick={() => { toggleTab('3'); }}
                                 >
                                     Time Entries (9 hrs 13 min)
@@ -67,7 +67,7 @@ const Comments = () => {
                                         <img src={avatar7} alt="" className="avatar-xs rounded-circle" />
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h5 className="fs-13"><Link to="/pages-profile">Joseph Parker</Link> <small className="text-muted">20 Dec 2021 - 05:47AM</small></h5>
+                                        <h5 className="fs-13"><Link to="/pages-profile" className="text-body">Joseph Parker</Link> <small className="text-muted">20 Dec 2021 - 05:47AM</small></h5>
                                         <p className="text-muted">I am getting message from customers that when they place order always get error message .</p>
                                         <Link to="#" className="badge text-muted bg-light"><i className="mdi mdi-reply"></i> Reply</Link>
                                         <div className="d-flex mt-4">
@@ -75,7 +75,7 @@ const Comments = () => {
                                                 <img src={avatar10} alt="" className="avatar-xs rounded-circle" />
                                             </div>
                                             <div className="flex-grow-1 ms-3">
-                                                <h5 className="fs-13"><Link to="/pages-profile">Tonya Noble</Link> <small className="text-muted">22 Dec 2021 - 02:32PM</small></h5>
+                                                <h5 className="fs-13"><Link to="/pages-profile" className="text-body">Tonya Noble</Link> <small className="text-muted">22 Dec 2021 - 02:32PM</small></h5>
                                                 <p className="text-muted">Please be sure to check your Spam mailbox to see if your email filters have identified the email from Dell as spam.</p>
                                                 <Link to="#" className="badge text-muted bg-light"><i className="mdi mdi-reply"></i> Reply</Link>
                                             </div>
@@ -87,7 +87,7 @@ const Comments = () => {
                                         <img src={avatar8} alt="" className="avatar-xs rounded-circle" />
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h5 className="fs-13"><Link to="/pages-profile">Thomas Taylor</Link> <small className="text-muted">24 Dec 2021 - 05:20PM</small></h5>
+                                        <h5 className="fs-13"><Link to="/pages-profile" className="text-body">Thomas Taylor</Link> <small className="text-muted">24 Dec 2021 - 05:20PM</small></h5>
                                         <p className="text-muted">If you have further questions, please contact Customer Support from the “Action Menu” on your <Link to="#" className="text-decoration-underline">Online Order Support</Link>.</p>
                                         <Link to="#" className="badge text-muted bg-light"><i className="mdi mdi-reply"></i> Reply</Link>
                                     </div>
@@ -97,7 +97,7 @@ const Comments = () => {
                                         <img src={avatar10} alt="" className="avatar-xs rounded-circle" />
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h5 className="fs-13"><Link to="/pages-profile">Tonya Noble</Link> <small className="text-muted">26 min ago</small></h5>
+                                        <h5 className="fs-13"><Link to="/pages-profile" className="text-body">Tonya Noble</Link> <small className="text-muted">26 min ago</small></h5>
                                         <p className="text-muted">Your <Link to="#" className="text-decoration-underline">Online Order Support</Link> provides you with the most current status of your order. To help manage your order refer to the “Action Menu” to initiate return, contact Customer Support and more.</p>
                                         <Row className="g-2 mb-3">
                                             <Col lg={1} sm={2} xs={6}>
@@ -113,7 +113,7 @@ const Comments = () => {
                                                 <img src={avatar6} alt="" className="avatar-xs rounded-circle" />
                                             </div>
                                             <div className="flex-grow-1 ms-3">
-                                                <h5 className="fs-13"><Link to="/pages-profile">Nancy Martino</Link> <small className="text-muted">8 sec ago</small></h5>
+                                                <h5 className="fs-13"><Link to="/pages-profile" className="text-body">Nancy Martino</Link> <small className="text-muted">8 sec ago</small></h5>
                                                 <p className="text-muted">Other shipping methods are available at checkout if you want your purchase delivered faster.</p>
                                                 <Link to="#" className="badge text-muted bg-light"><i className="mdi mdi-reply"></i> Reply</Link>
                                             </div>
@@ -156,7 +156,7 @@ const Comments = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h6 className="fs-15 mb-0"><Link to="#">App pages.zip</Link></h6>
+                                                        <h6 className="fs-15 mb-0"><Link to="#" className="text-body">App pages.zip</Link></h6>
                                                     </div>
                                                 </div>
                                             </td>
@@ -186,7 +186,7 @@ const Comments = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h6 className="fs-15 mb-0"><Link to="#">Velzon admin.ppt</Link></h6>
+                                                        <h6 className="fs-15 mb-0"><Link to="#" className="text-body">Velzon admin.ppt</Link></h6>
                                                     </div>
                                                 </div>
                                             </td>
@@ -216,7 +216,7 @@ const Comments = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h6 className="fs-15 mb-0"><Link to="#">Images.zip</Link></h6>
+                                                        <h6 className="fs-15 mb-0"><Link to="#" className="text-body">Images.zip</Link></h6>
                                                     </div>
                                                 </div>
                                             </td>
@@ -246,7 +246,7 @@ const Comments = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h6 className="fs-15 mb-0"><Link to="#">Bg-pattern.png</Link></h6>
+                                                        <h6 className="fs-15 mb-0"><Link to="#" className="text-body">Bg-pattern.png</Link></h6>
                                                     </div>
                                                 </div>
                                             </td>
@@ -290,7 +290,7 @@ const Comments = () => {
                                                 <div className="d-flex align-items-center">
                                                     <img src={avatar8} alt="" className="rounded-circle avatar-xxs" />
                                                     <div className="flex-grow-1 ms-2">
-                                                        <Link to="/pages-profile" className="fw-medium">Thomas Taylor</Link>
+                                                        <Link to="/pages-profile" className="fw-medium text-body">Thomas Taylor</Link>
                                                     </div>
                                                 </div>
                                             </th>
@@ -304,7 +304,7 @@ const Comments = () => {
                                                 <div className="d-flex align-items-center">
                                                     <img src={avatar10} alt="" className="rounded-circle avatar-xxs" />
                                                     <div className="flex-grow-1 ms-2">
-                                                        <Link to="/pages-profile" className="fw-medium">Tonya Noble</Link>
+                                                        <Link to="/pages-profile" className="fw-medium text-body">Tonya Noble</Link>
                                                     </div>
                                                 </div>
                                             </td>
@@ -318,7 +318,7 @@ const Comments = () => {
                                                 <div className="d-flex align-items-center">
                                                     <img src={avatar10} alt="" className="rounded-circle avatar-xxs" />
                                                     <div className="flex-grow-1 ms-2">
-                                                        <Link to="/pages-profile" className="fw-medium">Tonya Noble</Link>
+                                                        <Link to="/pages-profile" className="fw-medium text-body">Tonya Noble</Link>
                                                     </div>
                                                 </div>
                                             </th>

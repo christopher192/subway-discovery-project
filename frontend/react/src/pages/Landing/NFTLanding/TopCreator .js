@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardBody, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { topCreatorData } from '../../../common/data';
+import { topCreatorData } from "../../../common/data";
 
 const TopCreator = () => {
     
@@ -12,7 +12,7 @@ const TopCreator = () => {
                     <Row className="justify-content-center">
                         <Col lg={8}>
                             <div className="text-center mb-5">
-                                <h2 className="mb-3 fw-semibold lh-base">Top Creator This Week</h2>
+                                <h2 className="mb-3 fw-bold lh-base">Top Creator This Week</h2>
                                 <p className="text-muted">NFTs are valuable because they verify the authenticity of a non-fungible asset. This makes these assets unique and one of a kind.</p>
                             </div>
                         </Col>

@@ -46,6 +46,7 @@ const CustomersGlobalFilter = () => {
             ],
         },
     ];
+
     return (
         <React.Fragment>
             <Col xl={7}>
@@ -70,8 +71,8 @@ const CustomersGlobalFilter = () => {
                         <div>
                             <Select
                                 value={customerStatus}
-                                onChange={(e) => {
-                                    handlecustomerStatus(e.value);
+                                onChange={() => {
+                                    handlecustomerStatus();
                                 }}
                                 options={customerstatus}
                                 name="choices-single-default"
@@ -288,7 +289,7 @@ const CryptoOrdersGlobalFilter = () => {
             <Col xl={2} md={4}>
                 <select className="form-control" data-choices data-choices-search-false name="choices-single-default"
                     id="choices-single-default">
-                    <option defaultValue="all">Select Type</option>
+                    <option defaultValue="">Select Type</option>
                     <option value="Buy">Sell</option>
                     <option value="Sell">Buy</option>
                 </select>
@@ -296,10 +297,9 @@ const CryptoOrdersGlobalFilter = () => {
             <Col xl={2} md={4}>
                 <select className="form-control" data-choices data-choices-search-false name="choices-single-default2"
                     id="choices-single-default2">
-                    <option defaultValue="all">Select Status</option>
+                    <option defaultValue="">Select Status</option>
                     <option value="Successful">Successful</option>
                     <option value="Cancelled">Cancelled</option>
-                    <option value="Pending">Pending</option>
                 </select>
             </Col>
             <Col xl={1} md={4}>

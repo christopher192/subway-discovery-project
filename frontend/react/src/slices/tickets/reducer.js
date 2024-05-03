@@ -21,7 +21,7 @@ const TicketsSlice = createSlice({
             state.isTicketSuccess = false;
         });
         builder.addCase(addNewTicket.fulfilled, (state, action) => {
-            state.ticketsList.unshift(action.payload.data);
+            state.ticketsList.push(action.payload.data);
             state.isTicketCreated = true;
             state.isTicketAdd = true;
             state.isTicketAddFail = false;

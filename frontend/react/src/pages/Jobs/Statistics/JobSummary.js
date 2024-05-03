@@ -1,5 +1,14 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  UncontrolledDropdown,
+} from "reactstrap";
 import ReactApexChart from "react-apexcharts";
 import getChartColorsArray from "../../../Components/Common/ChartsDynamicColor";
 
@@ -90,7 +99,7 @@ const JobSummary = ({ dataColors }) => {
               </UncontrolledDropdown>
             </div>
           </CardHeader>
-          <CardBody className="card-body px-0">
+          <CardBody className="px-0">
             <ReactApexChart dir="ltr"
               className="apex-charts"
               series={series}

@@ -2,17 +2,21 @@ import React from 'react';
 import { Card, CardBody, Col, Row } from 'reactstrap';
 import { topartWork } from "../../common/data/index";
 import { featuredNFTData } from "../../common/data/dashboardNFT";
+
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
+
 // Import Chart
 import { TopArtworkChart } from "./DashboardNFTCharts";
+
 //SimpleBar
 import SimpleBar from "simplebar-react";
 import { Link } from 'react-router-dom';
+
 const FeaturedNFT = () => {
     return (
         <React.Fragment>
@@ -61,7 +65,7 @@ const FeaturedNFT = () => {
                                         </div>
                                         <CardBody>
                                             <p className="fw-medium mb-0 float-end"><i className="mdi mdi-heart text-danger align-middle"></i> {item.price} </p>
-                                            <h5 className="mb-1"><Link to="/apps-nft-item-details">{item.title}</Link></h5>
+                                            <h5 className="mb-1"><Link to="/apps-nft-item-details" className="text-body">{item.title}</Link></h5>
                                             <p className="text-muted mb-0">{item.category}</p>
                                         </CardBody>
                                         <div className="card-footer border-top border-top-dashed">
@@ -103,7 +107,7 @@ const FeaturedNFT = () => {
                                                         <div className="d-flex align-items-center">
                                                             <img src={item.img} alt="" className="avatar-sm rounded-circle" />
                                                             <div className="ms-3">
-                                                                <Link to="#">
+                                                                <Link to="#!">
                                                                     <h6 className="fs-15 mb-1">{item.title}</h6>
                                                                 </Link>
                                                                 <p className="mb-0 text-muted">{item.sales} Sales</p>
@@ -114,7 +118,7 @@ const FeaturedNFT = () => {
                                                         <TopArtworkChart seriesData={item.series} chartsColor={item.chartsColor} />
                                                     </td>
                                                     <td className="text-end">
-                                                        <Link to="#">
+                                                        <Link to="#!">
                                                             <h6 className="fs-15 mb-1">${item.collection}+</h6>
                                                         </Link>
                                                         <p className="mb-0 text-muted">Total USD</p>

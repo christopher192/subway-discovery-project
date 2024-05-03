@@ -24,7 +24,6 @@ import {
     GradientBadgesExample
 } from './UiBadgesCode';
 
-
 const UiBadges = () => {
     document.title = "Badges | Velzon - React Admin & Dashboard Template";
     return (
@@ -68,17 +67,17 @@ const UiBadges = () => {
                             <Card>
                                 <PreviewCardHeader title="Soft Badges" />
                                 <CardBody>
-                                    <p className="text-muted">Use the <code>badge-subtle-</code> class with the below-mentioned variation to create a softer badge.
+                                    <p className="text-muted">Use the <code>bg-*-subtle text-*</code> class with the below-mentioned variation to create a softer badge.
                                     </p>
                                     <div className="live-preview">
                                         <div className="d-flex flex-wrap gap-2">
                                             <span className="badge bg-primary-subtle text-primary">Primary</span>
-                                            <span className="badge bg-secondary-subtle text-secondary ">Secondary</span>
+                                            <span className="badge bg-secondary-subtle text-secondary">Secondary</span>
                                             <span className="badge bg-success-subtle text-success">Success</span>
                                             <span className="badge bg-info-subtle text-info">Info</span>
                                             <span className="badge bg-warning-subtle text-warning">Warning</span>
                                             <span className="badge bg-danger-subtle text-danger">Danger</span>
-                                            <span className="badge bg-dark-subtle text-body">Dark</span>
+                                            <span className="badge bg-dark-subtle text-dark">Dark</span>
                                             <span className="badge bg-light-subtle text-body">Light</span>
                                         </div>
                                     </div>
@@ -103,14 +102,14 @@ const UiBadges = () => {
                                     </p>
                                     <div className="live-preview">
                                         <div className="d-flex flex-wrap gap-2">
-                                            <span className="badge border border-primary text-primary">Primary</span>
+                                        <span className="badge border border-primary text-primary">Primary</span>
                                             <span className="badge border border-secondary text-secondary">Secondary</span>
                                             <span className="badge border border-success text-success">Success</span>
                                             <span className="badge border border-info text-info">Info</span>
                                             <span className="badge border border-warning text-warning">Warning</span>
                                             <span className="badge border border-danger text-danger">Danger</span>
                                             <span className="badge border border-dark text-body">Dark</span>
-                                            <span className="badge border border-light text-body">Light</span>
+                                            <span className="badge border border-light text-body text-body">Light</span>
                                         </div>
                                     </div>
                                     <div className="d-none code-view">
@@ -139,7 +138,7 @@ const UiBadges = () => {
                                             <Badge color="info" pill> Info </Badge>
                                             <Badge color="warning" pill> Warning </Badge>
                                             <Badge color="danger" pill> Danger </Badge>
-                                            <Badge color="dark" className="text-body" pill> Dark </Badge>
+                                            <Badge color="dark" pill> Dark </Badge>
                                             <Badge color="light" className="text-body" pill> Light </Badge>
                                         </div>
                                     </div>
@@ -161,18 +160,18 @@ const UiBadges = () => {
                                 <PreviewCardHeader title="Rounded Pill Badges with soft effect" />
                                 <CardBody>
 
-                                    <p className="text-muted">Use the <code>rounded-pill bg--subtle</code> class with the below-mentioned variation
+                                    <p className="text-muted">Use the <code>rounded-pill bg-*-subtle</code> class with the below-mentioned variation
                                         to create a badge more rounded with a soft background.</p>
                                     <div className="live-preview">
 
                                         <div className="d-flex flex-wrap gap-2">
                                             <span className="badge rounded-pill bg-primary-subtle text-primary">Primary</span>
-                                            <span className="badge rounded-pill bg-secondary-subtle text-secondary ">Secondary</span>
+                                            <span className="badge rounded-pill bg-secondary-subtle text-secondary">Secondary</span>
                                             <span className="badge rounded-pill bg-success-subtle text-success">Success</span>
                                             <span className="badge rounded-pill bg-info-subtle text-info">Info</span>
                                             <span className="badge rounded-pill bg-warning-subtle text-warning">Warning</span>
                                             <span className="badge rounded-pill bg-danger-subtle text-danger">Danger</span>
-                                            <span className="badge rounded-pill bg-dark-subtle text-body">Dark</span>
+                                            <span className="badge rounded-pill bg-dark-subtle text-dark">Dark</span>
                                             <span className="badge rounded-pill bg-light-subtle text-body">Light</span>
                                         </div>
                                     </div>
@@ -200,12 +199,12 @@ const UiBadges = () => {
 
                                         <div className="d-flex flex-wrap gap-2">
                                             <span className="badge bg-primary-subtle text-primary badge-border">Primary</span>
-                                            <span className="badge bg-secondary-subtle text-secondary  badge-border">Secondary</span>
+                                            <span className="badge bg-secondary-subtle text-secondary badge-border">Secondary</span>
                                             <span className="badge bg-success-subtle text-success badge-border">Success</span>
-                                            <span className="badge bg-danger-subtle  text-danger badge-border">Danger</span>
-                                            <span className="badge bg-warning-subtle  text-warning badge-border">Warning</span>
-                                            <span className="badge bg-info-subtle  text-info badge-border">Info</span>
-                                            <span className="badge bg-dark-subtle badge-border">Dark</span>
+                                            <span className="badge bg-danger-subtle text-danger badge-border">Danger</span>
+                                            <span className="badge bg-warning-subtle text-warning badge-border">Warning</span>
+                                            <span className="badge bg-info-subtle text-info badge-border">Info</span>
+                                            <span className="badge bg-dark-subtle text-dark badge-border">Dark</span>
                                             <span className="badge bg-light-subtle badge-border text-body">Light</span>
                                         </div>
                                     </div>
@@ -239,8 +238,8 @@ const UiBadges = () => {
                                             <span className="badge rounded-pill border border-info text-info">Info</span>
                                             <span className="badge rounded-pill border border-warning text-warning">Warning</span>
                                             <span className="badge rounded-pill border border-danger text-danger">Danger</span>
-                                            <span className="badge rounded-pill border border-dark text-body">Dark</span>
-                                            <span className="badge rounded-pill border border-light text-body">Light</span>
+                                            <span className="badge rounded-pill border border-dark text-dark">Dark</span>
+                                            <span className="badge rounded-pill border border-light  text-body">Light</span>
                                         </div>
                                     </div>
 
@@ -319,6 +318,7 @@ const UiBadges = () => {
                             </Card>
                         </Col>
                     </Row>
+
                     <Row>
                         <Col xxl={6}>
                             <Card>

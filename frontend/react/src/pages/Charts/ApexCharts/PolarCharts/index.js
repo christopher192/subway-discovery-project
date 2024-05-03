@@ -3,13 +3,11 @@ import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import BreadCrumb from '../../../../Components/Common/BreadCrumb';
 import {BasicPolar,PolarMonochrome} from './PolarCharts'
 
-
 const Polarcharts = () => {
-    document.title="Polar Charts | Velzon - React Admin & Dashboard Template";
+  document.title="Polar Charts | Velzon - React Admin & Dashboard Template";
     return (
         <div className="page-content">
             <Container fluid>
-                
                 <BreadCrumb title="Polar Charts" pageTitle="Apexcharts" />
                 <Row>
                     <Col xl={6}>

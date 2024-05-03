@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from "prop-types";
 import withRouter from '../Components/Common/withRouter';
 
+
 //import Components
 import Header from './Header';
 import Sidebar from './Sidebar';
@@ -26,41 +27,40 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from 'reselect';
 
+
 const Layout = (props) => {
     const [headerClass, setHeaderClass] = useState("");
     const dispatch = useDispatch();
-
     const selectLayoutState = (state) => state.Layout;
-    const selectLayoutProperties = createSelector(
-        selectLayoutState,
-        (layout) => ({
-            layoutType: layout.layoutType,
-            leftSidebarType: layout.leftSidebarType,
-            layoutModeType: layout.layoutModeType,
-            layoutWidthType: layout.layoutWidthType,
-            layoutPositionType: layout.layoutPositionType,
-            topbarThemeType: layout.topbarThemeType,
-            leftsidbarSizeType: layout.leftsidbarSizeType,
-            leftSidebarViewType: layout.leftSidebarViewType,
-            leftSidebarImageType: layout.leftSidebarImageType,
-            preloader: layout.preloader,
-            sidebarVisibilitytype: layout.sidebarVisibilitytype,
-        })
-    );
-    // Inside your component
-    const {
-        layoutType,
-        leftSidebarType,
-        layoutModeType,
-        layoutWidthType,
-        layoutPositionType,
-        topbarThemeType,
-        leftsidbarSizeType,
-        leftSidebarViewType,
-        leftSidebarImageType,
-        preloader,
-        sidebarVisibilitytype
-    } = useSelector(selectLayoutProperties);
+const selectLayoutProperties = createSelector(
+    selectLayoutState,
+    (layout) => ({
+        layoutType: layout.layoutType,
+        leftSidebarType: layout.leftSidebarType,
+        layoutModeType: layout.layoutModeType,
+        layoutWidthType: layout.layoutWidthType,
+        layoutPositionType: layout.layoutPositionType,
+        topbarThemeType: layout.topbarThemeType,
+        leftsidbarSizeType: layout.leftsidbarSizeType,
+        leftSidebarViewType: layout.leftSidebarViewType,
+        leftSidebarImageType: layout.leftSidebarImageType,
+        sidebarVisibilitytype: layout.sidebarVisibilitytype,
+    })
+  );
+
+  // Inside your component
+const {
+    layoutType,
+    leftSidebarType,
+    layoutModeType,
+    layoutWidthType,
+    layoutPositionType,
+    topbarThemeType,
+    leftsidbarSizeType,
+    leftSidebarViewType,
+    leftSidebarImageType,
+    sidebarVisibilitytype
+} = useSelector(selectLayoutProperties);    
 
     /*
     layout settings
@@ -110,11 +110,10 @@ const Layout = (props) => {
         }
     };
 
-    // class add remove in header 
+    // class add remove in header
     useEffect(() => {
         window.addEventListener("scroll", scrollNavigation, true);
     });
-
     function scrollNavigation() {
         var scrollup = document.documentElement.scrollTop;
         if (scrollup > 50) {
@@ -128,7 +127,7 @@ const Layout = (props) => {
         if (sidebarVisibilitytype === 'show' || layoutType === "vertical" || layoutType === "twocolumn") {
             document.querySelector(".hamburger-icon").classList.remove('open');
         } else {
-            document.querySelector(".hamburger-icon") && document.querySelector(".hamburger-icon").classList.add('open');
+            document.querySelector(".hamburger-icon").classList.add('open');
         }
     }, [sidebarVisibilitytype, layoutType]);
 
@@ -139,11 +138,8 @@ const Layout = (props) => {
                     headerClass={headerClass}
                     layoutModeType={layoutModeType}
                     onChangeLayoutMode={onChangeLayoutMode} />
-                <Sidebar
-                    layoutType={layoutType}
-                />
-                <div className="main-content">
-                    {props.children}
+                <Sidebar layoutType={layoutType} />
+                <div className="main-content">{props.children}
                     <Footer />
                 </div>
             </div>

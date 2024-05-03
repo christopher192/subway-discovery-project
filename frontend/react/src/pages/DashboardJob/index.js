@@ -24,7 +24,7 @@ const DashboardJobs = () => {
           </Row>
 
           <Row>
-            <ApplicationsStatistic dataColors='["--vz-success", "--vz-info", "--vz-primary"]' />
+            <ApplicationsStatistic />
             <Candidates />
           </Row>
 

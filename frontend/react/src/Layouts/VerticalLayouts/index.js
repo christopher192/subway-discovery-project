@@ -1,40 +1,43 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import withRouter from "../../Components/Common/withRouter";
 import { Collapse } from 'reactstrap';
 // Import Data
 import navdata from "../LayoutMenuData";
 //i18n
 import { withTranslation } from "react-i18next";
-import withRouter from "../../Components/Common/withRouter";
 import { useSelector } from "react-redux";
 import { createSelector } from 'reselect';
 
 const VerticalLayout = (props) => {
     const navData = navdata().props.children;
-    const path = props.router.location.pathname;
 
     /*
  layout settings
  */
-
     const selectLayoutState = (state) => state.Layout;
     const selectLayoutProperties = createSelector(
         selectLayoutState,
         (layout) => ({
+            layoutType: layout.layoutType,
             leftsidbarSizeType: layout.leftsidbarSizeType,
             sidebarVisibilitytype: layout.sidebarVisibilitytype,
-            layoutType: layout.layoutType
         })
     );
+
     // Inside your component
     const {
-        leftsidbarSizeType, sidebarVisibilitytype, layoutType
+        layoutType,
+        leftsidbarSizeType,
+        sidebarVisibilitytype
     } = useSelector(selectLayoutProperties);
+
 
     //vertical and semibox resize events
     const resizeSidebarMenu = useCallback(() => {
         var windowSize = document.documentElement.clientWidth;
+        var hamburgerIcon = document.querySelector(".hamburger-icon");
         if (windowSize >= 1025) {
             if (document.documentElement.getAttribute("data-layout") === "vertical") {
                 document.documentElement.setAttribute("data-sidebar-size", leftsidbarSizeType);
@@ -43,16 +46,10 @@ const VerticalLayout = (props) => {
                 document.documentElement.setAttribute("data-sidebar-size", leftsidbarSizeType);
             }
             if ((sidebarVisibilitytype === "show" || layoutType === "vertical" || layoutType === "twocolumn") && document.querySelector(".hamburger-icon")) {
-                //     document.querySelector(".hamburger-icon").classList.remove("open");
-                // } else {
-                //     document.querySelector(".hamburger-icon").classList.add("open");
-                // }
-                var hamburgerIcon = document.querySelector(".hamburger-icon");
                 if (hamburgerIcon !== null) {
                     hamburgerIcon.classList.remove("open");
                 }
             } else {
-                var hamburgerIcon = document.querySelector(".hamburger-icon");
                 if (hamburgerIcon !== null) {
                     hamburgerIcon.classList.add("open");
                 }
@@ -87,7 +84,7 @@ const VerticalLayout = (props) => {
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         const initMenu = () => {
-            const pathName = process.env.PUBLIC_URL + path;
+            const pathName = process.env.PUBLIC_URL + props.router.location.pathname;
             const ul = document.getElementById("navbar-nav");
             const items = ul.getElementsByTagName("a");
             let itemsArray = [...items]; // converts NodeList to Array
@@ -102,13 +99,15 @@ const VerticalLayout = (props) => {
         if (props.layoutType === "vertical") {
             initMenu();
         }
-    }, [path, props.layoutType]);
+    }, [props.router.location.pathname, props.layoutType]);
 
     function activateParentDropdown(item) {
+
         item.classList.add("active");
         let parentCollapseDiv = item.closest(".collapse.menu-dropdown");
 
         if (parentCollapseDiv) {
+
             // to set aria expand true remaining
             parentCollapseDiv.classList.add("show");
             parentCollapseDiv.parentElement.children[0].classList.add("active");
@@ -157,7 +156,7 @@ const VerticalLayout = (props) => {
                     <React.Fragment key={key}>
                         {/* Main Header */}
                         {item['isHeader'] ?
-                            <li className="menu-title"><span data-key="t-menu">{props.t(item.label)} </span></li>
+                            <li className="menu-title"><span data-key="t-menu">{props.t(item.label)}</span></li>
                             : (
                                 (item.subItems ? (
                                     <li className="nav-item">
@@ -167,11 +166,7 @@ const VerticalLayout = (props) => {
                                             to={item.link ? item.link : "/#"}
                                             data-bs-toggle="collapse"
                                         >
-                                            <i className={item.icon}></i>
-                                            <span data-key="t-apps">{props.t(item.label)}</span>
-                                            {item.badgeName ?
-                                                <span className={"badge badge-pill bg-" + item.badgeColor} data-key="t-new">{item.badgeName}</span>
-                                                : null}
+                                            <i className={item.icon}></i> <span data-key="t-apps">{props.t(item.label)}</span>
                                         </Link>
                                         <Collapse
                                             className="menu-dropdown"
@@ -200,11 +195,7 @@ const VerticalLayout = (props) => {
                                                                     className="nav-link"
                                                                     to="/#"
                                                                     data-bs-toggle="collapse"
-                                                                >
-                                                                    {props.t(subItem.label)}
-                                                                    {subItem.badgeName ?
-                                                                        <span className={"badge badge-pill bg-" + subItem.badgeColor} data-key="t-new">{subItem.badgeName}</span>
-                                                                        : null}
+                                                                > {props.t(subItem.label)}
                                                                 </Link>
                                                                 <Collapse className="menu-dropdown" isOpen={subItem.stateVariables} id="sidebarEcommerce">
                                                                     <ul className="nav nav-sm flex-column">
@@ -255,9 +246,6 @@ const VerticalLayout = (props) => {
                                             className="nav-link menu-link"
                                             to={item.link ? item.link : "/#"}>
                                             <i className={item.icon}></i> <span>{props.t(item.label)}</span>
-                                            {item.badgeName ?
-                                                <span className={"badge badge-pill bg-" + item.badgeColor} data-key="t-new">{item.badgeName}</span>
-                                                : null}
                                         </Link>
                                     </li>
                                 ))

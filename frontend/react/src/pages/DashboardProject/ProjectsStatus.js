@@ -9,14 +9,14 @@ const ProjectsStatus = () => {
     const dispatch = useDispatch();
 
     const [chartData, setchartData] = useState([]);
-    
-    const selectprojectstatusData = createSelector(
+
+    const selectDashboardData = createSelector(
         (state) => state.DashboardProject,
         (projectStatusData) => projectStatusData.projectStatusData
       );
+      
     // Inside your component
-    const projectStatusData = useSelector(selectprojectstatusData);
-
+    const projectStatusData  = useSelector(selectDashboardData);
 
     useEffect(() => {
         setchartData(projectStatusData);
@@ -40,7 +40,7 @@ const ProjectsStatus = () => {
                         <div className="flex-shrink-0">
                             <UncontrolledDropdown className="card-header-dropdown">
                                 <DropdownToggle tag="a" className="dropdown-btn text-muted" role="button">
-                                    {seletedMonth.charAt(0).toUpperCase() + seletedMonth.slice(1)} <i className="mdi mdi-chevron-down ms-1"></i>
+                                {seletedMonth.charAt(0).toUpperCase() + seletedMonth.slice(1)} <i className="mdi mdi-chevron-down ms-1"></i>
                                 </DropdownToggle>
                                 <DropdownMenu className="dropdown-menu-end">
                                     <DropdownItem onClick={() => { onChangeChartPeriod("all"); }} className={seletedMonth === "all" ? "active" : ""}>All Time</DropdownItem>
@@ -53,7 +53,9 @@ const ProjectsStatus = () => {
                     </CardHeader>
 
                     <CardBody>
-                        <PrjectsStatusCharts series={chartData} dataColors='["--vz-success", "--vz-primary", "--vz-warning", "--vz-danger"]' />
+                        <div id="prjects-status" className="apex-charts" dir="ltr">
+                            <PrjectsStatusCharts series={chartData} dataColors='["--vz-success", "--vz-primary", "--vz-warning", "--vz-danger"]' />
+                        </div>
                         <div className="mt-3">
                             <div className="d-flex justify-content-center align-items-center mb-4">
                                 <h2 className="me-3 ff-secondary mb-0">{chartData[0] + chartData[1] + chartData[2] + chartData[3] || 784}</h2>
@@ -68,28 +70,28 @@ const ProjectsStatus = () => {
                             <div className="d-flex justify-content-between border-bottom border-bottom-dashed py-2">
                                 <p className="fw-medium mb-0"><i className="ri-checkbox-blank-circle-fill text-success align-middle me-2"></i> Completed</p>
                                 <div>
-                                    <span className="text-muted pe-5">{chartData[0]} Projects</span>
+                                    <span className="text-muted pe-5">{chartData[0]}Projects</span>
                                     <span className="text-success fw-medium fs-12">15870hrs</span>
                                 </div>
                             </div>
                             <div className="d-flex justify-content-between border-bottom border-bottom-dashed py-2">
                                 <p className="fw-medium mb-0"><i className="ri-checkbox-blank-circle-fill text-primary align-middle me-2"></i> In Progress</p>
                                 <div>
-                                    <span className="text-muted pe-5">{chartData[1]} Projects</span>
+                                    <span className="text-muted pe-5">{chartData[1]}Projects</span>
                                     <span className="text-success fw-medium fs-12">243hrs</span>
                                 </div>
                             </div>
                             <div className="d-flex justify-content-between border-bottom border-bottom-dashed py-2">
                                 <p className="fw-medium mb-0"><i className="ri-checkbox-blank-circle-fill text-warning align-middle me-2"></i> Yet to Start</p>
                                 <div>
-                                    <span className="text-muted pe-5">{chartData[2]} Projects</span>
+                                    <span className="text-muted pe-5">{chartData[2]}Projects</span>
                                     <span className="text-success fw-medium fs-12">~2050hrs</span>
                                 </div>
                             </div>
                             <div className="d-flex justify-content-between py-2">
                                 <p className="fw-medium mb-0"><i className="ri-checkbox-blank-circle-fill text-danger align-middle me-2"></i> Cancelled</p>
                                 <div>
-                                    <span className="text-muted pe-5">{chartData[3]} Projects</span>
+                                    <span className="text-muted pe-5">{chartData[3]}Projects</span>
                                     <span className="text-success fw-medium fs-12">~900hrs</span>
                                 </div>
                             </div>

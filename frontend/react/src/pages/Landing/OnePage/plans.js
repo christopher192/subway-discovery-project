@@ -26,7 +26,7 @@ const Plans = () => {
                                         <label className="form-check-label" htmlFor="plan-switch"></label>
                                     </div>
                                     <div>
-                                        <h5 className="fs-14 mb-0">Annual <span className="badge bg-success-subtle text-success">Save 20%</span></h5>
+                                        <h5 className="fs-14 mb-0">Annual <span className="badge bg-danger-subtle text-danger">Save 20%</span></h5>
                                     </div>
                                 </div>
                             </div>

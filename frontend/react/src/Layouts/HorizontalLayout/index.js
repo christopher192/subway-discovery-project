@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 import { Col, Collapse, Row } from 'reactstrap';
 import withRouter from '../../Components/Common/withRouter';
-
 // Import Data
 import navdata from "../LayoutMenuData";
 //i18n
@@ -31,12 +30,10 @@ const HorizontalLayout = (props) => {
     });
     menuItems.push({ id: 'more', label: 'More', icon: 'ri-briefcase-2-line', link: "/#", stateVariables: isMoreMenu, subItems: splitMenuItems, click: function (e) { e.preventDefault(); setIsMoreMenu(!isMoreMenu); }, });
 
-    const path = props.router.location.pathname;
-
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         const initMenu = () => {
-            const pathName = process.env.PUBLIC_URL + path;
+            const pathName = process.env.PUBLIC_URL + props.router.location.pathname;
             const ul = document.getElementById("navbar-nav");
             const items = ul.getElementsByTagName("a");
             let itemsArray = [...items]; // converts NodeList to Array
@@ -49,7 +46,7 @@ const HorizontalLayout = (props) => {
             }
         };
         initMenu();
-    }, [path, props.layoutType]);
+    }, [props.router.location.pathname, props.layoutType]);
 
     function activateParentDropdown(item) {
         item.classList.add("active");
@@ -65,9 +62,9 @@ const HorizontalLayout = (props) => {
                 parentCollapseDiv.parentElement.closest(".collapse").classList.add("show");
                 var parentElementDiv = parentCollapseDiv.parentElement.closest(".collapse").previousElementSibling;
                 if (parentElementDiv)
-                    if (parentElementDiv.closest(".collapse"))
-                        parentElementDiv.closest(".collapse").classList.add("show");
-                parentElementDiv.classList.add("active");
+                    if(parentElementDiv.closest(".collapse"))
+                        parentElementDiv.closest(".collapse").classList.add("show")
+                    parentElementDiv.classList.add("active");
                 var parentElementSibling = parentElementDiv.parentElement.parentElement.parentElement.previousElementSibling;
                 if (parentElementSibling) {
                     parentElementSibling.classList.add("active");
@@ -204,8 +201,7 @@ const HorizontalLayout = (props) => {
                                                                                                             <li className="nav-item apex" key={key}>
                                                                                                                 <Link
                                                                                                                     to={subSubChildItem.link ? subSubChildItem.link : "/#"}
-                                                                                                                    className="nav-link"
-                                                                                                                >
+                                                                                                                    className="nav-link">
                                                                                                                     {props.t(subSubChildItem.label)}
                                                                                                                 </Link>
                                                                                                             </li>
@@ -243,7 +239,7 @@ const HorizontalLayout = (props) => {
                 );
             })}
             {/* menu Items */}
-        </React.Fragment >
+        </React.Fragment>
     );
 };
 

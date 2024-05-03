@@ -2,7 +2,7 @@ const layoutTypes = {
   HORIZONTAL: "horizontal",
   VERTICAL: "vertical",
   TWOCOLUMN: "twocolumn",
-  SEMIBOX:"semibox"
+  SEMIBOX: "semibox"
 };
 
 const layoutModeTypes = {
@@ -43,7 +43,7 @@ const leftsidbarSizeTypes = {
 
 const leftSidebarViewTypes = {
   DEFAULT: "default",
-  DETACHED : "detached"
+  DETACHED: "detached"
 };
 
 const leftSidebarImageTypes = {
@@ -51,18 +51,18 @@ const leftSidebarImageTypes = {
   IMG1: "img-1",
   IMG2: "img-2",
   IMG3: "img-3",
-  IMG4: "img-4",  
+  IMG4: "img-4",
 };
 
 const preloaderTypes = {
   ENABLE: "enable",
   DISABLE: "disable"
-}
+};
 
 const sidebarVisibilitytypes = {
   SHOW: "show",
   HIDDEN: "hidden"
-}
+};
 
 export {
   layoutTypes,

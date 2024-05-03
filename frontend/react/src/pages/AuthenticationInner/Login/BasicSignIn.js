@@ -7,13 +7,12 @@ import ParticlesAuth from "../ParticlesAuth";
 //import images
 import logoLight from "../../../assets/images/logo-light.png";
 
-
 const BasicSignIn = () => {
 document.title="Basic SignIn | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <ParticlesAuth>
-                <div className="auth-page-content mt-lg-5">                
+                <div className="auth-page-content">
                     <Container>
                         <Row>
                             <Col lg={12}>
@@ -41,7 +40,7 @@ document.title="Basic SignIn | Velzon - React Admin & Dashboard Template";
 
                                                 <div className="mb-3">
                                                     <Label htmlFor="username" className="form-label">Username</Label>
-                                                    <Input type="text" className="form-control" id="username" placeholder="Enter username" />
+                                                    <Input type="text" className="form-control" id="username" placeholder="Enter username" required/>
                                                 </div>
 
                                                 <div className="mb-3">
@@ -50,7 +49,7 @@ document.title="Basic SignIn | Velzon - React Admin & Dashboard Template";
                                                     </div>
                                                     <Label className="form-label" htmlFor="password-input">Password</Label>
                                                     <div className="position-relative auth-pass-inputgroup mb-3">
-                                                        <Input type="password" className="form-control pe-5 password-input" placeholder="Enter password" id="password-input" />
+                                                        <Input type="password" className="form-control pe-5 password-input" placeholder="Enter password" id="password-input" required/>
                                                         <button className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i className="ri-eye-fill align-middle"></i></button>
                                                     </div>
                                                 </div>

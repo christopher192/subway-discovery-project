@@ -34,7 +34,7 @@ const Client = () => {
                                     // pagination={{
                                     //     clickable: true,
                                     // }}
-                                    pagination={false}
+                                pagination={false}
                                     breakpoints={{
                                         576: {
                                             slidesPerView: 2,

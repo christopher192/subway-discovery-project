@@ -174,9 +174,9 @@ const fakeBackend = () => {
         if (user && user.token) {
           // You have to generate AccessToken by jwt. but this is fakeBackend so, right now its dummy
           const token = accessToken;
-          const first_name = user.name;
-          const nodeapiToken = nodeApiToken;
-          delete user.name;
+          const first_name = user.name
+          const nodeapiToken = nodeApiToken
+          delete user.name
 
           // JWT AccessToken
           const tokenObj = { accessToken: token, first_name: first_name }; // Token Obj
@@ -241,21 +241,6 @@ const fakeBackend = () => {
           resolve([200, event.data]);
         } else {
           reject([400, "Cannot add event"]);
-        }
-      });
-    });
-  });
-
-  // crm companies
-
-  mock.onPost(url.ADD_NEW_COMPANIES).reply((company) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (company && company.data) {
-          // Passing fake JSON data as response
-          resolve([200, company.data]);
-        } else {
-          reject([400, "Cannot add company"]);
         }
       });
     });
@@ -1445,59 +1430,58 @@ const fakeBackend = () => {
     });
   });
 
+  // Kanban Board
+  mock.onGet(url.GET_TASKS).reply(() => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (tasklist) {
+          // Passing fake JSON data as response
+          resolve([200, tasklist]);
+        } else {
+          reject([400, "Cannot get tasks"]);
+        }
+      });
+    });
+  });
 
-    // Kanban Board
-    mock.onGet(url.GET_TASKS).reply(() => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (tasklist) {
-            // Passing fake JSON data as response
-            resolve([200, tasklist]);
-          } else {
-            reject([400, "Cannot get tasks"]);
-          }
-        });
+  mock.onPost(url.ADD_TASKS).reply(user => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (user && user.data) {
+          // Passing fake JSON data as response
+          resolve([200, user.data]);
+        } else {
+          reject([400, "Cannot add user"]);
+        }
       });
     });
-  
-    mock.onPost(url.ADD_TASKS).reply(user => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (user && user.data) {
-            // Passing fake JSON data as response
-            resolve([200, user.data]);
-          } else {
-            reject([400, "Cannot add user"]);
-          }
-        });
+  });
+
+  mock.onPut(url.UPDATE_TASKS).reply((user) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (user && user.data) {
+          // Passing fake JSON data as response
+          resolve([200, user.data]);
+        } else {
+          reject([400, "Cannot update user"]);
+        }
       });
     });
-  
-    mock.onPut(url.UPDATE_TASKS).reply((user) => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (user && user.data) {
-            // Passing fake JSON data as response
-            resolve([200, user.data]);
-          } else {
-            reject([400, "Cannot update user"]);
-          }
-        });
+  });
+
+  mock.onDelete(url.DELETE_TASKS).reply(config => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (config && config.headers) {
+          // Passing fake JSON data as response
+          resolve([200, config.headers.card]);
+        } else {
+          reject([400, "Cannot delete users"]);
+        }
       });
     });
-  
-    mock.onDelete(url.DELETE_TASKS).reply(config => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (config && config.headers) {
-            // Passing fake JSON data as response
-            resolve([200, config.headers.card]);
-          } else {
-            reject([400, "Cannot delete users"]);
-          }
-        });
-      });
-    });
+  });
 
 };
 

@@ -69,8 +69,7 @@ const UiCards = () => {
             document.getElementById(id).classList.add("d-none");
         }, 3000);
     };
-    
-    document.title="Cards | Velzon - React Admin & Dashboard Template";
+document.title="Cards | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
@@ -487,7 +486,7 @@ const UiCards = () => {
                                         <div className="flex-shrink-0">
                                             <ul className="list-inline card-toolbar-menu d-flex align-items-center mb-0">
                                                 <li className="list-inline-item">
-                                                    <Link to="#" className="align-middle" role="button" onClick={() => spinner('spinner1')}>
+                                                    <Link to="#" className="align-middle" role="button" onClick={() => spinner('spinner1')} >
                                                         <i className="mdi mdi-refresh align-middle"></i>
                                                     </Link>
                                                 </li>
@@ -534,12 +533,6 @@ const UiCards = () => {
                                         </div>
                                         <div className="flex-grow-1 ms-2 text-muted">
                                             This may be the most commonly encountered tip I received from the designers I spoke with. They highly encourage that you use different fonts in one design, but do not over-exaggerate and go overboard.
-                                        </div>
-                                    </div>
-
-                                    <div className="card-status visually-hidden">
-                                        <div className="spinner-border text-success">
-                                            <span className="visually-hidden">Loading...</span>
                                         </div>
                                     </div>
                                 </Collapse>
@@ -674,7 +667,7 @@ const UiCards = () => {
                     <Row>
                         <Col className="col-12">
                             <div className="justify-content-between d-flex align-items-center mt-3 mb-4">
-                                <h5 className="mb-0 text-decoration-underline">Card Image Caps & Overlays</h5>
+                                <h5 className="mb-0 text-decoration-underline">Card Caps & Overlays</h5>
                             </div>
                             <Row>
                                 <Col lg={6} xxl={4}>

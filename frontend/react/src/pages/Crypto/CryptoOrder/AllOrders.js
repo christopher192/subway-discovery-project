@@ -110,13 +110,13 @@ const AllOrders = ({ orderList }) => {
                             data={(orderList || [])}
                             isGlobalFilter={true}
                             isAddUserList={false}
-                            customPageSize={10}
+                            customPageSize={8}
                             className="custom-header-css"
                             divClass="table-responsive table-card mb-1"
                             tableClass="align-middle table-nowrap"
                             theadClass="table-light text-muted"
                             isCryptoOrdersFilter={true}
-                            SearchPlaceholder='Search for orders'
+                            SearchPlaceholder="Search for orders..."
                         />
                     </CardBody>
                 </Card>

@@ -9,7 +9,6 @@ import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
 
 import { DefaultProgressExample, BackgroundColorExample, LabelExample, MultipleBarsExample, HeightExample, StripedExample, AnimatedStripedExample, GradientExample, AnimatedExample, CustomExample, CustomProgressExample, ContentExample, ProgressWithStepExample, StepProgressArrowExample } from './UiProgressCode';
 
-
 const UiProgress = () => {
     document.title="Progress | Velzon - React Admin & Dashboard Template";
     return (
@@ -438,7 +437,7 @@ const UiProgress = () => {
                                                 </div>
                                             </CardBody>
                                             <div >
-                                                <Progress value={30} color="info" className="bg-info-subtle rounded-0" />
+                                                <Progress value={30} color="secondary" className="bg-secondary-subtle rounded-0" />
                                             </div>
                                         </Card>
 

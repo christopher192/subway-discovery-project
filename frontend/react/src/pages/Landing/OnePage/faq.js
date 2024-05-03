@@ -87,7 +87,7 @@ const Faqs = () => {
                                 <p className="text-muted mb-4 ff-secondary">If you can not find answer to your question in our FAQ, you can
                                     always contact us or email us. We will answer you shortly!</p>
 
-                                <div className="hstack gap-2 justify-content-center">
+                                <div className="">
                                     <button type="button" className="btn btn-primary btn-label rounded-pill me-1"><i className="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i> Email Us</button>
                                     <button type="button" className="btn btn-info btn-label rounded-pill"><i className="ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2"></i> Send Us Tweet</button>
                                 </div>

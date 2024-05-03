@@ -44,31 +44,34 @@ import TableContainer from "../../Components/Common/TableContainer";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
-// Export Modal
-import ExportCSVModal from "../../Components/Common/ExportCSVModal";
-
 import Loader from "../../Components/Common/Loader";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+// Export Modal
+import ExportCSVModal from "../../Components/Common/ExportCSVModal";
 import { createSelector } from "reselect";
 
 const CrmCompanies = () => {
   const dispatch = useDispatch();
-
-
   const selectLayoutState = (state) => state.Crm;
-  const crmcompaniesData = createSelector(
-    selectLayoutState,
-    (state) => ({
-      companies: state.companies,
-      isCompaniesSuccess: state.isCompaniesSuccess,
-      error: state.error,
-    })
-  );
-  // Inside your component
+  const selectLayoutProperties = createSelector(
+      selectLayoutState,
+      (crm) => ({
+        companies: crm.companies,
+        isCompaniesCreated: crm.isCompaniesCreated,
+        isCompaniesSuccess : crm.isCompaniesSuccess  ,
+        error :crm.error 
+      })
+    );
+  
+    // Inside your component
   const {
-    companies, isCompaniesSuccess, error
-  } = useSelector(crmcompaniesData);
+    companies,
+    isCompaniesCreated,
+    isCompaniesSuccess  , 
+    error 
+  } = useSelector(selectLayoutProperties);  
 
 
   useEffect(() => {
@@ -95,6 +98,7 @@ const CrmCompanies = () => {
   //delete Company
   const [deleteModal, setDeleteModal] = useState(false);
   const [deleteModalMulti, setDeleteModalMulti] = useState(false);
+
   const [modal, setModal] = useState(false);
 
   const industrytype = [
@@ -170,7 +174,7 @@ const CrmCompanies = () => {
       location: Yup.string().required("Please Enter Location"),
       employee: Yup.string().required("Please Enter Employee"),
       website: Yup.string().required("Please Enter Website"),
-      contact_email: Yup.string().required("Please Enter Contact Email"),
+      contact_email: Yup.string().required("Please Enter Contact"),
       since: Yup.string().required("Please Enter Since"),
     }),
     onSubmit: (values) => {
@@ -284,6 +288,7 @@ const CrmCompanies = () => {
   };
 
 
+  // Customber Column
   const columns = useMemo(
     () => [
       {
@@ -397,6 +402,7 @@ const CrmCompanies = () => {
   // SideBar Company Deatail
   const [info, setInfo] = useState([]);
 
+
   // Export Modal
   const [isExportCSV, setIsExportCSV] = useState(false);
 
@@ -409,11 +415,13 @@ const CrmCompanies = () => {
           onCloseClick={() => setIsExportCSV(false)}
           data={companies}
         />
+
         <DeleteModal
           show={deleteModal}
           onDeleteClick={handleDeleteCompany}
           onCloseClick={() => setDeleteModal(false)}
         />
+
         <DeleteModal
           show={deleteModalMulti}
           onDeleteClick={() => {
@@ -422,7 +430,6 @@ const CrmCompanies = () => {
           }}
           onCloseClick={() => setDeleteModalMulti(false)}
         />
-
         <Container fluid>
           <BreadCrumb title="Companies" pageTitle="CRM" />
 
@@ -438,19 +445,18 @@ const CrmCompanies = () => {
                     </div>
                     <div className="flex-shrink-0">
                       <div className="hstack text-nowrap gap-2">
-                        {isMultiDeleteButton && <button className="btn btn-soft-danger"
+                        {isMultiDeleteButton && <button className="btn btn-danger"
                           onClick={() => setDeleteModalMulti(true)}
                         ><i className="ri-delete-bin-2-line"></i></button>}
-                        <button className="btn btn-danger">
+                        <button className="btn btn-secondary">
                           <i className="ri-filter-2-line me-1 align-bottom"></i>{" "}
                           Filters
                         </button>
-                        <button className="btn btn-soft-success" onClick={() => setIsExportCSV(true)}>Import</button>
-
+                        <button className="btn btn-soft-success" onClick={() => setIsExportCSV(true)}>Export</button>
                         <UncontrolledDropdown>
                           <DropdownToggle
                             href="#"
-                            className="btn btn-soft-info"
+                            className="btn btn-soft-info btn-icon"
                             tag="button"
                           >
                             <i className="ri-more-2-fill"></i>
@@ -478,7 +484,6 @@ const CrmCompanies = () => {
             </Col>
             <Col xxl={9}>
               <Card id="companyList">
-
                 <CardBody className="pt-0">
                   <div>
                     {isCompaniesSuccess && companies.length ? (
@@ -487,14 +492,14 @@ const CrmCompanies = () => {
                         data={(companies || [])}
                         isGlobalFilter={true}
                         isAddUserList={false}
-                        customPageSize={8}
+                        customPageSize={7}
                         className="custom-header-css"
                         divClass="table-responsive table-card mb-2"
                         tableClass="align-middle table-nowrap"
                         theadClass="table-light"
                         handleCompanyClick={handleCompanyClicks}
                         isCompaniesFilter={true}
-                        SearchPlaceholder='Search for company...'
+                        SearchPlaceholder="Search for company..."
                       />
                     ) : (<Loader error={error} />)
                     }
@@ -533,6 +538,7 @@ const CrmCompanies = () => {
                                       validation.touched.img && validation.errors.img ? true : false
                                     }
                                   />
+
                                 </div>
                                 <div className="avatar-lg p-1">
                                   <div className="avatar-title bg-light rounded-circle">
@@ -779,7 +785,7 @@ const CrmCompanies = () => {
                                 }
                               />
                               {validation.touched.contact_email && validation.errors.contact_email ? (
-                                <FormFeedback type="invalid">{validation.errors.contact_email}</FormFeedback>
+                                <FormFeedback type="invalid">{validation.errors.ccontact_emailontact}</FormFeedback>
                               ) : null}
                             </div>
                           </Col>

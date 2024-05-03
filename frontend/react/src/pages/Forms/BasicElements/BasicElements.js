@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { InputExample, InputSizing, FileInput, InputGroup, InputGroupSizing, MultipleInputs, ButtonsCheckboxesRadiosGroup, ButtonsWithDropdowns, CustomForms } from './BasicElementCode';
 import UiContent from "../../../Components/Common/UiContent";
 
@@ -9,7 +9,7 @@ import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
 
 
 const BasicElements = () => {
-    document.title = "Basic Elements | Velzon - React Admin & Dashboard Template";  
+  document.title="Basic Elements | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
@@ -167,7 +167,6 @@ const BasicElements = () => {
                                                     <Input type="text" className="form-control rounded-pill" id="exampleInputrounded" placeholder="Enter your name" />
                                                 </div>
                                             </Col>
-
                                             <Col xxl={3} md={6}>
                                                 <div>
                                                     <FormGroup floating>
@@ -183,7 +182,6 @@ const BasicElements = () => {
                                                     </FormGroup>
                                                 </div>
                                             </Col>
-
                                         </Row>
 
                                     </div>

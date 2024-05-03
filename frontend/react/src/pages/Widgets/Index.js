@@ -9,10 +9,9 @@ import OtherWidgets from './OtherWidgets';
 import UpcomingActivity from './UpcomingActivities';
 import ChartMapWidgets from './Chart&MapWidgets';
 import EcommerceWidgets from './EcommerceWidgets';
-import CreditCard from './CreditCard';
 
 const Widgets = () => {
-    document.title = "Widgets | Velzon - React Admin & Dashboard Template";
+    document.title="Widgets | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -32,9 +31,6 @@ const Widgets = () => {
 
                     {/* Chart & EcommerceWidgets  */}
                     <EcommerceWidgets />
-
-                    {/* CreditCard */}
-                    <CreditCard />
 
                 </Container>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Card, CardBody, Col, Container, Row, Form, Input, Label, FormFeedback } from 'reactstrap';
 import ParticlesAuth from '../ParticlesAuth';
@@ -13,7 +13,7 @@ const BasicPasswCreate = () => {
     document.title = "Create New Password | Velzon - React Admin & Dashboard Template";
 
     const [passwordShow, setPasswordShow] = useState(false);
-    const [confrimPasswordShow, setConfrimPasswordShow] = useState(false);
+    const [confrimPasswordShow, setConfrimPasswordShow] = useState(false);    
 
     const validation = useFormik({
         enableReinitialize: true,
@@ -45,7 +45,7 @@ const BasicPasswCreate = () => {
     });
     return (
         <ParticlesAuth>
-            <div className="auth-page-content mt-lg-5">
+            <div className="auth-page-content">
                 <Container>
                     <Row>
                         <Col lg={12}>
@@ -98,11 +98,11 @@ const BasicPasswCreate = () => {
                                                 <Label className="form-label" htmlFor="confirm-password-input">Confirm Password</Label>
                                                 <div className="position-relative auth-pass-inputgroup mb-3">
                                                     <Input
-                                                        type={confrimPasswordShow ? "text" : "password"}
+                                                         type={confrimPasswordShow ? "text" : "password"}
                                                         className="form-control pe-5 password-input"
                                                         placeholder="Confirm password"
                                                         id="confirm-password-input"
-                                                        name="confrim_password"
+                                                        name="confrim_password"                                                       
                                                         value={validation.values.confrim_password}
                                                         onBlur={validation.handleBlur}
                                                         onChange={validation.handleChange}
@@ -112,7 +112,7 @@ const BasicPasswCreate = () => {
                                                         <FormFeedback type="invalid">{validation.errors.confrim_password}</FormFeedback>
                                                     ) : null}
                                                     <Button color="link" onClick={() => setConfrimPasswordShow(!confrimPasswordShow)} className="position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button">
-                                                        <i className="ri-eye-fill align-middle"></i></Button>
+                                                    <i className="ri-eye-fill align-middle"></i></Button>
                                                 </div>
                                             </div>
 

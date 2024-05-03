@@ -648,7 +648,7 @@ const sellersList = [
     name: "Katia Stapleton",
     stock: "784",
     chartdata: [12, 14, 2, 47, 42, 15, 35, 75, 20, 67, 89],
-    color: "#0ab39c",
+    color: "#13c56b",
     balance: "$97,642",
     category:"Manufacturer"
   },
@@ -660,7 +660,7 @@ const sellersList = [
     name: "Harley Fuller",
     stock: "320",
     chartdata: [45, 20, 8, 42, 30, 5, 35, 79, 22, 54, 64],
-    color: "#0ab39c",
+    color: "#13c56b",
     balance: "$27,102",
     category:"Manufacturer"
   },
@@ -696,7 +696,7 @@ const sellersList = [
     name: "John Roberts",
     stock: "412",
     chartdata: [78, 63, 51, 33, 8, 16, 60, 67, 12, 49],
-    color: "#0ab39c",
+    color: "#13c56b",
     balance: "$34,241",
     category:"Computers & Electronics"
   },

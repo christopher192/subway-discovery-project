@@ -17,7 +17,6 @@ import paymentImg from "../../../assets/images/modals/success-payment.png";
 import authbg from "../../../assets/images/auth-one-bg.jpg";
 
 
-
 const UiModals = () => {
 
     const [modal_standard, setmodal_standard] = useState(false);
@@ -192,6 +191,7 @@ const UiModals = () => {
         setmodal_signUpModals(!modal_signUpModals);
     }
 
+
     document.title = "Modals | Velzon - React Admin & Dashboard Template";
 
     return (
@@ -206,7 +206,7 @@ const UiModals = () => {
                                 <PreviewCardHeader title="Default Modal" />
 
                                 <CardBody>
-                                    <p className="text-muted text-muted">A default modal Example.</p>
+                                <p className="text-muted text-muted">Use <code>modal-dialog </code>class to show default modal.</p>
                                     <div className="live-preview">
                                         <div>
                                             <Button color="primary" onClick={() => tog_standard()}>Standard Modal</Button>
@@ -252,6 +252,7 @@ const UiModals = () => {
                             <Card>
                                 <PreviewCardHeader title="Grids in Modals" />
                                 <CardBody>
+                                <p className='text-muted'>Use <code>container-fluid</code> class within the modal-body to utilize the Bootstrap grid system within a modal by nesting.</p>
                                     <div className="live-preview">
                                         <Button color="primary" onClick={() => tog_grid()}>
                                             Launch Demo Modal
@@ -272,6 +273,7 @@ const UiModals = () => {
                             <Card>
                                 <PreviewCardHeader title="Static Backdrop Modal" />
                                 <CardBody>
+                                <p className='text-muted'>Use <code>data-bs-backdrop="static"</code> to modal not to close when clicking outside the modal.</p>
                                     <div className="live-preview">
                                         <div>
                                             <Button color="primary" onClick={() => tog_backdrop()}>
@@ -296,6 +298,7 @@ const UiModals = () => {
                             <Card>
                                 <PreviewCardHeader title="Toggle Between Modal" />
                                 <CardBody>
+                                    <p className='text-muted'>Toggle between multiple modals with some clever placement of the<code> data-bs-target</code> and <code>data-bs-toggle</code> attributes. Please note multiple modals cannot be open at the same time. this method simply toggles between two separate modals.</p>
                                     <div className="live-preview">
                                         <div>
                                             <Button color="primary" onClick={() => tog_togFirst()}>Open First Modal</Button>
@@ -318,7 +321,7 @@ const UiModals = () => {
                             <Card>
                                 <PreviewCardHeader title="Tooltips and Popovers" />
                                 <CardBody>
-
+                                <p className='text-muted'><code>Tooltips</code> and<code> Popovers</code> can be placed within modals as needed.When modals are closed, any tooltips and popovers within are also automatically dismissed</p>
                                     <div className="live-preview">
                                         <Button color="primary" onClick={() => tog_tooltip()}>
                                             Launch Demo Modal
@@ -341,6 +344,7 @@ const UiModals = () => {
                             <Card>
                                 <PreviewCardHeader title="Scrollable Modal" />
                                 <CardBody>
+                                <p className='text-muted'>Use <code>modal-dialog-scrollable</code> class to create a modal scrollable.</p>
                                     <div className="live-preview">
                                         <div>
                                             <Button color="primary" onClick={() => tog_scroll()}>Scrollable Modal</Button>
@@ -361,6 +365,7 @@ const UiModals = () => {
                             <Card>
                                 <PreviewCardHeader title="Varying Modal Content" />
                                 <CardBody>
+                                <p className='text-muted'>Use <code>event.relatedTarget </code>and HTML <code>data-bs-*</code> attributes to vary the contents of the modal depending on which button was clicked.</p>
                                     <div className="live-preview">
                                         <div>
                                             <div className="hstack gap-2 flex-wrap">
@@ -392,23 +397,19 @@ const UiModals = () => {
                                         <div>
                                             <div className="hstack flex-wrap gap-2">
 
-                                                {/* 
-                                                // <!-- Fullscreen modal --> */}
+                                                {/* <!-- Fullscreen modal --> */}
                                                 <Button color="primary" onClick={() => tog_fullscreen(true)}>Fullscreen Modal</Button>
 
 
-                                                {/* 
-                                                // <!-- Extra Large modal --> */}
+                                                {/* <!-- Extra Large modal --> */}
                                                 <Button color="info" onClick={() => tog_xlarge(true)}>Extra large Modal</Button>
 
 
-                                                {/* 
-                                                // <!-- Large modal --> */}
+                                                {/* <!-- Large modal --> */}
                                                 <Button color="success" onClick={() => tog_large(true)}>Large Modal</Button>
 
 
-                                                {/* 
-                                                // <!-- Small modal --> */}
+                                                {/* <!-- Small modal --> */}
                                                 <Button color="danger" onClick={() => tog_small(true)}>Small Modal</Button>
                                             </div>
                                         </div>
@@ -512,6 +513,7 @@ const UiModals = () => {
                             </Card>
                         </Col>
                     </Row>
+
                     <Row className="mt-2">
                         <Col lg={12}>
                             <div className="justify-content-between d-flex align-items-center mb-3">
@@ -530,7 +532,8 @@ const UiModals = () => {
                                             <Row className="justify-content-center mt-2">
                                                 <Col lg={10}>
                                                     <div>
-                                                        <img src={paymentImg} alt="Mac" className="img-fluid" />
+                                                        <img src={paymentImg} alt="Mac"
+                                                            className="img-fluid" />
                                                     </div>
                                                 </Col>
                                             </Row>
@@ -611,21 +614,17 @@ const UiModals = () => {
                     tog_standard();
                 }}
             >
-                <ModalHeader className="modal-title"
-                    id="myModalLabel" toggle={() => {
-                        tog_standard();
-                    }}>
-
-                    Modal Heading
+                <ModalHeader className="modal-title" id="myModalLabel" toggle={() => { tog_standard(); }}>
+                        Modal Heading
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h5 className="fs-15">
                         Overflowing text to show scroll behavior
                     </h5>
                     <p className="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
                     <p className="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
                     <p className="text-muted">It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button
                         color="light"
@@ -651,9 +650,12 @@ const UiModals = () => {
                 }}
                 centered
             >
-                <ModalHeader className="modal-title" />
-
-                <ModalBody className="text-center p-5">
+                <ModalHeader>
+                   
+                        Center Modal
+                    
+                </ModalHeader>
+                <div className="modal-body text-center p-5">
                     <lord-icon src="https://cdn.lordicon.com/hrqwmuhr.json"
                         trigger="loop" colors="primary:#121331,secondary:#08a88a" style={{ width: "120px", height: "120px" }}>
                     </lord-icon>
@@ -665,7 +667,7 @@ const UiModals = () => {
                             <Link to="#" className="btn btn-danger">Try Again</Link>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
             </Modal>
 
             {/* Grids in Modals */}
@@ -675,13 +677,12 @@ const UiModals = () => {
                     tog_grid();
                 }}
             >
-                <ModalHeader className="modal-title" toggle={() => {
+                <ModalHeader toggle={() => {
                     tog_grid();
                 }}>
-                    Grid Modals
-
+                        Grid Modals
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <form action="#">
                         <div className="row g-3">
                             <Col xxl={6}>
@@ -719,7 +720,7 @@ const UiModals = () => {
                             </Col>
                             <Col xxl={6}>
                                 <label htmlFor="passwordInput" className="form-label">Password</label>
-                                <Input type="password" className="form-control" id="passwordInput" value="451326546" placeholder="Enter password" />
+                                <Input type="password" className="form-control" id="passwordInput" value="451326546" placeholder="Enter password" readOnly />
                             </Col>
                             <Col lg={12}>
                                 <div className="hstack gap-2 justify-content-end">
@@ -729,7 +730,7 @@ const UiModals = () => {
                             </Col>
                         </div>
                     </form>
-                </ModalBody>
+                </div>
             </Modal>
 
             {/* Static Backdrop Modal */}
@@ -742,13 +743,12 @@ const UiModals = () => {
                 id="staticBackdrop"
                 centered
             >
-                <ModalHeader className="modal-title" id="staticBackdropLabel" toggle={() => {
+                <ModalHeader id="staticBackdropLabel" toggle={() => {
                     tog_backdrop();
                 }}>
                     Modal title
-
                 </ModalHeader>
-                <ModalBody className="text-center p-5">
+                <div className="modal-body text-center p-5">
                     <lord-icon
                         src="https://cdn.lordicon.com/lupuorrc.json"
                         trigger="loop"
@@ -764,7 +764,7 @@ const UiModals = () => {
                             <Link to="#" className="btn btn-success" onClick={() => setmodal_backdrop(false)}>Completed</Link>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
             </Modal>
 
             {/* Toggle Between Modal */}
@@ -777,13 +777,12 @@ const UiModals = () => {
                 id="firstmodal"
                 centered
             >
-                <ModalHeader className="modal-title" id="exampleModalToggleLabel" toggle={() => {
+                <ModalHeader id="exampleModalToggleLabel" toggle={() => {
                     tog_togFirst();
                 }}>
-                    Modal 1
-
+                        Modal 1
                 </ModalHeader>
-                <ModalBody className="text-center p-5">
+                <div className="modal-body text-center p-5">
                     <lord-icon
                         src="https://cdn.lordicon.com/tdrtiskw.json"
                         trigger="loop"
@@ -798,7 +797,7 @@ const UiModals = () => {
                             Continue
                         </Button>
                     </div>
-                </ModalBody>
+                </div>
             </Modal>
 
             <Modal
@@ -809,17 +808,17 @@ const UiModals = () => {
                 id="secondmodal"
                 centered
             >
-                <ModalHeader className="modal-title" id="exampleModalToggleLabel2" toggle={() => {
+                <ModalHeader id="exampleModalToggleLabel2" toggle={() => {
                     tog_togSecond();
                 }}>
                     Modal 2
-
+                   
                 </ModalHeader>
-                <ModalBody className="text-center p-5">
+                <div className="modal-body text-center p-5">
                     <lord-icon
                         src="https://cdn.lordicon.com/zpxybbhl.json"
                         trigger="loop"
-                        colors="primary:#405189,secondary:#0ab39c"
+                        colors="primary:#6691e7,secondary:#13c56b"
                         style={{ width: "150px", height: "150px" }}>
                     </lord-icon>
                     <div className="mt-4 pt-3">
@@ -832,7 +831,7 @@ const UiModals = () => {
                             <Button color="light" onClick={() => tog_togSecond(false)}>Close</Button>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
 
             </Modal>
 
@@ -843,12 +842,14 @@ const UiModals = () => {
                     tog_tooltip();
                 }}
             >
-                <ModalHeader className="modal-title" toggle={() => {
+                <ModalHeader toggle={() => {
                     tog_tooltip();
                 }}>
-                    Tooltips and Popovers Modal
+                   
+                        Tooltips and Popovers Modal
+                    
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h5 className="fs-16">Popover in a Modal</h5>
                     <p className="text-muted">You only need to know a little to make a big
                         {" "}<Link to="#" className="popover-test fw-medium text-decoration-underline link-success" id="UncontrolledPopover">
@@ -870,7 +871,7 @@ const UiModals = () => {
                         </Link> contrasting colors in Graphic Design is a must.</p>
                     <UncontrolledTooltip placement="top" target="UncontrolledTooltip1" > Morton Bayer </UncontrolledTooltip>
                     <UncontrolledTooltip placement="top" target="UncontrolledTooltip2" > Web Developers </UncontrolledTooltip>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <div className="mx-auto">
                         <Link to="#" className="btn btn-link fw-medium">Read More <i className="ri-arrow-right-line ms-1 align-middle"></i></Link>
@@ -887,12 +888,13 @@ const UiModals = () => {
                 scrollable={true}
                 id="exampleModalScrollable"
             >
-                <ModalHeader className="modal-title" id="exampleModalScrollableTitle" toggle={() => {
+                <ModalHeader toggle={() => {
                     tog_scroll();
                 }}>
-                    Scrollable modal
+                        Scrollable modal
+                   
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -976,7 +978,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">Keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
 
                 <div className="modal-footer">
                     <Button
@@ -1004,14 +1006,12 @@ const UiModals = () => {
                 className="modal-fullscreen"
                 id="exampleModalFullscreen"
             >
-                <ModalHeader className="modal-title"
-                    id="exampleModalFullscreenLabel" toggle={() => {
-                        tog_fullscreen();
-                    }}>
-                    Fullscreen Modal Heading
-
+                <ModalHeader id="exampleModalFullscreenLabel"  toggle={() => {
+                    tog_fullscreen();
+                }}>
+                   Full Screen Modal
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1095,7 +1095,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">Keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to='#'
                         color="light"
@@ -1123,15 +1123,14 @@ const UiModals = () => {
                     tog_xlarge();
                 }}
             >
-                <ModalHeader className="modal-title"
-                    id="myExtraLargeModalLabel" toggle={() => {
-                        tog_xlarge();
-                    }}>
-
-                    Extra large modal
-
+                <ModalHeader id="myExtraLargeModalLabel" toggle={() => {
+                    tog_xlarge();
+                }}>
+                    
+                        Extra large modal
+                   
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1215,7 +1214,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">Keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => setmodal_xlarge(false)}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary">Save changes</Button>
@@ -1231,15 +1230,14 @@ const UiModals = () => {
                     tog_large();
                 }}
             >
-                <ModalHeader className="modal-title"
-                    id="myLargeModalLabel" toggle={() => {
-                        tog_large();
-                    }}>
-
-                    Large Modal
-
+                <ModalHeader id="myLargeModalLabel" toggle={() => {
+                    tog_large();
+                }}>
+                   
+                        Large Modal
+                    
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1323,7 +1321,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">Keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => setmodal_large(false)}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary">Save changes</Button>
@@ -1338,15 +1336,14 @@ const UiModals = () => {
                     tog_small();
                 }}
             >
-                <ModalHeader className="modal-title"
-                    id="mySmallModalLabel" toggle={() => {
-                        tog_small();
-                    }}>
-
-                    Small Modal
-
+                <ModalHeader id="mySmallModalLabel"  toggle={() => {
+                    tog_small();
+                }}>
+                    
+                        Small Modal
+                   
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1373,7 +1370,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => setmodal_small(false)}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary">Save changes</Button>
@@ -1390,15 +1387,14 @@ const UiModals = () => {
                 className="modal-fullscreen"
                 id="fullscreeexampleModal"
             >
-                <ModalHeader className="modal-title"
-                    id="fullscreeexampleModalLabel" toggle={() => {
-                        tog_fullscreen1();
-                    }}>
-
-                    Full screen modal
-
+                <ModalHeader id="fullscreeexampleModalLabel" toggle={() => {
+                    tog_fullscreen1();
+                }}>
+                    
+                        Full screen modal
+                    
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1450,7 +1446,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to='#'
                         type="button"
@@ -1472,10 +1468,10 @@ const UiModals = () => {
 
             {/* FullscreenSm */}
             <Modal id="exampleModalFullscreenSm" isOpen={modal_fullscreen_sm} toggle={() => { tog_fullscreen_sm(); }} >
-                <ModalHeader className="modal-title" id="exampleModalFullscreenSmLabel" toggle={() => { tog_fullscreen_sm(); }}>
-                    Full screen below sm
+                <ModalHeader id="exampleModalFullscreenSmLabel" toggle={() => { tog_fullscreen_sm(); }}>
+                     Full screen below sm
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1502,7 +1498,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => { tog_fullscreen_sm(); }}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary"> Save changes </Button>
@@ -1511,10 +1507,10 @@ const UiModals = () => {
 
             {/* FullscreenMd */}
             <Modal id="exampleModalFullscreenMd" isOpen={modal_fullscreen_md} toggle={() => { tog_fullscreen_md(); }} >
-                <ModalHeader className="modal-title" id="exampleModalFullscreenMdLabel" toggle={() => { tog_fullscreen_md(); }}>
-                    Full screen below md
+                <ModalHeader id="exampleModalFullscreenMdLabel" toggle={() => { tog_fullscreen_md(); }}>
+                     Full screen below md
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1541,7 +1537,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => { tog_fullscreen_md(); }}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary" > Save changes </Button>
@@ -1550,10 +1546,10 @@ const UiModals = () => {
 
             {/* FullscreenLg */}
             <Modal id="exampleModalFullscreenLg" isOpen={modal_fullscreen_lg} toggle={() => { tog_fullscreen_lg(); }} >
-                <ModalHeader className="modal-title" id="exampleModalFullscreenLgLabel" toggle={() => { tog_fullscreen_lg(); }}>
-                    Full screen below lg
+                <ModalHeader id="exampleModalFullscreenLgLabel" toggle={() => { tog_fullscreen_lg(); }}>
+                     Full screen below lg 
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1580,7 +1576,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => { tog_fullscreen_lg(); }}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary" > Save changes </Button>
@@ -1589,10 +1585,10 @@ const UiModals = () => {
 
             {/* FullscreenXl */}
             <Modal id="exampleModalFullscreenXl" isOpen={modal_fullscreen_xl} toggle={() => { tog_fullscreen_xl(); }} >
-                <ModalHeader className="modal-title" id="exampleModalFullscreenXlLabel" toggle={() => { tog_fullscreen_xl(); }}>
-                    Full screen below xl
+                <ModalHeader id="exampleModalFullscreenXlLabel" toggle={() => { tog_fullscreen_xl(); }}>
+                     Full screen below xl
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1619,7 +1615,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => { tog_fullscreen_xl(); }}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary" > Save changes </Button>
@@ -1628,10 +1624,10 @@ const UiModals = () => {
 
             {/* FullscreenXxl */}
             <Modal id="exampleModalFullscreenXxl" isOpen={modal_fullscreen_xxl} toggle={() => { tog_fullscreen_xxl(); }} >
-                <ModalHeader className="modal-title" id="exampleModalFullscreenXxlLabel" toggle={() => { tog_fullscreen_xxl(); }}>
+                <ModalHeader id="exampleModalFullscreenXxlLabel" toggle={() => { tog_fullscreen_xxl(); }}>
                     Modal Heading
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h6 className="fs-15">Give your text a good structure</h6>
                     <div className="d-flex">
                         <div className="flex-shrink-0">
@@ -1658,7 +1654,7 @@ const UiModals = () => {
                             <p className="text-muted mb-0">In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.</p>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Link to="#" className="btn btn-link link-success fw-medium" onClick={() => { tog_fullscreen_xxl(); }}><i className="ri-close-line me-1 align-middle"></i> Close</Link>
                     <Button color="primary" > Save changes </Button>
@@ -1677,9 +1673,9 @@ const UiModals = () => {
                     tog_varying1();
                 }}>
                     New message to Mary
-
+                    
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <form>
                         <div className="mb-3">
                             <label htmlFor="customer-name" className="col-form-label">Customer Name:</label>
@@ -1690,7 +1686,7 @@ const UiModals = () => {
                             <textarea className="form-control" id="message-text" rows="4"></textarea>
                         </div>
                     </form>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button
                         color="light"
@@ -1713,13 +1709,12 @@ const UiModals = () => {
                     tog_varying2();
                 }}
             >
-                <ModalHeader className="modal-title" toggle={() => {
+                <ModalHeader toggle={() => {
                     tog_varying2();
                 }}>
                     New message to Jennifer
-
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <form>
                         <div className="mb-3">
                             <label htmlFor="customer-name" className="col-form-label">Customer Name:</label>
@@ -1730,7 +1725,7 @@ const UiModals = () => {
                             <textarea className="form-control" id="message-text" rows="4"></textarea>
                         </div>
                     </form>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button
                         color="light"
@@ -1753,13 +1748,13 @@ const UiModals = () => {
                     tog_varying3();
                 }}
             >
-                <ModalHeader className="modal-title" toggle={() => {
+                <ModalHeader toggle={() => {
                     tog_varying3();
                 }}>
-                    New message to Roderick
-
+                        New message to Roderick
+                    
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <form>
                         <div className="mb-3">
                             <label htmlFor="customer-name" className="col-form-label">Customer Name:</label>
@@ -1770,7 +1765,7 @@ const UiModals = () => {
                             <textarea className="form-control" id="message-text" rows="4"></textarea>
                         </div>
                     </form>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button
                         color="light"
@@ -1790,16 +1785,16 @@ const UiModals = () => {
 
             {/* RightSide Animation */}
             <Modal id="fadeInRightModal" isOpen={modal_animationRight} toggle={() => { tog_animationRight(); }} modalClassName="fadeInRight" centered >
-                <ModalHeader className="modal-title" id="fadeInRightModalLabel" toggle={() => { tog_animationRight(); }}>
+                <ModalHeader id="fadeInRightModalLabel" toggle={() => { tog_animationRight(); }}>
                     Modal Heading
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h5 className="fs-16">
                         Overflowing text to show scroll behavior
                     </h5>
                     <p className="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
                     <p className="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button color="light" onClick={() => { tog_animationRight(); }}>
                         Close
@@ -1810,16 +1805,16 @@ const UiModals = () => {
 
             {/* LeftSide Animation */}
             <Modal id="fadeInleftModal" isOpen={modal_animationLeft} toggle={() => { tog_animationLeft(); }} modalClassName="fadeInLeft" centered >
-                <ModalHeader className="modal-title" id="fadeInleftModalLabel" toggle={() => { tog_animationLeft(); }}>
-                    Modal Heading
+                <ModalHeader id="fadeInleftModalLabel" toggle={() => { tog_animationLeft(); }}>
+                     Modal Heading 
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h5 className="fs-16">
                         Overflowing text to show scroll behavior
                     </h5>
                     <p className="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
                     <p className="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button color="light" onClick={() => { tog_animationLeft(); }}> Close </Button>
                     <Button color="primary" > Save changes </Button>
@@ -1828,16 +1823,16 @@ const UiModals = () => {
 
             {/* UpSide Animation */}
             <Modal id="fadeInUpModal" isOpen={modal_animationUp} toggle={() => { tog_animationUp(); }} modalClassName="fadeInUp" centered >
-                <ModalHeader className="modal-title" id="fadeInUpModalLabel" toggle={() => { tog_animationUp(); }}>
-                    Modal Heading
+                <ModalHeader  id="fadeInUpModalLabel" toggle={() => { tog_animationUp(); }}>
+                     Modal Heading
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h5 className="fs-16">
                         Overflowing text to show scroll behavior
                     </h5>
                     <p className="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
                     <p className="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button color="light" onClick={() => { tog_animationUp(); }}> Close </Button>
                     <Button color="primary" > Save changes </Button>
@@ -1846,16 +1841,16 @@ const UiModals = () => {
 
             {/* Flip Animation */}
             <Modal id="flipModal" isOpen={modal_animationFlip} toggle={() => { tog_animationFlip(); }} modalClassName="flip" centered >
-                <ModalHeader className="modal-title" id="flipModalLabel" toggle={() => { tog_animationFlip(); }}>
-                    Modal Heading
+                <ModalHeader id="flipModalLabel" toggle={() => { tog_animationFlip(); }}>
+                     Modal Heading
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h5 className="fs-16">
                         Overflowing text to show scroll behavior
                     </h5>
                     <p className="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
                     <p className="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button color="light" onClick={() => { tog_animationFlip(); }}> Close </Button>
                     <Button color="primary" > Save changes </Button>
@@ -1864,16 +1859,16 @@ const UiModals = () => {
 
             {/* ZoomIn Animation */}
             <Modal id="flipModal" isOpen={modal_animationZoom} toggle={() => { tog_animationZoom(); }} modalClassName="zoomIn" centered >
-                <ModalHeader className="modal-title" id="flipModalLabel" toggle={() => { tog_animationZoom(); }}>
+                <ModalHeader id="flipModalLabel" toggle={() => { tog_animationZoom(); }}>
                     Modal Heading
                 </ModalHeader>
-                <ModalBody>
+                <div className="modal-body">
                     <h5 className="fs-16">
                         Overflowing text to show scroll behavior
                     </h5>
                     <p className="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
                     <p className="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
-                </ModalBody>
+                </div>
                 <div className="modal-footer">
                     <Button color="light" onClick={() => { tog_animationZoom(); }}> Close </Button>
                     <Button color="primary" > Save changes </Button>
@@ -1882,10 +1877,10 @@ const UiModals = () => {
 
             {/* Position Top */}
             <Modal id="topmodal" isOpen={modal_positionTop} toggle={() => { tog_positionTop(); }} >
-                <ModalHeader className="modal-title" id="myModalLabel" toggle={() => { tog_positionTop(); }}>
-                    Modal Heading
+                <ModalHeader id="myModalLabel" toggle={() => { tog_positionTop(); }}>
+                     Modal Heading 
                 </ModalHeader>
-                <ModalBody className="text-center p-5">
+                <div className="modal-body text-center p-5">
                     <lord-icon src="https://cdn.lordicon.com/pithnlch.json"
                         trigger="loop" colors="primary:#121331,secondary:#08a88a" style={{ width: "120px", height: "120px" }}>
                     </lord-icon>
@@ -1897,16 +1892,16 @@ const UiModals = () => {
                             <Link to="#" className="btn btn-success">Completed</Link>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
             </Modal>
 
             {/* Position Top Right */}
 
             <Modal id="top-rightmodal" isOpen={modal_positionTopRight} toggle={() => { tog_positionTopRight(); }} className="modal-dialog-right" >
-                <ModalHeader className="modal-title" id="myModalLabel" toggle={() => { tog_positionTopRight(); }} >
-                    Modal Heading
+                <ModalHeader id="myModalLabel" toggle={() => { tog_positionTopRight(); }}>
+                    Modal Heading 
                 </ModalHeader>
-                <ModalBody className="text-center p-5">
+                <div className="modal-body text-center p-5">
                     <lord-icon src="https://cdn.lordicon.com/pithnlch.json"
                         trigger="loop" colors="primary:#121331,secondary:#08a88a" style={{ width: "120px", height: "120px" }}>
                     </lord-icon>
@@ -1918,16 +1913,16 @@ const UiModals = () => {
                             <Link to="#" className="btn btn-success">Completed</Link>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
             </Modal>
 
             {/* Position Bottom */}
 
             <Modal id="bottomModal" isOpen={modal_positionBottom} toggle={() => { tog_positionBottom(); }} className="modal-dialog-bottom" >
-                <ModalHeader className="modal-title" id="myModalLabel" toggle={() => { tog_positionBottom(); }}>
-                    Modal Heading
+                <ModalHeader id="myModalLabel" toggle={() => { tog_positionBottom(); }}>
+                    Modal Heading 
                 </ModalHeader>
-                <ModalBody className="text-center p-5">
+                <div className="modal-body text-center p-5">
                     <lord-icon src="https://cdn.lordicon.com/pithnlch.json"
                         trigger="loop" colors="primary:#121331,secondary:#08a88a" style={{ width: "120px", height: "120px" }}>
                     </lord-icon>
@@ -1939,16 +1934,16 @@ const UiModals = () => {
                             <Link to="#" className="btn btn-success">Completed</Link>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
             </Modal>
 
             {/* Position Bottom Right */}
 
             <Modal id="bottom-rightModal" isOpen={modal_positionBottomRight} toggle={() => { tog_positionBottomRight(); }} className="modal-dialog-bottom-right" >
-                <ModalHeader className="modal-title" id="myModalLabel" toggle={() => { tog_positionBottomRight(); }}>
+                <ModalHeader toggle={() => { tog_positionBottomRight(); }} id="myModalLabel">
                     Modal Heading
                 </ModalHeader>
-                <ModalBody className="text-center p-5">
+                <div className="modal-body text-center p-5">
                     <lord-icon src="https://cdn.lordicon.com/pithnlch.json"
                         trigger="loop" colors="primary:#121331,secondary:#08a88a" style={{ width: "120px", height: "120px" }}>
                     </lord-icon>
@@ -1960,9 +1955,8 @@ const UiModals = () => {
                             <Link to="#" className="btn btn-success">Completed</Link>
                         </div>
                     </div>
-                </ModalBody>
+                </div>
             </Modal>
-
 
             {/* Custom Modals Example */}
 

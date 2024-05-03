@@ -11,7 +11,7 @@ const TopSellers = () => {
                     <CardHeader className="align-items-center d-flex">
                         <h4 className="card-title mb-0 flex-grow-1">Top Sellers</h4>
                         <div className="flex-shrink-0">
-                            <UncontrolledDropdown className="card-header-dropdown" >
+                            <UncontrolledDropdown className="card-header-dropdown" direction='start'>
                                 <DropdownToggle tag="a" className="text-reset dropdown-btn" role="button">
                                     <span className="text-muted">Report<i className="mdi mdi-chevron-down ms-1"></i></span>
                                 </DropdownToggle>
@@ -36,7 +36,7 @@ const TopSellers = () => {
                                                         <img src={item.img} alt="" className="avatar-sm p-2" />
                                                     </div>
                                                     <div>
-                                                        <h5 className="fs-14 my-1 fw-medium"><Link to="/apps-ecommerce-seller-details" className="text-reset">{item.label}</Link></h5>
+                                                        <h5 className="fs-13 my-1"><Link to="/apps-ecommerce-seller-details" className="text-reset">{item.label}</Link></h5>
                                                         <span className="text-muted">{item.name}</span>
                                                     </div>
                                                 </div>
@@ -52,7 +52,7 @@ const TopSellers = () => {
                                                 <span className="text-muted">${item.amount}</span>
                                             </td>
                                             <td>
-                                                <h5 className="fs-14 mb-0">{item.percentage}%<i className="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i></h5>
+                                                <h5 className="fs-13 mb-0 fw-semibold">{item.percentage}%<i className="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i></h5>
                                             </td>
                                         </tr>
                                     ))}

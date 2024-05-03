@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardBody, Col, Container, Row } from "reactstrap";
-import BreadCrumb from "../../../Components/Common/BreadCrumb";
 import FeatherIcon from "feather-icons-react";
+import BreadCrumb from "../../../Components/Common/BreadCrumb";
 
 const PrivacyPolicy = () => {
   document.title = "Privacy Policy | Velzon - React Admin & Dashboard Template";
@@ -12,10 +12,10 @@ const PrivacyPolicy = () => {
         <Container fluid>
           <BreadCrumb title="Privacy Policy" pageTitle="Pages" />
           <Row className="justify-content-center">
-            <Col lg={10}>
+            <Col className="col-lg-10">
               <Card>
                 <div className="bg-warning-subtle position-relative">
-                  <CardBody className="p-5">
+                  <CardBody className="card-body p-5">
                     <div className="text-center">
                       <h3>Privacy Policy</h3>
                       <p className="mb-0 text-muted">
@@ -23,22 +23,11 @@ const PrivacyPolicy = () => {
                       </p>
                     </div>
                   </CardBody>
-                  {/* <div className="shape">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xmlnsXlink="http://www.w3.org/1999/xlink"
-                      // xmlns:svgjs="http://svgjs.com/svgjs"
-                      width="1440"
-                      height="60"
-                      preserveAspectRatio="none"
-                      viewBox="0 0 1440 60"
-                    >
-                      <g mask='url("#SvgjsMask1001")' fill="none">
-                        <path
-                          d="M 0,4 C 144,13 432,48 720,49 C 1008,50 1296,17 1440,9L1440 60L0 60z"
-                          style={{ fill: "var(--vz-card-bg-custom)" }}
-                        ></path>
+                  
+                <div className="shape">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsxlink="http://www.w3.org/1999/xlink" xmlnssvgjs="http://svgjs.com/svgjs" width="1440" height="60" preserveAspectRatio="none" viewBox="0 0 1440 60">
+                      <g mask="url(&quot;#SvgjsMask1001&quot;)" fill="none">
+                        <path d="M 0,4 C 144,13 432,48 720,49 C 1008,50 1296,17 1440,9L1440 60L0 60z" style={{ fill: "var(--vz-secondary-bg)" }}></path>
                       </g>
                       <defs>
                         <mask id="SvgjsMask1001">
@@ -46,28 +35,14 @@ const PrivacyPolicy = () => {
                         </mask>
                       </defs>
                     </svg>
-                  </div> */}
-
-                  <div className="shape">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsxlink="http://www.w3.org/1999/xlink" xmlnssvgjs="http://svgjs.com/svgjs" width="1440" height="60" preserveAspectRatio="none" viewBox="0 0 1440 60">
-                      <g mask="url(&quot;#SvgjsMask1001&quot;)" fill="none">
-                        <path d="M 0,4 C 144,13 432,48 720,49 C 1008,50 1296,17 1440,9L1440 60L0 60z" style={{ fill: "var(--vz-secondary-bg)" }}></path>
-                      </g>
-                      <defs>
-                        <mask id="SvgjsMask1001">
-                          <rect width="1440" height="60" fill="#FFFFFF"></rect>
-                        </mask>
-                      </defs>
-                    </svg>
                   </div>
-
                 </div>
                 <CardBody className="p-4">
                   <div className="d-flex">
                     <div className="flex-shrink-0 me-3">
                       <FeatherIcon
+                        className="text-success icon-dual-success icon-sm"
                         icon="check-circle"
-                        className="text-success icon-dual-success icon-xs"
                       />
                     </div>
                     <div className="flex-grow-1">
@@ -136,8 +111,8 @@ const PrivacyPolicy = () => {
                   <div className="d-flex">
                     <div className="flex-shrink-0 me-3">
                       <FeatherIcon
+                        className="text-success icon-dual-success icon-sm"
                         icon="check-circle"
-                        className="text-success icon-dual-success icon-xs"
                       />
                     </div>
                     <div className="flex-grow-1">
@@ -191,8 +166,8 @@ const PrivacyPolicy = () => {
                   <div className="d-flex">
                     <div className="flex-shrink-0 me-3">
                       <FeatherIcon
+                        className="text-success icon-dual-success icon-sm"
                         icon="check-circle"
-                        className="text-success icon-dual-success icon-xs"
                       />
                     </div>
                     <div className="flex-grow-1">

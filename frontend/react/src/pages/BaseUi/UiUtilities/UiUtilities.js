@@ -15,7 +15,6 @@ import avatar2 from "../../../assets/images/users/avatar-2.jpg";
 import img2 from "../../../assets/images/small/img-2.jpg";
 import { StacksVerticalExample, StacksHorizontalExample, TextSelectionExample, PointerEventsExample, OverflowExample, PositionExample, ShadowsExample, WidthExample, HeightExample } from './UiUtilitiesCode';
 
-
 const UiUtilities = () => {
     document.title = "Utilities | Velzon - React Admin & Dashboard Template";
     return (
@@ -628,11 +627,11 @@ const UiUtilities = () => {
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>font-family: 'Poppins', sans-serif;</td>
+                                                            <td>font-family: 'Rubik', sans-serif;</td>
                                                             <td><code>.ff-base</code></td>
                                                         </tr>
                                                         <tr>
-                                                            <td>font-family: 'hkgrotesk', sans-serif;</td>
+                                                            <td>font-family: 'Montserrat', sans-serif;</td>
                                                             <td><code>.ff-secondary</code></td>
                                                         </tr>
                                                         <tr>

@@ -22,15 +22,15 @@ const Contact = () => {
                             <div>
                                 <div className="mt-4">
                                     <h5 className="fs-13 text-muted text-uppercase">Office Address 1:</h5>
-                                    <div className="ff-secondary fw-semibold">4461 Cedar Street Moro, <br />AR 72368</div>
+                                    <div className=" fw-semibold">4461 Cedar Street Moro, <br />AR 72368</div>
                                 </div>
                                 <div className="mt-4">
                                     <h5 className="fs-13 text-muted text-uppercase">Office Address 2:</h5>
-                                    <div className="ff-secondary fw-semibold">2467 Swick Hill Street <br />New Orleans, LA</div>
+                                    <div className=" fw-semibold">2467 Swick Hill Street <br />New Orleans, LA</div>
                                 </div>
                                 <div className="mt-4">
                                     <h5 className="fs-13 text-muted text-uppercase">Working Hours:</h5>
-                                    <div className="ff-secondary fw-semibold">9:00am to 6:00pm</div>
+                                    <div className=" fw-semibold">9:00am to 6:00pm</div>
                                 </div>
                             </div>
                         </Col>

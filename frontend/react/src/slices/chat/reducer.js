@@ -35,14 +35,14 @@ const chatSlice = createSlice({
     });
 
     builder.addCase(addMessage.fulfilled, (state, action) => {
-      state.messages.unshift(action.payload);
+      state.messages.push(action.payload);
     });
     builder.addCase(addMessage.rejected, (state, action) => {
       state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteMessage.fulfilled, (state, action) => {
-      state.messages = (state.messages || []).filter((message) => message.id.toString() !== action.payload.toString());
+      state.messages = (state.messages || []).filter((message) => message.id.toString() !== action.payload.data.toString());
     });
     builder.addCase(deleteMessage.rejected, (state, action) => {
       state.error = action.payload.error || null;

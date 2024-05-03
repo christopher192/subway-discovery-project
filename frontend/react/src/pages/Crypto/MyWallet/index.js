@@ -7,9 +7,8 @@ import MarketStatus from './MarketStatus';
 import Widgets from './Widgets';
 import RecentTransaction from './RecentTransaction';
 
-
 const MyWallet = () => {
-    document.title="My Wallet | Velzon - React Admin & Dashboard Template";
+  document.title="My Wallet | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -17,7 +16,7 @@ const MyWallet = () => {
                     <BreadCrumb title="My Wallet" pageTitle="Crypto" />
                     <Row>
                         <Col xxl={9}>
-                            <PortfolioStatistics dataColors='["--vz-info"]' />
+                            <PortfolioStatistics  dataColors='["--vz-info"]'/>
                             <Watchlist />
                             <MarketStatus />
                         </Col>

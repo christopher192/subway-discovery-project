@@ -77,7 +77,7 @@ const SubscribeAction = () => {
                                             </tbody>
                                         </table>
                                         <div style={{textAlign: "center", margin: "0px auto"}}>
-                                            <ul style={{listStyle: "none", display: "flex", justifyContent: "space-evenly", paddingTop: "25px", marginBottom: "20px", paddingLeft: "0px", fontFamily: "Roboto sans-serif"}}>
+                                            <ul style={{listStyle: "none", display: "flex", justifyContent: "space-evenly", paddingTop: "25px", marginBottom: "20px", paddingLeft: "0px", fontFamily: "Roboto, sans-serif"}}>
                                                 <li>
                                                     <Link to="/#" style={{color: "#495057"}}>Help Center</Link>
                                                 </li>

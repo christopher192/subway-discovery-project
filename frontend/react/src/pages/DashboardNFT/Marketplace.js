@@ -5,8 +5,11 @@ import Countdown from "react-countdown";
 import { useSelector, useDispatch } from "react-redux";
 import { getMarketChartsDatas } from '../../slices/thunks';
 
+// Import Images
+import ImgGif2 from "../../assets/images/nft/gif/img-2.gif";
+
 // Import Chart
-import {MarketplaceChart} from "./DashboardNFTCharts";
+import { MarketplaceChart } from "./DashboardNFTCharts";
 import { Link } from 'react-router-dom';
 import { createSelector } from 'reselect';
 
@@ -14,13 +17,13 @@ const Marketplace = () => {
     const dispatch = useDispatch();
 
     const [chartData, setchartData] = useState([]);
-
-    const selectmarketData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.DashboardNFT,
         (marketplaceData) => marketplaceData.marketplaceData
       );
+      
     // Inside your component
-    const marketplaceData = useSelector(selectmarketData);
+    const  marketplaceData = useSelector(selectDashboardData);
 
 
     useEffect(() => {
@@ -37,7 +40,7 @@ const Marketplace = () => {
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
         if (completed) {
             // Render a completed state
-            return <span>You are good to go!</span>
+            return <span>You are good to go!</span>;
         } else {
             return (
                 <>
@@ -54,9 +57,9 @@ const Marketplace = () => {
                             <div className="count-num">{seconds}</div></div>
                     </div>
                 </>
-            )
+            );
         }
-    }
+    };
     return (
         <React.Fragment>
             <Row>
@@ -124,14 +127,14 @@ const Marketplace = () => {
 
                                         <div className="w-100">
                                             <div className="d-flex align-items-center">
-                                                <img src={"https://img.themesbrand.com/velzon/images/img-2.gif"} className="img-fluid avatar-xs rounded-circle object-fit-cover" alt="" />
+                                                <img src={ImgGif2} className="img-fluid avatar-xs rounded-circle object-fit-cover" alt="" />
                                                 <div className="ms-3 flex-grow-1">
                                                     <h5 className="fs-16 mb-1">Trendy Fashion Portraits</h5>
                                                     <p className="text-muted mb-0">Artwork</p>
                                                 </div>
 
                                                 <UncontrolledDropdown>
-                                                    <DropdownToggle tag="a" className="align-middle text-muted" role="button">
+                                                    <DropdownToggle tag="a" className="text-reset dropdown-btn" role="button">
                                                         <i className="ri-share-line fs-18"></i>
                                                     </DropdownToggle>
                                                     <DropdownMenu className="dropdown-menu-end">
@@ -161,7 +164,7 @@ const Marketplace = () => {
                                             </div>
 
                                             <div className="dash-countdown mt-4 pt-1">
-                                                <Countdown date="2025/01/01" renderer={renderer} />
+                                                <Countdown date="2025/1/1" renderer={renderer} />
                                             </div>
 
                                             <Row className="mt-4 pt-2">

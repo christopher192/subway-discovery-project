@@ -5,7 +5,7 @@ import BasicAction from "./BasicAction";
 import SubscribeAction from "./SubscribeAction";
 import EmailVerifyAction from "./EmailVerifyAction";
 import PasswordChangeAction from "./PasswordChangeAction";
-
+import './font.css'
 const index = () => {
     document.title = "Basic Action | Velzon - React Admin & Dashboard Template";
     

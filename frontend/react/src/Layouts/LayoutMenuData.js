@@ -143,7 +143,7 @@ const Navdata = () => {
     {
       id: "dashboard",
       label: "Dashboards",
-      icon: "ri-dashboard-2-line",
+      icon: "bx bxs-dashboard",
       link: "/#",
       stateVariables: isDashboard,
       click: function (e) {
@@ -194,15 +194,13 @@ const Navdata = () => {
           label: "Job",
           link: "/dashboard-job",
           parentId: "dashboard",
-          // badgeColor: "success",
-          // badgeName: "New",
         },
       ],
     },
     {
       id: "apps",
       label: "Apps",
-      icon: "ri-apps-2-line",
+      icon: "bx bx-layer",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -522,6 +520,8 @@ const Navdata = () => {
           label: "File Manager",
           link: "/apps-file-manager",
           parentId: "apps",
+          // badgeName: "New",
+          // badgeColor: "danger"
         },
         {
           id: "todo",
@@ -534,8 +534,6 @@ const Navdata = () => {
           label: "Jobs",
           link: "/#",
           parentId: "apps",
-          // badgeName: "New",
-          // badgeColor: "success",
           isChildItem: true,
           click: function (e) {
             e.preventDefault();
@@ -638,8 +636,8 @@ const Navdata = () => {
           label: "API Key",
           link: "/apps-api-key",
           parentId: "apps",
-          // badgeName: "New",
-          // badgeColor: "success"
+          badgeName: "New",
+          badgeColor: "success",
         },
       ],
     },
@@ -650,7 +648,7 @@ const Navdata = () => {
     {
       id: "authentication",
       label: "Authentication",
-      icon: "ri-account-circle-line",
+      icon: "bx bx-user-circle",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -812,7 +810,7 @@ const Navdata = () => {
     {
       id: "pages",
       label: "Pages",
-      icon: "ri-pages-line",
+      icon: "bx bx-file",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -903,14 +901,12 @@ const Navdata = () => {
           label: "Privacy Policy",
           link: "/pages-privacy-policy",
           parentId: "pages",
-          // badgeColor: "success", badgeName: "New",
         },
         {
           id: "TermsCondition",
           label: "Terms Condition",
           link: "/pages-terms-condition",
           parentId: "pages",
-          // badgeColor: "success", badgeName: "New",
         },
       ],
     },
@@ -944,7 +940,8 @@ const Navdata = () => {
           label: "Job",
           link: "/job-landing",
           parentId: "landing",
-          // badgeColor: "success", badgeName: "New"
+          badgeColor: "success",
+          badgeName: "New",
         },
       ],
     },
@@ -955,7 +952,7 @@ const Navdata = () => {
     {
       id: "baseUi",
       label: "Base UI",
-      icon: "ri-pencil-ruler-2-line",
+      icon: "bx bx-palette",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -1070,8 +1067,8 @@ const Navdata = () => {
           label: "Links",
           link: "/ui-links",
           parentId: "baseUi",
-          badgeColor: "success",
           badgeName: "New",
+          badgeColor: "success",
         },
         {
           id: "general",
@@ -1096,7 +1093,7 @@ const Navdata = () => {
     {
       id: "advanceUi",
       label: "Advance UI",
-      icon: "ri-stack-line",
+      icon: "bx bx-briefcase-alt",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -1153,7 +1150,7 @@ const Navdata = () => {
     {
       id: "widgets",
       label: "Widgets",
-      icon: "ri-honour-line",
+      icon: "bx bx-aperture",
       link: "/widgets",
       click: function (e) {
         e.preventDefault();
@@ -1163,7 +1160,7 @@ const Navdata = () => {
     {
       id: "forms",
       label: "Forms",
-      icon: "ri-file-list-3-line",
+      icon: "bx bx-receipt",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -1256,7 +1253,7 @@ const Navdata = () => {
     {
       id: "tables",
       label: "Tables",
-      icon: "ri-layout-grid-line",
+      icon: "bx bx-table",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -1272,12 +1269,14 @@ const Navdata = () => {
           link: "/tables-basic",
           parentId: "tables",
         },
+
         {
           id: "listjs",
           label: "List Js",
           link: "/tables-listjs",
           parentId: "tables",
         },
+
         {
           id: "reactdatatables",
           label: "React Datatables",
@@ -1289,7 +1288,7 @@ const Navdata = () => {
     {
       id: "charts",
       label: "Charts",
-      icon: "ri-pie-chart-line",
+      icon: "bx bx-doughnut-chart",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -1320,17 +1319,15 @@ const Navdata = () => {
               id: 7,
               label: "Range Area",
               link: "/charts-apex-range-area",
-              parentId: "apexcharts",
-              badgeColor: "success",
               badgeName: "New",
+              badgeColor: "success",
             },
             {
               id: 8,
               label: "Funnel",
               link: "/charts-apex-funnel",
-              parentId: "apexcharts",
-              badgeColor: "success",
               badgeName: "New",
+              badgeColor: "success",
             },
             { id: 9, label: "Candlstick", link: "/charts-apex-candlestick" },
             { id: 10, label: "Boxplot", link: "/charts-apex-boxplot" },
@@ -1412,7 +1409,7 @@ const Navdata = () => {
     {
       id: "maps",
       label: "Maps",
-      icon: "ri-map-pin-line",
+      icon: "bx bx-map-alt",
       link: "/#",
       click: function (e) {
         e.preventDefault();
@@ -1433,7 +1430,7 @@ const Navdata = () => {
     {
       id: "multilevel",
       label: "Multi Level",
-      icon: "ri-share-line",
+      icon: "bx bx-sitemap",
       link: "/#",
       click: function (e) {
         e.preventDefault();

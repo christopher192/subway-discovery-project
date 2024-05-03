@@ -45,7 +45,7 @@ const DealsStatus = () => {
                                             <td>{item.date}</td>
                                             <td><img src={item.img} alt="" className="avatar-xs rounded-circle me-2" />
                                                 <Link to="#" className="text-body fw-medium">{item.representativeName}</Link></td>
-                                            <td><span className={"badge bg-" + item.badgeClass + "-subtle text-"+item.badgeClass +" p-2"}>{item.status}</span></td>
+                                            <td><span className={"badge bg-" + item.badgeClass + "-subtle text-"+item.badgeClass+" p-2"}>{item.status}</span></td>
                                             <td><div className="text-nowrap">{item.statusValue}</div></td>
                                         </tr>
                                     ))}

@@ -3,12 +3,12 @@ import { getFirebaseBackend } from "../../../helpers/firebase_helper";
 import {
   postFakeLogin,
   postJwtLogin,
-  postSocialLogin,
 } from "../../../helpers/fakebackend_helper";
 
 import { loginSuccess, logoutUserSuccess, apiError, reset_login_flag } from './reducer';
 
 export const loginUser = (user, history) => async (dispatch) => {
+
   try {
     let response;
     if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {
@@ -23,13 +23,13 @@ export const loginUser = (user, history) => async (dispatch) => {
         password: user.password
       });
 
-    } else if (process.env.REACT_APP_DEFAULTAUTH) {
+    } else if (process.env.REACT_APP_API_URL) {
       response = postFakeLogin({
         email: user.email,
         password: user.password,
       });
     }
-
+    
     var data = await response;
 
     if (data) {
@@ -44,7 +44,7 @@ export const loginUser = (user, history) => async (dispatch) => {
         } else {
           dispatch(apiError(finallogin));
         }
-      } else {
+      }else{
         dispatch(loginSuccess(data));
         history('/dashboard')
       }
@@ -94,7 +94,7 @@ export const socialLogin = (type, history) => async (dispatch) => {
   }
 };
 
-export const resetLoginFlag = () => async (dispatch) => {
+export const resetLoginFlag = () => async (dispatch) =>{
   try {
     const response = dispatch(reset_login_flag());
     return response;

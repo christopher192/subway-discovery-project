@@ -8,6 +8,7 @@
     "Projects": "Projects",
     "NFT": "NFT",
     "Apps": "Apps",
+    "pages": "Pages",
     "Calendar": "Calendar",
     "Main Calender": "Main Calender",
     "Month Grid": "Month Grid",
@@ -192,20 +193,5 @@
     "Level 2.2": "Level 2.2",
     "Level 3.1": "Level 3.1",
     "Level 3.2": "Level 3.2",
-     "Job" : "Job",
-    "Jobs" : "Jobs",
-    "Statistics" : "Statistics",
-    "Job Lists" : " Job Lists",
-    "candidate Lists" : "candidate Lists",
-    "Grid View" : "Grid View",
-    "Application" : "Application",
-    "New Job" : "New Job",
-    "Companies List" : "Companies List",
-    "Job Categories" : "Job Categories",
-    "API Key" : "API Key",
-    "Privacy Policy" : "Privacy Policy",
-    "Terms Condition" : "Terms Condition",
-    "pages" : "pages",
     "React Datatables" : "React Datatables"
-
 }

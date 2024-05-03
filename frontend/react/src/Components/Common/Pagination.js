@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Row } from "reactstrap";
 
-const Pagination = ({ data, currentPage, setCurrentPage, perPageData }) => {
+const Pagination = ({ data, currentPage, setCurrentPage, perPageData, className }) => {
 
 
     const handleClick = (e) => {
@@ -30,8 +30,12 @@ const Pagination = ({ data, currentPage, setCurrentPage, perPageData }) => {
     return (
         <React.Fragment>
             <Row className="g-0 justify-content-end mb-4">
+                <div className="col-sm-6">
+                    <div className="text-muted">Showing<span className="fw-semibold ms-1">1</span> of <span className="fw-semibold">{data.length}</span> Results
+                    </div>
+                </div>
                 <div className="col-sm-auto">
-                    <ul className="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                    <ul className={className}>
                         {currentPage <= 1 ? (
                             <Link className="page-item pagination-prev disabled" href="#!">
                                 Previous

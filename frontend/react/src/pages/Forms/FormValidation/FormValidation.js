@@ -32,7 +32,7 @@ const FormValidations = () => {
     initialValues: {
       firstname: "",
       lastname: "",
-      username: "",
+      username:"",
       city: "",
       state: "",
       zip: "",
@@ -50,15 +50,15 @@ const FormValidations = () => {
     },
   });
 
-document.title ="Validation | Velzon - React Admin & Dashboard Template";
+
+  document.title="Form Validation | Velzon - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
       <UiContent />
       <div className="page-content">
-        
         <Container fluid={true}>
-          <BreadCrumb title="Form Validation" pageTitle="Forms" />
+          <BreadCrumb title="Forms Validation" pageTitle="Forms" />
           <Row>
             <Col lg={12}>
               <Card>
@@ -198,33 +198,31 @@ document.title ="Validation | Velzon - React Admin & Dashboard Template";
                         </Col>
                         <Col md={4}>
                           <FormGroup className="mb-3">
-                            <Label htmlFor="validationTooltipUsername">Username</Label>
-                            <InputGroup>
-                              <span className="input-group-text" id="inputGroupPrepend2">@</span>
-                              <Input
-                                name="username"
-                                type="text"
-                                className="form-control"
-                                id="validationTooltipUsername"
-                                onChange={validation.handleChange}
-                                onBlur={validation.handleBlur}
-                                value={validation.values.username || ""}
-                                invalid={
-                                  validation.touched.username &&
-                                    validation.errors.username
-                                    ? true
-                                    : false
-                                }
-                              />
-                              {validation.touched.username &&
-                                validation.errors.username ? (
-                                <FormFeedback type="invalid">
-                                  {validation.errors.username}
-                                </FormFeedback>
-                              ) : null}
-                            </InputGroup>
+                            <Label htmlFor="validationTooltipUsername">User name</Label>
+                            <Input
+                              name="username"
+                              placeholder="Otto"
+                              type="text"
+                              className="form-control"
+                              id="validationTooltipUsername"
+                              onChange={validation.handleChange}
+                              onBlur={validation.handleBlur}
+                              value={validation.values.username || ""}
+                              invalid={
+                                validation.touched.username &&
+                                  validation.errors.username
+                                  ? true
+                                  : false
+                              }
+                            />
+                            {validation.touched.username &&
+                              validation.errors.username ? (
+                              <FormFeedback type="invalid">
+                                {validation.errors.username}
+                              </FormFeedback>
+                            ) : null}
                           </FormGroup>
-                        </Col>
+                        </Col> 
                       </Row>
                       <Row>
                         <Col md="4">
@@ -234,7 +232,6 @@ document.title ="Validation | Velzon - React Admin & Dashboard Template";
                               name="city"
                               placeholder="City"
                               type="text"
-                              id="validationCustom03"
                               className="form-control"
                               onChange={validation.handleChange}
                               onBlur={validation.handleBlur}

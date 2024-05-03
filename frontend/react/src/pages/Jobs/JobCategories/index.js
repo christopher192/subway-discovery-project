@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
+  Button,
   Card,
   CardBody,
   CardHeader,
@@ -22,7 +23,7 @@ const JobCategories = () => {
   return (
     <React.Fragment>
       <div className="page-content">
-        <Container fluid className="container-fluid">
+        <Container fluid>
           <BreadCrumb title="Job Categories" pageTitle="Jobs" />
           <Row>
             <Col lg={12}>
@@ -41,18 +42,19 @@ const JobCategories = () => {
                     </Col>
                     <Col className="col-lg-auto">
                       <div className="d-md-flex text-nowrap gap-2">
-                        <button
-                          className="btn btn-info add-btn"
+                        <Button
+                          color="info"
+                          className="btn add-btn"
                           data-bs-toggle="modal"
                           data-bs-target="#showModal"
                         >
                           <i className="ri-add-fill me-1 align-bottom"></i> Add
                           Categories
-                        </button>
-                        <button className="btn btn-danger">
+                        </Button>
+                        <Button color="danger" className="btn">
                           <i className="ri-filter-2-line me-1 align-bottom"></i>{" "}
                           Filters
-                        </button>
+                        </Button>
                         <UncontrolledDropdown>
                           <DropdownToggle
                             type="button"
@@ -65,29 +67,18 @@ const JobCategories = () => {
                           >
                             <i className="ri-more-2-fill"></i>
                           </DropdownToggle>
-                          <DropdownMenu
-                            className="dropdown-menu"
-                            aria-labelledby="dropdownMenuLink1"
-                          >
+                          <DropdownMenu aria-labelledby="dropdownMenuLink1">
                             <li>
-                              <DropdownItem className="dropdown-item" to="#">
-                                All
-                              </DropdownItem>
+                              <DropdownItem href="#">All</DropdownItem>
                             </li>
                             <li>
-                              <DropdownItem className="dropdown-item" to="#">
-                                Last Week
-                              </DropdownItem>
+                              <DropdownItem href="#">Last Week</DropdownItem>
                             </li>
                             <li>
-                              <DropdownItem className="dropdown-item" to="#">
-                                Last Month
-                              </DropdownItem>
+                              <DropdownItem href="#">Last Month</DropdownItem>
                             </li>
                             <li>
-                              <DropdownItem className="dropdown-item" to="#">
-                                Last Year
-                              </DropdownItem>
+                              <DropdownItem href="#">Last Year</DropdownItem>
                             </li>
                           </DropdownMenu>
                         </UncontrolledDropdown>
@@ -111,7 +102,7 @@ const JobCategories = () => {
                       target="div"
                       style={{ width: "50px", height: "50px" }}
                     ></lord-icon>
-                    <Link to="#" className="stretched-link">
+                    <Link to="#!" className="stretched-link">
                       <h5 className="mt-4">{item.lable}</h5>
                     </Link>
                     <p className="text-muted mb-0">{item.position}</p>

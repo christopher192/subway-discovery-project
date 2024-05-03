@@ -8,9 +8,8 @@ import BreadCrumb from '../../../Components/Common/BreadCrumb';
 
 import { VerticalStartExample, VerticalCenterExample, VerticalEndExample, AlignSelfExample, HorizontalAlignExample } from "./UiGridCode";
 
-
 const UiGrid = () => {
-    document.title="Grid | Velzon - React Admin & Dashboard Template";
+document.title="Grid | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <UiContent />
@@ -88,7 +87,7 @@ const UiGrid = () => {
                                                 </tr>
                                                 <tr>
                                                     <th className="text-nowrap" scope="row">Gutter width</th>
-                                                    <td colSpan="6">24px (12px on each side of a column)</td>
+                                                    <td colSpan="6">1.5rem (0.75rem on each side of a column)</td>
                                                 </tr>
                                                 <tr>
                                                     <th className="text-nowrap" scope="row">Custom gutters</th>

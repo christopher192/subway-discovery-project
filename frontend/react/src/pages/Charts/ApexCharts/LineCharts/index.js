@@ -20,7 +20,7 @@ import {
 
 
 const LineCharts = () => {
-    document.title = "Line Charts | Velzon - React Admin & Dashboard Template";
+  document.title="Line Charts | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -142,7 +142,6 @@ const LineCharts = () => {
                                 </CardBody>
                             </Card>
                         </Col>
-
                         <Col lg={6}>
                             <Card>
                                 <CardHeader>
@@ -150,9 +149,9 @@ const LineCharts = () => {
                                 </CardHeader>
                                 <CardBody>
                                     <div>
-                                        <ChartSyncingLine dataColors='["--vz-primary"]' className="apex-charts" dir="ltr" />
-                                        <ChartSyncingLine2 dataColors='["--vz-warning"]' className="apex-charts" dir="ltr" />
-                                        <ChartSyncingArea dataColors='["--vz-success"]' className="apex-charts" dir="ltr" />
+                                        <ChartSyncingLine dataColors='["--vz-primary"]' className="apex-charts" dir="ltr"/>
+                                        <ChartSyncingLine2 dataColors='["--vz-warning"]' className="apex-charts" dir="ltr"/>
+                                        <ChartSyncingArea dataColors='["--vz-success"]' className="apex-charts" dir="ltr"/>
                                     </div>
                                 </CardBody>
                             </Card>

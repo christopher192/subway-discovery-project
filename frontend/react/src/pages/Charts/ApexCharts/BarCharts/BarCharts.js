@@ -41,7 +41,6 @@ const Basic = ({ dataColors }) => {
                 series={series}
                 type="bar"
                 height={350}
-
             />
         </React.Fragment>
     );

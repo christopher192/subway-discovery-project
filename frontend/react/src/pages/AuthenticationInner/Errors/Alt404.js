@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardBody, Col, Container, Row } from 'reactstrap';
 
 const Alt404 = () => {
-    document.title = "404 Error Alt | Velzon - React Admin & Dashboard Template";
+document.title="404 Error Alt | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
@@ -15,20 +15,11 @@ const Alt404 = () => {
                                 <Card className="overflow-hidden">
                                     <CardBody className="p-4">
                                         <div className="text-center">
-                                            {/* <lord-icon className="avatar-xl"
-                                                src="https://cdn.lordicon.com/spxnqpau.json"
-                                                trigger="loop"
-                                                colors="primary:#405189,secondary:#0ab39c"
-                                                style={{ width: "120px", height: "120px" }}>
-                                            </lord-icon> */}
-
-                                            <lord-icon
+                                            <lord-icon className="avatar-xl"
                                                 src="https://cdn.lordicon.com/etwtznjn.json"
                                                 trigger="loop"
                                                 colors="primary:#405189,secondary:#0ab39c"
-                                                className="avatar-xl"
-                                                style={{ width: "120px", height: "120px" }}
-                                            >
+                                                style={{ width: "120px", height: "120px" }}>
                                             </lord-icon>
                                             <h1 className="text-primary mb-4">Oops !</h1>
                                             <h4 className="text-uppercase">Sorry, Page not Found 😭</h4>

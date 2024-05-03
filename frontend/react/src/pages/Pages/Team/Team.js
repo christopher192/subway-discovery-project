@@ -11,6 +11,7 @@ import userdummyimg from '../../../assets/images/users/user-dummy-img.jpg';
 
 //Small Images
 import smallImage9 from '../../../assets/images/small/img-9.jpg';
+
 //redux
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -32,12 +33,13 @@ const Team = () => {
 
     const dispatch = useDispatch();
 
-    const selectteamData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.Team,
         (teamData) => teamData.teamData
       );
+      
     // Inside your component
-    const teamData = useSelector(selectteamData);
+    const  teamData = useSelector(selectDashboardData);
 
 
     const [team, setTeam] = useState(null);
@@ -85,7 +87,7 @@ const Team = () => {
     // Add To do
     const handleTeamClicks = () => {
         setTeamMem("");
-        setModal(!modal);
+        setModal(!modal)
         setIsEdit(false);
         toggle();
     };
@@ -102,6 +104,7 @@ const Team = () => {
             setDeleteModal(false);
         }
     };
+
 
     useEffect(() => {
         const list = document.querySelectorAll(".team-list");
@@ -143,9 +146,9 @@ const Team = () => {
 
         const filterItems = (arr, query) => {
             return arr.filter((el) => {
-                return el.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-            });
-        };
+                return el.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+            })
+        }
 
         let filterData = filterItems(teamData, inputVal);
         setTeamlist(filterData);
@@ -156,7 +159,7 @@ const Team = () => {
             document.getElementById("noresult").style.display = "none";
             document.getElementById("teamlist").style.display = "block";
         }
-    };
+    }
 
     //OffCanvas  
     const [isOpen, setIsOpen] = useState(false);
@@ -208,10 +211,9 @@ const Team = () => {
                 dispatch(onAddTeamData(newTeamData));
                 validation.resetForm();
             }
-            toggle();
+            toggle()
         },
     });
-
     return (
         <React.Fragment>
             <ToastContainer closeButton={false} />
@@ -250,7 +252,8 @@ const Team = () => {
                                                 <li><Link className="dropdown-item" to="#">Last Year</Link></li>
                                             </DropdownMenu>
                                         </Dropdown>
-                                        <Button color="success" onClick={() => handleTeamClicks()}>
+                                        <Button color="success"
+                                            onClick={() => handleTeamClicks()}>
                                             <i className="ri-add-fill me-1 align-bottom"></i> Add Members</Button>
                                     </div>
                                 </Col>
@@ -342,6 +345,7 @@ const Team = () => {
                                     </Col>
                                 </Row>
 
+
                                 <div className="modal fade" id="addmembers" tabIndex="-1" aria-hidden="true">
                                     <div className="modal-dialog modal-dialog-centered">
                                         <Modal isOpen={modal} toggle={toggle} centered>
@@ -375,7 +379,7 @@ const Team = () => {
                                                                                     </label>
                                                                                     <input className="form-control d-none" defaultValue="" id="cover-image-input" type="file" accept="image/png, image/gif, image/jpeg" />
                                                                                 </div>
-                                                                                <button type="button" className="btn-close btn-close-white" onClick={() => setModal(false)} id="createMemberBtn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                                <button type="button" className="btn-close btn-close-white" id="createMemberBtn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -452,13 +456,13 @@ const Team = () => {
                                     </div>
                                 </div>
 
+
                                 <Offcanvas
                                     isOpen={isOpen}
                                     direction="end"
                                     toggle={() => setIsOpen(!isOpen)}
                                     className="offcanvas-end border-0"
                                     tabIndex="-1"
-                                    id="member-overview"
                                 >
                                     <OffcanvasBody className="profile-offcanvas p-0">
                                         <div className="team-cover">
@@ -468,7 +472,7 @@ const Team = () => {
                                             <div className="team-settings">
                                                 <Row>
                                                     <Col>
-                                                        <button type="button" className="btn btn-light btn-icon rounded-circle btn-sm favourite-btn "> <i className="ri-star-fill fs-14"></i> </button>
+                                                    <button type="button" class="btn btn-light btn-icon rounded-circle btn-sm favourite-btn "> <i class="ri-star-fill fs-14"></i> </button>
                                                     </Col>
                                                     <UncontrolledDropdown direction='start' className="col text-end">
                                                         <DropdownToggle tag="a" id="dropdownMenuLink14" role="button">
@@ -485,8 +489,8 @@ const Team = () => {
                                         <div className="p-3 text-center">
                                             <img src={sideBar.userImage || avatar2} alt="" className="avatar-lg img-thumbnail rounded-circle mx-auto" />
                                             <div className="mt-3">
-                                                <h5 className="fs-15 profile-name"><Link to="#" className="link-primary">{sideBar.name || "Nancy Martino"}</Link></h5>
-                                                <p className="text-muted profile-designation">{sideBar.designation || "Team Leader & HR"}</p>
+                                                <h5 className="fs-15"><Link to="#" className="link-primary">{sideBar.name || "Nancy Martino"}</Link></h5>
+                                                <p className="text-muted">{sideBar.designation || "Team Leader & HR"}</p>
                                             </div>
                                             <div className="hstack gap-2 justify-content-center mt-4">
                                                 <div className="avatar-xs">
@@ -514,13 +518,13 @@ const Team = () => {
                                         <Row className="g-0 text-center">
                                             <Col xs={6}>
                                                 <div className="p-3 border border-dashed border-start-0">
-                                                    <h5 className="mb-1 profile-project">{sideBar.projectCount || "124"}</h5>
+                                                    <h5 className="mb-1">{sideBar.projectCount || "124"}</h5>
                                                     <p className="text-muted mb-0">Projects</p>
                                                 </div>
                                             </Col>
                                             <Col xs={6}>
                                                 <div className="p-3 border border-dashed border-start-0">
-                                                    <h5 className="mb-1 profile-task">{sideBar.taskCount || "81"}</h5>
+                                                    <h5 className="mb-1">{sideBar.taskCount || "81"}</h5>
                                                     <p className="text-muted mb-0">Tasks</p>
                                                 </div>
                                             </Col>
@@ -612,6 +616,11 @@ const Team = () => {
                             </div>
                         </Col>
                     </Row>
+
+                    <svg className="bookmark-hide">
+                        <symbol viewBox="0 0 24 24" stroke="currentColor" fill="var(--color-svg)" id="icon-star"><path strokeWidth=".4" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></symbol>
+                    </svg>
+
                 </Container>
             </div>
         </React.Fragment>

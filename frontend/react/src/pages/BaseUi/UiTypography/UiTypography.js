@@ -10,7 +10,6 @@ import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
 
 import { DisplayHeadingExample, HeadingsExample, BlockquotesExample, BlockquoteColorExample, BlockquoteBorderColorExample, InlineTextExample, UnstyleListExample, InlineListExample, DescriptionListExample, TextWrappingExample, FontSizeExample, WordBreakExample, FontWeightExample, LineHeightExample, TextTransformExample, TextDecrationExample, TextTruncationExample, VisibilityExample, ClearfixExample } from './UiTypographyCode';
 
-
 const UiTypography = () => {
     document.title="Typography | Velzon - React Admin & Dashboard Template";
     return (
@@ -33,11 +32,11 @@ const UiTypography = () => {
                                                 <div className="text-muted">
                                                     <p>Body Font Family</p>
                                                     <div>
-                                                        <p className="display-4 text-body fw-medium">Aa</p>
+                                                        <p className="display-4 text-body">Aa</p>
                                                     </div>
                                                     <div>
                                                         <p className="mb-2">Font Family</p>
-                                                        <h5 className="mb-0">"Poppins", sans-serif</h5>
+                                                        <h5 className="mb-0">"Rubik", sans-serif</h5>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -46,11 +45,11 @@ const UiTypography = () => {
                                                 <div className="text-muted mt-4 mt-sm-0">
                                                     <p>Heading Font Family</p>
                                                     <div>
-                                                        <h1 className="display-4 text-body fw-medium">Aa</h1>
+                                                        <h1 className="display-4 text-body ff-secondary">Aa</h1>
                                                     </div>
                                                     <div>
                                                         <p className="mb-2">Font Family</p>
-                                                        <h5 className="mb-0">"Poppins", sans-serif</h5>
+                                                        <h5 className="mb-0">"Montserrat", sans-serif</h5>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -399,7 +398,7 @@ const UiTypography = () => {
                     </Row>
 
                     <Row>
-                        <Col xl={12}>
+                        <div className="col-xl-12">
                             <Card>
                                 <PreviewCardHeader title="Description List Alignment" />
                                 <CardBody>
@@ -441,7 +440,7 @@ const UiTypography = () => {
                                     </div>
                                 </CardBody>
                             </Card>
-                        </Col>
+                        </div>
                     </Row>
 
                     <Row>

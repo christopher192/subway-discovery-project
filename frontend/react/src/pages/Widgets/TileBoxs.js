@@ -49,16 +49,15 @@ const TileBoxs = () => {
                                         <Link to="#" className={"text-decoration-underline " + item.captionClass}>{item.caption}</Link>
                                     </div>
                                     <div className="avatar-sm flex-shrink-0">
-                                        <span 
-                                        className={"avatar-title rounded fs-3 bg-" + item.iconClass}
-                                        >
+                                        <span className={"avatar-title rounded fs-3 bg-" + item.iconClass}>
                                             <i className={item.icon + " text-" + item.color}></i>
                                         </span>
                                     </div>
                                 </div>
                             </CardBody>
                         </Card>
-                    </Col>))}
+                    </Col>
+                    ))}
             </Row>
 
             <Row>
@@ -68,28 +67,28 @@ const TileBoxs = () => {
                             <Row className="row-cols-md-3 row-cols-1">
 
                                 {(tileBoxs2 || []).map((item, key) => (
-                                    <Col className={item.id === 4 ? "col-lg" : "col-lg border-end"} key={key}>
-                                        <div className="mt-3 mt-md-0 py-4 px-3">
-                                            <h5 className="text-muted text-uppercase fs-13">{item.label} <i className={"fs-18 float-end align-middle " + item.badge}></i></h5>
-                                            <div className="d-flex align-items-center">
-                                                <div className="flex-shrink-0">
-                                                    <i className={"display-6 text-muted " + item.icon}></i>
-                                                </div>
-                                                <div className="flex-grow-1 ms-3">
-                                                    <h2 className="mb-0"><span className="counter-value">
-                                                        <CountUp
-                                                            start={0}
-                                                            prefix={item.prefix}
-                                                            suffix={item.suffix}
-                                                            separator={item.separator}
-                                                            end={item.counter}
-                                                            decimals={item.decimals}
-                                                            duration={4}
-                                                        /></span></h2>
-                                                </div>
+                                <Col className={item.id === 4 ? "col-lg" : "col-lg border-end"} key={key}>
+                                    <div className="mt-3 mt-md-0 py-4 px-3">
+                                        <h5 className="text-muted text-uppercase fs-13">{item.label} <i className={"fs-18 float-end align-middle " + item.badge}></i></h5>
+                                        <div className="d-flex align-items-center">
+                                            <div className="flex-shrink-0">
+                                                <i className={"display-6 text-muted " + item.icon}></i>
+                                            </div>
+                                            <div className="flex-grow-1 ms-3">
+                                                <h2 className="mb-0"><span className="counter-value">
+                                                    <CountUp
+                                                        start={0}
+                                                        prefix={item.prefix}
+                                                        suffix={item.suffix}
+                                                        separator={item.separator}
+                                                        end={item.counter}
+                                                        decimals={item.decimals}
+                                                        duration={4}
+                                                    /></span></h2>
                                             </div>
                                         </div>
-                                    </Col>))}
+                                    </div>
+                                </Col>))}
                             </Row>
                         </CardBody>
                     </Card>
@@ -135,7 +134,6 @@ const TileBoxs = () => {
                     </Card>
                 </Col>))}
             </Row>
-
             <Row>
                 {(tileBoxes4 || []).map((item, key) => (<Col xl={3} md={6} key={key}>
                     <Card className={"card-height-100 " + item.bgColor}>
@@ -171,29 +169,29 @@ const TileBoxs = () => {
             </Row>
 
             <Row>
-                {(tileBoxes5 || []).map((item, key) => (
-                    <Col xl={3} ms={6} key={key}>
-                        <Card className={"card-height-100 " + item.class}>
-                            <CardBody>
-                                <UncontrolledDropdown className="float-end">
-                                    <DropdownToggle tag="a" className="text-reset dropdown-btn" href="#">
-                                        <span className="text-muted fs-18"><i className="mdi mdi-dots-vertical"></i></span>
-                                    </DropdownToggle>
-                                    <DropdownMenu className="dropdown-menu-end">
-                                        <DropdownItem>Favorite</DropdownItem>
-                                        <DropdownItem>Apply Now</DropdownItem>
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
-                                <div className="mb-4 pb-2">
-                                    <img src={item.img} alt="" className="avatar-sm" />
-                                </div>
-                                <Link to="#!">
-                                    <h6 className="fs-15 fw-bold">{item.title} <span className="text-muted fs-13">{item.year}</span></h6>
-                                </Link>
-                                <p className="text-muted mb-0"><i className="ri-building-line align-bottom"></i> Themesbrand <span className="ms-2"><i className="ri-map-pin-2-line align-bottom"></i> California</span></p>
-                            </CardBody>
-                        </Card>
-                    </Col>
+                {(tileBoxes5 || []).map((item , key) => (
+                <Col xl={3} ms={6} key={key}>
+                    <Card className={"card-height-100 " + item.class}>
+                        <CardBody>
+                            <UncontrolledDropdown className="float-end">
+                                <DropdownToggle tag="a" className="text-reset dropdown-btn" href="#">
+                                    <span className="text-muted fs-18"><i className="mdi mdi-dots-vertical"></i></span>
+                                </DropdownToggle>
+                                <DropdownMenu className="dropdown-menu-end">
+                                    <DropdownItem>Favorite</DropdownItem>
+                                    <DropdownItem>Apply Now</DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+                            <div className="mb-4 pb-2">
+                                <img src={item.img} alt="" className="avatar-sm" />
+                            </div>
+                            <Link to="#!">
+                                <h6 className="fs-15 fw-semibold">{item.title} <span className="text-muted fs-13">{item.year}</span></h6>
+                            </Link>
+                            <p className="text-muted mb-0"><i className="ri-building-line align-bottom"></i> Themesbrand <span className="ms-2"><i className="ri-map-pin-2-line align-bottom"></i> California</span></p>
+                        </CardBody>
+                    </Card>
+                </Col>
                 ))}
             </Row>
         </React.Fragment>

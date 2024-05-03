@@ -16,18 +16,18 @@ const Statistics = () => {
         <Container fluid>
           <BreadCrumb title="STATISTICS" pageTitle="Jobs" />
 
-          <Row className="row">
+          <Row>
             <Widgets dataColors='["--vz-success", "--vz-danger"]' />
           </Row>
 
-          <Row className="row">
-            <VisitorGraph dataColors='["--vz-primary-rgb, 0.75", "--vz-secondary", "--vz-warning", "--vz-info","--vz-success", "--vz-danger"]' />
+          <Row>
+            <VisitorGraph dataColors='["--vz-primary", "--vz-secondary", "--vz-success", "--vz-info","--vz-warning", "--vz-danger"]' />
             <UsersByDevice />
           </Row>
 
-          <Row className="row">
+          <Row>
             <NatworkSummary dataColors='["--vz-primary", "--vz-info"]' />
-            <JobSummary dataColors='["--vz-success","--vz-primary", "--vz-info", "--vz-danger"]' />
+            <JobSummary dataColors='["--vz-primary", "--vz-success", "--vz-info", "--vz-danger"]' />
           </Row>
         </Container>
       </div>

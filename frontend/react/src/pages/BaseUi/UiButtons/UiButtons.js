@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, Col, Container, DropdownItem, DropdownMenu, DropdownToggle, Row, UncontrolledButtonDropdown, ButtonGroup, ButtonToolbar, Input, Spinner } from 'reactstrap';
+import { Button, Card, CardBody, Col, Container, DropdownItem, DropdownMenu, DropdownToggle, Row, UncontrolledButtonDropdown, ButtonGroup, ButtonToolbar, Input, Spinner, CardHeader } from 'reactstrap';
 import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
 
 // Import Content
@@ -8,12 +8,10 @@ import UiContent from '../../../Components/Common/UiContent';
 import BreadCrumb from '../../../Components/Common/BreadCrumb';
 import { Link } from 'react-router-dom';
 
-import { DefaultButtonsExample, OutlineButtonsExample, RoundedButtonsExample, SoftButtonsExample, GradientButtonsExample, AnimationButtonsExample, LabelButtonsExample, SizeButtonsExample, WidthButtonsExample, TagButtonsExample, GridButtonsExample, CheckButtonsExample, GroupButtonsExample, IconButtonsExample, ToolbarButtonsExample, GroupsizingButtonsExample, VerticalButtonsExample, GhostButtonsExample, LoadingbuttonsExample, BorderButtonsExample, CustomToggleButtonsExample, BaseClassExample, CustomSizeExample, FocusRingExample, FocusRingUtilityExample } from './UiButtonCode';
-
+import { DefaultButtonsExample, OutlineButtonsExample, RoundedButtonsExample, SoftButtonsExample, GradientButtonsExample, AnimationButtonsExample, LabelButtonsExample, SizeButtonsExample, WidthButtonsExample, TagButtonsExample, GridButtonsExample, CheckButtonsExample, GroupButtonsExample, IconButtonsExample, ToolbarButtonsExample, GroupsizingButtonsExample, VerticalButtonsExample, GhostButtonsExample, LoadingbuttonsExample, BorderButtonsExample, CustomToggleButtonsExample, FocusButtonExample, FocusUtilitiesExample, BaseClassExample, CustomSizingExample } from './UiButtonCode';
 
 const UiButtons = () => {
     document.title = "Buttons | Velzon - React Admin & Dashboard Template";
-
     const favouriteBtn = (ele) => {
         if (ele.closest("button").classList.contains("active")) {
             ele.closest("button").classList.remove("active");
@@ -21,8 +19,6 @@ const UiButtons = () => {
             ele.closest("button").classList.add("active");
         }
     };
-
-
     return (
         <React.Fragment>
             <UiContent />
@@ -70,7 +66,7 @@ const UiButtons = () => {
                                     <p className="text-muted">Use <code>outline</code>  atrribute with the below-mentioned variation to create a button with the outline.</p>
                                     <div className="live-preview">
                                         <div className="d-flex flex-wrap gap-2">
-                                            <Button color="primary" outline > primary </Button>
+                                            <Button color="primary" outline > Primary </Button>
                                             <Button color="secondary" outline > Secondary </Button>
                                             <Button color="success" outline > Success </Button>
                                             <Button color="info" outline > Info </Button>
@@ -128,15 +124,15 @@ const UiButtons = () => {
                             <Card>
                                 <PreviewCardHeader title="Soft Buttons" />
                                 <CardBody>
-                                    <p className="text-muted">Use <code>btn-subtle-</code>  class with the below-mentioned variation to create a button with the soft background.</p>                                        <div className="live-preview">
+                                    <p className="text-muted">Use <code>btn-soft-</code>  class with the below-mentioned variation to create a button with the soft background.</p>                                        <div className="live-preview">
                                         <div className="d-flex flex-wrap gap-2">
-                                            <button className="btn btn-soft-primary waves-effect waves-light"> Primary </button>
-                                            <button className="btn btn-soft-secondary waves-effect waves-light"> Secondary </button>
-                                            <button className="btn btn-soft-success waves-effect waves-light"> Success </button>
-                                            <button className="btn btn-soft-info waves-effect waves-light"> Info </button>
-                                            <button className="btn btn-soft-warning waves-effect waves-light"> Warning </button>
-                                            <button className="btn btn-soft-danger waves-effect waves-light"> Danger </button>
-                                            <button className="btn btn-soft-dark waves-effect waves-light"> Dark </button>
+                                            <button className="btn btn-soft-primary"> Primary </button>
+                                            <Button className="btn-soft-secondary"> Secondary </Button>
+                                            <Button className="btn-soft-success"> Success </Button>
+                                            <Button className="btn-soft-info"> Info </Button>
+                                            <Button className="btn-soft-warning"> Warning </Button>
+                                            <Button className="btn-soft-danger"> Danger </Button>
+                                            <Button className="btn-soft-dark"> Dark </Button>
                                         </div>
                                     </div>
                                     <div className="d-none code-view">
@@ -160,13 +156,13 @@ const UiButtons = () => {
                                     <p className="text-muted">Use <code>btn-ghost-</code>  class with the below-mentioned variation to create a button with the transparent background.</p>
                                     <div className="live-preview">
                                         <div className="d-flex flex-wrap gap-2">
-                                            <Button color="primary" outline className="btn btn-ghost-primary">Primary</Button>
-                                            <Button color="secondary" outline className="btn btn-ghost-secondary">Secondary</Button>
-                                            <Button color="success" outline className="btn btn-ghost-success">Success</Button>
-                                            <Button color="info" outline className="btn btn-ghost-info">Info</Button>
-                                            <Button color="warning" outline className="btn btn-ghost-warning">Warning</Button>
-                                            <Button color="danger" outline className="btn btn-ghost-danger">Danger</Button>
-                                            <Button color="dark" outline className="btn btn-ghost-dark">Dark</Button>
+                                            <Button color="primary" outline className="btn btn-ghost-primary waves-effect waves-light">Primary</Button>
+                                            <Button color="secondary" outline className="btn btn-ghost-secondary waves-effect waves-light">Secondary</Button>
+                                            <Button color="success" outline className="btn btn-ghost-success waves-effect waves-light">Success</Button>
+                                            <Button color="info" outline className="btn btn-ghost-info waves-effect waves-light">Info</Button>
+                                            <Button color="warning" outline className="btn btn-ghost-warning waves-effect waves-light">Warning</Button>
+                                            <Button color="danger" outline className="btn btn-ghost-danger waves-effect waves-light">Danger</Button>
+                                            <Button color="dark" outline className="btn btn-ghost-dark waves-effect waves-light">Dark</Button>
                                         </div>
                                     </div>
 
@@ -502,6 +498,7 @@ const UiButtons = () => {
                         <Col lg={12}>
                             <Card>
                                 <PreviewCardHeader title="Buttons Sizes" />
+
                                 <CardBody>
                                     <p className="text-muted">Use <code >btn-lg</code> class to create a large size button and <code >btn-sm</code> class to create a small size button.</p>
                                     <div className="live-preview">
@@ -580,11 +577,10 @@ const UiButtons = () => {
                             </Card>
                         </Col>
                     </Row>
-
                     <Row>
                         <Col lg={6}>
                             <Card>
-                                <PreviewCardHeader title="Base class" />
+                            <PreviewCardHeader title="Base Class" />
                                 <CardBody>
                                     <p className="text-muted">
                                         Bootstrap has a base <code>.btn</code> class that sets up basic styles such as padding and content alignment. By default, <code>.btn</code> controls have a transparent border and background color, and lack any explicit focus and hover styles.
@@ -604,22 +600,26 @@ const UiButtons = () => {
                                 </CardBody>
                             </Card>
                         </Col>
+
                         <Col lg={6}>
                             <Card>
+                                
                                 <PreviewCardHeader title="Custom sizing with CSS variables" />
                                 <CardBody>
                                     <p className="text-muted">
                                         You can even roll your own custom sizing with CSS variables:
                                     </p>
                                     <div className="live-preview">
-                                        <button type="button" className="btn btn-primary" style={{ '--tb-btn-padding-y': '.25rem', '--tb-btn-padding-x': '.5rem', '--tb-btn-font-size': '.75rem', }}>
-                                            Custom button
-                                        </button>
+                                            <button type="button" className="btn btn-primary" style={{'--tb-btn-padding-y': '.25rem',
+    '--tb-btn-padding-x': '.5rem',
+    '--tb-btn-font-size': '.75rem',}}>
+                                                Custom button
+                                            </button>
                                     </div>
                                     <div className="d-none code-view">
                                         <pre className="language-markup" >
                                             <code>
-                                                <CustomSizeExample />
+                                                <CustomSizingExample />
                                             </code>
                                         </pre>
                                     </div>
@@ -627,7 +627,6 @@ const UiButtons = () => {
                             </Card>
                         </Col>
                     </Row>
-
                     <Row>
                         <Col lg={12}>
                             <Card>
@@ -948,73 +947,98 @@ const UiButtons = () => {
                             </Card>
                         </Col>
                     </Row>
-
                     <Row>
                         <Col lg={12}>
                             <Card>
-                                <PreviewCardHeader title="Focus Ring" />
+                            <PreviewCardHeader title="Focus Ring" />
                                 <CardBody>
-                                    <p className="text-muted">Click directly on the link below to see the focus ring in action, or into the example below and then press <kbd>Tab</kbd>.</p>
-                                    <div className="live-preview">
-                                        <div className="d-flex gap-3">
-                                            <Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
-                                                Focus ring
-                                            </Link>
-                                            <Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style={{ '--vz-focus-ring-color': 'rgba(118, 93, 255, .25)', }}>
-                                                Custom focus ring
-                                            </Link>
-                                            <Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style={{ '--vz-focus-ring-x': '10px', '--vz-focus-ring-y': '10px', '--vz-focus-ring-blur': '4px', }}>
-                                                Blurry offset focus ring
-                                            </Link>
-                                        </div>
+                                    <p className="text-muted">Click directly on the link below to see the focus ring in
+                                        action, or into the example below and then press <kbd>Tab</kbd>.</p>
+
+                                        <div className='live-preview'>
+                                    <div className="d-flex gap-3">
+                                        <Link href="#!"
+                                            className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
+                                            Focus ring
+                                        </Link>
+                                        
+                                        <Link href="#!"
+                                            className="d-inline-flex focus-ring-primary focus-ring py-1 px-2 text-decoration-none border rounded-2">
+                                            Custom focus ring
+                                        </Link>
+                                        
+                                        <Link href="#!"
+                                            className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
+                                            Blurry offset focus ring
+                                        </Link>
+                                    </div>
                                     </div>
                                     <div className="d-none code-view">
                                         <pre className="language-markup" style={{ height: "275px" }}>
                                             <code>
-                                                <FocusRingExample />
+                                                <FocusButtonExample />
                                             </code>
                                         </pre>
                                     </div>
+                                    
                                 </CardBody>
-
                             </Card>
-                        </Col>
+                        </Col>                      
                     </Row>
 
                     <Row>
-                        <Col lg={12}>
-                            <Card>
-                                <PreviewCardHeader title="Focus Ring Utilities" />
-                                <CardBody>
-                                    <p className="text-muted">In addition to <code>.focus-ring</code>, we have several <code>.focus-ring-*</code> utilities to modify the helper class defaults. Modify the color with any of our <Link href="/ui-colors">theme colors</Link>. Note that the light and dark variants may not be visible on all background colors given current color mode support.</p>
-                                    <div className="live-preview">
-                                        <Row>
-                                            <Col lg={6}>
-                                                <p><Link href="#!" className="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Primary focus</Link></p>
-                                                <p><Link href="#!" className="d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2">Secondary focus</Link></p>
-                                                <p><Link href="#!" className="d-inline-flex focus-ring focus-ring-success py-1 px-2 text-decoration-none border rounded-2">Success focus</Link></p>
-                                                <p className="mb-lg-0"><Link href="#!" className="d-inline-flex focus-ring focus-ring-danger py-1 px-2 text-decoration-none border rounded-2">Danger focus</Link></p>
-                                            </Col>
-                                            <Col lg={6}>
-                                                <p><Link href="#!" className="d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2">Warning focus</Link></p>
-                                                <p><Link href="#!" className="d-inline-flex focus-ring focus-ring-info py-1 px-2 text-decoration-none border rounded-2">Info focus</Link></p>
-                                                <p><Link href="#!" className="d-inline-flex focus-ring focus-ring-light py-1 px-2 text-decoration-none border rounded-2">Light focus</Link></p>
-                                                <p className="mb-0"><Link href="#!" className="d-inline-flex focus-ring focus-ring-dark py-1 px-2 text-decoration-none border rounded-2">Dark focus</Link></p>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                    <div className="d-none code-view">
+                <Col lg={12}>
+                    <Card>
+                    <PreviewCardHeader title="Focus Ring Utilities" />
+                        <CardBody>
+                            <p className="text-muted">In addition to <code> .focus-ring</code>, we have several
+                                <code> .focus-ring-*</code> utilities to modify the helper class defaults. Modify
+                                the color with any of our <Link href="/ui/colors">theme colors</Link>. Note that
+                                the light and dark variants may not be visible on all background colors given
+                                current color mode support.
+                            </p>
+                            <div className='live-preview'>
+                            <Row>
+                                <Col lg={6}>
+                                    <p><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Primary focus</Link></p>
+                                    <p><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2">Secondary focus</Link></p>
+                                    <p><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-success py-1 px-2 text-decoration-none border rounded-2">Success
+                                        focus</Link></p>
+                                    <p className="mb-lg-0"><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-danger py-1 px-2 text-decoration-none border rounded-2">Danger
+                                        focus</Link></p>
+                                </Col>
+                                <Col lg={6}>
+                                    <p><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2">Warning
+                                        focus</Link></p>
+                                    <p><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-info py-1 px-2 text-decoration-none border rounded-2">Info
+                                        focus</Link></p>
+                                    <p><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-light py-1 px-2 text-decoration-none border rounded-2">Light
+                                        focus</Link></p>
+                                    <p className="mb-0"><Link href="#!"
+                                        className="d-inline-flex focus-ring focus-ring-dark py-1 px-2 text-decoration-none border rounded-2">Dark
+                                        focus</Link></p>
+                                </Col>
+                            </Row>
+                            </div>
+                            <div className="d-none code-view">
                                         <pre className="language-markup" style={{ height: "275px" }}>
                                             <code>
-                                                <FocusRingUtilityExample />
+                                                <FocusUtilitiesExample />
                                             </code>
                                         </pre>
                                     </div>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    </Row>
+                        </CardBody>
+                    </Card>
+                </Col>
 
+            </Row>
                 </Container>
             </div>
         </React.Fragment>

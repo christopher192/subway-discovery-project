@@ -55,10 +55,7 @@ const TeamMembers = () => {
                                             {item.tasks}
                                         </td>
                                         <td style={{ width: "5%" }}>
-                                            
-                                            {/* <div id="radialBar_chart_1" data-colors='["--vz-primary"]' data-chart-series="50" className="apex-charts" dir="ltr"> */}
-                                                <TeamMembersCharts seriesData={item.series} chartsColor={item.chartsColor} />
-                                            {/* </div> */}
+                                            <TeamMembersCharts seriesData={item.series} chartsColor={item.chartsColor} />
                                         </td>
                                     </tr>))}
                                 </tbody>
@@ -67,6 +64,7 @@ const TeamMembers = () => {
                     </div>
                 </Card>
             </Col>
+
         </React.Fragment>
     );
 };

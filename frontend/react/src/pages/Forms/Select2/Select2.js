@@ -163,29 +163,6 @@ const Select2 = () => {
 
     ];
 
-    const customStyles = {
-        multiValue: (styles, { data }) => {
-            return {
-              ...styles,
-              backgroundColor: "#3762ea",
-            };
-          },
-          multiValueLabel: (styles, { data }) => ({
-            ...styles,
-            backgroundColor : "#405189" ,
-            color: "white",
-          }),
-          multiValueRemove: (styles, { data }) => ({
-            ...styles,
-            color: "white",
-            backgroundColor : "#405189" ,
-            ':hover': {
-              backgroundColor: "#405189" ,
-              color: 'white',
-            },
-          }),
-    }
-
     return (
         <React.Fragment>
             <div className="page-content">
@@ -207,8 +184,7 @@ const Select2 = () => {
                                                 onChange={(sortBy) => {
                                                     setsortBy(sortBy);
                                                 }}
-                                                options={sortbyname}
-                                                id="choices-single-default"
+                                                options={sortbyname}                                             
                                                 className="js-example-basic-single mb-0"
                                                 name="state"
                                             />
@@ -224,7 +200,6 @@ const Select2 = () => {
                                                 }}
                                                 options={sortbyMulti}
                                                 classNamePrefix="js-example-basic-multiple mb-0"
-                                                styles={customStyles}
                                             />
                                         </Col>
                                         <Col lg={4}>
@@ -249,8 +224,7 @@ const Select2 = () => {
                                                 onChange={(sortBy) => {
                                                     settemp(sortBy);
                                                 }}
-                                                options={tempOption}
-                                                id="choices-single-default"
+                                                options={tempOption}                                               
                                                 className="js-example-templating mb-0"
                                             />
                                         </Col>
@@ -262,8 +236,7 @@ const Select2 = () => {
                                                 onChange={(sortBy) => {
                                                     setselTemp(sortBy);
                                                 }}
-                                                options={selTempOption}
-                                                id="choices-single-default"
+                                                options={selTempOption}                                              
                                                 className="select-flag-templating mb-0"
                                             />
                                         </Col>
@@ -302,7 +275,6 @@ const Select2 = () => {
                                             options={dissortbyMulti}
                                             classNamePrefix="js-example-disabled-multi mb-0"
                                             isDisabled={disable}
-                                            styles={customStyles}
                                         />
                                     </div>
                                     <div className="hstack gap-2 mt-3">

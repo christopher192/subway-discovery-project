@@ -49,8 +49,8 @@ const Collections = () => {
                                             {item.isChildren.map((item, key) => (<img src={item.img} alt="" className={"img-fluid rounded " + item.imgClass} key={key} />))}
                                         </Col>))}
                                     </Row>
-                                    <Link to="#" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
-                                    <h5 className="mb-0 fs-16"><Link to="#">{item.category} <span className="badge bg-success-subtle text-success">{item.quantity}</span></Link></h5>
+                                    <Link to="#!" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
+                                    <h5 className="mb-0 fs-16"><Link to="#!" className="text-body">{item.category} <span className="badge bg-success-subtle text-success">{item.quantity}</span></Link></h5>
                                 </CardBody>
                             </Card>
                         </Col>))}

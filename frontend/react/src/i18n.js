@@ -11,7 +11,6 @@ import translationCN from "./locales/ch.json";
 import translationFR from "./locales/fr.json";
 import translationAR from "./locales/ar.json";
 
-
 // the translations
 const resources = {
   gr: {

@@ -168,7 +168,7 @@ const projectList = [
             { id: 3, imgNumber: "+" },
         ],
         ratingClass:"active",
-        cardHeaderClass:"secondary-subtle"
+        cardHeaderClass:"secondary"
     },
     {
         id: 10,
@@ -205,7 +205,7 @@ const projectList = [
             { id: 4, imgNumber: "+" },
         ],
         ratingClass:"",
-        cardHeaderClass:"primary-subtle"
+        cardHeaderClass:"primary"
     },
     {
         id: 12,
@@ -224,7 +224,7 @@ const projectList = [
             { id: 4, imgNumber: "+" },
         ],
         ratingClass:"active",
-        cardHeaderClass:"danger-subtle"
+        cardHeaderClass:"danger"
     },
 ];
 export { projectList };

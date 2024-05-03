@@ -613,7 +613,7 @@ const BorderedTables = () => {
         <tr>
             <td className="fw-medium">02</td>
             <td>Design syntax</td>
-            <td><span className="badge bg-secondary-subtle text-secondary ">In Progress</span></td>
+            <td><span className="badge bg-secondary-subtle text-secondary">In Progress</span></td>
             <td>Calvin Garrett</td>
             <td>$7,546</td>
             <td>
@@ -653,7 +653,7 @@ const BorderedTables = () => {
         <tr>
             <td className="fw-medium">04</td>
             <td>Implement extensions</td>
-            <td><span className="badge bg-secondary-subtle text-secondary ">In Progress</span></td>
+            <td><span className="badge bg-secondary-subtle text-secondary">In Progress</span></td>
             <td>Maritza Blanda</td>
             <td>$4,521</td>
             <td>
@@ -721,7 +721,7 @@ const TablesBorderColors = () => {
         <tr>
             <td className="fw-medium">02</td>
             <td>Design syntax</td>
-            <td><span className="badge bg-secondary-subtle text-secondary ">In Progress</span></td>
+            <td><span className="badge bg-secondary-subtle text-secondary">In Progress</span></td>
             <td>Calvin Garrett</td>
             <td>$7,546</td>
             <td>
@@ -761,7 +761,7 @@ const TablesBorderColors = () => {
         <tr>
             <td className="fw-medium">04</td>
             <td>Implement extensions</td>
-            <td><span className="badge bg-secondary-subtle text-secondary ">In Progress</span></td>
+            <td><span className="badge bg-secondary-subtle text-secondary">In Progress</span></td>
             <td>Maritza Blanda</td>
             <td>$4,521</td>
             <td>
@@ -850,7 +850,7 @@ const TablesWithoutBorders = () => {
             <td>Lenora Sandoval</td>
             <td>Applications Engineer</td>
             <td>25, Nov 2021</td>
-            <td><span className="badge bg-danger-subtle  text-danger">Disabled</span></td>
+            <td><span className="badge bg-danger-subtle text-danger">Disabled</span></td>
             <td>
                 <div className="hstack gap-3 fs-15">
                     <Link to="#" className="link-primary"><i className="ri-settings-4-line"></i></Link>
@@ -893,7 +893,7 @@ const SmallTables = () => {
         <tr>
             <td className="fw-medium">02</td>
             <td>Design syntax</td>
-            <td><span className="badge bg-secondary-subtle text-secondary ">In Progress</span></td>
+            <td><span className="badge bg-secondary-subtle text-secondary">In Progress</span></td>
             <td>Calvin Garrett</td>
         </tr>
         <tr>
@@ -905,7 +905,7 @@ const SmallTables = () => {
         <tr>
             <td className="fw-medium">04</td>
             <td>Implement extensions</td>
-            <td><span className="badge bg-dark-subtle">Backlog</span></td>
+            <td><span className="badge bg-dark-subtle text-body">Backlog</span></td>
             <td>Maritza Blanda</td>
         </tr>
         <tr>
@@ -1511,7 +1511,6 @@ const StripedColumnsTables = () => {
         </React.Fragment>
     )
 }
-
 export {
     DefaultTables,
     StrippedRow,
@@ -1530,6 +1529,5 @@ export {
     Variants,
     VerticalAlignment,
     ResponsiveTables,
-    StripedColumnsTables,
+    StripedColumnsTables
 }
-

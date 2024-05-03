@@ -16,14 +16,14 @@ import avatar5 from "../../../assets/images/users/avatar-5.jpg";
 
 const ListTables = () => {
     const [modal_list, setmodal_list] = useState(false);
-    const tog_list = () => {
+    function tog_list() {
         setmodal_list(!modal_list);
-    };
+    }
 
     const [modal_delete, setmodal_delete] = useState(false);
-    const tog_delete = () => {
+    function tog_delete() {
         setmodal_delete(!modal_delete);
-    };
+    }
 
     useEffect(() => {
 
@@ -79,7 +79,7 @@ const ListTables = () => {
         });
     });
 
-    document.title = "Listjs | Velzon - React Admin & Dashboard Template";
+    document.title="Listjs | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
@@ -98,7 +98,7 @@ const ListTables = () => {
                                         <Row className="g-4 mb-3">
                                             <Col className="col-sm-auto">
                                                 <div>
-                                                    <Button color="success" className="add-btn me-1" onClick={() => tog_list()} id="create-btn"><i className="ri-add-line align-bottom me-1"></i> Add</Button>
+                                                    <Button color="success" className="add-btn" onClick={() => tog_list()} id="create-btn"><i className="ri-add-line align-bottom me-1"></i> Add</Button>{" "}
                                                     <Button className="btn btn-soft-danger"
                                                     // onClick="deleteMultiple()"
                                                     ><i className="ri-delete-bin-2-line"></i></Button>
@@ -215,7 +215,7 @@ const ListTables = () => {
                                                         <td className="email">michaelmorris@velzon.com</td>
                                                         <td className="phone">805-447-8398</td>
                                                         <td className="date">19 May, 2021</td>
-                                                        <td className="status"><span className="badge bg-danger-subtle  text-danger text-uppercase">Block</span></td>
+                                                        <td className="status"><span className="badge bg-danger-subtle text-danger text-uppercase">Block</span></td>
                                                         <td>
                                                             <div className="d-flex gap-2">
                                                                 <div className="edit">
@@ -312,7 +312,7 @@ const ListTables = () => {
                                                         <td className="email">charleskubik@velzon.com</td>
                                                         <td className="phone">231-480-8536</td>
                                                         <td className="date">25 Sep, 2021</td>
-                                                        <td className="status"><span className="badge bg-danger-subtle  text-danger text-uppercase">Block</span></td>
+                                                        <td className="status"><span className="badge bg-danger-subtle text-danger text-uppercase">Block</span></td>
                                                         <td>
                                                             <div className="d-flex gap-2">
                                                                 <div className="edit">
@@ -336,7 +336,7 @@ const ListTables = () => {
                                                         <td className="email">herbertstokes@velzon.com</td>
                                                         <td className="phone">312-944-1448</td>
                                                         <td className="date">20 Jul, 2021</td>
-                                                        <td className="status"><span className="badge bg-danger-subtle  text-danger text-uppercase">Block</span></td>
+                                                        <td className="status"><span className="badge bg-danger-subtle text-danger text-uppercase">Block</span></td>
                                                         <td>
                                                             <div className="d-flex gap-2">
                                                                 <div className="edit">
@@ -384,7 +384,7 @@ const ListTables = () => {
                                                         <td className="email">johnnyevans@velzon.com</td>
                                                         <td className="phone">407-645-1767</td>
                                                         <td className="date">01 Oct, 2021</td>
-                                                        <td className="status"><span className="badge bg-danger-subtle  text-danger text-uppercase">Block</span></td>
+                                                        <td className="status"><span className="badge bg-danger-subtle text-danger text-uppercase">Block</span></td>
                                                         <td>
                                                             <div className="d-flex gap-2">
                                                                 <div className="edit">
@@ -828,7 +828,11 @@ const ListTables = () => {
 
             {/* Add Modal */}
             <Modal isOpen={modal_list} toggle={() => { tog_list(); }} centered >
-                <ModalHeader className="bg-light p-3" toggle={() => { tog_list(); }}> Add Customer </ModalHeader>
+                <ModalHeader className="bg-light p-3">
+                    Add Customer
+                    <Button type="button" onClick={() => { setmodal_list(false); }} className="btn-close" aria-label="Close" >
+                    </Button>
+                </ModalHeader>
                 <form className="tablelist-form">
                     <ModalBody>
                         <div className="mb-3" id="modal-id" style={{ display: "none" }}>
@@ -864,7 +868,7 @@ const ListTables = () => {
 
                         <div>
                             <label htmlFor="status-field" className="form-label">Status</label>
-                            <select className="form-control" data-trigger name="status-field" id="status-field" required>
+                            <select className="form-control" data-trigger name="status-field" id="status-field" >
                                 <option value="">Status</option>
                                 <option value="Active">Active</option>
                                 <option value="Block">Block</option>
@@ -883,13 +887,15 @@ const ListTables = () => {
 
             {/* Remove Modal */}
             <Modal isOpen={modal_delete} toggle={() => { tog_delete(); }} className="modal fade zoomIn" id="deleteRecordModal" centered >
-                <ModalHeader toggle={() => { tog_delete(); }}></ModalHeader>
+                <div className="modal-header">
+                    <Button type="button" onClick={() => setmodal_delete(false)} className="btn-close" aria-label="Close"> </Button>
+                </div>
                 <ModalBody>
                     <div className="mt-2 text-center">
                         <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
-                            colors="primary:#f7b84b,secondary:#f06548" style={{ width: "100px", height: "100px" }}></lord-icon>
+                            colors="primary:#405189,secondary:#f06548" style={{ width: "100px", height: "100px" }}></lord-icon>
                         <div className="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                            <h4>Are you sure ?</h4>
+                            <h4>Are you Sure ?</h4>
                             <p className="text-muted mx-4 mb-0">Are you Sure You want to Remove this Record ?</p>
                         </div>
                     </div>

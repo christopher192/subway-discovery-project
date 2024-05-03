@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactApexChart from "react-apexcharts";
+
 import getChartColorsArray from "../../Components/Common/ChartsDynamicColor";
 
 const SalesForecastCharts = ({ dataColors, series }) => {
-    var areachartSalesColors = getChartColorsArray(dataColors);
-
+    const areachartSalesColors = getChartColorsArray(dataColors);
+   
     var options = {
         chart: {
             type: 'bar',
@@ -88,9 +89,9 @@ const SalesForecastCharts = ({ dataColors, series }) => {
     );
 };
 
-const DealTypeCharts = ({ dataColors, series }) => {
-    var dealTypeChartsColors = getChartColorsArray(dataColors);
-
+const DealTypeCharts = ({dataColors, series}) => {
+    const dealTypeChartsColors = getChartColorsArray(dataColors)
+    
     var options = {
         chart: {
             height: 341,
@@ -147,9 +148,9 @@ const DealTypeCharts = ({ dataColors, series }) => {
     );
 };
 
-const BalanceOverviewCharts = ({ dataColors, series }) => {
-    var revenueExpensesChartsColors = getChartColorsArray(dataColors);
-
+const BalanceOverviewCharts = ({dataColors, series}) => {
+    const revenueExpensesChartsColors = getChartColorsArray(dataColors)
+    
     var options = {
         chart: {
             height: 290,

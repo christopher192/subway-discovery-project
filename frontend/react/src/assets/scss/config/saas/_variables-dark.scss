@@ -49,7 +49,7 @@ $body-tertiary-color-dark:                                          rgba($body-c
 $body-tertiary-bg-dark:                                             tint-color($body-bg-dark, 7%);
 $body-emphasis-color-dark:                                          $white;
 $border-color-dark:                                                 #32383e;
-$border-color-translucent-dark:                                     #32383e;;
+$border-color-translucent-dark:                                     #32383e;
 $headings-color-dark:                                               #ced4da;
 $link-color-dark:                                                   tint-color($primary, 80%);
 $link-hover-color-dark:                                             shift-color($link-color-dark, -$link-shade-percentage);
@@ -110,7 +110,7 @@ $topnav-item-active-color-dark:                                     $white;
 
 // Topbar
 $header-bg-dark:                                                    #292e32;
-$header-border-dark:                                                #292e32;
+$header-border-dark:                                                #2e3438;
 $header-item-color-dark:                                            #e9ecef;
 $header-item-bg-dark:                                               #31363c;
 $header-item-sub-color-dark:                                        #878a99;
@@ -126,9 +126,9 @@ $page-title-box-shadow-dark:                                        0 1px 2px rg
 $dark-header-bg-dark:                                               $primary;
 $dark-header-border-dark:                                           $primary;
 $dark-header-item-color-dark:                                       rgba($white, .85);
-$dark-header-item-bg-dark:                                          #495c99;
-$dark-header-item-sub-color-dark:                                   #b0c4d9; 
-$dark-topbar-user-bg-dark:                                          #52639c;
+$dark-header-item-bg-dark:                                          #7399e5;
+$dark-header-item-sub-color-dark:                                   rgba($white, .6); 
+$dark-topbar-user-bg-dark:                                          lighten($primary, 3%);
 $dark-topbar-search-bg-dark:                                        rgba($white, .05);
 $dark-topbar-search-color-dark:                                     $white;
 
@@ -158,7 +158,7 @@ $vertical-menu-title-color-dark:                                    #919da9;
 //sidebar dark 
 $dark-vertical-menu-bg-dark:                                        #212529;
 $dark-vertical-menu-border-dark:                                    #212529;
-$dark-vertical-menu-item-color-dark:                                #7c7f90;
+$dark-vertical-menu-item-color-dark:                                #878a99;
 $dark-vertical-menu-item-bg-dark:                                   rgba($white, .15);
 $dark-vertical-menu-item-hover-color-dark:                          $white;
 $dark-vertical-menu-item-active-color-dark:                         $white;

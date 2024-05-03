@@ -17,7 +17,7 @@ const leadDiscover = (props) => {
           className={"card-header bg-" + props.deal.bgColor+"-subtle"}
           id={"leadDiscovered" + props.index}
         >
-          <h5 className="card-title text-uppercase fw-semibold mb-1 fs-15">
+          <h5 className="card-title text-uppercase mb-1 fs-14">
             {props.deal.title}
           </h5>
           <p className="text-muted mb-0">
@@ -58,7 +58,7 @@ const leadDiscover = (props) => {
                     />
                   </div>
                   <div className="flex-grow-1 ms-3">
-                    <h6 className="fs-14 mb-1">{subitem.title}</h6>
+                    <h6 className="fs-13 mb-1">{subitem.title}</h6>
                     <p className="text-muted mb-0">
                       {subitem.price} - {subitem.date}
                     </p>
@@ -75,7 +75,7 @@ const leadDiscover = (props) => {
                     {subitem.subTitle}{" "}
                     <small
                       className={
-                        "badge bg-" + subitem.timeDurationClass+"-subtle"
+                        "badge bg-" + subitem.timeDurationClass+"-subtle text-"+subitem.timeDurationClass
                       }
                     >
                       {subitem.timeDuration}

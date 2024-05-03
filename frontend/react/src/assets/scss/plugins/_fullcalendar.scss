@@ -2,13 +2,12 @@
 // _fullcalendar.scss
 // 
 
-
-
 :root {
     --fc-border-color:       var(--#{$prefix}border-color);
     --fc-page-bg-color:      var(--#{$prefix}secondary-bg);
     --fc-neutral-bg-color:   var(--#{$prefix}light);
 }
+
 
 .fc td,
 .fc th {
@@ -169,8 +168,8 @@
 }
 
 .fc-button {
-    background: var(--#{$prefix}card-bg-custom);
-    border-color: $border-color;
+    background: var(--#{$prefix}secondary-bg);
+    border-color: var(--#{$prefix}border-color);
     color: $gray-700;
     text-transform: capitalize;
     box-shadow: none;
@@ -205,6 +204,7 @@
     text-align: center;
 }
 
+
 .fc-theme-standard  {
     .fc-popover {
         .fc-popover-header {
@@ -212,7 +212,6 @@
         }
     }
 }
-
 
 .fc-event,
 .fc-event-dot {
@@ -264,7 +263,6 @@
     position: relative;
     height: 37.5px;
     width: 37.5px;
-
     &::before {
         position: absolute;
         font-family: remixicon !important;
@@ -278,13 +276,11 @@
         justify-content: center;
     }
 }
-
 .fc-prev-button {
     &::before {
         content: "\ea64";
     }
 }
-
 .fc-next-button {
     &::before {
         content: "\ea6e";
@@ -320,6 +316,9 @@
         background-color: $secondary !important;
         border-color: $secondary !important;
         color: $white !important;
+    }
+    .fc-button-primary {
+        text-transform: capitalize;
     }
 }
 
@@ -439,4 +438,3 @@ $value in $theme-colors {
         margin-left: 0.75em;
     }
 }
-

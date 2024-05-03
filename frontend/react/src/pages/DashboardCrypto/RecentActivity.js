@@ -43,7 +43,7 @@ const RecentActivity = () => {
                                         </span>
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">Bought Bitcoin</h6>
+                                        <h6 className="fs-13 mb-1">Bought Bitcoin</h6>
                                         <p className="text-muted fs-12 mb-0">
                                             <i className="mdi mdi-circle-medium text-success fs-15 align-middle"></i>
                                             Visa Debit Card ***6
@@ -64,7 +64,7 @@ const RecentActivity = () => {
                                         </span>
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">Sent Ethereum</h6>
+                                        <h6 className="fs-13 mb-1">Sent Eathereum</h6>
                                         <p className="text-muted fs-12 mb-0">
                                             <i className="mdi mdi-circle-medium text-warning fs-15 align-middle"></i>
                                             Sofia Cunha
@@ -87,7 +87,7 @@ const RecentActivity = () => {
                                         </span>
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">Sell Dash</h6>
+                                        <h6 className="fs-13 mb-1">Sell Dash</h6>
                                         <p className="text-muted fs-12 mb-0">
                                             <i className="mdi mdi-circle-medium text-danger fs-15 align-middle"></i>
                                             www.cryptomarket.com
@@ -108,7 +108,7 @@ const RecentActivity = () => {
                                         </span>
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">Sell Dogecoin</h6>
+                                        <h6 className="fs-13 mb-1">Sell Dogecoin</h6>
                                         <p className="text-muted fs-12 mb-0">
                                             <i className="mdi mdi-circle-medium text-success fs-15 align-middle"></i>
                                             www.coinmarket.com
@@ -129,7 +129,7 @@ const RecentActivity = () => {
                                         </span>
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">Bought Litecoin</h6>
+                                        <h6 className="fs-13 mb-1">Bought Litecoin</h6>
                                         <p className="text-muted fs-12 mb-0">
                                             <i className="mdi mdi-circle-medium text-warning fs-15 align-middle"></i>
                                             Payment via Wallet
@@ -152,7 +152,7 @@ const RecentActivity = () => {
                                         </span>
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">Sent Ethereum</h6>
+                                        <h6 className="fs-13 mb-1">Sent Eathereum</h6>
                                         <p className="text-muted fs-12 mb-0">
                                             <i className="mdi mdi-circle-medium text-warning fs-15 align-middle"></i>
                                             Sofia Cunha
@@ -174,7 +174,7 @@ const RecentActivity = () => {
                                         </span>
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">Bought Bitcoin</h6>
+                                        <h6 className="fs-13 mb-1">Bought Bitcoin</h6>
                                         <p className="text-muted fs-12 mb-0">
                                             <i className="mdi mdi-circle-medium text-success fs-15 align-middle"></i>
                                             Visa Debit Card ***6

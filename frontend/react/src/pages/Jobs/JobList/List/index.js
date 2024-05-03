@@ -1,51 +1,49 @@
-import React, { useState, useMemo, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Card, CardBody, CardHeader, Col, Row } from "reactstrap";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Button, Card, CardBody, CardHeader, Col, Container, Row } from "reactstrap";
+import Select from "react-select";
 import { jobList } from "../../../../common/data/appsJobs";
 import BreadCrumb from "../../../../Components/Common/BreadCrumb";
 import img10 from "../../../../assets/images/small/img-10.jpg";
 import img7 from "../../../../assets/images/companies/img-7.png";
 import AppSummaryChart from "./AppSummary";
-import Pagination from "../../../../Components/Common/Pagination";
 
 const JobList = () => {
   document.title = "Job Lists | Velzon -  Admin & Dashboard Template";
-
-  const [jobListData, setJobListData] = useState();
-  const [currentPage, setCurrentPage] = useState(1);
-
-  //pagination
-  const perPageData = 3;
-  const indexOfLast = currentPage * perPageData;
-  const indexOfFirst = indexOfLast - perPageData;
-  const currentdata = useMemo(() => jobList?.slice(indexOfFirst, indexOfLast), [indexOfFirst, indexOfLast])
-
-  useEffect(() => {
-    setJobListData(currentdata)
-  }, [currentdata]);
+  const option = [
+    {
+      options: [
+        { label: "All Selected", value: "All Selected" },
+        { label: "Newest", value: "Newest" },
+        { label: "Popluar", value: "Popluar" },
+        { label: "Oldest", value: "Oldest" },
+      ],
+    },
+  ];
   return (
     <React.Fragment>
       <div className="page-content">
-        <div className="container-fluid">
+        <Container fluid>
           <BreadCrumb title="Job Lists" pageTitle="Jobs" />
 
           <Row>
             <Col lg={12}>
               <Card>
-                <CardBody className="bg-light-subtle">
+                <CardBody>
                   <div className="d-flex align-items-center">
                     <h6 className="card-title mb-0 flex-grow-1 fw-bold">
                       Search Jobs
                     </h6>
                     <div className="flex-shrink-0">
-                      <button
-                        className="btn btn-primary"
+                      <Button
+                        color="primary"
+                        className="btn "
                         data-bs-toggle="modal"
                         data-bs-target="#CreateJobModal"
                       >
-                        <i className="ri-add-line align-bottom me-1"></i>
-                        Create New Job
-                      </button>
+                        <i className="ri-add-line align-bottom me-1"></i> Create
+                        New Job
+                      </Button>
                     </div>
                   </div>
 
@@ -62,26 +60,16 @@ const JobList = () => {
                         <i className="ri-search-line search-icon"></i>
                       </div>
                     </Col>
-                    <Col xxl={2} ms={6}>
+                    <Col xxl={2} md={6}>
                       <div className="input-light">
-                        <select
-                          className="form-control"
-                          data-choices
-                          data-choices-search-false
+                        <Select
+                          options={option}
                           name="choices-single-default"
                           id="idStatus"
-                          defaultValue="Newest"
-                        >
-                          <option value="All">All Selected</option>
-                          <option value="Newest" defaultValue>
-                            Newest
-                          </option>
-                          <option value="Popluar">Popluar</option>
-                          <option value="Oldest">Oldest</option>
-                        </select>
+                        ></Select>
                       </div>
                     </Col>
-                    <Col className="col-xl-12 d-none" id="found-job-alert">
+                    <Col xl={12} className="d-none" id="found-job-alert">
                       <div
                         className="alert alert-success mb-0 text-center"
                         role="alert"
@@ -98,7 +86,7 @@ const JobList = () => {
           <Row>
             <Col xxl={9}>
               <div id="job-list">
-                {(jobListData || []).map((item, key) => (
+                {jobList.map((item, key) => (
                   <Card className="joblist-card" key={key}>
                     <CardBody>
                       <div className="d-flex mb-4">
@@ -117,9 +105,9 @@ const JobList = () => {
                             alt=""
                             className="d-none cover-img"
                           />
-                          <Link to="#">
+                          <NavLink to="#!">
                             <h5 className="job-title">{item.jobTitle}</h5>
-                          </Link>
+                          </NavLink>
                           <p className="company-name text-muted mb-0">
                             {item.companyName}
                           </p>
@@ -143,9 +131,18 @@ const JobList = () => {
                         {item.description}
                       </p>
                       <div>
-                        {(item.tags || []).map((subItem, key) => (
-                          <span key={key} className="badge bg-primary-subtle text-primary me-1">{subItem}</span>
-                        ))}
+                        <span className="badge bg-primary-subtle text-primary me-1">
+                          {item.tags[0]}
+                        </span>
+                        <span className="badge bg-primary-subtle text-primary me-1">
+                          {item.tags[1]}
+                        </span>
+                        <span className="badge bg-primary-subtle text-primary me-1">
+                          {item.tags[2]}
+                        </span>
+                        <span className="badge bg-primary-subtle text-primary me-1">
+                          {item.tags[3]}
+                        </span>
                       </div>
                     </CardBody>
                     <CardHeader className="card-footer border-top-dashed">
@@ -172,13 +169,13 @@ const JobList = () => {
                           <span className="job-postdate">{item.postDate}</span>
                         </div>
                         <div>
-                          <Link
-                            to="#"
+                          <NavLink
+                            to="#!"
                             className="btn btn-primary viewjob-list"
                           >
                             View More{" "}
                             <i className="ri-arrow-right-line align-bottom ms-1"></i>
-                          </Link>
+                          </NavLink>
                         </div>
                       </div>
                     </CardHeader>
@@ -186,13 +183,26 @@ const JobList = () => {
                 ))}
               </div>
 
-               <Pagination
-                perPageData={perPageData}
-                data={jobList}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-                className="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0"
-              />
+              <Row
+                className="g-0 justify-content-end mb-4"
+                id="pagination-element"
+              >
+                <Col sm={6}>
+                  <div className="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                    <div className="page-item">
+                      <NavLink to="" className="page-link" id="page-prev">
+                        Previous
+                      </NavLink>
+                    </div>
+                    <span id="page-num" className="pagination"></span>
+                    <div className="page-item">
+                      <NavLink to="" className="page-link" id="page-next">
+                        Next
+                      </NavLink>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
             </Col>
             <Col xxl={3}>
               <Card
@@ -205,7 +215,7 @@ const JobList = () => {
                   id="cover-img"
                   className="img-fluid background object-fit-cover"
                 />
-                <CardBody className="card-body">
+                <CardBody>
                   <div className="avatar-md mt-n5">
                     <div className="avatar-title bg-light rounded-circle">
                       <img
@@ -216,7 +226,7 @@ const JobList = () => {
                     </div>
                   </div>
                   <div className="mt-3">
-                    <h5 className="view-title">Product Designer</h5>
+                    <h5 className="view-title fw-bold">Product Designer</h5>
                     <div className="hstack gap-3 mb-3">
                       <span className="text-muted">
                         <i className="ri-building-line me-1 align-bottom"></i>{" "}
@@ -239,7 +249,7 @@ const JobList = () => {
                       <Row>
                         <Col lg={4} sm={6}>
                           <div>
-                            <p className="mb-2 text-uppercase fw-semibold fs-12 text-muted">
+                            <p className="mb-2 text-uppercase fs-12 text-muted">
                               Job Type
                             </p>
                             <h5 className="fs-14 mb-0 view-type">Full Time</h5>
@@ -247,7 +257,7 @@ const JobList = () => {
                         </Col>
                         <Col lg={4} sm={6}>
                           <div>
-                            <p className="mb-2 text-uppercase fw-semibold fs-12 text-muted">
+                            <p className="mb-2 text-uppercase  fs-12 text-muted">
                               Post Date
                             </p>
                             <h5 className="fs-14 mb-0 view-postdate">
@@ -257,7 +267,7 @@ const JobList = () => {
                         </Col>
                         <Col lg={4} sm={6}>
                           <div>
-                            <p className="mb-2 text-uppercase fw-semibold fs-12 text-muted">
+                            <p className="mb-2 text-uppercase  fs-12 text-muted">
                               Experience
                             </p>
                             <h5 className="fs-14 mb-0 view-experience">
@@ -272,7 +282,7 @@ const JobList = () => {
                   <div className="mt-4">
                     <h5 className="mb-3">Application Summary</h5>
                     <div>
-                      <AppSummaryChart dataColors='["--vz-info", "--vz-primary", "--vz-danger", "--vz-danger"]' />
+                      <AppSummaryChart dataColors='["--vz-info", "--vz-primary", "--vz-danger"]' />
                     </div>
                   </div>
                   <div className="mt-4">
@@ -284,9 +294,9 @@ const JobList = () => {
               </Card>
             </Col>
           </Row>
-        </div >
-      </div >
-    </React.Fragment >
+        </Container>
+      </div>
+    </React.Fragment>
   );
 };
 

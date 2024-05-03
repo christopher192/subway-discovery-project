@@ -1,22 +1,22 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import withRouter from '../../Components/Common/withRouter';
 import PropTypes from "prop-types";
 import { Collapse, Container } from 'reactstrap';
-import withRouter from '../../Components/Common/withRouter';
-
 import logoSm from "../../assets/images/logo-sm.png";
 //i18n
 import { withTranslation } from "react-i18next";
 
 // Import Data
 import navdata from "../LayoutMenuData";
-import VerticalLayout from "../VerticalLayouts";
 
 //SimpleBar
 import SimpleBar from "simplebar-react";
+import VerticalLayout from '../VerticalLayouts/index';
 
 const TwoColumnLayout = (props) => {
     const navData = navdata().props.children;
+
     const activateParentDropdown = useCallback((item) => {
         item.classList.add("active");
         let parentCollapseDiv = item.closest(".collapse.menu-dropdown");
@@ -41,10 +41,8 @@ const TwoColumnLayout = (props) => {
         return false;
     }, []);
 
-    const path = props.router.location.pathname;
-
     const initMenu = useCallback(() => {
-        const pathName = process.env.PUBLIC_URL + path;
+        const pathName = process.env.PUBLIC_URL + props.router.location.pathname;
         const ul = document.getElementById("navbar-nav");
         const items = ul.getElementsByTagName("a");
         let itemsArray = [...items]; // converts NodeList to Array
@@ -64,12 +62,12 @@ const TwoColumnLayout = (props) => {
             if (id) document.body.classList.add('twocolumn-panel');
             activateIconSidebarActive(id);
         }
-    }, [path, activateParentDropdown]);
+    }, [props.router.location.pathname, activateParentDropdown]);
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         initMenu();
-    }, [path, initMenu]);
+    }, [props.router.location.pathname, initMenu]);
 
     function activateIconSidebarActive(id) {
         var menu = document.querySelector("#two-column-menu .simplebar-content-wrapper a[subitems='" + id + "'].nav-icon");
@@ -133,6 +131,7 @@ const TwoColumnLayout = (props) => {
             };
         }
     });
+
     return (
         <React.Fragment>
             {isMenu === "twocolumn" ?
@@ -209,9 +208,6 @@ const TwoColumnLayout = (props) => {
                                                                         to="/#"
                                                                         data-bs-toggle="collapse"
                                                                     > {props.t(subItem.label)}
-                                                                        {subItem.badgeName ?
-                                                                            <span className={"badge badge-pill bg-" + subItem.badgeColor} data-key="t-new">{subItem.badgeName}</span>
-                                                                            : null}
                                                                     </Link>
                                                                     <Collapse className="menu-dropdown" isOpen={subItem.stateVariables} id={item.id}>
                                                                         <ul className="nav nav-sm flex-column">
@@ -224,7 +220,6 @@ const TwoColumnLayout = (props) => {
                                                                                             onClick={childItem.click}
                                                                                             className="nav-link" >
                                                                                             {props.t(childItem.label)}
-
                                                                                         </Link>
                                                                                         <Collapse className="menu-dropdown" isOpen={childItem.stateVariables} id={item.id}>
                                                                                             <ul className="nav nav-sm flex-column">
@@ -273,7 +268,7 @@ const TwoColumnLayout = (props) => {
                     </Container>
                 </SimpleBar>
             }
-        </React.Fragment >
+        </React.Fragment>
     );
 };
 
@@ -281,5 +276,6 @@ TwoColumnLayout.propTypes = {
     location: PropTypes.object,
     t: PropTypes.any,
 };
+
 
 export default withRouter(withTranslation()(TwoColumnLayout));

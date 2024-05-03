@@ -22,7 +22,7 @@ const tourOptions = {
     useModalOverlay: true
 };
 
-const Autton = () => {
+function Autton() {
     const tour = useContext(ShepherdTourContext);
     useEffect(() => {
         tour.start();
@@ -32,7 +32,7 @@ const Autton = () => {
 
 
 const UiTour = () => {
-document.title="Tour | Velzon - React Admin & Dashboard Template";
+    document.title = "Tour | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -80,7 +80,8 @@ document.title="Tour | Velzon - React Admin & Dashboard Template";
                                                             <Card className="border shadow-none">
                                                                 <CardBody className="text-center">
                                                                     <div className="avatar-md mx-auto mb-4" id="register-tour">
-                                                                        <div className="avatar-title bg-light rounded-circle text-primary fs-24">
+                                                                        <div
+                                                                            className="avatar-title bg-light rounded-circle text-primary fs-24">
                                                                             <i className="ri-edit-box-line"></i>
                                                                         </div>
                                                                     </div>

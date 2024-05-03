@@ -32,11 +32,11 @@ const TopPerformers = () => {
                                         <img src={item.img} className="avatar-xs" alt="" />
                                     </div>
                                     <div className="flex-grow-1 ms-3">
-                                        <h6 className="fs-14 mb-1">{item.coinName}</h6>
+                                        <h6 className="fs-13 mb-1">{item.coinName}</h6>
                                         <p className="text-muted mb-0">${item.marketCap} Billions</p>
                                     </div>
                                     <div className="flex-shrink-0 text-end">
-                                        <h6 className="fs-14 mb-1">${item.price}</h6>
+                                        <h6 className="fs-13 mb-1">${item.price}</h6>
                                         <p className={"fs-12 mb-0 text-" + item.textColor}>{item.change} ({item.percentage})</p>
                                     </div>
                                 </li>

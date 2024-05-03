@@ -26,7 +26,7 @@ fakeBackend();
 //   measurementId: process.env.REACT_APP_MEASUREMENTID,
 // };
 
-// // init firebase backend
+// init firebase backend
 // initFirebaseBackend(firebaseConfig);
 
 function App() {

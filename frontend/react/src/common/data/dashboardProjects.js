@@ -8,6 +8,9 @@ import avatar6 from "../../assets/images/users/avatar-6.jpg";
 import avatar7 from "../../assets/images/users/avatar-7.jpg";
 import avatar8 from "../../assets/images/users/avatar-8.jpg";
 
+import img1 from "../../assets/images/small/img-1.jpg";
+import img2 from "../../assets/images/small/img-2.jpg";
+
 const projectsWidgets = [
     {
         id: 1,
@@ -222,7 +225,7 @@ const teamMembers = [
         hours: "110",
         tasks: "258",
         series: "50",
-        chartsColor: "#405189"
+        chartsColor: "#6691e7"
     },
     {
         id: 2,
@@ -232,7 +235,7 @@ const teamMembers = [
         hours: "83",
         tasks: "105",
         series: "45",
-        chartsColor: "#405189"
+        chartsColor: "#6691e7"
     },
     {
         id: 3,
@@ -242,7 +245,7 @@ const teamMembers = [
         hours: "58",
         tasks: "75",
         series: "75",
-        chartsColor: "#405189"
+        chartsColor: "#6691e7"
     },
     {
         id: 4,
@@ -262,7 +265,7 @@ const teamMembers = [
         hours: "76",
         tasks: "69",
         series: "60",
-        chartsColor: "#405189"
+        chartsColor: "#6691e7"
     },
     {
         id: 6,
@@ -282,7 +285,7 @@ const teamMembers = [
         hours: "117",
         tasks: "125",
         series: "70",
-        chartsColor: "#405189"
+        chartsColor: "#6691e7"
     },
 ];
 

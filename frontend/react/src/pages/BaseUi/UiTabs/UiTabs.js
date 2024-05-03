@@ -29,7 +29,7 @@ import img8 from "../../../assets/images/small/img-8.jpg";
 const UiTabs = () => {
 
     // Default Tabs
-    const [activeTab, setactiveTab] = useState("2");
+    const [activeTab, setactiveTab] = useState("1");
     const toggle = (tab) => {
         if (activeTab !== tab) {
             setactiveTab(tab);
@@ -37,7 +37,7 @@ const UiTabs = () => {
     };
 
     // Justify Tabs
-    const [justifyTab, setjustifyTab] = useState("2");
+    const [justifyTab, setjustifyTab] = useState("1");
     const justifyToggle = (tab) => {
         if (justifyTab !== tab) {
             setjustifyTab(tab);
@@ -228,7 +228,7 @@ const UiTabs = () => {
                                         </NavItem>
                                     </Nav>
 
-                                    <TabContent activeTab={activeTab} className="text-muted" >
+                                    <TabContent activeTab={activeTab} className="text-muted">
                                         <TabPane tabId="1" id="home">
                                             <h6>Graphic Design</h6>
                                             <p className="mb-0">
@@ -575,7 +575,7 @@ const UiTabs = () => {
                                     <p className="text-muted">Use <code>flex-column</code> class to create Vertical nav tabs.</p>
                                     <Row>
                                         <Col md={3}>
-                                            <Nav pills className="flex-column text-center" id="v-pills-tab">
+                                            <Nav pills className="flex-column" id="v-pills-tab">
                                                 <NavItem>
                                                     <NavLink
                                                         style={{ cursor: "pointer" }}
@@ -1880,7 +1880,6 @@ const UiTabs = () => {
                             </Card>
                         </Col>
                     </Row>
-
                     <Row>
                         <Col xxl={6}>
                             <h5 className="mb-3">Outline Border Nav</h5>
@@ -2126,7 +2125,6 @@ const UiTabs = () => {
                             </Card>
                         </Col>
                     </Row>
-
                     <Row>
                         <Col xxl={6}>
                             <h5 className="mb-3">Colored Nav</h5>

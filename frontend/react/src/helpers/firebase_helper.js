@@ -131,7 +131,7 @@ class FirebaseAuthBackend {
         throw this._handleError(error);
     }
   };
-
+  
   addNewUserToFirestore = (user) => {
     const collection = firebase.firestore().collection("users");
     const { profile } = user.additionalUserInfo;

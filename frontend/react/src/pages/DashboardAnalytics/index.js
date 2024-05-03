@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
-//import Components
+//import COmponents
 import UpgradeAccountNotise from './UpgradeAccountNotise';
 import UsersByDevice from './UsersByDevice';
 import Widget from './Widget';
@@ -12,13 +12,12 @@ import LiveUsers from './LiveUsers';
 import TopReferrals from './TopReferrals';
 import TopPages from './TopPages';
 
-
 const DashboardAnalytics = () => {
-document.title="Analytics | Velzon - React Admin & Dashboard Template";
+  document.title="Analytics | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
-                <Container fluid>
+                <Container fluid>              
                     <BreadCrumb title="Analytics" pageTitle="Dashboards" />
                     <Row>
                         <Col xxl={5}>

@@ -25,7 +25,7 @@ const Widgets = () => {
                     >
                       <path
                         id="Shape 8"
-                        style={{ opacity: ".05", fill: "rgb(11 152 93)" }}
+                        style={{ opacity: ".05", fill: "#878a99" }}
                         d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z"
                       />
                     </svg>
@@ -33,11 +33,11 @@ const Widgets = () => {
                   <CardBody style={{ zIndex: "1" }}>
                     <div className="d-flex align-items-center">
                       <div className="flex-grow-1 overflow-hidden">
-                        <p className="text-uppercase fw-medium text-muted text-truncate mb-3">
+                        <p className="text-uppercase fw-semibold text-muted text-truncate mb-3">
                           {" "}
                           {widget.lable}
                         </p>
-                        <h4 className="fs-22 fw-semibold ff-secondary mb-0">
+                        <h4 className="fs-22 fw-bold ff-secondary mb-0">
                           <span className="counter-value" data-target="36894">
                             {widget.jobs}
                           </span>

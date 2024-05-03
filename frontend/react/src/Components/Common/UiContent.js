@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 const UiContent = () => {
     useEffect(() => {
-        const checkbox = document.getElementsByClassName("code-switcher");
+        var checkbox = document.getElementsByClassName("code-switcher");
         Array.from(checkbox).forEach(function (check) {
             check.addEventListener('change', function () {
                 var card = check.closest('.card');

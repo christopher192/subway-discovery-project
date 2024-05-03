@@ -44,9 +44,8 @@ const UiDropdowns = () => {
             setNotification1Tab(tab);
         }
     };
+document.title="Dropdowns | Velzon - React Admin & Dashboard Template";
 
-    document.title="Dropdowns | Velzon - React Admin & Dashboard Template";
-    
     return (
         <React.Fragment>
             <UiContent />
@@ -56,9 +55,11 @@ const UiDropdowns = () => {
                     <Row>
                         <Col lg={12}>
                             <Card>
+                              
                                 <PreviewCardHeader title="Single Button Dropdown" />
 
-                                <CardBody>                                    
+                                <CardBody>   
+                                <p className='text-muted'>Use<code> btn</code> class at to create a dropdown toggle with &lt;button&gt; element.</p>                                 
                                     <div className="live-preview">
                                         <div className="d-flex flex-wrap gap-3">
 
@@ -977,7 +978,7 @@ const UiDropdowns = () => {
                                                                     <label className="form-check-label" htmlFor="rememberdropdownCheck">Remember me</label>
                                                                 </div>
                                                             </div>
-                                                            <Button type="submit" className='bg-primary'>Sign in</Button>
+                                                            <Button type="submit" className="btn btn-primary">Sign in</Button>
                                                         </form>
                                                     </DropdownMenu>
                                                 </UncontrolledDropdown>

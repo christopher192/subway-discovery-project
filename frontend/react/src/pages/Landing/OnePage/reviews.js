@@ -73,7 +73,7 @@ const Reviews = () => {
                                     </div>
                                     <div className="swiper-button-next bg-white rounded-circle"></div>
                                     <div className="swiper-button-prev bg-white rounded-circle"></div>
-                                    <div className="swiper-pagination position-relative mt-4"></div>
+                                    <div className="swiper-pagination position-relative mt-2"></div>
                                 </Swiper>
                             </div>
                         </Col>

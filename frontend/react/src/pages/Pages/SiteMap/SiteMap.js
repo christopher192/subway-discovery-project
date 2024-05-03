@@ -3,7 +3,6 @@ import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import BreadCrumb from '../../../Components/Common/BreadCrumb';
 import { Link } from 'react-router-dom';
 
-
 const SiteMap = () => {
     document.title="SiteMap | Velzon - React Admin & Dashboard Template";
     return (
@@ -227,11 +226,13 @@ const SiteMap = () => {
                                         <Col sm={6}>
                                             <div className="verti-sitemap">
                                                 <ul className="list-unstyled mb-0">
-                                                    <li className="p-0 parent-title"><Link to="#" className="fw-medium fs-14">Nancy Martino - Project Director</Link></li>
+                                                    <li className="p-0 parent-title"><Link to="#" className="fw-medium fs-14">Nancy Martino - Project Director</Link>
+                                                    </li>
                                                     <li>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#" className="fw-medium text-primary">Erica Kernan - Team Leader</Link>
+                                                                <Link to="#" className="fw-medium text-primary">Erica
+                                                                    Kernan - Team Leader</Link>
                                                             </div>
                                                             <ul className="second-list list-unstyled">
                                                                 <li>
@@ -246,27 +247,38 @@ const SiteMap = () => {
                                                         </div>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#"
-                                                                    className="fw-medium text-primary">Mary Jones - Project Manager</Link>
+                                                                <Link to="#" className="fw-medium text-primary">Mary
+                                                                    Jones
+                                                                    - Project Manager</Link>
                                                             </div>
                                                             <ul className="second-list list-unstyled">
-                                                                <li><Link to="#">Jordyn Jones - Designer</Link></li>
-                                                                <li><Link to="#">Ashlee Haney - Developer</Link></li>
-                                                                <li><Link to="#">Rashad Charles - BackEnd Developer</Link></li>
-                                                                <li><Link to="#">Walter Newman - Frontend Developer</Link></li>
-                                                                <li><Link to="#">Adam Moss - Designer</Link></li>
+                                                                <li><Link to="#">Jordyn Jones -
+                                                                        Designer</Link></li>
+                                                                <li><Link to="#">Ashlee Haney -
+                                                                        Developer</Link></li>
+                                                                <li><Link to="#">Rashad Charles -
+                                                                        BackEnd Developer</Link></li>
+                                                                <li><Link to="#">Walter Newman -
+                                                                        Frontend Developer</Link>
+                                                                </li>
+                                                                <li><Link to="#">Adam Moss -
+                                                                        Designer</Link></li>
                                                             </ul>
                                                         </div>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#" className="fw-medium text-primary">Tilly Kent - Executive Manager</Link>
+                                                                <Link to="#" className="fw-medium text-primary">Tilly
+                                                                    Kent
+                                                                    - Executive Manager</Link>
                                                             </div>
                                                             <ul className="second-list list-unstyled">
                                                                 <li>
-                                                                    <Link to="#">Tyler Porter - Account Executive</Link>
+                                                                    <Link to="#">Tyler Porter -
+                                                                        Account Executive</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <Link to="#">Alicia Thompson - Sales Executive</Link>
+                                                                    <Link to="#">Alicia Thompson -
+                                                                        Sales Executive</Link>
                                                                     <ul className="third-list list-unstyled">
                                                                         <li><Link to="#">Jack Coates - Member</Link></li>
                                                                         <li><Link to="#">Owen Jarvis - Member</Link></li>
@@ -278,24 +290,26 @@ const SiteMap = () => {
                                                         </div>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#"
-                                                                    className="fw-medium text-primary">Rachel Rose - HR</Link>
+                                                                <Link to="#" className="fw-medium text-primary">Rachel
+                                                                    Rose
+                                                                    - HR</Link>
                                                             </div>
                                                         </div>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </Col>
+                                       
 
                                         <Col sm={6}>
                                             <div className="verti-sitemap">
-                                                <ul className="mb-0 list-unstyled">
+                                                <ul className="list-unstyled mb-0">
                                                     <li className="p-0 parent-title"><Link to="#" className="fw-medium fs-14">Velzon</Link></li>
                                                     <li>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#" className="fw-medium text-primary"><i
-                                                                        className="ri-airplay-line me-1 align-bottom"></i> Dashboards</Link>
+                                                                <Link to="#" className="fw-medium text-primary"><i className="ri-airplay-line me-1 align-bottom"></i>
+                                                                    Dashboards</Link>
                                                             </div>
                                                             <ul className="second-list list-unstyled">
                                                                 <li>
@@ -308,25 +322,29 @@ const SiteMap = () => {
                                                         </div>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#" className="fw-medium text-primary"><i className="ri-pencil-ruler-2-line me-1 align-bottom"></i> App Pages</Link>
+                                                                <Link to="#" className="fw-medium text-primary"><i className="ri-pencil-ruler-2-line me-1 align-bottom"></i>
+                                                                    App Pages</Link>
                                                             </div>
                                                             <ul className="second-list list-unstyled">
                                                                 <li><Link to="#">Calender</Link></li>
                                                                 <li><Link to="#">Chat</Link></li>
                                                                 <li><Link to="#">Email</Link></li>
-                                                                <li><Link to="#">Ecommerce</Link></li>
+                                                                <li><Link to="#">Ecommerce</Link>
+                                                                </li>
                                                                 <li><Link to="#">Projects</Link></li>
                                                                 <li><Link to="#">Tasks</Link></li>
                                                             </ul>
                                                         </div>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#" className="fw-medium text-primary"><i className="ri-file-list-3-line me-1 align-bottom"></i> Pages</Link>
+                                                                <Link to="#" className="fw-medium text-primary"><i className="ri-file-list-3-line me-1 align-bottom"></i>
+                                                                    Pages</Link>
                                                             </div>
                                                         </div>
                                                         <div className="first-list">
                                                             <div className="list-wrap">
-                                                                <Link to="#" className="fw-medium text-primary"><i className="ri-stack-line me-1 align-bottom"></i> Components</Link>
+                                                                <Link to="#" className="fw-medium text-primary"><i className="ri-stack-line me-1 align-bottom"></i>
+                                                                    Components</Link>
                                                             </div>
                                                             <ul className="second-list list-unstyled">
                                                                 <li>
@@ -335,9 +353,12 @@ const SiteMap = () => {
                                                                 <li>
                                                                     <Link to="#">Advance UI</Link>
                                                                     <ul className="third-list list-unstyled">
-                                                                        <li><Link to="#">Sweet Alerts</Link></li>
-                                                                        <li><Link to="#">Range Slider</Link></li>
-                                                                        <li><Link to="#">Nestable List</Link></li>
+                                                                        <li><Link to="#">Sweet
+                                                                                Alerts</Link></li>
+                                                                        <li><Link to="#">Range
+                                                                                Slider</Link></li>
+                                                                        <li><Link to="#">Nestable
+                                                                                List</Link></li>
                                                                     </ul>
                                                                 </li>
                                                             </ul>
@@ -347,6 +368,7 @@ const SiteMap = () => {
                                             </div>
                                         </Col>
                                     </Row>
+                                   
                                 </CardBody>
                             </Card>
                         </Col>

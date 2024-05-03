@@ -17,12 +17,12 @@ const Widgets = () => {
                                     </span>
                                 </div>
                                 <div className="flex-grow-1 ms-3">
-                                    <p className="text-uppercase fw-semibold fs-12 text-muted mb-1">{item.label}</p>
+                                    <p className="text-uppercase fw-medium fs-12 text-muted mb-1">{item.label}</p>
                                     <h4 className=" mb-0"> <CountUp start={0} end={item.counter} decimals={item.decimal} separator={item.separator} prefix={item.prefix} duration={3} />
                                     </h4>
                                 </div>
                                 <div className="flex-shrink-0 align-self-end">
-                                    <span className={"badge bg-" + item.badgeColor+"-subtle text-"+item.badgeColor+""}><i className={"align-middle me-1 " + item.badge}></i>{item.percentage} %<span>
+                                    <span className={"badge bg-" + item.badgeColor+"-subtle text-"+item.badgeColor}><i className={"align-middle me-1 " + item.badge}></i>{item.percentage} %<span>
                                     </span></span></div>
                             </div>
                         </CardBody>

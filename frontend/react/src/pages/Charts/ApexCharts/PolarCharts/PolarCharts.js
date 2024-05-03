@@ -31,7 +31,7 @@ const BasicPolar = ({ dataColors }) => {
             series={series}
             options={options}
             type="polarArea"
-            height={310}
+            height={330}
         />
     )
 }
@@ -84,7 +84,7 @@ const PolarMonochrome = () => {
             series={series}
             options={options}
             type="polarArea"
-            height={333}
+            height={330}
         />
     )
 }

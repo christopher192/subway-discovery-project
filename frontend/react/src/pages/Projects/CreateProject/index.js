@@ -25,14 +25,14 @@ const CreateProject = () => {
 
     const [selectedMulti, setselectedMulti] = useState(null);
 
-    const handleMulti = (selectedMulti) => {
+    function handleMulti(selectedMulti) {
     setselectedMulti(selectedMulti);
     }  
     
     //Dropzone file upload
     const [selectedFiles, setselectedFiles] = useState([]);
   
-    const handleAcceptedFiles = (files) => {
+    function handleAcceptedFiles(files) {
       files.map(file =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
@@ -45,7 +45,7 @@ const CreateProject = () => {
         /**
      * Formats the size
      */
-    const formatBytes = (bytes, decimals = 2) => {
+    function formatBytes(bytes, decimals = 2) {
         if (bytes === 0) return "0 Bytes";
         const k = 1024;
         const dm = decimals < 0 ? 0 : decimals;
@@ -54,9 +54,7 @@ const CreateProject = () => {
         const i = Math.floor(Math.log(bytes) / Math.log(k));
         return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
     }
-
-document.title="Create Project | Velzon - React Admin & Dashboard Template";
-
+    document.title="Create Project | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -86,9 +84,9 @@ document.title="Create Project | Velzon - React Admin & Dashboard Template";
                                                 // You can store the "editor" and use when it is needed.
                                                 
                                             }}
-                                            // onChange={(editor) => {
-                                            //     editor.getData();
-                                            // }}
+                                            onChange={(editor) => {
+                                                editor.getData();
+                                            }}
                                             />
                                     </div>
 
@@ -122,7 +120,7 @@ document.title="Create Project | Velzon - React Admin & Dashboard Template";
                                                     options={{
                                                     dateFormat: "d M, Y"
                                                     }}
-                                                    placeholder="Enter due date"
+                                                    placeholder="Selact Date"
                                                 />
                                             </div>
                                         </Col>
@@ -151,7 +149,7 @@ document.title="Create Project | Velzon - React Admin & Dashboard Template";
                                                 <div className="mb-3">
                                                     <i className="display-4 text-muted ri-upload-cloud-2-fill" />
                                                 </div>
-                                                <h4>Drop files here or click to upload.</h4>
+                                                <h5>Drop files here or click to upload.</h5>
                                                 </div>
                                             </div>
                                             )}

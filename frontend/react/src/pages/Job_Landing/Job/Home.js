@@ -22,8 +22,8 @@ const Home = () => {
         <Container>
           <Row className="justify-content-between align-items-center">
             <Col lg={6}>
-            <div>
-                <h1 className="display-6 fw-semibold text-capitalize mb-3 lh-base">
+              <div>
+                <h1 className="display-6 fw-bold text-capitalize mb-3 lh-base">
                   Find your next job and build your dream here
                 </h1>
                 <p className="lead text-muted lh-base mb-4">

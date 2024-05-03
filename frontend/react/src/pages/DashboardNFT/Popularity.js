@@ -39,7 +39,7 @@ const Popularity = () => {
                                             <div className="d-flex align-items-center">
                                                 <img src={item.img} alt="" className="avatar-xs object-fit-cover rounded-circle" />
                                                 <div className="ms-3 flex-grow-1">
-                                                    <Link to="#" className="stretched-link">
+                                                    <Link to="#!" className="stretched-link">
                                                         <h6 className="fs-14 mb-1">{item.author}</h6>
                                                     </Link>
                                                     <p className="mb-0 text-muted">{item.username}</p>

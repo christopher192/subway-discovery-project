@@ -12,6 +12,9 @@ import Img3 from "../../../assets/images/nft/img-03.jpg";
 import Img5 from "../../../assets/images/nft/img-05.jpg";
 import Img6 from "../../../assets/images/nft/img-06.jpg";
 
+import ImgGif3 from "../../../assets/images/nft/gif/img-3.gif";
+import ImgGif4 from "../../../assets/images/nft/gif/img-4.gif";
+
 import avatar1 from "../../../assets/images/users/avatar-1.jpg";
 import avatar3 from "../../../assets/images/users/avatar-3.jpg";
 import avatar5 from "../../../assets/images/users/avatar-5.jpg";
@@ -71,7 +74,7 @@ const ItemDetails = () => {
                                                         <img src={Img3} alt="" className="img-fluid rounded" />
                                                     </Col>
                                                     <Col className="col-3">
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-3.gif"} alt="" className="img-fluid rounded h-100 object-fit-cover" />
+                                                        <img src={ImgGif3} alt="" className="img-fluid rounded h-100 object-fit-cover" />
                                                     </Col>
                                                     <Col className="col-3">
                                                         <img src={Img6} alt="" className="img-fluid rounded" />
@@ -97,8 +100,8 @@ const ItemDetails = () => {
                                             </DropdownMenu>
                                         </UncontrolledDropdown>
 
-                                        <span className="badge bg-info-subtle  text-info mb-3 fs-12"><i className="ri-eye-line me-1 align-bottom"></i> 8,634 people views this</span>
-                                        <h4>Patterns Arts & Culture</h4>
+                                        <span className="badge bg-info-subtle text-info mb-3 fs-12"><i className="ri-eye-line me-1 align-bottom"></i> 8,634 people views this</span>
+                                        <h4 className="fw-bold">Patterns Arts & Culture</h4>
                                         <div className="hstack gap-3 flex-wrap">
                                             <div className="text-muted">Creators : <Link to="#" className="text-primary fw-medium">Nancy Martino</Link></div>
                                             <div className="vr"></div>
@@ -148,7 +151,7 @@ const ItemDetails = () => {
                                                 <div className="p-2 border border-dashed rounded text-center">
                                                     <div>
                                                         <p className="text-muted fw-medium mb-1">Auction Ends:</p>
-                                                        <Countdown date="2025/01/01" renderer={renderer} />
+                                                        <Countdown date="2024/3/19" renderer={renderer} />
                                                     </div>
                                                 </div>
                                             </Col>
@@ -225,7 +228,7 @@ const ItemDetails = () => {
                                                                         <div className="d-flex align-items-center">
                                                                             <img src={avatar1} alt="" className="avatar-xs rounded object-fit-cover" />
                                                                             <div className="ms-2">
-                                                                                <Link to="#"><h6 className="mb-1">Alexis Clarke</h6></Link>
+                                                                                <Link to="#!"><h6 className="mb-1">Alexis Clarke</h6></Link>
                                                                                 <p className="text-muted mb-0">Creators</p>
                                                                             </div>
                                                                         </div>
@@ -244,7 +247,7 @@ const ItemDetails = () => {
                                                                         <div className="d-flex align-items-center">
                                                                             <img src={avatar3} alt="" className="avatar-xs rounded object-fit-cover" />
                                                                             <div className="ms-2">
-                                                                                <Link to="#"><h6 className="mb-1">Glen Matney</h6></Link>
+                                                                                <Link to="#!"><h6 className="mb-1">Glen Matney</h6></Link>
                                                                                 <p className="text-muted mb-0">Creators</p>
                                                                             </div>
                                                                         </div>
@@ -254,7 +257,7 @@ const ItemDetails = () => {
                                                                 <tr>
                                                                     <th scope="row">
                                                                         <div className="d-flex align-items-center">
-                                                                            <img src={"https://img.themesbrand.com/velzon/images/img-4.gif"} alt="" className="avatar-xs rounded object-fit-cover" />
+                                                                            <img src={ImgGif4} alt="" className="avatar-xs rounded object-fit-cover" />
                                                                             <Link to="/apps-nft-item-details" className="text-body"><span className="mb-0 ms-2">Evolved Reality</span></Link>
                                                                         </div>
                                                                     </th>
@@ -263,7 +266,7 @@ const ItemDetails = () => {
                                                                         <div className="d-flex align-items-center">
                                                                             <img src={avatar5} alt="" className="avatar-xs rounded object-fit-cover" />
                                                                             <div className="ms-2">
-                                                                                <Link to="#"><h6 className="mb-1">Herbert Stokes</h6></Link>
+                                                                                <Link to="#!"><h6 className="mb-1">Herbert Stokes</h6></Link>
                                                                                 <p className="text-muted mb-0">Creators</p>
                                                                             </div>
                                                                         </div>
@@ -282,7 +285,7 @@ const ItemDetails = () => {
                                                                         <div className="d-flex align-items-center">
                                                                             <img src={avatar8} alt="" className="avatar-xs rounded object-fit-cover" />
                                                                             <div className="ms-2">
-                                                                                <Link to="#"><h6 className="mb-1">Michael Morris</h6></Link>
+                                                                                <Link to="#!"><h6 className="mb-1">Michael Morris</h6></Link>
                                                                                 <p className="text-muted mb-0">Creators</p>
                                                                             </div>
                                                                         </div>

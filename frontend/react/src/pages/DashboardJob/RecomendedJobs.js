@@ -138,13 +138,13 @@ const RecomendedJobs = () => {
               columns={(columns || [])}
               data={(data || [])}
               isPagination={true}
+              // isGlobalFilter={false}
               iscustomPageSize={false}
               isBordered={false}
               customPageSize={5}
               className="custom-header-css table align-middle table-nowrap"
-              tableClass="table-centered align-middle table-nowrap mb-0"
-              theadClass="text-muted table-light gridjs-thead"
-              
+              tableClassName="table-centered align-middle table-nowrap mb-0"
+              theadClassName="text-muted table-light gridjs-thead"    
     />
           </CardBody>
         </Card>

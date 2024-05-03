@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 //import Images
 import logo_dark from "../../../../assets/images/logo-dark.png";
 import avatar03 from "../../../../assets/images/users/avatar-3.jpg";
-
 const BasicAction = () => {
-
     function changeBackground(e) {
         e.target.style.background = "#099885";
     }
@@ -31,7 +29,7 @@ const BasicAction = () => {
                         <tbody>
                             <tr style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", margin: 0 }}>
                                 <td style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", verticalAlign: "top", margin: 0 }} valign="top"></td>
-                                <td className="container" width="600" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "15px", verticalAlign: "top", display: "block", maxWidth: "600px", clear: "both", margin: "0, auto" }} valign="top">
+                                <td className="container" width="600" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", verticalAlign: "top", display: "block", maxWidth: "600px", clear: "both", margin: "0, auto" }} valign="top">
                                     <div className="content" style={{ fontFamily: "Roboto sans-serif", boxSizing: "border-box", fontSize: "14px", maxWidth: "600px", display: "block", margin: "0 auto", padding: "20px" }}>
                                         <table className="main" width="100%" cellPadding="0" cellSpacing="0" itemProp="action" itemScope itemType="http://schema.org/ConfirmAction" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", borderRadius: "3px", margin: 0, border: "none" }}>
                                             <tbody>
@@ -52,9 +50,9 @@ const BasicAction = () => {
                                                                         Hey, Anna Adame
                                                                     </td>
                                                                 </tr>
-                                                                <tr style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "15px", margin: 0 }}>
+                                                                <tr style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", margin: 0 }}>
                                                                     <td className="content-block" style={{ fontFamily: "Roboto, sans-serif", color: "#878a99", boxSizing: "border-box", lineHeight: "1.5", fontSize: "15px", verticalAlign: "top", margin: 0, padding: "0 0 10px" }} valign="top">
-                                                                    I'm writing to let you know that I can't attend class for two weeks as I've had an accident and hurt my back. I'm afraid I also need to ask for an extension for next week's essay.
+                                                                        I'm writing to let you know that I can't attend className for two weeks as I've had an accident and hurt my back. I'm afraid I also need to ask for an extension for next week's essay.
                                                                     </td>
                                                                 </tr>
                                                                 <tr style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", margin: 0 }}>
@@ -70,7 +68,6 @@ const BasicAction = () => {
                                                                             Read More &#8594;</Link>
                                                                     </td>
                                                                 </tr>
-
                                                                 <tr style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", margin: 0, borderTop: "1px solid #e9ebec" }}>
                                                                     <td className="content-block" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", verticalAlign: "top", margin: 0, padding: 0, paddingTop: "15px" }} valign="top">
                                                                         <div style={{ display: "flex", alignItems: "center" }}>
@@ -112,5 +109,4 @@ const BasicAction = () => {
         </React.Fragment>
     );
 };
-
 export default BasicAction;

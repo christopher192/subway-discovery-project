@@ -30,7 +30,7 @@ import Select from "react-select";
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
-// Import actions
+//Import actions
 import { getSellers as onGetSellers } from "../../../slices/thunks";
 import SellerChats from "./SellerChats";
 import { createSelector } from "reselect";
@@ -41,12 +41,13 @@ const EcommerceSellers = () => {
   const [modal, setModal] = useState(false);
   const [companyType, setcompanyType] = useState(null);
 
-  const selectsellerData = createSelector(
+  const selectDashboardData = createSelector(
     (state) => state.Ecommerce,
     (sellers) => sellers.sellers
   );
-  // Inside your component
-  const sellers = useSelector(selectsellerData);
+  
+// Inside your component
+const sellers   = useSelector(selectDashboardData);
 
 
   useEffect(() => {
@@ -104,6 +105,7 @@ const EcommerceSellers = () => {
   };
 
   document.title = "Sellers | Velzon - React Admin & Dashboard Template";
+
   return (
     <React.Fragment>
       <div className="page-content">

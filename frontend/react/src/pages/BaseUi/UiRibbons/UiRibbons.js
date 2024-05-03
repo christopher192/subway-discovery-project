@@ -8,8 +8,6 @@ import BreadCrumb from '../../../Components/Common/BreadCrumb';
 import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
 
 import { RoundedRibbonExample, RibbonShapeExample, FilledRibbonsExample, BoxedRibbonsExample, RibbonsExample, RibbonsHoverExample } from './UiRibbonsCode';
-
-
 const UiRibbons = () => {
     document.title="Ribbons | Velzon - React Admin & Dashboard Template";
     return (

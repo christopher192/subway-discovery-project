@@ -18,7 +18,7 @@ const ProjectsSlice = createSlice({
             state.error = action.payload.error || null;
         });
         builder.addCase(addProjectList.fulfilled, (state, action) => {
-            state.projectLists.unshift(action.payload);
+            state.projectLists.push(action.payload);
         });
         builder.addCase(addProjectList.rejected, (state, action) => {
             state.error = action.payload.error || null;

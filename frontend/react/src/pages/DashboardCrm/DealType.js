@@ -14,8 +14,9 @@ const DealType = () => {
         (state) => state.DashboardCRM,
         (dialTypeData) => dialTypeData.dialTypeData
       );
+      
     // Inside your component
-    const dialTypeData = useSelector(selectDashboardData);
+    const  dialTypeData = useSelector(selectDashboardData);
 
 
     useEffect(() => {
@@ -54,7 +55,7 @@ const DealType = () => {
                     </div>
                     <div className="card-body pb-0">
                         <div id="deal-type-charts" dir="ltr">
-                            <DealTypeCharts series={chartData} dataColors='["--vz-warning", "--vz-danger", "--vz-success"]'/>
+                            <DealTypeCharts series={chartData} dataColors='["--vz-warning", "--vz-danger", "--vz-success"]' />
                         </div>
                     </div>
                 </Card>

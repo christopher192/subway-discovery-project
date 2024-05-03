@@ -10,7 +10,6 @@ const TaskList = () => {
     return (
         <React.Fragment>
             <div className="page-content">
-            
                 <Container fluid>
                     <BreadCrumb title="Tasks List" pageTitle="Tasks" />
                     <Row>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import {
   Container,
   Button,
@@ -16,20 +16,21 @@ import {
   Nav,
   NavItem,
   NavLink,
-  TabContent,
+  TabContent,   
   TabPane
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import SimpleBar from "simplebar-react";
-import classnames from "classnames";
-import Picker from 'emoji-picker-react';
 import { isEmpty, map } from "lodash";
+import classnames from "classnames";
+import SimpleBar from "simplebar-react";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 import PersonalInfo from "./PersonalInfo";
 
 import { chatContactData } from "../../common/data";
+
+import Picker from 'emoji-picker-react';
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
@@ -50,7 +51,7 @@ import "react-perfect-scrollbar/dist/css/styles.css";
 import { createSelector } from "reselect";
 
 const Chat = () => {
-  const userChatShow = useRef();
+
   const [customActiveTab, setcustomActiveTab] = useState("1");
   const toggleCustom = (tab) => {
     if (customActiveTab !== tab) {
@@ -58,6 +59,7 @@ const Chat = () => {
     }
   };
 
+  const ref = useRef();
   const dispatch = useDispatch();
   const [isInfoDetails, setIsInfoDetails] = useState(false);
   const [Chat_Box_Username, setChat_Box_Username] = useState("Lisa Parker");
@@ -69,27 +71,28 @@ const Chat = () => {
   const [settings_Menu, setsettings_Menu] = useState(false);
   const [reply, setreply] = useState("");
   const [emojiPicker, setemojiPicker] = useState(false);
-  const currentUser = {
+  const [currentUser, setCurrentUser] = useState({
     name: "Anna Adame",
     isActive: true,
-  };
-
+  });
 
   const selectLayoutState = (state) => state.Chat;
-  const chatProperties = createSelector(
-    selectLayoutState,
-    (state) => ({
-      chats: state.chats,
-      messages: state.messages,
-      channels: state.channels,
-    })
-  );
-  // Inside your component
+  const selectLayoutProperties = createSelector(
+      selectLayoutState,
+      (msg) => ({
+        chats: msg.chats,
+        messages: msg.messages,
+        channels  : msg.channels  ,
+         
+      })
+    );
+  
+    // Inside your component
   const {
-    chats, messages, channels
-  } = useSelector(chatProperties);
-
-
+    chats,
+    messages,
+    channels  , 
+  } = useSelector(selectLayoutProperties);  
   //Toggle Chat Box Menus
   const toggleSearch = () => {
     setsearch_Menu(!search_Menu);
@@ -109,25 +112,13 @@ const Chat = () => {
     dispatch(getMessages(currentRoomId));
   }, [dispatch, currentRoomId]);
 
-  // useEffect(() => {
-  //   ref.current.recalculate();
-  // });
-
-
   //Use For Chat Box
   const userChatOpen = (id, name, status, roomId, image) => {
     setChat_Box_Username(name);
     setCurrentRoomId(roomId);
     setChat_Box_Image(image);
     dispatch(getMessages(roomId));
-    if (window.innerWidth < 892) {
-      userChatShow.current.classList.add("user-chat-show");
-    }
   };
-
-  const backToUserChat = () => {
-    userChatShow.current.classList.remove("user-chat-show");
-  }
 
   const addMessage = (roomId, sender) => {
     const message = {
@@ -140,7 +131,6 @@ const Chat = () => {
     setcurMessage("");
     dispatch(onAddMessage(message));
   };
-
 
   const scrollToBottom = useCallback(() => {
     if (messageBox) {
@@ -163,7 +153,7 @@ const Chat = () => {
 
   //serach recent user
   const searchUsers = () => {
-    var input, filter, li, a, i, txtValue;
+    var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("search-user");
     filter = input.value.toUpperCase();
     var userList = document.getElementsByClassName("users-list");
@@ -183,7 +173,7 @@ const Chat = () => {
 
   //Search Message
   const searchMessages = () => {
-    var searchInput, searchFilter, searchUL, searchLI, a, txtValue;
+    var searchInput, searchFilter, searchUL, searchLI, a, i, txtValue;
     searchInput = document.getElementById("searchMessage");
     searchFilter = searchInput.value.toUpperCase();
     searchUL = document.getElementById("users-conversation");
@@ -210,6 +200,7 @@ const Chat = () => {
     }, 2000);
   };
 
+
   // emoji
   const [emojiArray, setemojiArray] = useState("");
 
@@ -228,7 +219,7 @@ const Chat = () => {
         <Container fluid>
           <div className="chat-wrapper d-lg-flex gap-1 mx-n4 mt-n4 p-1">
             <div className="chat-leftsidebar">
-              <div className="px-4 pt-4 mb-3">
+              <div className="px-4 pt-4 mb-4">
                 <div className="d-flex align-items-start">
                   <div className="flex-grow-1">
                     <h5 className="mb-4">Chats</h5>
@@ -241,7 +232,7 @@ const Chat = () => {
                     <Button
                       color=""
                       id="addcontact"
-                      className="btn btn-soft-success btn-sm shadow-none"
+                      className="btn btn-soft-success btn-sm"
                     >
                       <i className="ri-add-line align-bottom"></i>
                     </Button>
@@ -258,8 +249,6 @@ const Chat = () => {
                   <i className="ri-search-2-line search-icon"></i>
                 </div>
               </div>
-
-
               <Nav tabs className="nav nav-tabs nav-tabs-custom nav-success nav-justified mb-3">
                 <NavItem>
                   <NavLink
@@ -370,11 +359,9 @@ const Chat = () => {
                                 <div className="flex-grow-1 overflow-hidden">
                                   <p className="text-truncate mb-0">{chat.name}</p>
                                 </div>
-                                {chat.badge &&
-                                  <div className="flex-shrink-0">
-                                    <span className="badge bg-dark-subtle text-body rounded p-1">{chat.badge}</span>
-                                  </div>
-                                }
+                                {chat.badge && <div className="flex-shrink-0">
+                                  <span className="badge bg-dark-subtle text-body rounded p-1">{chat.badge}</span>
+                                </div>}
                               </div>
                             </Link>
                           </li>
@@ -442,7 +429,6 @@ const Chat = () => {
                       </ul>
                     </div>
                   </SimpleBar>
-
                 </TabPane>
                 <TabPane tabId="2" id="contacts">
                   <SimpleBar className="chat-room-list pt-3" style={{ margin: "-16px 0px 0px" }}>
@@ -494,7 +480,7 @@ const Chat = () => {
               </TabContent>
             </div>
 
-            <div className="user-chat w-100 overflow-hidden" ref={userChatShow}>
+            <div className="user-chat w-100 overflow-hidden">
               <div className="chat-content d-lg-flex">
                 <div className="w-100 overflow-hidden position-relative">
                   <div className="position-relative">
@@ -505,7 +491,6 @@ const Chat = () => {
                             <div className="flex-shrink-0 d-block d-lg-none me-3">
                               <Link
                                 to="#"
-                                onClick={backToUserChat}
                                 className="user-chat-remove fs-18 p-1"
                               >
                                 <i className="ri-arrow-left-s-line align-bottom"></i>
@@ -635,94 +620,95 @@ const Chat = () => {
                     </div>
 
                     <div className="position-relative" id="users-chat">
-                      <div className="chat-conversation p-3 p-lg-4" id="chat-conversation">
-                        <PerfectScrollbar
-                          containerRef={ref => setMessageBox(ref)} >
-                          <div id="elmLoader"></div>
-                          <ul
-                            className="list-unstyled chat-conversation-list"
-                            id="users-conversation"
-                          >
-                            {messages &&
-                              map(messages, (message, key) => (
-                                <li
-                                  className={
-                                    message.sender === Chat_Box_Username
-                                      ? " chat-list left"
-                                      : "chat-list right"
-                                  }
-                                  key={key}
-                                >
-                                  <div className="conversation-list">
-                                    {message.sender === Chat_Box_Username && (
-                                      <div className="chat-avatar">
-                                        {Chat_Box_Image === undefined ?
-                                          <img
-                                            src={userDummayImage}
-                                            alt=""
-                                          />
-                                          :
-                                          <img
-                                            src={Chat_Box_Image}
-                                            alt=""
-                                          />
-                                        }
-                                      </div>
-                                    )}
+                    <div className="chat-conversation p-3 p-lg-4" id="chat-conversation">
+                      <PerfectScrollbar
+                        
+                        containerRef={ref => setMessageBox(ref)} >
+                        <div id="elmLoader"></div>
+                        <ul
+                          className="list-unstyled chat-conversation-list"
+                          id="users-conversation"
+                        >
+                          {messages &&
+                            map(messages, (message, key) => (
+                              <li
+                                className={
+                                  message.sender === Chat_Box_Username
+                                    ? " chat-list left"
+                                    : "chat-list right"
+                                }
+                                key={key}
+                              >
+                                <div className="conversation-list">
+                                  {message.sender === Chat_Box_Username && (
+                                    <div className="chat-avatar">
+                                      {Chat_Box_Image === undefined ?
+                                        <img
+                                          src={userDummayImage}
+                                          alt=""
+                                        />
+                                        :
+                                        <img
+                                          src={Chat_Box_Image}
+                                          alt=""
+                                        />
+                                      }
+                                    </div>
+                                  )}
 
-                                    <div className="user-chat-content">
-                                      <div className="ctext-wrap">
-                                        <div className="ctext-wrap-content">
-                                          <p className="mb-0 ctext-content">
-                                            {message.message}
-                                          </p>
-                                        </div>
-                                        <UncontrolledDropdown className="align-self-start message-box-drop">
-                                          <DropdownToggle
-                                            href="#"
-                                            className="btn nav-btn"
-                                            tag="a"
-                                          >
-                                            <i className="ri-more-2-fill"></i>
-                                          </DropdownToggle>
-                                          <DropdownMenu>
-                                            <DropdownItem href="#" className="reply-message" onClick={() => setreply(message)}>
-                                              <i className="ri-reply-line me-2 text-muted align-bottom"></i>
-                                              Reply
-                                            </DropdownItem>
-                                            <DropdownItem href="#">
-                                              <i className="ri-share-line me-2 text-muted align-bottom"></i>
-                                              Forward
-                                            </DropdownItem>
-                                            <DropdownItem href="#" onClick={(e) => handleCkick(e.target)}>
-                                              <i className="ri-file-copy-line me-2 text-muted align-bottom"></i>
-                                              Copy
-                                            </DropdownItem>
-                                            <DropdownItem href="#">
-                                              <i className="ri-bookmark-line me-2 text-muted align-bottom"></i>
-                                              Bookmark
-                                            </DropdownItem>
-                                            <DropdownItem href="#" onClick={() => dispatch(onDeleteMessage(message.id))}>
-                                              <i className="ri-delete-bin-5-line me-2 text-muted align-bottom"></i>
-                                              Delete
-                                            </DropdownItem>
-                                          </DropdownMenu>
-                                        </UncontrolledDropdown>
+                                  <div className="user-chat-content">
+                                    <div className="ctext-wrap">
+                                      <div className="ctext-wrap-content">
+                                        <p className="mb-0 ctext-content">
+                                          {message.message}
+                                        </p>
                                       </div>
-                                      <div className="conversation-name">
-                                        <small className="text-muted time">
-                                          09:07 am
-                                        </small>{" "}
-                                        <span className="text-success check-message-icon">
-                                          <i className="ri-check-double-line align-bottom"></i>
-                                        </span>
-                                      </div>
+                                      <UncontrolledDropdown className="align-self-start message-box-drop">
+                                        <DropdownToggle
+                                          href="#"
+                                          className="btn nav-btn"
+                                          tag="i"
+                                        >
+                                          <i className="ri-more-2-fill"></i>
+                                        </DropdownToggle>
+                                        <DropdownMenu>
+                                          <DropdownItem href="#" className="reply-message" onClick={() => setreply(message)}>
+                                            <i className="ri-reply-line me-2 text-muted align-bottom"></i>
+                                            Reply
+                                          </DropdownItem>
+                                          <DropdownItem href="#">
+                                            <i className="ri-share-line me-2 text-muted align-bottom"></i>
+                                            Forward
+                                          </DropdownItem>
+                                          <DropdownItem href="#" onClick={(e) => handleCkick(e.target)}>
+                                            <i className="ri-file-copy-line me-2 text-muted align-bottom"></i>
+                                            Copy
+                                          </DropdownItem>
+                                          <DropdownItem href="#">
+                                            <i className="ri-bookmark-line me-2 text-muted align-bottom"></i>
+                                            Bookmark
+                                          </DropdownItem>
+                                          <DropdownItem href="#" onClick={() => dispatch(onDeleteMessage(message.id))}>
+                                            <i className="ri-delete-bin-5-line me-2 text-muted align-bottom"></i>
+                                            Delete
+                                          </DropdownItem>
+                                        </DropdownMenu>
+                                      </UncontrolledDropdown>
+                                    </div>
+                                    <div className="conversation-name">
+                                      <small className="text-muted time">
+                                        09:07 am
+                                      </small>{" "}
+                                      <span className="text-success check-message-icon">
+                                        <i className="ri-check-double-line align-bottom"></i>
+                                      </span>
                                     </div>
                                   </div>
-                                </li>
-                              ))}
-                          </ul>
-                        </PerfectScrollbar>
+                                </div>
+                              </li>
+                            ))}
+                        </ul>
+                      </PerfectScrollbar>
                       </div>
                       <div
                         className="alert alert-warning alert-dismissible copyclipboard-alert px-4 fade show "
@@ -774,7 +760,8 @@ const Chat = () => {
                                 <Button
                                   type="button"
                                   color="success"
-                                  onClick={() => { addMessage(currentRoomId, currentUser.name); setemojiPicker(false); setemojiArray(""); }}
+                                  onClick={() => { addMessage(currentRoomId, currentUser.name); setemojiPicker(false); setemojiArray(""); }
+                                  }
                                   className="chat-send waves-effect waves-light"
                                 >
                                   <i className="ri-send-plane-2-fill align-bottom"></i>

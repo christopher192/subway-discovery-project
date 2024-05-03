@@ -17,7 +17,7 @@ import { useFormik } from "formik";
 
 import DeleteModal from "../../../Components/Common/DeleteModal";
 
-import { toast, ToastContainer } from 'react-toastify';
+import { toast,ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from "../../../Components/Common/Loader";
 import { createSelector } from 'reselect';
@@ -25,20 +25,24 @@ import { createSelector } from 'reselect';
 const TicketsData = () => {
     const dispatch = useDispatch();
 
+   
     const selectLayoutState = (state) => state.Tickets;
     const selectLayoutProperties = createSelector(
         selectLayoutState,
-        (state) => ({
-            ticketsList: state.ticketsList,
-            isTicketSuccess: state.isTicketSuccess,
-            error: state.error,
-        })
-    );
+        (layout) => ({
+            ticketsList: layout.ticketsList,
+            isTicketCreated: layout.isTicketCreated,
+            isTicketSuccess: layout.isTicketSuccess,
+            error: layout.error,
+        }));
+
     // Inside your component
     const {
-        ticketsList, isTicketSuccess, error
+        ticketsList,
+         isTicketCreated, 
+         isTicketSuccess, 
+         error
     } = useSelector(selectLayoutProperties);
-
 
     const [isEdit, setIsEdit] = useState(false);
     const [ticket, setTicket] = useState([]);
@@ -46,6 +50,7 @@ const TicketsData = () => {
     // Delete Tickets
     const [deleteModal, setDeleteModal] = useState(false);
     const [deleteModalMulti, setDeleteModalMulti] = useState(false);
+
     const [modal, setModal] = useState(false);
 
     const toggle = useCallback(() => {
@@ -79,16 +84,17 @@ const TicketsData = () => {
             title: Yup.string().required("Please Enter Title"),
             client: Yup.string().required("Please Enter Client Name"),
             assigned: Yup.string().required("Please Enter Assigned Name"),
-            // create: Yup.string().required("Please Enter Create Date"),
-            // due: Yup.string().required("Please Enter Your Due Date"),
+            // createDate: Yup.string().required("Please Enter Create Date"),
+            // dueDate: Yup.string().required("Please Enter Your Due Date"),
             status: Yup.string().required("Please Enter Your Joining status"),
             priority: Yup.string().required("Please Enter Your Priority")
         }),
         onSubmit: (values) => {
             if (isEdit) {
+
                 const updateTickets = {
                     _id: ticket ? ticket._id : 0,
-                    id: values.id,
+                    ticketId: values.ticketId,
                     title: values.title,
                     client: values.client,
                     assigned: values.assigned,
@@ -105,6 +111,7 @@ const TicketsData = () => {
                 const newTicket = {
                     _id: (Math.floor(Math.random() * (30 - 20)) + 20).toString(),
                     id: values["id"],
+                    ticketId: values["ticketId"],
                     title: values["title"],
                     client: values["client"],
                     assigned: values["assigned"],
@@ -154,6 +161,7 @@ const TicketsData = () => {
         toggle();
     }, [toggle]);
 
+    // Get Data
     useEffect(() => {
         if (ticketsList && !ticketsList.length) {
             dispatch(getTicketsList());
@@ -179,18 +187,7 @@ const TicketsData = () => {
         toggle();
     };
 
-    // Node API 
-    // useEffect(() => {
-    //   if (isTicketCreated) {
-    //     setTicket(null);
-    //     dispatch(getTicketsList());
-    //   }
-    // }, [
-    //   dispatch,
-    //   isTicketCreated,
-    // ]);
-
-    // Checked All
+// Checked All
     const checkedAll = useCallback(() => {
         const checkall = document.getElementById("checkBoxAll");
         const ele = document.querySelectorAll(".ticketCheckBox");
@@ -207,7 +204,7 @@ const TicketsData = () => {
         deleteCheckbox();
     }, []);
 
-    // Delete Multiple
+// Delete Multiple
     const [selectedCheckBoxDelete, setSelectedCheckBoxDelete] = useState([]);
     const [isMultiDeleteButton, setIsMultiDeleteButton] = useState(false);
 
@@ -332,7 +329,6 @@ const TicketsData = () => {
         [checkedAll]
     );
 
-
     const dateFormat = () => {
         let d = new Date(),
             months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -378,13 +374,14 @@ const TicketsData = () => {
                                 <div className="flex-shrink-0">
                                     <div className="d-flex flex-wrap gap-2">
                                         <button className="btn btn-danger add-btn" onClick={() => { setIsEdit(false); toggle(); }}><i className="ri-add-line align-bottom"></i> Create Tickets</button>
-                                        {" "}{isMultiDeleteButton && <button className="btn btn-soft-danger"
+                                        {" "}{isMultiDeleteButton && <button className="btn btn-soft-secondary"
                                             onClick={() => setDeleteModalMulti(true)}
                                         ><i className="ri-delete-bin-2-line"></i></button>}
                                     </div>
                                 </div>
                             </div>
                         </CardHeader>
+                        
                         <CardBody className='pt-0'>
                             {isTicketSuccess && ticketsList.length ? (
                                 <TableContainer
@@ -396,9 +393,11 @@ const TicketsData = () => {
                                     className="custom-header-css"
                                     divClass="table-responsive table-card mb-3"
                                     tableClass="align-middle table-nowrap mb-0"
+                                    theadClass=""
+                                    thClass=""
                                     handleTicketClick={handleTicketsClicks}
                                     isTicketsListFilter={true}
-                                    SearchPlaceholder='Search for ticket details or something...'
+                                    SearchPlaceholder="Search for ticket details or something..."
                                 />
                             ) : (<Loader error={error} />)
                             }
@@ -477,7 +476,7 @@ const TicketsData = () => {
                             </Col>
                             <Col lg={6}>
                                 <div>
-                                    <Label htmlFor="client_nameName-field" className="form-label">Client</Label>
+                                    <Label htmlFor="client_nameName-field" className="form-label">Client Name</Label>
                                     <Input
                                         name="client"
                                         type="text"

@@ -163,12 +163,6 @@ export const updateTask = task => api.update(url.UPDATE_TASK + '/' + task._id, t
 // delete Task
 export const deleteTask = task => api.delete(url.DELETE_TASK + '/' + task);
 
-// Kanban Board
-export const getTasks = () => api.get(url.GET_TASKS);
-export const addNewTasks = (card) => api.create(url.ADD_TASKS, card)
-export const updateTasks = (card) => api.put(url.UPDATE_TASKS, card)
-export const deleteTasks = (card) => api.delete(url.DELETE_TASKS, { headers: {card} })
-
 // CRM
 // get Contacts
 export const getContacts = () => api.get(url.GET_CONTACTS);
@@ -368,3 +362,9 @@ export const getJobApplicationList = () => api.get(url.GET_APPLICATION_LIST);
 
 //API Key
 export const getAPIKey = () => api.get(url.GET_API_KEY);
+
+// Kanban Board
+export const getTasks = () => api.get(url.GET_TASKS);
+export const addNewTasks = (card) => api.create(url.ADD_TASKS, card)
+export const updateTasks = (card) => api.put(url.UPDATE_TASKS, card)
+export const deleteTasks = (card) => api.delete(url.DELETE_TASKS, { headers: {card} })

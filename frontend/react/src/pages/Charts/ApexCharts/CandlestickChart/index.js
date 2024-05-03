@@ -10,9 +10,8 @@ import {
     CandlestickLine
 } from "./CandlestickChart";
 
-
 const CandlestickChart = () => {
-    document.title = "Candlestick Charts | Velzon - React Admin & Dashboard Template";
+  document.title="Candlestick Charts | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -25,7 +24,7 @@ const CandlestickChart = () => {
                                     <h4 className="card-title mb-0">Basic Candlestick Chart</h4>
                                 </CardHeader>
                                 <CardBody>
-                                    <Basic dataColors='["--vz-success", "--vz-danger"]' />
+                                    <Basic dataColors='["--vz-success", "--vz-danger"]'/>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -38,10 +37,10 @@ const CandlestickChart = () => {
                                 <CardBody>
                                     <div>
                                         <div id="combo_candlestick">
-                                            <ComboCandlestick dataColors='["--vz-info", "--vz-danger"]' />
+                                            <ComboCandlestick dataColors='["--vz-info", "--vz-danger"]'/>
                                         </div>
                                         <div id="combo_candlestick_chart">
-                                            <ComboCandlestick1 dataColors='["--vz-warning", "--vz-danger"]' />
+                                            <ComboCandlestick1 dataColors='["--vz-warning", "--vz-danger"]'/>
                                         </div>
                                     </div>
                                 </CardBody>
@@ -56,7 +55,7 @@ const CandlestickChart = () => {
                                     <h4 className="card-title mb-0">Category X-Axis</h4>
                                 </CardHeader>
                                 <CardBody>
-                                    <Category dataColors='["--vz-success", "--vz-danger"]' />
+                                    <Category dataColors='["--vz-success", "--vz-danger"]'/>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -71,7 +70,7 @@ const CandlestickChart = () => {
                                 </CardBody>
                             </Card>
                         </Col>
-                    </Row>
+                        </Row>
                 </Container>
             </div>
         </React.Fragment>

@@ -91,13 +91,13 @@ const UpdateDonut = ({ dataColors }) => {
             series={series}
             options={options}
             type="donut"
-            height={280.7}
+            height={300}
         />
-
     )
 }
 
-const MonochromePie = () => {
+const MonochromePie = ({ dataColors }) => {
+    var chartMonochromeColors = getChartColorsArray(dataColors);
     const series = [25, 15, 44, 55, 41, 17]
     var options = {
 
@@ -147,7 +147,7 @@ const MonochromePie = () => {
             series={series}
             options={options}
             type="pie"
-            height={300.7}
+            height={300}
         />
 
     )
@@ -194,7 +194,7 @@ const GradientDonut = ({ dataColors }) => {
             series={series}
             options={options}
             type="donut"
-            height={290.7}
+            height={300}
         />
 
     )
@@ -272,7 +272,7 @@ const PatternedDonut = ({ dataColors }) => {
             series={series}
             options={options}
             type="donut"
-            height={280.7}
+            height={300}
         />
 
     )
@@ -331,7 +331,7 @@ const ImagePieChart = ({ dataColors }) => {
             series={series}
             options={options}
             type="pie"
-            height={263.6}
+            height={267.7}
         />
 
     )

@@ -34,7 +34,7 @@ const Widgets = () => {
                                                     />
                                                 </span>))}
                                             </h4>
-                                            <span className={"fs-12 badge bg-" + item.badgeClass+"-subtle text-"+item.badgeClass+""}><i className={"fs-13 align-middle me-1 " + item.icon}></i>{item.percentage}</span>
+                                            <span className={"fs-12 badge bg-" + item.badgeClass+"-subtle text-"+item.badgeClass}><i className={"fs-13 align-middle me-1 " + item.icon}></i>{item.percentage}</span>
                                         </div>
                                         <p className="text-muted text-truncate mb-0">{item.caption}</p>
                                     </div>

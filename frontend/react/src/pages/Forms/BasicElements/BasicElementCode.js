@@ -145,22 +145,6 @@ const InputExample = () => {
         <Input type="text" className="form-control rounded-pill" id="exampleInputrounded" placeholder="Enter your name" />
     </div>
 </Col>
-
-<Col xxl={3} md={6}>
-    <div>
-        <FormGroup floating>
-            <Input
-                id="exampleEmail"
-                name="email"
-                placeholder="Floating Input"
-                type="text"
-            />
-            <Label for="exampleEmail">
-                Floating Input
-            </Label>
-        </FormGroup>
-    </div>
-</Col>
 `
     return (
         <React.Fragment>

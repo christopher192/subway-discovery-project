@@ -9,7 +9,6 @@ import smallImage1 from '../../../assets/images/small/img-1.jpg';
 import smallImage3 from '../../../assets/images/small/img-3.jpg';
 import smallImage4 from '../../../assets/images/small/img-4.jpg';
 import smallImage5 from '../../../assets/images/small/img-5.jpg';
-
 import { SearchGallery, news, video, swiper  } from '../../../common/data';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +20,6 @@ const SearchResults = () => {
 
     SwiperCore.use([Autoplay]);
 
-  
     //Tab 
     const [activeTab, setActiveTab] = useState('1');
     const toggleTab = (tab) => {
@@ -43,14 +41,14 @@ const SearchResults = () => {
         setDropdownOpen(!dropdownOpen);
     };
 
-document.title="Search Results | Velzon - React Admin & Dashboard Template";
+    document.title="Search Results | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
             <div className="page-content">
-                
                 <div className="container-fluid">
                     <BreadCrumb title="Search Results" pageTitle="Pages" />
+
                     <Row>
                         <Col lg={12}>
                             <Card>
@@ -80,7 +78,7 @@ document.title="Search Results | Velzon - React Admin & Dashboard Template";
                                         tabIndex="-1"
                                     >
                                         <OffcanvasBody>
-                                            <button type="button" onClick={() => setIsOpen(false)} className="btn-close text-reset float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            <button type="button" className="btn-close text-reset float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                             <div className="d-flex flex-column h-100 justify-content-center align-items-center">
                                                 <div className="search-voice">
                                                     <i className="ri-mic-fill align-middle"></i>
@@ -152,7 +150,7 @@ document.title="Search Results | Velzon - React Admin & Dashboard Template";
                                     <TabContent activeTab={activeTab} className="text-muted">
                                         <TabPane tabId="1">
                                             <div className="pb-3">
-                                                <h5 className="mb-1"><Link to="#">Velzon - Responsive Bootstrap 5 Admin Dashboard</Link></h5>
+                                                <h5 className="mb-1 fs-14"><Link to="#">Velzon - Responsive Bootstrap 5 Admin Dashboard</Link></h5>
                                                 <p className="text-success mb-2">https://themesbrand.com/velzon/index.html</p>
                                                 <p className="text-muted mb-2">Velzon admin is super flexible, powerful, clean, modern & responsive admin template based on <span className="fw-semibold">bootstrap 5</span> stable with unlimited possibilities. You can simply change to any layout or mode by changing a couple of lines of code. You can start small and large projects or update design in your existing project using Velzon it is very quick and easy as it is beautiful, adroit, and delivers the ultimate user experience.</p>
                                                 <ul className="list-inline d-flex align-items-center g-3 text-muted fs-14 mb-0">
@@ -218,7 +216,7 @@ document.title="Search Results | Velzon - React Admin & Dashboard Template";
                                             <div className="border border-dashed"></div>
 
                                             <div className="py-3">
-                                                <h5 className="mb-1"><Link to="#">Skote - Admin & Dashboard Template by Themesbrand</Link></h5>
+                                                <h5 className="mb-1 fs-14"><Link to="#">Skote - Admin & Dashboard Template by Themesbrand</Link></h5>
                                                 <p className="text-success mb-2">https://themesbrand.com/skote/</p>
                                                 <p className="text-muted mb-2">Skote is an admin dashboard template that is a beautifully crafted, clean & minimal designed admin template with Dark, Light Layouts with RTL options. You can build any type of web application like Saas based interface, eCommerce, Crypto, CRM, CMS, Project management apps, Admin Panels, etc.</p>
                                                 <ul className="list-inline d-flex align-items-center g-3 text-muted fs-14 mb-0">
@@ -240,7 +238,7 @@ document.title="Search Results | Velzon - React Admin & Dashboard Template";
                                             <div className="border border-dashed"></div>
 
                                             <div className="py-3">
-                                                <h5 className="mb-1"><Link to="#">Minia - React Js Admin & Dashboard Template</Link></h5>
+                                                <h5 className="mb-1 fs-14"><Link to="#">Minia - React Js Admin & Dashboard Template</Link></h5>
                                                 <p className="text-success mb-2">https://themesbrand.com/minia/react/</p>
                                                 <p className="text-muted mb-2">Minia react is a simple and beautiful admin template built with Bootstrap ^5.1.3. It has <span className="fw-semibold">5+ different layouts and 3 modes</span> ( Dark, Light & RTL ) which are managed by SCSS only. You can simply change to any layouts or mode by changing a couple of lines code.</p>
                                                 <ul className="list-inline d-flex align-items-center g-3 text-muted fs-14 mb-0">
@@ -262,7 +260,7 @@ document.title="Search Results | Velzon - React Admin & Dashboard Template";
                                             <div className="border border-dashed"></div>
 
                                             <div className="py-3">
-                                                <h5 className="mb-1"><Link to="#">Doson - Angular Admin & Dashboard Template by Themesbrand</Link></h5>
+                                                <h5 className="mb-1 fs-14"><Link to="#">Doson - Angular Admin & Dashboard Template by Themesbrand</Link></h5>
                                                 <p className="text-success mb-2">https://themesbrand.com/dason/angular/</p>
                                                 <p className="text-muted mb-2">Dason is a simple and beautiful admin template built with Bootstrap ^5.1.3. It has 5+ different layouts and 3 modes ( Dark, Light & RTL ) which are managed by SCSS only. You can simply change to any layouts or mode by changing a couple of lines code.</p>
                                                 <ul className="list-inline d-flex align-items-center g-3 text-muted fs-14 mb-0">
@@ -328,7 +326,7 @@ document.title="Search Results | Velzon - React Admin & Dashboard Template";
                                                                     <Link className="image-popup" to="assets/images/small/img-1.jpg" title="">
                                                                         <img className="gallery-img img-fluid mx-auto" src={item.img} alt="" />
                                                                         <div className="gallery-overlay">
-                                                                            <h5 className="overlay-caption">{item.title}</h5>
+                                                                            <h5 className="overlay-caption fs-15">{item.title}</h5>
                                                                         </div>
                                                                     </Link>
                                                                 </div>
@@ -409,7 +407,7 @@ document.title="Search Results | Velzon - React Admin & Dashboard Template";
                                                 {(video || []).map((item, key) => (
                                                     <Col lg={12} className="video-list" key={key}>
                                                         <div className="list-element mt-4">
-                                                            <h5 className="mb-1"><Link to="#">{item.title}</Link></h5>
+                                                            <h5 className="mb-1 fs-14"><Link to="#">{item.title}</Link></h5>
                                                             <p className="text-success">{item.siteLink}</p>
                                                             <div className="d-flex flex-column flex-sm-row">
                                                                 <div className="flex-shrink-0">

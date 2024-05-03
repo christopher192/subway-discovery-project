@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -37,7 +37,6 @@ const UiSwiperSlider = () => {
             return '<span className="' + className + '">' + (index + 1) + "</span>";
         },
     };
-
     document.title="Swiper Slider | Velzon - React Admin & Dashboard Template";
 
     return (

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Collapse, Container, NavbarToggler, NavLink } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import Scrollspy from "react-scrollspy";
+import { Link } from 'react-router-dom'; import Scrollspy from "react-scrollspy";
 
 
 //import Images
@@ -9,9 +8,10 @@ import logodark from "../../../assets/images/logo-dark.png";
 import logolight from "../../../assets/images/logo-light.png";
 
 const Navbar = () => {
-    const [navClass, setnavClass] = useState("");
-    
     const [isOpenMenu, setisOpenMenu] = useState(false);
+    const [navClass, setnavClass] = useState("");
+    const [activeLink, setActiveLink] = useState();
+
     const toggle = () => setisOpenMenu(!isOpenMenu);
 
     useEffect(() => {
@@ -25,9 +25,8 @@ const Navbar = () => {
         } else {
             setnavClass("");
         }
-    };
+    }
 
-    const [activeLink, setActiveLink] = useState();
     useEffect(() => {
         const activation = (event) => {
             const target = event.target;
@@ -39,7 +38,7 @@ const Navbar = () => {
                 }
             }
         };
-        const defaultLink = document.querySelector('.navbar li.a.active');
+        const defaultLink = document.querySelector('.navbar li a.active');
         if (defaultLink) {
             defaultLink?.classList.add("active")
             setActiveLink(defaultLink)
@@ -55,31 +54,20 @@ const Navbar = () => {
         };
     }, [activeLink]);
 
-    var windowSize = document.documentElement.clientWidth;
-    useEffect(() => {
-        var navbar = document.getElementById("navbar");
-        if (windowSize >= 992) {
-            navbar.classList.add("navbar-light")
-        }
-        else {
-            navbar.classList.remove("navbar-light")
-        }
-    }, [windowSize]);
-    
     return (
         <React.Fragment>
-            <nav className={"navbar navbar-expand-lg navbar-landing fixed-top " + navClass} id="navbar">
+            <nav className={"navbar navbar-expand-lg navbar-landing navbar-light fixed-top " + navClass} id="navbar">
                 <Container>
                     <Link className="navbar-brand" to="/index">
                         <img src={logodark} className="card-logo card-logo-dark" alt="logo dark" height="17" />
                         <img src={logolight} className="card-logo card-logo-light" alt="logo light" height="17" />
                     </Link>
 
-                    <button className="navbar-toggler py-0 fs-20 text-body" onClick={toggle} type="button" data-bs-toggle="collapse"
+                    <NavbarToggler className="navbar-toggler py-0 fs-20 text-body" onClick={toggle} type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i className="mdi mdi-menu"></i>
-                    </button>
+                    </NavbarToggler>
 
                     <Collapse
                         className="navbar-collapse"
@@ -100,19 +88,19 @@ const Navbar = () => {
                             id="navbar-example"
                         >
                             <li className="nav-item">
-                                <NavLink href="#hero">Home</NavLink>
+                                <NavLink className="fs-14 fw-semibold" href="#hero">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#wallet">Wallet</NavLink>
+                                <NavLink className="fs-14 fw-semibold" href="#wallet">Wallet</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#marketplace">Marketplace</NavLink>
+                                <NavLink className="fs-14 fw-semibold" href="#marketplace">Marketplace</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#categories">Categories</NavLink>
+                                <NavLink className="fs-14 fw-semibold" href="#categories">Categories</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#creators">Creators</NavLink>
+                                <NavLink className="fs-14 fw-semibold" href="#creators">Creators</NavLink>
                             </li>
                         </Scrollspy>
 
@@ -125,6 +113,6 @@ const Navbar = () => {
             <div className="bg-overlay bg-overlay-pattern"></div>
         </React.Fragment>
     );
-};
+}
 
 export default Navbar;

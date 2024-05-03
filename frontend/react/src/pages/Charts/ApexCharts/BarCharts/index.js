@@ -14,12 +14,11 @@ import {
     BarwithImages
 } from "./BarCharts";
 
-
 const BarCharts = () => {
-    document.title="Apex Bar Charts | Velzon - React Admin & Dashboard Template";
+  document.title="Bar Charts | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
-            <div className="page-content">            
+            <div className="page-content">
                 <Container fluid>
                     <BreadCrumb title="Bar Charts" pageTitle="Apexcharts" />
                     <Row>

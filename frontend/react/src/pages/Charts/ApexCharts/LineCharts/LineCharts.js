@@ -1151,7 +1151,6 @@ const MissingData = ({ dataColors }) => {
     );
 };
 
-
 function generateDayWiseTimeSeriesline(baseval, count, yrange) {
     var i = 0;
     var series = [];
@@ -1383,6 +1382,7 @@ const ChartSyncingArea = ({ dataColors }) => {
         </React.Fragment>
     );
 };
+
 
 export {
     BasicLineCharts,

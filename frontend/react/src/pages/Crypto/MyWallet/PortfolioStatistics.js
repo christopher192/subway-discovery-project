@@ -5,7 +5,7 @@ import ReactApexChart from "react-apexcharts";
 import getChartColorsArray from "../../../Components/Common/ChartsDynamicColor";
 
 const PortfolioStatistics = ({ dataColors }) => {
-  var portfolioStatisticsColors = getChartColorsArray(dataColors);
+  const PortfolioStatistics = getChartColorsArray(dataColors);
   const series = [{
     data: [
       [1327359600000, 30.95],
@@ -284,7 +284,7 @@ const PortfolioStatistics = ({ dataColors }) => {
       [1361833200000, 38.59],
       [1361919600000, 39.60],
     ]
-  }]
+  }];
   var option = {
 
     chart: {
@@ -298,34 +298,9 @@ const PortfolioStatistics = ({ dataColors }) => {
         show: false,
     },
     },
-    // annotations: {
-    //   yaxis: [{
-    //     y: 30,
-    //     borderColor: '#999',
-    //     label: {
-    //       show: true,
-    //       text: 'Support',
-    //       style: {
-    //         color: "#fff",
-    //         background: '#00E396'
-    //       }
-    //     }
-    //   }],
-    //   xaxis: [{
-    //     x: new Date('14 Nov 2012').getTime(),
-    //     borderColor: '#999',
-    //     yAxisIndex: 0,
-    //     label: {
-    //       show: true,
-    //       text: 'Rally',
-    //       style: {
-    //         color: "#fff",
-    //         background: '#775DD0'
-    //       }
-    //     }
-    //   }]
-    // },
-    colors: portfolioStatisticsColors,
+    colors: PortfolioStatistics,
+    
+  
     dataLabels: {
       enabled: false
     },
@@ -338,11 +313,6 @@ const PortfolioStatistics = ({ dataColors }) => {
       min: new Date('01 Mar 2012').getTime(),
       tickAmount: 6,
     },
-    yaxis: {
-      title: {
-          text: "$ (thousands)",
-      },
-  },
     tooltip: {
       x: {
         format: 'dd MMM yyyy'

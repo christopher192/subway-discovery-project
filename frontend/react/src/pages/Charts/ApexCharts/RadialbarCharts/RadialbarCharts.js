@@ -9,7 +9,7 @@ import getChartColorsArray from "../../../../Components/Common/ChartsDynamicColo
 
 const SimpleRadialbar = ({ dataColors }) => {
     var chartRadialbarBasicColors = getChartColorsArray(dataColors);
-    const series = [70];
+    const series = [70]
     var options = {
 
         chart: {
@@ -34,12 +34,12 @@ const SimpleRadialbar = ({ dataColors }) => {
             type="radialBar"
             height={350}
         />
-    );
-};
+    )
+}
 
 const MultipleRadialbar = ({ dataColors }) => {
     var chartRadialbarMultipleColors = getChartColorsArray(dataColors);
-    const series = [44, 55, 67, 83];
+    const series = [44, 55, 67, 83]
     var options = {
         chart: {
             height: 350,
@@ -58,7 +58,7 @@ const MultipleRadialbar = ({ dataColors }) => {
                         show: true,
                         label: 'Total',
                         formatter: function (w) {
-                            return 249;
+                            return 249
                         }
                     }
                 }
@@ -75,12 +75,12 @@ const MultipleRadialbar = ({ dataColors }) => {
             type="radialBar"
             height={350}
         />
-    );
-};
+    )
+}
 
 const CircleRadialbar = ({ dataColors }) => {
     var chartRadialbarCircleColors = getChartColorsArray(dataColors);
-    const series = [76, 67, 61, 55];
+    const series = [76, 67, 61, 55]
     var options = {
 
         chart: {
@@ -124,7 +124,7 @@ const CircleRadialbar = ({ dataColors }) => {
                 size: 0
             },
             formatter: function (seriesName, opts) {
-                return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
+                return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
             },
             itemMargin: {
                 vertical: 3
@@ -147,12 +147,12 @@ const CircleRadialbar = ({ dataColors }) => {
             type="radialBar"
             height={350}
         />
-    );
-};
+    )
+}
 
 const GradientCircleRadialbar = ({ dataColors }) => {
     var chartRadialbarGradientColors = getChartColorsArray(dataColors);
-    const series = [75];
+    const series = [75]
     var options = {
         chart: {
             height: 350,
@@ -224,65 +224,12 @@ const GradientCircleRadialbar = ({ dataColors }) => {
             type="radialBar"
             height={350}
         />
-    );
-};
-
-const ImageRadialbar = () => {
-    const series = [67];
-    var options = {
-        chart: {
-            height: 315,
-            type: 'radialBar',
-        },
-        plotOptions: {
-            radialBar: {
-                hollow: {
-                    margin: 15,
-                    size: '65%',
-                    image: comingSoon,
-                    imageWidth: 56,
-                    imageHeight: 56,
-                    imageClipped: false
-                },
-                dataLabels: {
-                    name: {
-                        show: false,
-                        color: '#fff'
-                    },
-                    value: {
-                        show: true,
-                        color: '#333',
-                        offsetY: 65,
-                        fontSize: '22px'
-                    }
-                }
-            }
-        },
-        fill: {
-            type: 'image',
-            image: {
-                src: [Img4],
-            }
-        },
-        stroke: {
-            lineCap: 'round'
-        },
-        labels: ['Volatility'],
-    };
-    return (
-        <ReactApexChart dir="ltr"
-            className="apex-charts"
-            series={series}
-            options={options}
-            type="radialBar"
-            height={320.8}
-        />
-    );
-};
+    )
+}
 
 const StrokedCircleRadial = ({ dataColors }) => {
     var chartStorkeRadialbarColors = getChartColorsArray(dataColors);
-    const series = [67];
+    const series = [67]
     var options = {
 
         chart: {
@@ -334,14 +281,14 @@ const StrokedCircleRadial = ({ dataColors }) => {
             series={series}
             options={options}
             type="radialBar"
-            height={320.8}
+            height={328.7}
         />
-    );
-};
+    )
+}
 
 const SemiCircularRadial = ({ dataColors }) => {
     var chartStorkeRadialbarColors = getChartColorsArray(dataColors);
-    const series = [76];
+    const series = [76]
     var options = {
         chart: {
             type: 'radialBar',
@@ -404,9 +351,62 @@ const SemiCircularRadial = ({ dataColors }) => {
             series={series}
             options={options}
             type="radialBar"
+            height={328.7}
+        />
+    )
+}
+
+const ImageRadialbar = () => {
+    const series = [67];
+    var options = {
+        chart: {
+            height: 315,
+            type: 'radialBar',
+        },
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    margin: 15,
+                    size: '65%',
+                    image: comingSoon,
+                    imageWidth: 56,
+                    imageHeight: 56,
+                    imageClipped: false
+                },
+                dataLabels: {
+                    name: {
+                        show: false,
+                        color: '#fff'
+                    },
+                    value: {
+                        show: true,
+                        color: '#333',
+                        offsetY: 65,
+                        fontSize: '22px'
+                    }
+                }
+            }
+        },
+        fill: {
+            type: 'image',
+            image: {
+                src: [Img4],
+            }
+        },
+        stroke: {
+            lineCap: 'round'
+        },
+        labels: ['Volatility'],
+    };
+    return (
+        <ReactApexChart dir="ltr"
+            className="apex-charts"
+            series={series}
+            options={options}
+            type="radialBar"
             height={350}
         />
     );
 };
 
-export { SimpleRadialbar, MultipleRadialbar, CircleRadialbar, GradientCircleRadialbar, StrokedCircleRadial, SemiCircularRadial, ImageRadialbar };
+export { SimpleRadialbar, MultipleRadialbar, CircleRadialbar, GradientCircleRadialbar, StrokedCircleRadial, SemiCircularRadial, ImageRadialbar }

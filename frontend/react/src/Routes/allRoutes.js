@@ -9,12 +9,11 @@ import DashboardEcommerce from "../pages/DashboardEcommerce";
 import DashboardCrypto from "../pages/DashboardCrypto";
 import DashboardProject from "../pages/DashboardProject";
 import DashboardNFT from "../pages/DashboardNFT";
-import DashboardJob from "../pages/DashboardJob/";
+import DashboardJob from "../pages/DashboardJob";
 
 //Calendar
-import Calendar from "../pages/Calendar/Maincalender";
 import MonthGrid from "../pages/Calendar/MonthGrid";
-
+import Calendar from "../pages/Calendar/Maincalender";
 
 // Email box
 import MailInbox from "../pages/EmailInbox";
@@ -134,7 +133,9 @@ import Select2 from "../pages/Forms/Select2/Select2";
 
 //Tables
 import BasicTables from '../pages/Tables/BasicTables/BasicTables';
+
 import ListTables from '../pages/Tables/ListTables/ListTables';
+
 import ReactTable from "../pages/Tables/ReactTables";
 
 //Icon pages
@@ -212,6 +213,7 @@ import PieCharts from "../pages/Charts/ApexCharts/PieCharts";
 import RadialbarCharts from "../pages/Charts/ApexCharts/RadialbarCharts";
 import RadarCharts from "../pages/Charts/ApexCharts/RadarCharts";
 import PolarCharts from "../pages/Charts/ApexCharts/PolarCharts";
+
 import ChartsJs from "../pages/Charts/ChartsJs/index";
 import Echarts from "../pages/Charts/ECharts/index";
 
@@ -231,7 +233,7 @@ import CompaniesList from "../pages/Jobs/CompaniesList";
 import OnePage from "../pages/Landing/OnePage";
 import NFTLanding from "../pages/Landing/NFTLanding";
 
-import PrivecyPolicy from '../pages/Pages/PrivacyPolicy';
+import PrivecyPolicy from "../pages/Pages/PrivacyPolicy"
 import TermsCondition from '../pages/Pages/TermsCondition';
 import JobLanding from "../pages/Job_Landing/Job";
 
@@ -240,9 +242,11 @@ import UserProfile from "../pages/Authentication/user-profile";
 
 import FileManager from "../pages/FileManager";
 import ToDoList from "../pages/ToDo";
-import RangeArea from "../pages/Charts/ApexCharts/RangeAreaCharts/Index";
-import FunnelChart from "../pages/Charts/ApexCharts/FunnelCharts/Index";
 import UiLink from "../pages/BaseUi/UiLinks/UiLinks";
+import RangeArea from "../pages/Charts/ApexCharts/RangeAreaCharts";
+import FunnelCharts from "../pages/Charts/ApexCharts/FunnelCharts";
+
+import Home from "../pages/Home";
 
 const authProtectedRoutes = [
   { path: "/dashboard-analytics", component: <DashboardAnalytics /> },
@@ -334,7 +338,7 @@ const authProtectedRoutes = [
   { path: "/charts-apex-mixed", component: <MixedCharts /> },
   { path: "/charts-apex-timeline", component: <TimelineCharts /> },
   { path: "/charts-apex-range-area", component: <RangeArea /> },
-  { path: "/charts-apex-funnel", component: <FunnelChart /> },
+  { path: "/charts-apex-funnel", component: <FunnelCharts /> },
   { path: "/charts-apex-candlestick", component: <CandlestickChart /> },
   { path: "/charts-apex-boxplot", component: <BoxplotCharts /> },
   { path: "/charts-apex-bubble", component: <BubbleChart /> },
@@ -405,7 +409,9 @@ const authProtectedRoutes = [
 
   //Tables
   { path: "/tables-basic", component: <BasicTables /> },
+  
   { path: "/tables-listjs", component: <ListTables /> },
+ 
   { path: "/tables-react", component: <ReactTable /> },
 
   //Icons
@@ -446,18 +452,20 @@ const authProtectedRoutes = [
   { path: "/pages-privacy-policy", component: <PrivecyPolicy /> },
   { path: "/pages-terms-condition", component: <TermsCondition /> },
 
-
   //User Profile
   { path: "/profile", component: <UserProfile /> },
+
+  //Home
+  { path: "/home", component: <Home /> },
 
   // this route should be at the end of all other routes
   // eslint-disable-next-line react/display-name
   {
     path: "/",
     exact: true,
-    component: <Navigate to="/dashboard" />,
+    component: <Navigate to="/home" />,
   },
-  { path: "*", component: <Navigate to="/dashboard" /> },
+  { path: "*", component: <Navigate to="/home" /> },
 ];
 
 const publicRoutes = [

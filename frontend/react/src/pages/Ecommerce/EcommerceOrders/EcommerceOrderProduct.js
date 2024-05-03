@@ -14,10 +14,10 @@ const EcommerceOrderProduct = (props) => {
               />
             </div>
             <div className="flex-grow-1 ms-3">
-              <h5 className="fs-15">
+              <h5 className="fs-14">
                 <a
                   href="apps-ecommerce-product-details"
-                  className="link-primary"
+                  className="text-body"
                 >
                   {props.product.name}
                 </a>
@@ -34,7 +34,7 @@ const EcommerceOrderProduct = (props) => {
         <td>{props.product.price}</td>
         <td>{props.product.quantity}</td>
         <td>
-          <div className="text-warning fs-15">
+          <div className="text-warning fs-14">
             <i className="ri-star-fill"></i>
             <i className="ri-star-fill"></i>
             <i className="ri-star-fill"></i>

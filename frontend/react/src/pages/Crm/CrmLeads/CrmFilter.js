@@ -14,7 +14,7 @@ import Select from "react-select";
 const CrmFilter = ({ show, onCloseClick }) => {
   const [selectCountry, setselectCountry] = useState(null);
 
-const handleselectCountry = (selectCountry) => {
+  function handleselectCountry(selectCountry) {
     setselectCountry(selectCountry);
   }
 
@@ -34,7 +34,10 @@ const handleselectCountry = (selectCountry) => {
         { label: "Spain", value: "Spain" },
         { label: "Syria", value: "Syria" },
         { label: "United Kingdom", value: "United Kingdom" },
-        { label: "United States of America", value: "United States of America"},
+        {
+          label: "United States of America",
+          value: "United States of America",
+        },
       ],
     },
   ];

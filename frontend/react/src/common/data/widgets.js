@@ -30,10 +30,10 @@ const tileBoxs1 = [
         caption: "View net earnings",
         icon: "bx bx-dollar-circle",
         iconClass: "success-subtle",
-        color: "success",
         decimals: 2,
         prefix: "$",
         suffix: "k",
+        color:"success"
     },
     {
         id: 2,
@@ -53,6 +53,7 @@ const tileBoxs1 = [
         prefix: "",
         separator: ",",
         suffix: "",
+        color:"white"
     },
     {
         id: 3,
@@ -65,10 +66,10 @@ const tileBoxs1 = [
         caption: "See details",
         icon: "bx bx-user-circle",
         iconClass: "warning-subtle",
-        color:"warning",
         decimals: 2,
         prefix: "",
         suffix: "M",
+        color:"warning"
     },
     {
         id: 4,
@@ -80,11 +81,11 @@ const tileBoxs1 = [
         caption: "Withdraw money",
         icon: "bx bx-wallet",
         iconClass: "primary-subtle",
-        color:"primary",
         decimals: 2,
         prefix: "$",
         separator: ",",
         suffix: "k",
+        color:"primary"
     },
 ];
 
@@ -111,7 +112,7 @@ const tileBoxs2 = [
     },
     {
         id: 3,
-        label: "Lead Coversation",
+        label: "Lead Conversation",
         badge: "ri-arrow-down-circle-line text-danger",
         icon: "ri-pulse-line",
         counter: "32.89",
@@ -236,7 +237,6 @@ const tileBoxs3 = [
         ],
     },
 ];
-
 const tileBoxes4 = [
     {
         id: 1,
@@ -331,7 +331,7 @@ const tileBoxes5 = [
     {
         id: 3,
         img: image6,
-        class : "bg-primary-subtle shadow-none bg-opacity-10",
+        class : "bg-primary-subtle text-primary shadow-none bg-opacity-10",
         title: "Marketing Director",
         year: "(2+ Yrs Exp.)"
     },

@@ -4,8 +4,9 @@ import ReactApexChart from "react-apexcharts";
 
 import getChartColorsArray from "../../../Components/Common/ChartsDynamicColor";
 
-const MarketGraph = ({ dataColors }) => {
-    var MarketchartColors = getChartColorsArray(dataColors);
+const MarketGraph = ({dataColors}) => {
+    const MarketchartColors = getChartColorsArray(dataColors)
+    
     const series = [{
         data: [{
             x: new Date(1538778600000),

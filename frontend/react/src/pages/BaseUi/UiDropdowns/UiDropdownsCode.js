@@ -814,7 +814,7 @@ const notificationDropdownCode =
                     <h6 className="m-0 fs-16 fw-semibold text-white"> Notifications </h6>
                 </Col>
                 <div className="col-auto dropdown-tabs">
-                    <span className="badge bg-light-subtle fs-13"> 4 New</span>
+                    <span className="badge bg-light-subtle text-bodyfs-13"> 4 New</span>
                 </div>
             </Row>
         </div>

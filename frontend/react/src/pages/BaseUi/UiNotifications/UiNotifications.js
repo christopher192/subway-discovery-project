@@ -45,9 +45,8 @@ const UiNotifications = () => {
     const offsetnotify = () => toast("Welcome Back ! This is a Toast Notification", { position: "top-right", hideProgressBar: true, className: 'bg-success text-white m-5' });
     const closeiconnotify = () => toast("Welcome Back ! This is a Toast Notification", { position: "top-right", hideProgressBar: true, className: 'bg-success text-white' });
     const durationnotify = () => toast("Toast Duration 5s", { position: "top-right", hideProgressBar: false, className: 'bg-success text-white' });
-
-    document.title = "Notifications | Velzon - React Admin & Dashboard Template";
-
+    
+    document.title="Notifications | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <UiContent />
@@ -59,10 +58,11 @@ const UiNotifications = () => {
                             <Card>
                                 <PreviewCardHeader title="Bootstrap Toasts" />
                                 <CardBody>
+                                    <p className='text-muted'>Use <code>toast </code>className to set a default toast.</p>
                                     <div className="live-preview">
                                         <Row className="g-3">
                                             <Col xxl={6}>
-                                                <h5 className="fs-14 mb-3">Default Toast</h5>
+                                                <h5 className="fs-14 mb-3">Default Toast</h5>                                                
                                                 <div>
                                                     <Toast isOpen={toast1}>
                                                         <ToastHeader toggle={() => setToast1(!toast1)}>
@@ -331,12 +331,14 @@ const UiNotifications = () => {
                             </Card>
                         </Col>
                     </Row>
+
+
                     <Row>
                         <Col lg={12}>
 
                             <Card>
                                 <PreviewCardHeader title="Toastify JS" />
-                                <CardBody>
+                                <CardBody>                                    
                                     <div className="live-preview">
                                         <div className="hstack flex-wrap gap-2">
                                             <Button color="light" className="w-xs" onClick={defaultnotify}>Default</Button>

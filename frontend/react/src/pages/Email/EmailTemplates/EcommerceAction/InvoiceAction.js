@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
 function InvoiceAction() {
     return (
         <React.Fragment>
@@ -11,7 +10,6 @@ function InvoiceAction() {
                         <h5 className="mb-0 pb-1 text-decoration-underline">Invoice Action</h5>
                     </div>
                 </Col>
-
                 <Col className="col-12">
                     <table className="body-wrap" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", width: "100%", backgroundColor: "transparent", margin: 0 }}>
                         <tbody>
@@ -28,7 +26,7 @@ function InvoiceAction() {
                                                             <tbody>
                                                                 <tr style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", margin: 0 }}>
                                                                     <td className="content-block" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "24px", verticalAlign: "top", margin: 0, padding: "0 0 10px", textAlign: "center" }} valign="top">
-                                                                        <h4 style={{ fontFamily: "Roboto, sans-serif", marginBottom: "10px", fontWeight: 600, letterSpacing:"-0.7px"}}>Your order has been placed</h4>
+                                                                        <h4 style={{ fontFamily: "Roboto, sans-serif", marginBottom: "10px", fontWeight: 600 }}>Your order has been placed</h4>
                                                                     </td>
                                                                 </tr>
                                                                 <tr style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: "14px", margin: 0 }}>
@@ -151,7 +149,6 @@ function InvoiceAction() {
                                                 </tr>
                                             </tbody>
                                         </table>
-
                                         <div style={{ marginTop: "32px", textAlign: "center" }}>
                                             <Link to="#" itemProp="url" className="me-1" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: ".8125rem", color: "#FFF", textDecoration: "none", fontWeight: 400, textAlign: "center", cursor: "pointer", display: "inline-block", borderRadius: ".25rem", textTransform: "capitalize", backgroundColor: "#405189", margin: 0, borderColor: "#405189", borderStyle: "solid", borderWidth: "1px", padding: ".5rem .9rem" }}>Download</Link>
                                             <Link to="#" itemProp="url" style={{ fontFamily: "Roboto, sans-serif", boxSizing: "border-box", fontSize: ".8125rem", color: "#FFF", textDecoration: "none", fontWeight: 400, textAlign: "center", cursor: "pointer", display: "inline-block", borderRadius: ".25rem", textTransform: "capitalize", backgroundColor: "#0ab39c", margin: 0, borderColor: "#0ab39c", borderStyle: "solid", borderWidth: "1px", padding: ".5rem .9rem" }}>Back to Shop</Link>
@@ -169,5 +166,4 @@ function InvoiceAction() {
         </React.Fragment>
     );
 }
-
 export default InvoiceAction;

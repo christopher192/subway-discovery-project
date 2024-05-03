@@ -11,13 +11,12 @@ import "quill/dist/quill.snow.css";
 
 const FormEditor = () => {
   const {  quillRef } = useQuill();
+  document.title="Editors | Velzon - React Admin & Dashboard Template";
 
-document.title ="Editors | Velzon - React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <UiContent />
       <div className="page-content">
-        
         <Container fluid>
           <BreadCrumb title="Editors" pageTitle="Forms" />
 
@@ -36,9 +35,10 @@ document.title ="Editors | Velzon - React Admin & Dashboard Template";
                         // You can store the "editor" and use when it is needed.
                         
                       }}
-                      // onChange={(editor) => {
-                      //    editor.getData();
-                      // }}
+                      onChange={ ( event, editor ) => {
+                        const data = editor.getData();
+                        console.log( { event, editor, data } );
+                      }}
                     />
                   </Form>
                 </CardBody>

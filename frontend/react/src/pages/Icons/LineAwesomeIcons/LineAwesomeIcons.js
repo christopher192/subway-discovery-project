@@ -3,9 +3,8 @@ import { Card, Row, CardHeader, Col, Container, CardBody } from 'reactstrap';
 //Import Breadcrumb
 import BreadCrumb from '../../../Components/Common/BreadCrumb';
 
-
 const LineAwesomeIcons = () => {
-    document.title="Line Awesome Icons | Velzon - React Admin & Dashboard Template";
+document.title="Line Awesome Icons | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -16,7 +15,7 @@ const LineAwesomeIcons = () => {
                             <Card>
                                 <CardHeader>
                                     <h4 className="card-title">Examples</h4>
-                                    <p className="text-muted mb-0">Use <code>&lt;i className="lab la-*-*"&lt;/i</code> class.</p>
+                                    <p className="text-muted mb-0">Use <code>&lt;i className="lab la-*-*">&lt;/i></code> class.</p>
                                 </CardHeader>
                                 <CardBody>
                                     <h6 className="text-uppercase text-muted fw-semibold">Accessibility</h6>

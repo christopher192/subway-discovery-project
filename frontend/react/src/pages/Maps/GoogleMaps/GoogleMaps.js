@@ -1,9 +1,9 @@
-import { GoogleApiWrapper, Map, Marker } from "google-maps-react";
 import React from 'react';
-import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
+import { GoogleApiWrapper, Map, Marker } from "google-maps-react";
+
 //Import Breadcrumb
 import BreadCrumb from '../../../Components/Common/BreadCrumb';
-
 
 const mapStyles = {
     width: '100%',
@@ -12,14 +12,13 @@ const mapStyles = {
 
 const LoadingContainer = () => <div>Loading...</div>
 
-
 const GoogleMaps = (props) => {
-    document.title="Google Maps | Velzon - React Admin & Dashboard Template";
+  document.title="Google Maps | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>                
                 <div className="page-content">
                     <Container fluid>
-                        <BreadCrumb title="Google Maps" pageTitle="Maps" />
+                    <BreadCrumb title="Google Maps" pageTitle="Maps" />
 
                         <Row>
                             <Col lg={6}>

@@ -11,7 +11,7 @@ const Footer = () => {
             <footer className="custom-footer bg-dark py-5 position-relative">
                 <Container>
                     <Row>
-                        <Col lg={4} className="mt-4 fs-13">
+                        <Col lg={4} className="mt-4">
                             <div>
                                 <div>
                                     <img src={logolight} alt="logo light" height="17" />

@@ -28,7 +28,7 @@ const BasicPasswReset = () => {
 
     return (
         <ParticlesAuth>
-            <div className="auth-page-content mt-lg-5">                
+            <div className="auth-page-content">                
                 <Container>
                     <Row>
                         <Col lg={12}>
@@ -38,7 +38,7 @@ const BasicPasswReset = () => {
                                         <img src={logoLight} alt="" height="20" />
                                     </Link>
                                 </div>
-                                <p className="mt-3 fs-15 fw-semibold">Premium Admin & Dashboard Template</p>
+                                <p className="mt-3 fs-16 fw-semibold">Premium Admin & Dashboard Template</p>
                             </div>
                         </Col>
                     </Row>

@@ -1,5 +1,14 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  UncontrolledDropdown,
+} from "reactstrap";
 import ReactApexChart from "react-apexcharts";
 import getChartColorsArray from "../../../Components/Common/ChartsDynamicColor";
 
@@ -61,9 +70,9 @@ const NatworkSummary = ({ dataColors }) => {
   };
   return (
     <React.Fragment>
-      <Col className="col-xxl-4 col-md-6">
-        <Card className="card card-height-100">
-          <CardHeader className="card-header align-items-center d-flex">
+      <Col xxl={4} md={6}>
+        <Card className="card-height-100">
+          <CardHeader className="align-items-center d-flex">
             <h4 className="card-title mb-0 flex-grow-1">
               Your Network Summary
             </h4>
@@ -91,7 +100,7 @@ const NatworkSummary = ({ dataColors }) => {
               </UncontrolledDropdown>
             </div>
           </CardHeader>
-          <CardBody className="card-body pb-0">
+          <CardBody className="pb-0">
             <ReactApexChart dir="ltr"
               className="apex-charts"
               series={series}

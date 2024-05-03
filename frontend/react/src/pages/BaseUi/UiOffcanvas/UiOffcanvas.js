@@ -84,7 +84,7 @@ const UiOffcanvas = () => {
                                                 Link with href
                                             </Link>
                                             <Button color="secondary" onClick={toggleDefultCanvas}>
-                                            Button with data-bs-target
+                                                Button with data-bs-target
                                             </Button>
                                         </div>
 

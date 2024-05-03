@@ -33,7 +33,7 @@ const DocumentsTab = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h5 className="fs-14 mb-0"><Link to="#" className="text-body">Artboard-documents.zip</Link></h5>
+                                                        <h5 className="fs-13 mb-0"><Link to="#" className="text-body">Artboard-documents.zip</Link></h5>
                                                     </div>
                                                 </div>
                                             </td>
@@ -63,7 +63,7 @@ const DocumentsTab = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h5 className="fs-14 mb-0"><Link to="#" className="text-body">Bank Management System</Link></h5>
+                                                        <h5 className="fs-13 mb-0"><Link to="#" className="text-body">Bank Management System</Link></h5>
                                                     </div>
                                                 </div>
                                             </td>
@@ -93,7 +93,7 @@ const DocumentsTab = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h5 className="fs-14 mb-0"><Link to="#" className="text-body">Tour-video.mp4</Link></h5>
+                                                        <h5 className="fs-13 mb-0"><Link to="#" className="text-body">Tour-video.mp4</Link></h5>
                                                     </div>
                                                 </div>
                                             </td>
@@ -123,7 +123,7 @@ const DocumentsTab = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h5 className="fs-14 mb-0"><Link to="#" className="text-body">Account-statement.xsl</Link></h5>
+                                                        <h5 className="fs-13 mb-0"><Link to="#" className="text-body">Account-statement.xsl</Link></h5>
                                                     </div>
                                                 </div>
                                             </td>
@@ -153,7 +153,7 @@ const DocumentsTab = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h5 className="fs-14 mb-0"><Link to="#" className="text-body">Project Screenshots Collection</Link></h5>
+                                                        <h5 className="fs-13 mb-0"><Link to="#" className="text-body">Project Screenshots Collection</Link></h5>
                                                     </div>
                                                 </div>
                                             </td>
@@ -183,7 +183,7 @@ const DocumentsTab = () => {
                                                         </div>
                                                     </div>
                                                     <div className="ms-3 flex-grow-1">
-                                                        <h5 className="fs-14 mb-0"><Link to="#" className="text-body">Velzon-logo.png</Link></h5>
+                                                        <h5 className="fs-13 mb-0"><Link to="#" className="text-body">Velzon-logo.png</Link></h5>
                                                     </div>
                                                 </div>
                                             </td>

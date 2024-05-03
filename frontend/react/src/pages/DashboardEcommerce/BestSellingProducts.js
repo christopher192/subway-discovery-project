@@ -11,7 +11,7 @@ const BestSellingProducts = () => {
                     <CardHeader className="align-items-center d-flex">
                         <h4 className="card-title mb-0 flex-grow-1">Best Selling Products</h4>
                         <div className="flex-shrink-0">
-                            <UncontrolledDropdown className="card-header-dropdown">
+                            <UncontrolledDropdown className="card-header-dropdown" direction='start'>
                                 <DropdownToggle tag="a" className="text-reset" role="button">
                                     <span className="fw-semibold text-uppercase fs-12">Sort by: </span><span className="text-muted">Today<i className="mdi mdi-chevron-down ms-1"></i></span>
                                 </DropdownToggle>
@@ -39,13 +39,13 @@ const BestSellingProducts = () => {
                                                         <img src={item.img} alt="" className="img-fluid d-block" />
                                                     </div>
                                                     <div>
-                                                        <h5 className="fs-14 my-1"><Link to="/apps-ecommerce-product-details" className="text-reset">{item.label}</Link></h5>
+                                                        <h5 className="fs-13 my-1"><Link to="/apps-ecommerce-product-details" className="text-reset">{item.label}</Link></h5>
                                                         <span className="text-muted">{item.date}</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5 className="fs-14 my-1 fw-normal">${(item.price).toFixed(2)}</h5>
+                                                <h5 className="fs-14 my-1 fw-normal">${item.price}</h5>
                                                 <span className="text-muted">Price</span>
                                             </td>
                                             <td>
@@ -53,7 +53,7 @@ const BestSellingProducts = () => {
                                                 <span className="text-muted">Orders</span>
                                             </td>
                                             <td>
-                                                <h5 className="fs-14 my-1 fw-normal">{item.stock ? item.stock : <span className="badge bg-danger-subtle  text-danger">Out of stock</span>} </h5>
+                                                <h5 className="fs-14 my-1 fw-normal">{item.stock ? item.stock : <span className="badge bg-danger-subtle text-danger">Out of stock</span>} </h5>
                                                 <span className="text-muted">Stock</span>
                                             </td>
                                             <td>

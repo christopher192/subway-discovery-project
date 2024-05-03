@@ -20,12 +20,10 @@ import {
 import dummyUser from "../../../assets/images/users/user-dummy-img.jpg";
 import logoDark from "../../../assets/images/logo-dark.png";
 import logoLight from "../../../assets/images/logo-light.png";
-
 import classnames from "classnames";
 import BreadCrumb from "../../../Components/Common/BreadCrumb";
 import { loadAnimation } from "lottie-web";
 import { defineElement } from "lord-icon-element";
-
 // register lottie and define custom element
 defineElement(loadAnimation);
 
@@ -71,13 +69,13 @@ const FormWizard = () => {
       }
     }
   }
+  document.title = "Form Wizard | Velzon - React Admin & Dashboard Template";
 
-document.title ="Wizard | Velzon - React Admin & Dashboard Template";
   return (
     <React.Fragment>
-      <div className="page-content">        
+      <div className="page-content">
         <Container fluid>
-          <BreadCrumb title="Forms" breadcrumbItem="Wizard" />
+          <BreadCrumb title="Wizard" pageTitle="Forms" />
           <Row>
             <Col xl={6}>
               <Card>
@@ -85,7 +83,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                   <h4 className="card-title mb-0">Progress Nav Steps</h4>
                 </CardHeader>
                 <CardBody>
-                  <Form action="#" className="form-steps">
+                  <Form className="form-steps" action="#">
                     <div className="text-center pt-3 pb-4 mb-1">
                       <h5>Signup Your Account</h5>
                     </div>
@@ -99,11 +97,11 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                       <Nav
                         className="nav-pills progress-bar-tab custom-nav"
                         role="tablist"
-                       
+
                       >
                         <NavItem>
                           <NavLink
-                           to="#"
+                            to="#"
                             id="pills-gen-info-tab"
                             className={classnames(
                               {
@@ -122,7 +120,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                         </NavItem>
                         <NavItem>
                           <NavLink
-                           to="#"
+                            to="#"
                             id="pills-gen-info-tab"
                             className={classnames(
                               {
@@ -141,7 +139,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                         </NavItem>
                         <NavItem>
                           <NavLink
-                           to="#"
+                            to="#"
                             id="pills-gen-info-tab"
                             className={classnames(
                               {
@@ -310,7 +308,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                               <lord-icon
                                 src="https://cdn.lordicon.com/lupuorrc.json"
                                 trigger="loop"
-                                colors="primary:#0ab39c,secondary:#405189"
+                                colors="primary:#0ab39c,secondary:#6691e7"
                                 style={{ width: "120px", height: "120px" }}
                               ></lord-icon>
                             </div>
@@ -345,7 +343,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                       >
                         <NavItem>
                           <NavLink
-                          href="#"
+                            href="#"
                             id="steparrow-gen-info-tab"
                             className={classnames({
                               active: activeArrowTab === 4,
@@ -360,7 +358,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                         </NavItem>
                         <NavItem>
                           <NavLink
-                          href="#"
+                            href="#"
                             id="steparrow-gen-info-tab"
                             className={classnames({
                               active: activeArrowTab === 5,
@@ -375,7 +373,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                         </NavItem>
                         <NavItem>
                           <NavLink
-                          href="#"
+                            href="#"
                             id="steparrow-gen-info-tab"
                             className={classnames({
                               active: activeArrowTab === 6,
@@ -557,7 +555,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                         >
                           <NavItem>
                             <NavLink
-                            href="#"
+                              href="#"
                               className={
                                 (classnames({
                                   active: activeVerticalTab === 7,
@@ -577,7 +575,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                           </NavItem>
                           <NavItem>
                             <NavLink
-                            href="#"
+                              href="#"
                               className={
                                 (classnames({
                                   active: activeVerticalTab === 8,
@@ -597,7 +595,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                           </NavItem>
                           <NavItem>
                             <NavLink
-                            href="#"
+                              href="#"
                               className={classnames({
                                 active: activeVerticalTab === 9,
                                 done: (activeVerticalTab <= 11 && activeVerticalTab >= 9)
@@ -615,7 +613,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                           </NavItem>
                           <NavItem>
                             <NavLink
-                            href="#"
+                              href="#"
                               className={classnames({
                                 active: activeVerticalTab === 10,
                                 done: (activeVerticalTab <= 11 && activeVerticalTab >= 10)
@@ -1042,7 +1040,7 @@ document.title ="Wizard | Velzon - React Admin & Dashboard Template";
                                   <lord-icon
                                     src="https://cdn.lordicon.com/lupuorrc.json"
                                     trigger="loop"
-                                    colors="primary:#0ab39c,secondary:#405189"
+                                    colors="primary:#0ab39c,secondary:#6691e7"
                                     style={{ width: "120px", height: "120px" }}
                                   ></lord-icon>
                                 </div>

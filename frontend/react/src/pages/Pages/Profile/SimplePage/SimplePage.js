@@ -29,7 +29,6 @@ import smallImage9 from '../../../../assets/images/small/img-9.jpg';
 import { projects, documents } from '../../../../common/data';
 
 const SimplePage = () => {
-    document.title = "Profile | Velzon - React Admin & Dashboard Template";
 
     SwiperCore.use([Autoplay]);
 
@@ -48,6 +47,7 @@ const SimplePage = () => {
         }
     };
 
+    document.title = "Profile | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
@@ -107,45 +107,41 @@ const SimplePage = () => {
                                 <div className="d-flex">
                                     <Nav pills className="animation-nav profile-nav gap-2 gap-lg-3 flex-grow-1"
                                         role="tablist">
-                                        <NavItem className="fs-14">
+                                        <NavItem>
                                             <NavLink
                                                 href="#overview-tab"
-                                                className={classnames({ active: activeTab === '1' })}
+                                                className={classnames({ active: activeTab === '1' }, "fs-14")}
                                                 onClick={() => { toggleTab('1'); }}
-                                                
                                             >
                                                 <i className="ri-airplay-fill d-inline-block d-md-none"></i> <span
                                                     className="d-none d-md-inline-block">Overview</span>
                                             </NavLink>
                                         </NavItem>
-                                        <NavItem className="fs-14">
+                                        <NavItem>
                                             <NavLink
                                                 href="#activities"
-                                                className={classnames({ active: activeTab === '2' })}
+                                                className={classnames({ active: activeTab === '2' }, "fs-14")}
                                                 onClick={() => { toggleTab('2'); }}
-                                                
                                             >
                                                 <i className="ri-list-unordered d-inline-block d-md-none"></i> <span
                                                     className="d-none d-md-inline-block">Activities</span>
                                             </NavLink>
                                         </NavItem>
-                                        <NavItem className="fs-14">
+                                        <NavItem>
                                             <NavLink
                                                 href="#projects"
-                                                className={classnames({ active: activeTab === '3' })}
+                                                className={classnames({ active: activeTab === '3' }, "fs-14")}
                                                 onClick={() => { toggleTab('3'); }}
-                                                
                                             >
                                                 <i className="ri-price-tag-line d-inline-block d-md-none"></i> <span
                                                     className="d-none d-md-inline-block">Projects</span>
                                             </NavLink>
                                         </NavItem>
-                                        <NavItem className="fs-14">
+                                        <NavItem>
                                             <NavLink
                                                 href="#documents"
-                                                className={classnames({ active: activeTab === '4' })}
+                                                className={classnames({ active: activeTab === '4' }, "fs-14")}
                                                 onClick={() => { toggleTab('4'); }}
-                                                
                                             >
                                                 <i className="ri-folder-4-line d-inline-block d-md-none"></i> <span
                                                     className="d-none d-md-inline-block">Documents</span>
@@ -293,7 +289,7 @@ const SimplePage = () => {
                                                                 </div>
                                                                 <div className="flex-grow-1">
                                                                     <div>
-                                                                        <h5 className="fs-14 mb-1">Esther James</h5>
+                                                                        <h5 className="fs-13 mb-1">Esther James</h5>
                                                                         <p className="fs-13 text-muted mb-0">Frontend
                                                                             Developer</p>
                                                                     </div>
@@ -311,7 +307,7 @@ const SimplePage = () => {
                                                                 </div>
                                                                 <div className="flex-grow-1">
                                                                     <div>
-                                                                        <h5 className="fs-14 mb-1">Jacqueline Steve</h5>
+                                                                        <h5 className="fs-13 mb-1">Jacqueline Steve</h5>
                                                                         <p className="fs-13 text-muted mb-0">UI/UX Designer
                                                                         </p>
                                                                     </div>
@@ -329,7 +325,7 @@ const SimplePage = () => {
                                                                 </div>
                                                                 <div className="flex-grow-1">
                                                                     <div>
-                                                                        <h5 className="fs-14 mb-1">George Whalen</h5>
+                                                                        <h5 className="fs-13 mb-1">George Whalen</h5>
                                                                         <p className="fs-13 text-muted mb-0">Backend
                                                                             Developer</p>
                                                                     </div>
@@ -371,7 +367,7 @@ const SimplePage = () => {
                                                             </div>
                                                             <div className="flex-grow-1 ms-3 overflow-hidden">
                                                                 <Link to="#">
-                                                                    <h6 className="text-truncate fs-14">Design your apps in
+                                                                    <h6 className="text-truncate fs-13">Design your apps in
                                                                         your own way</h6>
                                                                 </Link>
                                                                 <p className="text-muted mb-0">15 Dec 2021</p>
@@ -384,7 +380,7 @@ const SimplePage = () => {
                                                             </div>
                                                             <div className="flex-grow-1 ms-3 overflow-hidden">
                                                                 <Link to="#">
-                                                                    <h6 className="text-truncate fs-14">Smartest
+                                                                    <h6 className="text-truncate fs-13">Smartest
                                                                         Applications for Business</h6>
                                                                 </Link>
                                                                 <p className="text-muted mb-0">28 Nov 2021</p>
@@ -397,7 +393,7 @@ const SimplePage = () => {
                                                             </div>
                                                             <div className="flex-grow-1 ms-3 overflow-hidden">
                                                                 <Link to="#">
-                                                                    <h6 className="text-truncate fs-14">How to get creative
+                                                                    <h6 className="text-truncate fs-13">How to get creative
                                                                         in your work</h6>
                                                                 </Link>
                                                                 <p className="text-muted mb-0">21 Nov 2021</p>
@@ -470,7 +466,7 @@ const SimplePage = () => {
                                                                         role="tablist">
                                                                         <NavItem>
                                                                             <NavLink
-                                                                                to="#today-tab"
+                                                                                href="#"
                                                                                 className={classnames({ active: activityTab === '1' })}
                                                                                 onClick={() => { toggleActivityTab('1'); }}
                                                                             >
@@ -479,7 +475,7 @@ const SimplePage = () => {
                                                                         </NavItem>
                                                                         <NavItem>
                                                                             <NavLink
-                                                                                to="#weekly-tab"
+                                                                                href="#"
                                                                                 className={classnames({ active: activityTab === '2' })}
                                                                                 onClick={() => { toggleActivityTab('2'); }}
                                                                             >
@@ -488,7 +484,7 @@ const SimplePage = () => {
                                                                         </NavItem>
                                                                         <NavItem className="nav-item">
                                                                             <NavLink
-                                                                                to="#monthly-tab"
+                                                                                href="#"
                                                                                 className={classnames({ active: activityTab === '3' })}
                                                                                 onClick={() => { toggleActivityTab('3'); }}
                                                                             >
@@ -523,7 +519,7 @@ const SimplePage = () => {
                                                                                             </div>
                                                                                         </button>
                                                                                     </div>
-                                                                                    <UncontrolledCollapse className="accordion-collapse" toggler="#headingOne" defaultOpen>
+                                                                                    <UncontrolledCollapse toggler="#headingOne" defaultOpen>
                                                                                         <div
                                                                                             className="accordion-body ms-2 ps-5">
                                                                                             In an awareness campaign, it
@@ -1365,7 +1361,7 @@ const SimplePage = () => {
 
                                                 <Card>
                                                     <CardBody>
-                                                        <h5 className="card-title"></h5>
+                                                        <h5 className="card-title">Projects</h5>
                                                         <div className="d-flex justify-content-end gap-2 mb-2">
                                                             <div className="slider-button-prev">
                                                                 <div className="avatar-title fs-18 rounded px-1">
@@ -1403,7 +1399,7 @@ const SimplePage = () => {
                                                                                         Last Update : <span className="fw-semibold text-body">4 hr Ago</span></p>
                                                                                 </div>
                                                                                 <div className="flex-shrink-0 ms-2">
-                                                                                    <div className="badge bg-warning-subtle  text-warning fs-10">
+                                                                                    <div className="badge bg-warning-subtle text-warning fs-10">
                                                                                         Inprogress</div>
                                                                                 </div>
                                                                             </div>
@@ -1527,7 +1523,7 @@ const SimplePage = () => {
                                                                                 </div>
                                                                                 <div className="flex-shrink-0 ms-2">
                                                                                     <div
-                                                                                        className="badge bg-warning-subtle  text-warning fs-10">
+                                                                                        className="badge bg-warning-subtle text-warning fs-10">
                                                                                         Inprogress</div>
                                                                                 </div>
                                                                             </div>
@@ -1632,7 +1628,7 @@ const SimplePage = () => {
                                                                                 </div>
                                                                                 <div className="flex-shrink-0 ms-2">
                                                                                     <div
-                                                                                        className="badge bg-warning-subtle  text-warning fs-10">
+                                                                                        className="badge bg-warning-subtle text-warning fs-10">
                                                                                         Inprogress</div>
                                                                                 </div>
                                                                             </div>
@@ -1970,7 +1966,7 @@ const SimplePage = () => {
                                                                                         </div>
                                                                                     </div>
                                                                                     <div className="ms-3 flex-grow-1">
-                                                                                        <h6 className="fs-15 mb-0"><Link to="#">{item.fileName}</Link>
+                                                                                        <h6 className="fs-14 mb-0"><Link to="#" className="text-body">{item.fileName}</Link>
                                                                                         </h6>
                                                                                     </div>
                                                                                 </div>

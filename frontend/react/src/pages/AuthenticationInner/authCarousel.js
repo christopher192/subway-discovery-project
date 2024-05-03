@@ -25,18 +25,18 @@ const AuthSlider = () => {
                                 <i className="ri-double-quotes-l display-4 text-success"></i>
                             </div>
 
-                            <Carousel showThumbs={false} autoPlay={true} showArrows={false} showStatus={false} infiniteLoop={true} className="slide" id="qoutescarouselIndicators">
-                                <div className="carousel-inner text-center text-white-50 pb-5">
+                            <Carousel showThumbs={false} autoPlay={true} showArrows={false} showStatus={false} infiniteLoop={true} className="carousel slide" id="qoutescarouselIndicators" >
+                                <div className="carousel-inner text-center text-white pb-5">
                                     <div className="item">
                                         <p className="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
                                     </div>
                                 </div>
-                                <div className="carousel-inner text-center text-white-50 pb-5">
+                                <div className="carousel-inner text-center text-white pb-5">
                                     <div className="item">
                                         <p className="fs-15 fst-italic">" The theme is really great with an amazing customer support."</p>
                                     </div>
                                 </div>
-                                <div className="carousel-inner text-center text-white-50 pb-5">
+                                <div className="carousel-inner text-center text-white pb-5">
                                     <div className="item">
                                         <p className="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
                                     </div>

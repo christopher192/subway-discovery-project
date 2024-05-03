@@ -6,7 +6,7 @@ import Nouislider from "nouislider-react";
 import 'nouislider/distribute/nouislider.css';
 
 const FormRangeSlider = () => {
-
+  
   const [mincost, setMincost] = useState(0);
   const [maxcost, setMaxcost] = useState(2000);
   //slider function
@@ -34,15 +34,20 @@ const FormRangeSlider = () => {
     }
   };
 
-  document.title = "Range Slider | Velzon - React Admin & Dashboard Template"
-
   return (
     <React.Fragment>
-
+    
       <div className="page-content">
+
+        <title>
+          Range Slider | Velzon - React Admin & Dashboard Template
+        </title>
 
         <Container fluid>
           <BreadCrumb title="Range Slider" pageTitle="Forms" />
+        
+         
+
           <Row>
             <Col lg={12}>
               <Card>
@@ -96,7 +101,7 @@ const FormRangeSlider = () => {
           </Row>
 
 
-          {/* nouislider */}
+{/* nouislider */}
 
           <Row>
             <Col lg={12}>
@@ -316,123 +321,120 @@ const FormRangeSlider = () => {
           {/* color scheme */}
 
           <Row>
-            <Col lg={12}>
-              <Card>
-                <CardHeader>
-                  <h4 className="card-title mb-0">Color Scheme</h4>
-                </CardHeader>
-                <CardBody>
+                <Col lg={12}>
+                    <Card>
+                        <CardHeader>
+                            <h4 className="card-title mb-0">Color Scheme</h4>
+                        </CardHeader>
+                        <CardBody>
 
-                  <Row>
-                    <Col xl={4} lg={6}>
-                      <div>
-                        <h5 className="fs-14">Primary</h5>
-                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;primary&quot;</code> attribute to set primary color scheme.</p>
-                        <div data-rangeslider data-slider-color="primary">
-                          <Nouislider
-                            range={{ min: 0, max: 100 }}
-                            start={[0, 50]}
-                            connect
-                          />
-                        </div>
-                      </div>
-                    </Col>
+                            <Row>
+                                <Col xl={4} lg={6}>
+                                    <div>
+                                        <h5 className="fs-14">Primary</h5>
+                                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;primary&quot;</code> attribute to set primary color scheme.</p>
+                                        <div data-rangeslider data-slider-color="primary">
+                                            <Nouislider
+                                                range={{ min: 0, max: 100 }}
+                                                start={[0, 50]}
+                                                connect
+                                            />
+                                        </div>
+                                    </div>
+                                </Col>
 
-                    <Col xl={4} lg={6}>
-                      <div className="mt-4 mt-lg-0">
-                        <h5 className="fs-14">Secondary</h5>
-                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;secondary&quot;</code> attribute to set secondary color scheme.</p>
-                        <div data-rangeslider data-slider-color="secondary">
-                          <Nouislider
-                            range={{ min: 0, max: 100 }}
-                            start={[0, 50]}
-                            connect
-                          />
-                        </div>
-                      </div>
-                    </Col>
+                                <Col xl={4} lg={6}>
+                                    <div className="mt-4 mt-lg-0">
+                                        <h5 className="fs-14">Secondary</h5>
+                                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;secondary&quot;</code> attribute to set secondary color scheme.</p>
+                                        <div data-rangeslider data-slider-color="secondary">
+                                            <Nouislider
+                                                range={{ min: 0, max: 100 }}
+                                                start={[0, 50]}
+                                                connect
+                                            />
+                                            </div>
+                                    </div>
+                                </Col>
 
-                    <Col xl={4} lg={6}>
-                      <div className="mt-4 mt-xl-0">
-                        <h5 className="fs-14">Success</h5>
-                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;success&quot;</code> attribute to set success color scheme.</p>
-                        <div data-rangeslider data-slider-color="success">
-                          <Nouislider
-                            range={{ min: 0, max: 100 }}
-                            start={[0, 50]}
-                            connect
-                          />
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
+                                <Col xl={4} lg={6}>
+                                    <div className="mt-4 mt-xl-0">
+                                        <h5 className="fs-14">Success</h5>
+                                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;success&quot;</code> attribute to set success color scheme.</p>
+                                        <div data-rangeslider data-slider-color="success">
+                                            <Nouislider
+                                                range={{ min: 0, max: 100 }}
+                                                start={[0, 50]}
+                                                connect
+                                            />
+                                            </div>
+                                    </div>
+                                </Col>
+                            </Row>
 
-                  <Row className="mt-4">
-                    <Col xl={4} lg={6}>
-                      <div className="mt-4">
-                        <h5 className="fs-14">Info</h5>
-                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;info&quot;</code> attribute to set info color scheme.</p>
-                        <div data-rangeslider data-slider-color="info">
-                          <Nouislider
-                            range={{ min: 0, max: 100 }}
-                            start={[0, 50]}
-                            connect
-                          />
-                        </div>
-                      </div>
-                    </Col>
+                            <Row className="mt-4">
+                                <Col xl={4} lg={6}>
+                                    <div className="mt-4">
+                                        <h5 className="fs-14">Info</h5>
+                                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;info&quot;</code> attribute to set info color scheme.</p>
+                                        <div data-rangeslider data-slider-color="info">
+                                            <Nouislider
+                                                range={{ min: 0, max: 100 }}
+                                                start={[0, 50]}
+                                                connect
+                                            />
+                                            </div>
+                                    </div>
+                                </Col>
 
-                    <Col xl={4} lg={6}>
-                      <div className="mt-4">
-                        <h5 className="fs-14">Warning</h5>
-                        <p className="text-muted mb-4">Use <code>data-slider-color=&quot;warning&quot;</code> attribute to set warning color scheme.</p>
-                        <div data-rangeslider data-slider-color="warning">
-                          <Nouislider
-                            range={{ min: 0, max: 100 }}
-                            start={[0, 50]}
-                            connect
-                          />
-                        </div>
-                      </div>
-                    </Col>
+                                <Col xl={4} lg={6}>
+                                    <div className="mt-4">
+                                        <h5 className="fs-14">Warning</h5>
+                                        <p className="text-muted mb-4">Use <code>data-slider-color=&quot;warning&quot;</code> attribute to set warning color scheme.</p>
+                                        <div data-rangeslider data-slider-color="warning">
+                                            <Nouislider
+                                                range={{ min: 0, max: 100 }}
+                                                start={[0, 50]}
+                                                connect
+                                            />
+                                            </div>
+                                    </div>
+                                </Col>
 
-                    <Col xl={4} lg={6}>
-                      <div className="mt-4">
-                        <h5 className="fs-14">Danger</h5>
-                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;danger&quot;</code> attribute to set danger color scheme.</p>
-                        <div data-rangeslider data-slider-color="danger">
-                          <Nouislider
-                            range={{ min: 0, max: 100 }}
-                            start={[0, 50]}
-                            connect
-                          />
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
+                                <Col xl={4} lg={6}>
+                                    <div className="mt-4">
+                                        <h5 className="fs-14">Danger</h5>
+                                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;danger&quot;</code> attribute to set danger color scheme.</p>
+                                        <div data-rangeslider data-slider-color="danger">
+                                            <Nouislider
+                                                range={{ min: 0, max: 100 }}
+                                                start={[0, 50]}
+                                                connect
+                                            />
+                                            </div>
+                                    </div>
+                                </Col>
+                            </Row>
 
-                  <Row className="mt-4">
-                    <Col xl={4} lg={6}>
-                      <div className="mt-4">
-                        <h5 className="fs-14">Dark</h5>
-                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;dark&quot;</code> attribute to set dark color scheme.</p>
-                        <div data-rangeslider data-slider-color="dark">
-                          <Nouislider
-                            range={{ min: 0, max: 100 }}
-                            start={[0, 50]}
-                            connect
-                          />
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-
-
-
+                            <Row className="mt-4">
+                                <Col xl={4} lg={6}>
+                                    <div className="mt-4">
+                                        <h5 className="fs-14">Dark</h5>
+                                        <p className="text-muted mb-4">Use <code>data-rangeslider data-slider-color=&quot;dark&quot;</code> attribute to set dark color scheme.</p>
+                                        <div data-rangeslider data-slider-color="dark">
+                                            <Nouislider
+                                                range={{ min: 0, max: 100 }}
+                                                start={[0, 50]}
+                                                connect
+                                            />
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>           
         </Container>
       </div>
     </React.Fragment>

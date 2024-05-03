@@ -32,9 +32,6 @@ import Select from "react-select";
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 import DeleteModal from "../../Components/Common/DeleteModal";
 
-// Export Modal
-import ExportCSVModal from "../../Components/Common/ExportCSVModal";
-
 //Import actions
 import {
   getContacts as onGetContacts,
@@ -53,27 +50,30 @@ import { useFormik } from "formik";
 import Loader from "../../Components/Common/Loader";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { createSelector } from "reselect";
 
+// Export Modal
+import ExportCSVModal from "../../Components/Common/ExportCSVModal";
+import { createSelector } from "reselect";
 
 const CrmContacts = () => {
   const dispatch = useDispatch();
-
-
   const selectLayoutState = (state) => state.Crm;
-  const crmcontactData = createSelector(
-    selectLayoutState,
-    (state) => ({
-      crmcontacts: state.crmcontacts,
-      isContactSuccess: state.isContactSuccess,
-      error: state.error,
-    })
-  );
-  // Inside your component
+  const selectLayoutProperties = createSelector(
+      selectLayoutState,
+      (crm) => ({
+        crmcontacts: crm.crmcontacts,
+           isContactCreated: crm.isContactCreated,
+           isContactSuccess: crm.isContactSuccess,
+           error: crm.error,
+      })
+    );
+    // Inside your component
   const {
-    crmcontacts, isContactSuccess, error
-  } = useSelector(crmcontactData);
-
+    crmcontacts, 
+    isContactCreated, 
+    isContactSuccess, 
+    error 
+  } = useSelector(selectLayoutProperties);
 
   useEffect(() => {
     if (crmcontacts && !crmcontacts.length) {
@@ -100,6 +100,7 @@ const CrmContacts = () => {
   //delete Conatct
   const [deleteModal, setDeleteModal] = useState(false);
   const [deleteModalMulti, setDeleteModalMulti] = useState(false);
+
   const [modal, setModal] = useState(false);
 
   const toggle = useCallback(() => {
@@ -142,15 +143,6 @@ const CrmContacts = () => {
     return (d.getDate() + ' ' + months[d.getMonth()] + ', ' + d.getFullYear());
   };
 
-  // const timeFormat = () => {
-  //   let d = new Date();
-  //   let minutes = d.getMinutes().toString().length === 1 ? '0' + d.getMinutes() : d.getMinutes();
-  //   let hours = (d.getHours().toString() % 12) || 12;
-  //   hours = (hours <= 9) ? hours = ("0" + hours) : hours;
-  //   let ampm = d.getHours() >= 12 ? 'PM' : 'AM';
-  //   return (hours + ':' + minutes + ampm);
-  // };
-
   // validation
   const validation = useFormik({
     // enableReinitialize : use this flag when initial values needs to be changed
@@ -189,7 +181,7 @@ const CrmContacts = () => {
           // time: timeFormat(),
           tags: assignTag,
         };
-        // update Contact
+        // update Contact 
         dispatch(onUpdateContact(updateContact));
         validation.resetForm();
       } else {
@@ -266,8 +258,7 @@ const CrmContacts = () => {
     const updateTime = moment(getTime, 'hh:mm').format('hh:mm') + " " + meridiem;
     return updateTime;
   };
-
-
+  
   // Checked All
   const checkedAll = useCallback(() => {
     const checkall = document.getElementById("checkBoxAll");
@@ -305,7 +296,9 @@ const CrmContacts = () => {
     setSelectedCheckBoxDelete(ele);
   };
 
-  // Column
+
+
+  // Customber Column
   const columns = useMemo(
     () => [
       {
@@ -439,15 +432,14 @@ const CrmContacts = () => {
   );
 
 
-
   const [tag, setTag] = useState([]);
   const [assignTag, setAssignTag] = useState([]);
 
-  const handlestag = (tags) => {
+  function handlestag(tags) {
     setTag(tags);
     const assigned = tags.map((item) => item.value);
     setAssignTag(assigned);
-  };
+  }
 
   const tags = [
     { label: "Exiting", value: "Exiting" },
@@ -476,7 +468,8 @@ const CrmContacts = () => {
           onDeleteClick={handleDeleteContact}
           onCloseClick={() => setDeleteModal(false)}
         />
-        <DeleteModal
+
+         <DeleteModal
           show={deleteModalMulti}
           onDeleteClick={() => {
             deleteMultiple();
@@ -504,14 +497,14 @@ const CrmContacts = () => {
                     </div>
                     <div className="flex-shrink-0">
                       <div className="hstack text-nowrap gap-2">
-                        {isMultiDeleteButton && <button className="btn btn-soft-danger"
+                        {isMultiDeleteButton && <button className="btn btn-danger"
                           onClick={() => setDeleteModalMulti(true)}
                         ><i className="ri-delete-bin-2-line"></i></button>}
-                        <button className="btn btn-danger">
+                        <button className="btn btn-secondary">
                           <i className="ri-filter-2-line me-1 align-bottom"></i>{" "}
                           Filters
                         </button>
-                        <button className="btn btn-soft-success" onClick={() => setIsExportCSV(true)}>Export</button>
+                        <button className="btn btn-soft-success"  onClick={() => setIsExportCSV(true)}>Export</button>
 
                         <UncontrolledDropdown>
                           <DropdownToggle
@@ -552,10 +545,11 @@ const CrmContacts = () => {
                         theadClass="table-light"
                         handleContactClick={handleContactClicks}
                         isContactsFilter={true}
-                        SearchPlaceholder='Search for contact...'
+                        SearchPlaceholder="Search for contact..."
                       />
                     ) : (<Loader error={error} />)
                     }
+
                   </div>
 
                   <Modal id="showModal" isOpen={modal} toggle={toggle} centered>
@@ -816,7 +810,7 @@ const CrmContacts = () => {
                       <ModalFooter>
                         <div className="hstack gap-2 justify-content-end">
                           <button type="button" className="btn btn-light" onClick={() => { setModal(false); }} > Close </button>
-                          <button type="submit" className="btn btn-success" id="add-btn"> {!!isEdit ? "Update" : "Add Contact"} </button>
+                          <button type="submit" className="btn btn-success" id="add-btn" > {!!isEdit ? "Update" : "Add Contact"} </button>
                         </div>
                       </ModalFooter>
                     </Form>
@@ -911,7 +905,13 @@ const CrmContacts = () => {
                             Tags
                           </td>
                           <td>
-                            {(info.tags || ["Lead", "Partner"]).map((item, key) => (<span className="badge bg-primary-subtle text-primary me-1" key={key}>{item}</span>))}
+                            {(info.tags ||
+                              [
+                                "Lead",
+                                "Partner"
+                              ]
+                            ).map((item, key) => (<span className="badge bg-primary-subtle text-primary me-1" key={key}>{item}</span>))
+                            }
                           </td>
                         </tr>
                         <tr>

@@ -20,9 +20,9 @@ const Widgets = () => {
                                 </lord-icon>
                             </div>
                             <div className="flex-shrink-0">
-                                <Link to="#" className="badge bg-warning-subtle text-warning badge-border">BTC </Link>&nbsp;
-                                <Link to="#" className="badge bg-info-subtle text-info badge-border">ETH</Link>&nbsp;
-                                <Link to="#" className="badge bg-primary-subtle text-primary badge-border">USD</Link>&nbsp;
+                                <Link to="#" className="badge bg-warning-subtle text-warning badge-border me-1">BTC</Link>
+                                <Link to="#" className="badge bg-info-subtle text-info badge-border me-1">ETH</Link>
+                                <Link to="#" className="badge bg-primary-subtle text-primary badge-border me-1">USD</Link>
                                 <Link to="#" className="badge bg-danger-subtle text-danger badge-border">EUR</Link>
                             </div>
                         </div>
@@ -43,9 +43,9 @@ const Widgets = () => {
                                 <lord-icon src="https://cdn.lordicon.com/qhviklyi.json" trigger="loop" colors="primary:#405189,secondary:#0ab39c" style={{ width: "55px", height: "55px" }}></lord-icon>
                             </div>
                             <div className="flex-shrink-0">
-                                <Link to="#" className="badge bg-warning-subtle text-warning badge-border">BTC</Link>&nbsp;
-                                <Link to="#" className="badge bg-info-subtle text-info badge-border">ETH</Link>&nbsp;
-                                <Link to="#" className="badge bg-primary-subtle text-primary badge-border">USD</Link>&nbsp;
+                                <Link to="#" className="badge bg-warning-subtle text-warning badge-border me-1">BTC</Link>
+                                <Link to="#" className="badge bg-info-subtle text-info badge-border me-1">ETH</Link>
+                                <Link to="#" className="badge bg-primary-subtle text-primary badge-border me-1">USD</Link>
                                 <Link to="#" className="badge bg-danger-subtle text-danger badge-border">EUR</Link>
                             </div>
                         </div>
@@ -71,9 +71,9 @@ const Widgets = () => {
                                 </lord-icon>
                             </div>
                             <div className="flex-shrink-0">
-                                <Link to="#" className="badge bg-warning-subtle text-warning badge-border">BTC</Link>&nbsp;
-                                <Link to="#" className="badge bg-info-subtle text-info badge-border">ETH</Link>&nbsp;
-                                <Link to="#" className="badge bg-primary-subtle text-primary badge-border">USD</Link>&nbsp;
+                                <Link to="#" className="badge bg-warning-subtle text-warning badge-border me-1">BTC</Link>
+                                <Link to="#" className="badge bg-info-subtle text-info badge-border me-1">ETH</Link>
+                                <Link to="#" className="badge bg-primary-subtle text-primary badge-border me-1">USD</Link>
                                 <Link to="#" className="badge bg-danger-subtle text-danger badge-border">EUR</Link>
                             </div>
                         </div>

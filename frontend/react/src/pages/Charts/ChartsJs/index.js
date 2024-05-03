@@ -3,9 +3,8 @@ import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import BreadCrumb from '../../../Components/Common/BreadCrumb';
 import { LineChart ,BarChart,PieChart,DonutChart,PolarChart,RadarChart} from './ChartsJs';
 
-
 const ChartsJs = () => {
-    document.title="Charts Js| Velzon - React Admin & Dashboard Template";
+  document.title="Charts Js | Velzon - React Admin & Dashboard Template";
     return (
         <div className="page-content">
             <Container fluid>

@@ -6,6 +6,12 @@ import Img4 from "../../assets/images/nft/img-04.jpg";
 import Img5 from "../../assets/images/nft/img-05.jpg";
 import Img6 from "../../assets/images/nft/img-06.jpg";
 
+import ImgGif1 from "../../assets/images/nft/gif/img-1.gif";
+import ImgGif2 from "../../assets/images/nft/gif/img-2.gif";
+import ImgGif3 from "../../assets/images/nft/gif/img-3.gif";
+import ImgGif4 from "../../assets/images/nft/gif/img-4.gif";
+import ImgGif5 from "../../assets/images/nft/gif/img-5.gif";
+
 import avatar1 from "../../assets/images/users/avatar-1.jpg";
 import avatar2 from "../../assets/images/users/avatar-2.jpg";
 import avatar3 from "../../assets/images/users/avatar-3.jpg";
@@ -26,7 +32,7 @@ import math from "../../assets/images/nft/wallet/math.png";
 const expolreNow = [
     {
         id: 1,
-        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        img: ImgGif3,
         likes: "37.41",
         title: "Walking On Air",
         category: "Artwork",
@@ -62,7 +68,7 @@ const expolreNow = [
     },
     {
         id: 4,
-        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+        img: ImgGif4,
         likes: "15.93",
         title: "Evolved Reality",
         category: "Video",
@@ -110,7 +116,7 @@ const expolreNow = [
     },
     {
         id: 8,
-        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+        img: ImgGif2,
         likes: "94.1",
         title: "Trendy Fashion Portraits",
         category: "3d Style",
@@ -134,7 +140,7 @@ const expolreNow = [
     },
     {
         id: 10,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: ImgGif1,
         likes: "8.42",
         title: "Patterns Arts & Culture",
         category: "Artwork",
@@ -158,7 +164,7 @@ const expolreNow = [
     },
     {
         id: 12,
-        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+        img: ImgGif4,
         likes: "15.93",
         title: "Evolved Reality",
         category: "Artwork",
@@ -205,12 +211,11 @@ const expolreNow = [
         sales: "Has Offers"
     },
 ];
-
 const aution = [
     {
         id: 1,
         img: Img1,
-        date: "2024/3/19",
+        date: "2025/3/19",
         likes: "19.29",
         price: "97.8",
         title: "Abstract Face Painting",
@@ -222,8 +227,8 @@ const aution = [
     },
     {
         id: 2,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
-        date: "2024/4/16",
+        img: ImgGif1,
+        date: "2026/4/16",
         likes: "8.42",
         price: "245.23",
         title: "Patterns Arts & Culture",
@@ -236,7 +241,7 @@ const aution = [
     {
         id: 3,
         img: Img3,
-        date: "2024/12/1",
+        date: "2025/12/1",
         likes: "19.29",
         price: "67.36",
         title: "Creative Filtered Portrait",
@@ -261,8 +266,8 @@ const aution = [
     },
     {
         id: 5,
-        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
-        date: "2024/5/27",
+        img: ImgGif5,
+        date: "2025/5/27",
         likes: "47.12",
         price: "245.23",
         title: "Long-tailed Macaque",
@@ -275,7 +280,7 @@ const aution = [
     {
         id: 6,
         img: Img2,
-        date: "2024/5/20",
+        date: "2026/5/20",
         likes: "23.63",
         price: "394.7",
         title: "The Chirstoper",
@@ -288,7 +293,7 @@ const aution = [
     {
         id: 7,
         img: Img6,
-        date: "2024/6/10",
+        date: "2025/6/10",
         likes: "36.42",
         price: "745.14",
         title: "Robotic Body Art",
@@ -300,8 +305,8 @@ const aution = [
     },
     {
         id: 8,
-        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
-        date: "2023/6/25",
+        img: ImgGif4,
+        date: "2026/6/25",
         likes: "94.1",
         price: "245.23",
         title: "Evolved Reality",
@@ -346,7 +351,7 @@ const NFTRanking = [
     },
     {
         ranking: 8,
-        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        img: ImgGif3,
         collection: "Walking On Air",
         volume_price: "4,62,000",
         hours: 238.13,
@@ -356,7 +361,7 @@ const NFTRanking = [
     },
     {
         ranking: 7,
-        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        img: ImgGif5,
         collection: "The Chirstoper",
         volume_price: "1,87,600",
         hours: -31.49,
@@ -386,7 +391,7 @@ const NFTRanking = [
     },
     {
         ranking: 4,
-        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+        img: ImgGif2,
         collection: "Long-tailed Macaque",
         volume_price: "3,63,000",
         hours: 709.13,
@@ -406,7 +411,7 @@ const NFTRanking = [
     },
     {
         ranking: 2,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: ImgGif1,
         collection: "Patterns Arts & Culture",
         volume_price: "32,850",
         hours: -42.03,
@@ -447,7 +452,7 @@ const creatorsData = [
     },
     {
         id: 4,
-        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+        img: ImgGif5,
         title: "Herbert Stokes",
         price: "34,754 ETH",
     },
@@ -487,7 +492,7 @@ const creatorsListData = [
     },
     {
         id: 2,
-        cardImg: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        cardImg: ImgGif3,
         img: avatar6,
         title: "Charles Kubik",
         products: "4678",
@@ -504,14 +509,14 @@ const creatorsListData = [
     {
         id: 4,
         cardImg: Img6,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: ImgGif1,
         title: "James Morris",
         products: "30174",
         isFollowBtn: false,
     },
     {
         id: 5,
-        cardImg: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        cardImg: ImgGif3,
         img: avatar8,
         title: "Herbert Stokes",
         products: "6487",
@@ -527,7 +532,7 @@ const creatorsListData = [
     },
     {
         id: 7,
-        cardImg: "https://img.themesbrand.com/velzon/images/img-2.gif",
+        cardImg: ImgGif2,
         img: avatar6,
         title: "Tonya Noble",
         products: "364",
@@ -544,14 +549,14 @@ const creatorsListData = [
     {
         id: 9,
         cardImg: Img1,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: ImgGif1,
         title: "Kevin Dawson",
         products: "6374",
         isFollowBtn: true,
     },
     {
         id: 10,
-        cardImg: "https://img.themesbrand.com/velzon/images/img-4.gif",
+        cardImg: ImgGif4,
         img: avatar10,
         title: "Glen Matney",
         products: "7809",
@@ -621,14 +626,14 @@ const topDrop = [
     },
     {
         id: 2,
-        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+        img: ImgGif4,
         title: "Patterns arts & culture",
         price: "147.83",
         time: "3 sec ago",
     },
     {
         id: 3,
-        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        img: ImgGif3,
         title: "Evolved Reality",
         price: "34.81",
         time: "2 min ago",
@@ -698,13 +703,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img6 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif2, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif5, imgClass: "mb-1" },
                     { id: 2, img: Img3 },
                 ],
             },
@@ -719,13 +724,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img5 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif1, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-4.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif4, imgClass: "mb-1" },
                     { id: 2, img: Img4 },
                 ],
             },
@@ -740,13 +745,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img2 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-3.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif3, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif1, imgClass: "mb-1" },
                     { id: 2, img: Img1 },
                 ],
             },
@@ -761,13 +766,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img3 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif5, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif2, imgClass: "mb-1" },
                     { id: 2, img: Img5 },
                 ],
             },
@@ -782,13 +787,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img2 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-3.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif3, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif1, imgClass: "mb-1" },
                     { id: 2, img: Img1 },
                 ],
             },
@@ -803,13 +808,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img5 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif1, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-4.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif4, imgClass: "mb-1" },
                     { id: 2, img: Img4 },
                 ],
             },
@@ -824,13 +829,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img6 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif2, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif5, imgClass: "mb-1" },
                     { id: 2, img: Img3 },
                 ],
             },
@@ -845,13 +850,13 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img3 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif5, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif2, imgClass: "mb-1" },
                     { id: 2, img: Img5 },
                 ],
             },
@@ -869,13 +874,13 @@ const marketPlacewidget = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img5 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif1, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-4.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif4, imgClass: "mb-1" },
                     { id: 2, img: Img4 },
                 ],
             },
@@ -890,13 +895,13 @@ const marketPlacewidget = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img6 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif2, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif5, imgClass: "mb-1" },
                     { id: 2, img: Img3 },
                 ],
             },
@@ -911,13 +916,13 @@ const marketPlacewidget = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img2 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-3.gif", imgClass: "mt-1" },
+                    { id: 2, img: ImgGif3, imgClass: "mt-1" },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mb-1" },
+                    { id: 1, img: ImgGif1, imgClass: "mb-1" },
                     { id: 2, img: Img1 },
                 ],
             },
@@ -953,7 +958,7 @@ const tradingArtworkData = [
         img: avatar10,
         author: "Diana Kohler",
         title: "Owners",
-        cardImg: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        cardImg: ImgGif1,
         likes: "8.34k",
         price: "701.38 ETH",
         category: "Long-tailed Macaque",
@@ -975,7 +980,7 @@ const tradingArtworkData = [
         img: avatar2,
         author: "Rickey Teran",
         title: "Creators",
-        cardImg: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        cardImg: ImgGif3,
         likes: "78.34k",
         price: "571.24 ETH",
         category: "Creative Filtered Portrait",
@@ -995,7 +1000,7 @@ const nftArtworkData = [
     },
     {
         id: 2,
-        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+        img: ImgGif2,
         likes: "94.1k",
         title: "Trendy Fashion Portraits",
         category: "3d Style",
@@ -1013,7 +1018,7 @@ const nftArtworkData = [
     },
     {
         id: 4,
-        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+        img: ImgGif4,
         likes: "15.93k",
         title: "Evolved Reality",
         category: "Video",
@@ -1041,7 +1046,7 @@ const popularCreatorsNFT = [
     },
     {
         id: 2,
-        cardImg: "https://img.themesbrand.com/velzon/images/img-5.gif",
+        cardImg: ImgGif5,
         img: Img4,
         author: "Kevin Dawson",
         products: 649,
@@ -1056,7 +1061,7 @@ const popularCreatorsNFT = [
     {
         id: 4,
         cardImg: Img5,
-        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+        img: ImgGif2,
         author: "Thomas Taylor",
         products: 345,
         isFollow: true,
@@ -1064,7 +1069,7 @@ const popularCreatorsNFT = [
     {
         id: 2,
         cardImg: Img2,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: ImgGif1,
         author: "James Price",
         products: 745,
         isFollow: true,

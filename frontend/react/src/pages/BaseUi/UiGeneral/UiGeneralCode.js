@@ -184,7 +184,7 @@ const paginationCode =
 <!-- Pagination Alignment -->
 
 <!-- Center Alignment -->
-<Pagination size="lg" listClassName="justify-content-center">
+<Pagination listClassName="justify-content-center">
     <PaginationItem disabled> <PaginationLink to="#"> ← &nbsp; Prev </PaginationLink> </PaginationItem>
     <PaginationItem> <PaginationLink to="#"> 1 </PaginationLink> </PaginationItem>
     <PaginationItem> <PaginationLink to="#"> 2 </PaginationLink> </PaginationItem>
@@ -203,7 +203,7 @@ const paginationCode =
 
 
 <!-- Pagination Rounded -->
-<Pagination size="sm" className="pagination-rounded">
+<Pagination className="pagination-rounded">
     <PaginationItem disabled> <PaginationLink to="#"> ← </PaginationLink> </PaginationItem>
     <PaginationItem> <PaginationLink to="#"> 1 </PaginationLink> </PaginationItem>
     <PaginationItem active> <PaginationLink to="#"> 2 </PaginationLink> </PaginationItem>

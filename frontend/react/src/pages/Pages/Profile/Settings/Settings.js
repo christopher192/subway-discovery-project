@@ -15,7 +15,7 @@ const Settings = () => {
         if (activeTab !== tab) setActiveTab(tab);
     };
 
-    document.title = "Profile Settings | Velzon - React Admin & Dashboard Template";
+    document.title="Profile Settings | Velzon - React Admin & Dashboard Template";
 
     return (
         <React.Fragment>
@@ -141,7 +141,7 @@ const Settings = () => {
                                         role="tablist">
                                         <NavItem>
                                             <NavLink
-                                                className={classnames({ active: activeTab === "1" })}
+                                                className={classnames({ active: activeTab === "1" }, "text-body")}
                                                 onClick={() => {
                                                     tabChange("1");
                                                 }}>
@@ -151,7 +151,7 @@ const Settings = () => {
                                         </NavItem>
                                         <NavItem>
                                             <NavLink to="#"
-                                                className={classnames({ active: activeTab === "2" })}
+                                                className={classnames({ active: activeTab === "2" }, "text-body")}
                                                 onClick={() => {
                                                     tabChange("2");
                                                 }}
@@ -162,7 +162,7 @@ const Settings = () => {
                                         </NavItem>
                                         <NavItem >
                                             <NavLink to="#"
-                                                className={classnames({ active: activeTab === "3" })}
+                                                className={classnames({ active: activeTab === "3" }, "text-body")}
                                                 onClick={() => {
                                                     tabChange("3");
                                                 }}
@@ -173,7 +173,7 @@ const Settings = () => {
                                         </NavItem>
                                         <NavItem>
                                             <NavLink to="#"
-                                                className={classnames({ active: activeTab === "4" })}
+                                                className={classnames({ active: activeTab === "4" }, "text-body")}
                                                 onClick={() => {
                                                     tabChange("4");
                                                 }}
@@ -530,12 +530,10 @@ const Settings = () => {
                                                                 <div className="mb-3">
                                                                     <Label htmlFor="jobDescription" className="form-label">Job
                                                                         Description</Label>
-                                                                    <Input type='teaxtarea'
-                                                                        className="form-control" id="jobDescription"
+                                                                    {/* <textarea className="form-control" id="jobDescription"
+                                                                    defaultValue=""
                                                                         rows="3"
-                                                                        placeholder='Enter description'
-                                                                        defaultValue="You always want to make sure that your fonts work well together and try to limit the number of fonts you use to three or less. Experiment and play around with the fonts that you already have in the software you're working with reputable font websites."
-                                                                    />
+                                                                        placeholder="Enter description">You always want to make sure that your fonts work well together and try to limit the number of fonts you use to three or less. Experiment and play around with the fonts that you already have in the software you're working with reputable font websites. </textarea> */}
                                                                 </div>
                                                             </Col>
 
@@ -564,7 +562,7 @@ const Settings = () => {
                                                 <h5 className="card-title text-decoration-underline mb-3">Security:</h5>
                                                 <div className="d-flex flex-column flex-sm-row mb-4 mb-sm-0">
                                                     <div className="flex-grow-1">
-                                                        <h6 className="fs-14 mb-1">Two-factor Authentication</h6>
+                                                        <h6 className="fs-13 mb-1">Two-factor Authentication</h6>
                                                         <p className="text-muted">Two-factor authentication is an enhanced
                                                             security meansur. Once enabled, you'll be required to give
                                                             two types of identification when you log into Google
@@ -578,7 +576,7 @@ const Settings = () => {
                                                 </div>
                                                 <div className="d-flex flex-column flex-sm-row mb-4 mb-sm-0 mt-2">
                                                     <div className="flex-grow-1">
-                                                        <h6 className="fs-14 mb-1">Secondary Verification</h6>
+                                                        <h6 className="fs-13 mb-1">Secondary Verification</h6>
                                                         <p className="text-muted">The first factor is a password and the
                                                             second commonly includes a text with a code sent to your
                                                             smartphone, or biometrics using your fingerprint, face, or
@@ -591,7 +589,7 @@ const Settings = () => {
                                                 </div>
                                                 <div className="d-flex flex-column flex-sm-row mb-4 mb-sm-0 mt-2">
                                                     <div className="flex-grow-1">
-                                                        <h6 className="fs-14 mb-1">Backup Codes</h6>
+                                                        <h6 className="fs-13 mb-1">Backup Codes</h6>
                                                         <p className="text-muted mb-sm-0">A backup code is automatically
                                                             generated for you when you turn on two-factor authentication
                                                             through your iOS or Android Twitter app. You can also

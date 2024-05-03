@@ -45,7 +45,7 @@ SwiperCore.use([FreeMode, Navigation, Thumbs]);
 const ProductReview = (props) => {
   return (
     <React.Fragment>
-      <li className="py-2">
+     <li className="py-2">
         <div className="border border-dashed rounded p-3">
           <div className="d-flex align-items-start mb-3">
             <div className="hstack gap-3">
@@ -127,11 +127,11 @@ function EcommerceProductDetail(props) {
       setcustomActiveTab(tab);
     }
   };
+  document.title="Product Details | Velzon - React Admin & Dashboard Template";
 
-document.title ="Product Details | Velzon - React Admin & Dashboard Template";
   return (
     <div className="page-content">
-      <Container fluid>        
+      <Container fluid>
         <BreadCrumb title="Product Details" pageTitle="Ecommerce" />
 
         <Row>
@@ -305,7 +305,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
                       <Row>
                         <Col xl={6}>
                           <div className=" mt-4">
-                            <h5 className="fs-14">Sizes :</h5>
+                            <h5 className="fs-13">Sizes :</h5>
                             <div className="d-flex flex-wrap gap-2">
                               <Tooltip
                                 placement="top"
@@ -401,7 +401,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
 
                         <Col xl={6}>
                           <div className=" mt-4">
-                            <h5 className="fs-14">Colors :</h5>
+                            <h5 className="fs-13">Colors :</h5>
                             <div className="d-flex flex-wrap gap-2">
                               <div
                                 data-bs-toggle="tooltip"
@@ -514,7 +514,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
                       </Row>
 
                       <div className="mt-4 text-muted">
-                        <h5 className="fs-14">Description :</h5>
+                        <h5 className="fs-13">Description :</h5>
                         <p>
                           Tommy Hilfiger men striped pink sweatshirt. Crafted
                           with cotton. Material composition is 100% organic
@@ -528,7 +528,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
                       <Row>
                         <Col sm={6}>
                           <div className="mt-3">
-                            <h5 className="fs-14">Features :</h5>
+                            <h5 className="fs-13">Features :</h5>
                             <ul className="list-unstyled">
                               <li className="py-1">
                                 <i className="mdi mdi-circle-medium me-1 text-muted align-middle"></i>{" "}
@@ -551,7 +551,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
                         </Col>
                         <Col sm={6}>
                           <div className="mt-3">
-                            <h5 className="fs-14">Services :</h5>
+                            <h5 className="fs-13">Services :</h5>
                             <ul className="list-unstyled product-desc-list">
                               <li className="py-1">10 Days Replacement</li>
                               <li className="py-1">
@@ -563,7 +563,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
                       </Row>
 
                       <div className="product-content mt-5">
-                        <h5 className="fs-14 mb-3">Product Description :</h5>
+                        <h5 className="fs-13 mb-3">Product Description :</h5>
                         <Nav tabs className="nav-tabs-custom nav-success">
                           <NavItem>
                             <NavLink
@@ -636,7 +636,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
                             tabId="2"
                           >
                             <div>
-                              <h5 className="font-size-16 mb-3">
+                              <h5 className="mb-3">
                                 Tommy Hilfiger Sweatshirt for Men (Pink)
                               </h5>
                               <p>
@@ -673,7 +673,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
 
                       <div className="mt-5">
                         <div>
-                          <h5 className="fs-14 mb-3">Ratings & Reviews</h5>
+                          <h5 className="fs-13 mb-3">Ratings & Reviews</h5>
                         </div>
                         <Row className="gy-4 gx-0">
                           <Col lg={4}>
@@ -847,7 +847,7 @@ document.title ="Product Details | Velzon - React Admin & Dashboard Template";
                           <Col lg={8}>
                             <div className="ps-lg-4">
                               <div className="d-flex flex-wrap align-items-start gap-3">
-                                <h5 className="fs-14">Reviews: </h5>
+                                <h5 className="fs-13">Reviews: </h5>
                               </div>
 
                               <SimpleBar

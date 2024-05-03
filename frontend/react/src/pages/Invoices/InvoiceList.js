@@ -20,8 +20,8 @@ import DeleteModal from "../../Components/Common/DeleteModal";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
-import { invoiceWidgets } from "../../common/data/invoiceList";
 
+import { invoiceWidgets } from "../../common/data/invoiceList";
 //Import actions
 import {
   getInvoices as onGetInvoices,
@@ -32,32 +32,33 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 
 import Loader from "../../Components/Common/Loader";
-
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createSelector } from "reselect";
 
 const InvoiceList = () => {
   const dispatch = useDispatch();
-
   const selectLayoutState = (state) => state.Invoice;
-  const selectinvoiceProperties = createSelector(
-    selectLayoutState,
-    (state) => ({
-      invoices: state.invoices,
-      isInvoiceSuccess: state.isInvoiceSuccess,
-      error: state.error,
-    })
+  const selectLayoutProperties = createSelector(
+      selectLayoutState,
+      (layout) => ({
+        invoices: layout.invoices,
+           isInvoiceSuccess: layout.isInvoiceSuccess,
+           error: layout.error,
+      })
   );
+
   // Inside your component
   const {
-    invoices, isInvoiceSuccess, error
-  } = useSelector(selectinvoiceProperties);
-
+    invoices,
+     isInvoiceSuccess, 
+     error 
+  } = useSelector(selectLayoutProperties);
 
   //delete invoice
   const [deleteModal, setDeleteModal] = useState(false);
   const [deleteModalMulti, setDeleteModalMulti] = useState(false);
+
 
   const [invoice, setInvoice] = useState(null);
 
@@ -83,7 +84,6 @@ const InvoiceList = () => {
       setDeleteModal(false);
     }
   };
-
 
   const handleValidDate = date => {
     const date1 = moment(new Date(date)).format("DD MMM Y");
@@ -142,7 +142,7 @@ const InvoiceList = () => {
     setSelectedCheckBoxDelete(ele);
   };
 
-  //Column
+  // Customber Column
   const columns = useMemo(
     () => [
       {
@@ -362,20 +362,21 @@ const InvoiceList = () => {
                     <h5 className="card-title mb-0 flex-grow-1">Invoices</h5>
                     <div className="flex-shrink-0">
                       <div className="d-flex gap-2 flex-wrap">
-                        {isMultiDeleteButton && <button className="btn btn-primary me-1"
-                          onClick={() => setDeleteModalMulti(true)}
-                        ><i className="ri-delete-bin-2-line"></i></button>}
                         <Link
                           to="/apps-invoices-create"
-                          className="btn btn-danger"
+                          className="btn btn-danger me-1"
                         >
                           <i className="ri-add-line align-bottom me-1"></i> Create
                           Invoice
                         </Link>
+                        {isMultiDeleteButton && <button className="btn btn-danger"
+                          onClick={() => setDeleteModalMulti(true)}
+                        ><i className="ri-delete-bin-2-line"></i></button>}
                       </div>
                     </div>
                   </div>
                 </CardHeader>
+
                 <CardBody className="pt-0">
                   <div>
                     {isInvoiceSuccess && invoices.length ? (
@@ -386,9 +387,9 @@ const InvoiceList = () => {
                         isAddUserList={false}
                         customPageSize={10}
                         className="custom-header-css"
-                        isInvoiceListFilter={true}
                         theadClass="text-muted text-uppercase"
-                        SearchPlaceholder='Search for customer, email, country, status or something...'
+                        isInvoiceListFilter={true}
+                        SearchPlaceholder="Search for customer, email, country, status or something..."
                       />
                     ) : (<Loader error={error} />)
                     }

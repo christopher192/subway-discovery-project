@@ -9,7 +9,7 @@ const defaultevent = [
     "title": "World Braille Day",
     "start": "2022-01-01T00:00:00.000Z",
     "end": "2022-01-08T00:00:00.000",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -18,7 +18,7 @@ const defaultevent = [
     "id": 2,
     "title": "World Leprosy Day",
     "start": "2022-05-04",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -28,7 +28,7 @@ const defaultevent = [
     "id": 3,
     "title": "International Mother Language Day",
     "start": "2022-02-21",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -38,7 +38,7 @@ const defaultevent = [
     "id": 4,
     "title": "International Women's Day",
     "start": "2022-03-08",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -48,7 +48,7 @@ const defaultevent = [
     "id": 5,
     "title": "World Thinking Day",
     "start": "2022-02-22",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -58,7 +58,7 @@ const defaultevent = [
     "id": 6,
     "title": "International Mother Language Day",
     "start": "2022-03-21",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -68,7 +68,7 @@ const defaultevent = [
     "id": 7,
     "title": "World Water Day",
     "start": "2022-03-22",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -78,7 +78,7 @@ const defaultevent = [
     "id": 8,
     "title": "World Health Day",
     "start": "2022-04-07",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -88,7 +88,7 @@ const defaultevent = [
     "id": 9,
     "title": "International Special Librarians Day",
     "start": "2022-04-16",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -98,7 +98,7 @@ const defaultevent = [
     "id": 10,
     "title": "Earth Day",
     "start": "2022-04-22",
-    "className": "bg-info-subtle text-info",
+    "className": "bg-info-subtle",
     "allDay": true,
     "description": "N.A.",
     "location" : "N.A."
@@ -110,7 +110,7 @@ const events = [
     id: 153,
     title: "All Day Event",
     start: new Date(y, m, 1),
-    className: "bg-primary-subtle text-primary",
+    className: "bg-primary-subtle",
     location: "San Francisco, US",
     allDay: false,
     extendedProps: {
@@ -125,7 +125,7 @@ const events = [
     start: new Date(y, m, d - 5),
     end: new Date(y, m, d - 2),
     allDay: false,
-    className: "bg-warning-subtle text-warning",
+    className: "bg-warning-subtle",
     location: "San Francisco, US",
     extendedProps: {
       department: "Long Event",
@@ -139,7 +139,7 @@ const events = [
     start: new Date(y, m, d + 22, 20, 0),
     end: new Date(y, m, d + 24, 16, 0),
     allDay: false,
-    className: "bg-danger-subtle text-danger",
+    className: "bg-danger-subtle",
     location: "California, US",
     extendedProps: {
       department: "Meeting with Alexis",
@@ -153,7 +153,7 @@ const events = [
     start: new Date(y, m, d + 4, 16, 0),
     end: new Date(y, m, d + 9, 16, 0),
     allDay: false,
-    className: "bg-primary-subtle text-primary",
+    className: "bg-primary-subtle",
     location: "Las Vegas, US",
     extendedProps: {
       department: "Repeating Event",
@@ -166,7 +166,7 @@ const events = [
     title: "Meeting With Designer",
     start: new Date(y, m, d, 12, 30),
     allDay: false,
-    className: "bg-success-subtle text-success",
+    className: "bg-success-subtle",
     location: "Head Office, US",
     extendedProps: {
       department: "Meeting",
@@ -179,7 +179,7 @@ const events = [
     start: new Date(y, m, d + 9),
     end: new Date(y, m, d + 11),
     allDay: false,
-    className: "bg-danger-subtle text-danger",
+    className: "bg-danger-subtle",
     location: "Head Office, US",
     extendedProps: {
       department: "Lunch",
@@ -191,7 +191,7 @@ const events = [
     title: "Birthday Party",
     start: new Date(y, m, d + 1, 19, 0),
     allDay: false,
-    className: "bg-success-subtle text-success",
+    className: "bg-success-subtle",
     location: "Los Angeles, US",
     extendedProps: {
       department: "Birthday Party",
@@ -205,7 +205,7 @@ const events = [
     start: new Date(y, m, 28),
     end: new Date(y, m, 29),
     url: "http://google.com/",
-    className: "bg-dark-subtle text-body",
+    className: "bg-dark-subtle",
   },
   {
     id: 456,
@@ -213,7 +213,7 @@ const events = [
     start: new Date(y, m, d + 23, 20, 0),
     end: new Date(y, m, d + 24, 16, 0),
     allDay: false,
-    className: "bg-info-subtle text-info",
+    className: "bg-info-subtle",
     location: "Head Office, US",
     extendedProps: {
       department: "Discussion",

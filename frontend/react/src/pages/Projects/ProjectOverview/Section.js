@@ -69,7 +69,7 @@ const Section = () => {
                                 <Nav className="nav-tabs-custom border-bottom-0" role="tablist">
                                     <NavItem>
                                         <NavLink
-                                            className={classnames({ active: activeTab === '1' }, "fw-semibold")}
+                                            className={classnames({ active: activeTab === '1' }, "text-body fw-semibold")}
                                             onClick={() => { toggleTab('1'); }}
                                             href="#">
                                             Overview
@@ -77,7 +77,7 @@ const Section = () => {
                                     </NavItem>
                                     <NavItem>
                                         <NavLink
-                                            className={classnames({ active: activeTab === '2' }, "fw-semibold")}
+                                            className={classnames({ active: activeTab === '2' }, "text-body fw-semibold")}
                                             onClick={() => { toggleTab('2'); }}
                                             href="#">
                                             Documents
@@ -85,7 +85,7 @@ const Section = () => {
                                     </NavItem>
                                     <NavItem>
                                         <NavLink
-                                            className={classnames({ active: activeTab === '3' }, "fw-semibold")}
+                                            className={classnames({ active: activeTab === '3' }, "text-body fw-semibold")}
                                             onClick={() => { toggleTab('3'); }}
                                             href="#">
                                             Activities
@@ -93,7 +93,7 @@ const Section = () => {
                                     </NavItem>
                                     <NavItem>
                                         <NavLink
-                                            className={classnames({ active: activeTab === '4' }, "fw-semibold")}
+                                            className={classnames({ active: activeTab === '4' }, "text-body fw-semibold")}
                                             onClick={() => { toggleTab('4'); }}
                                             href="#">
                                             Team

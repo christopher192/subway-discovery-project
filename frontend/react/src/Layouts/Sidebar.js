@@ -7,7 +7,7 @@ import logoDark from "../assets/images/logo-dark.png";
 import logoLight from "../assets/images/logo-light.png";
 
 //Import Components
-import VerticalLayout from "./VerticalLayouts";
+import VerticalLayout from "./VerticalLayouts/index";
 import TwoColumnLayout from "./TwoColumnLayout";
 import { Container } from "reactstrap";
 import HorizontalLayout from "./HorizontalLayout";
@@ -33,7 +33,6 @@ const Sidebar = ({ layoutType }) => {
       document.documentElement.setAttribute('data-sidebar-size', 'sm-hover');
     }
   };
-
   return (
     <React.Fragment>
       <div className="app-menu navbar-menu">
@@ -75,7 +74,7 @@ const Sidebar = ({ layoutType }) => {
           </div>
         ) : layoutType === 'twocolumn' ? (
           <React.Fragment>
-            <TwoColumnLayout layoutType={layoutType} />
+            <TwoColumnLayout />
             <div className="sidebar-background"></div>
           </React.Fragment>
         ) : (

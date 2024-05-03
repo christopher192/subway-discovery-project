@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 
 //import Components
@@ -11,22 +11,18 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FadeUpExample, FadeDownExample, FadeRightExample, FadeLeftExample, FadeUpRightExample, FadeUpLeftExample, FadeDownRightExample, FadeDownLeftExample, FlipLeftExample, FlipRightExample, FilpUpExample, FilpDownExample, ZoomInExample, ZoomOutExample, ZoomInUpExample, ZoomOutUpExample, ZoomInDownExample, ZoomOutDownExample, ZoomInRightExample, ZoomOutRightExample, ZoomInLeftExample, ZoomOutLeftExample, DurationExample, EasingLinearExample, Offset1Example, Offset2Example, EaseInBackExample, EaseOutCubicExample } from './UiAnimationCode';
 
-
-
+AOS.init({
+    easing: 'ease-out-back',
+    duration: 3000,
+    anchorPlacement: 'top-bottom', 
+});
 const UiAnimation = () => {
-    useEffect(() => {
-        AOS.init({
-            easing: 'ease-out-back',
-            duration: 3000,
-            anchorPlacement: 'top-bottom',
-        });
-    }, []);
-    document.title = "Animation | Velzon - React Admin & Dashboard Template";
+    document.title="Animation | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="Animation" pageTitle="Advance UI" />
+                    <BreadCrumb title="Animation" pageTitle="Advanced UI" />
                     <Row>
                         <Col lg={12}>
                             <Card>

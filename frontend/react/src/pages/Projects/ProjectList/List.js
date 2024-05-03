@@ -24,8 +24,9 @@ const List = () => {
         (state) => state.Projects,
         (projectLists) => projectLists.projectLists
       );
+      
     // Inside your component
-    const projectLists = useSelector(selectDashboardData);
+    const  projectLists = useSelector(selectDashboardData);
 
     const [project, setProject] = useState(null);
     const [deleteModal, setDeleteModal] = useState(false);
@@ -58,7 +59,6 @@ const List = () => {
             ele.closest("button").classList.add("active");
         }
     };
-
     return (
         <React.Fragment>
             <ToastContainer closeButton={false} />
@@ -137,7 +137,7 @@ const List = () => {
                                                     </div>
                                                 </div>
                                                 <div className="flex-grow-1">
-                                                    <h5 className="mb-1 fs-15"><Link to="/apps-projects-overview" className="text-body">{item.label}</Link></h5>
+                                                    <h5 className="mb-1 fs-14"><Link to="/apps-projects-overview" className="text-body">{item.label}</Link></h5>
                                                     <p className="text-muted text-truncate-two-lines mb-3">{item.caption}</p>
                                                 </div>
                                             </div>
@@ -227,13 +227,13 @@ const List = () => {
                                                     <Col xs={6}>
                                                         <div>
                                                             <p className="text-muted mb-1">Status</p>
-                                                            <div className={"fs-12 badge bg-" + item.statusClass+"-subtle" + " text-" + item.statusClass}>{item.status}</div>
+                                                            <div className={"fs-12 badge bg-" + item.statusClass+"-subtle text-"+item.statusClass}>{item.status}</div>
                                                         </div>
                                                     </Col>
                                                     <Col xs={6}>
                                                         <div>
                                                             <p className="text-muted mb-1">Deadline</p>
-                                                            <h5 className="fs-14">{item.deadline}</h5>
+                                                            <h5 className="fs-13">{item.deadline}</h5>
                                                         </div>
                                                     </Col>
                                                 </Row>
@@ -283,7 +283,7 @@ const List = () => {
                                     <Col xxl={3} sm={6} className="project-card">
                                         <Card>
                                             <CardBody>
-                                                <div className={`p-3 mt-n3 mx-n3 bg-${item.cardHeaderClass} rounded-top`}>
+                                                <div className={`p-3 mt-n3 mx-n3 bg-${item.cardHeaderClass}-subtle rounded-top`}>
                                                     <div className="d-flex gap-1 align-items-center justify-content-end my-n2">
                                                         <button type="button" className={`btn avatar-xs mt-n1 p-0 favourite-btn ${item.ratingClass}`} onClick={(e) => activebtn(e.target)}>
                                                             <span className="avatar-title bg-transparent fs-15">
@@ -315,13 +315,13 @@ const List = () => {
                                                         <Col xs={6}>
                                                             <div>
                                                                 <p className="text-muted mb-1">Status</p>
-                                                                <div className={"fs-12 badge bg-" + item.statusClass+"-subtle" + " text-" + item.statusClass}>{item.status}</div>
+                                                                <div className={"fs-12 badge bg-" + item.statusClass+"-subtle text-"+item.statusClass}>{item.status}</div>
                                                             </div>
                                                         </Col>
                                                         <Col xs={6}>
                                                             <div>
                                                                 <p className="text-muted mb-1">Deadline</p>
-                                                                <h5 className="fs-14">{item.deadline}</h5>
+                                                                <h5 className="fs-13">{item.deadline}</h5>
                                                             </div>
                                                         </Col>
                                                     </Row>

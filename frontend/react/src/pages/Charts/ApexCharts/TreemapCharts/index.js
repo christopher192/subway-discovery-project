@@ -3,13 +3,12 @@ import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap';
 import BreadCrumb from '../../../../Components/Common/BreadCrumb';
 import {BasicTreemap,MultiTreemap,DiffColorTreemap,ColorRangeTreemap} from './TreemapCharts'
 
-
 const TreemapCharts = () => {
-    document.title="Treemap Charts | Velzon - React Admin & Dashboard Template";
+  document.title="Treemap Charts | Velzon - React Admin & Dashboard Template";
   return (
     <React.Fragment>
             <div className="page-content">
-                <Container fluid>                   
+                <Container fluid>
                         <BreadCrumb title="Treemap Charts" pageTitle="Apexcharts" />
                         <Row>
                             <Col xl={6}>

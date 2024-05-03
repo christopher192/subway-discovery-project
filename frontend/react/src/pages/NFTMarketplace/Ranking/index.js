@@ -80,7 +80,6 @@ const Ranking = () => {
         ],
         []);
 
-
     return (
         <React.Fragment>
             <div className="page-content">
@@ -95,7 +94,8 @@ const Ranking = () => {
                                         <p className="text-muted mb-0">Updated: 28 April, 2022 08:05:00</p>
                                     </div>
                                 </div>
-                                <div className="card-body">
+                                
+                                <div className="card-body pt-0">
                                     {NFTRanking && NFTRanking.length > 0 ? (
                                         <TableContainer
                                             columns={columns}
@@ -108,7 +108,7 @@ const Ranking = () => {
                                             tableClass="align-middle table-nowrap"
                                             theadClass="table-light text-muted"
                                             isNFTRankingFilter={true}
-                                            SearchPlaceholder='Search for...'
+                                            SearchPlaceholder="Search for..."
                                         />
                                     ) : (
                                         <div className="noresult">

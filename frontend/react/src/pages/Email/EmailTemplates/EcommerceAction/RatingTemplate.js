@@ -1,15 +1,12 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
 //import Images
 import logo_dark from "../../../../assets/images/logo-dark.png";
 import img01 from "../../../../assets/images/products/img-1.png"
 import img02 from "../../../../assets/images/products/img-2.png"
 import img03 from "../../../../assets/images/products/img-3.png"
-
 const RatingTemplate = () => {
-
     function changeBackground(e) {
         e.target.style.background = "#099885";
     }
@@ -115,5 +112,4 @@ const RatingTemplate = () => {
         </React.Fragment>
     );
 }
-
 export default RatingTemplate;

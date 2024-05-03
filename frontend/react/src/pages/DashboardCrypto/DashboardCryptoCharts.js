@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactApexChart from "react-apexcharts";
+
 import getChartColorsArray from "../../Components/Common/ChartsDynamicColor";
 
-const PortfolioCharts = ({ dataColors, series }) => {
-    var donutchartportfolioColors = getChartColorsArray(dataColors);
+const PortfolioCharts = ({dataColors, series}) => {
+    const donutchartportfolioColors = getChartColorsArray(dataColors)
 
     var options = {
         labels: ["Bitcoin", "Ethereum", "Litecoin", "Dash"],
@@ -29,7 +30,7 @@ const PortfolioCharts = ({ dataColors, series }) => {
                         value: {
                             show: true,
                             fontSize: '20px',
-                            color: '#343a40',
+                            color: '#363d48',
                             fontWeight: 500,
                             offsetY: 5,
                             formatter: function (val) {
@@ -84,9 +85,10 @@ const PortfolioCharts = ({ dataColors, series }) => {
     );
 };
 
-const MarkerCharts = ({ dataColors, series }) => {
-    var MarketchartColors = getChartColorsArray(dataColors);
-
+const MarkerCharts = ({dataColors, series}) => {
+    const MarketchartColors = getChartColorsArray(dataColors)
+    
+   
     var options = {
         chart: {
             type: 'candlestick',
@@ -158,7 +160,7 @@ const MarkerCharts = ({ dataColors, series }) => {
     );
 };
 
-const WidgetsCharts = ({ seriesData, chartsColor }) => {
+const WidgetsCharts = ({seriesData,chartsColor}) => {
     const areachartlitecoinColors = [chartsColor];
     var options = {
         chart: {

@@ -39,14 +39,14 @@ const MyTasks = () => {
                                     {(projectTasks || []).map((item, key) => (<tr key={key}>
                                         <td>
                                             <div className="form-check">
-                                                <input className="form-check-input fs-15" type="checkbox" value="" id={item.forId} />
+                                                <input className="form-check-input fs-15" type="checkbox" value="" id={item.forId} />{" "}
                                                 <label className="form-check-label ms-1" htmlFor={item.forId}>
                                                     {item.label}
                                                 </label>
                                             </div>
                                         </td>
                                         <td className="text-muted">{item.dedline}</td>
-                                        <td><span className={"badge bg-" + item.statusClass+"-subtle text-"+item.statusClass+""}>{item.status}</span></td>
+                                        <td><span className={"badge bg-" + item.statusClass+"-subtle text-"+item.statusClass}>{item.status}</span></td>
                                         <td>
                                             <Link to="#" className="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Mary Stoner">
                                                 <img src={item.img} alt="" className="rounded-circle avatar-xxs" />

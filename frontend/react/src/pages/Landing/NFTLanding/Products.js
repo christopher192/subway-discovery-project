@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { productData } from '../../../common/data';
+import { productData } from "../../../common/data";
 
 const Products = () => {
     const [nav, setNav] = useState("All");
-
+   
     return (
         <React.Fragment>
             <section className="section bg-light" id="marketplace">
@@ -13,26 +13,26 @@ const Products = () => {
                     <Row className="justify-content-center">
                         <Col lg={8}>
                             <div className="text-center mb-5">
-                                <h2 className="mb-3 fw-semibold lh-base">Explore Products</h2>
+                                <h2 className="mb-3 fw-bold lh-base">Explore Products</h2>
                                 <p className="text-muted mb-4">Collection widgets specialize in displaying many elements of the same type, such as a collection of pictures from a collection of articles.</p>
                                 <Nav pills className="nav-pills filter-btns justify-content-center" role="tablist">
                                     <NavItem role="presentation">
-                                        <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? " fw-medium active" : "fw-medium text-primary"}>All Items</NavLink>
+                                        <NavLink type="button" onClick={() => setNav("All")} className={nav === "All" ? "fw-medium active" : "fw-medium text-primary"} >All Items</NavLink>
                                     </NavItem>
                                     <NavItem role="presentation">
-                                        <NavLink type="button" onClick={() => setNav("artwork")} className={nav === "artwork" ? " fw-medium active" : "fw-medium text-primary"}>Artwork</NavLink>
+                                        <NavLink type="button" onClick={() => setNav("artwork")} className={nav === "artwork" ? "fw-medium active" : "fw-medium text-primary"}>Artwork</NavLink>
                                     </NavItem>
                                     <NavItem role="presentation">
-                                        <NavLink type="button" onClick={() => setNav("music")} className={nav === "music" ? " fw-medium active" : "fw-medium text-primary"}>Music</NavLink>
+                                        <NavLink type="button" onClick={() => setNav("music")} className={nav === "music" ? "fw-medium active" : "fw-medium text-primary"}>Music</NavLink>
                                     </NavItem>
                                     <NavItem role="presentation">
-                                        <NavLink type="button" onClick={() => setNav("games")} className={nav === "games" ? " fw-medium active" : "fw-medium text-primary"}>Games</NavLink>
+                                        <NavLink type="button" onClick={() => setNav("games")} className={nav === "games" ? "fw-medium active" : "fw-medium text-primary"}>Games</NavLink>
                                     </NavItem>
                                     <NavItem role="presentation">
-                                        <NavLink type="button" onClick={() => setNav("crypto-card")} className={nav === "crypto-card" ? " fw-medium active" : "fw-medium text-primary"}>Crypto Card</NavLink>
+                                        <NavLink type="button" onClick={() => setNav("crypto-card")} className={nav === "crypto-card" ? "fw-medium active" : "fw-medium text-primary"}>Crypto Card</NavLink>
                                     </NavItem>
                                     <NavItem role="presentation">
-                                        <NavLink type="button" onClick={() => setNav("3d-style")} className={nav === "3d-style" ? " fw-medium active" : "fw-medium text-primary"}>3d Style</NavLink>
+                                        <NavLink type="button" onClick={() => setNav("3d-style")} className={nav === "3d-style" ? "fw-medium active" : "fw-medium text-primary"}>3d Style</NavLink>
                                     </NavItem>
                                 </Nav>
                             </div>
@@ -49,12 +49,12 @@ const Products = () => {
                                         <img src={item.img} alt="" className="card-img-top explore-img" />
                                         <div className="bg-overlay"></div>
                                         <div className="place-bid-btn">
-                                            <Link to="#" className="btn btn-success"><i className="ri-auction-fill align-bottom me-1"></i> Place Bid</Link>
+                                            <Link to="#!" className="btn btn-success"><i className="ri-auction-fill align-bottom me-1"></i> Place Bid</Link>
                                         </div>
                                     </div>
                                     <div className="card-body">
                                         <p className="fw-medium mb-0 float-end"><i className="mdi mdi-heart text-danger align-middle"></i> {item.likes} </p>
-                                        <h5 className="mb-1"><Link to="/apps-nft-item-details">{item.title}</Link></h5>
+                                        <h5 className="mb-1"><Link to="/apps-nft-item-details" className="text-body">{item.title}</Link></h5>
                                         <p className="text-muted mb-0">{item.category}</p>
                                     </div>
                                     <div className="card-footer border-top border-top-dashed">

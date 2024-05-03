@@ -5,12 +5,10 @@ import Img3 from "../../assets/images/nft/img-03.jpg";
 import Img4 from "../../assets/images/nft/img-04.jpg";
 import Img5 from "../../assets/images/nft/img-05.jpg";
 import Img6 from "../../assets/images/nft/img-06.jpg";
-
-// import ImgGif5 from "../../assets/images/nft/gif/img-5.gif";
-// import ImgGif1 from "../../assets/images/nft/gif/img-1.gif";
-// import ImgGif3 from "../../assets/images/nft/gif/img-3.gif";
-// import ImgGif4 from "../../assets/images/nft/gif/img-4.gif";
-
+import ImgGif5 from "../../assets/images/nft/gif/img-5.gif";
+import ImgGif1 from "../../assets/images/nft/gif/img-1.gif";
+import ImgGif3 from "../../assets/images/nft/gif/img-3.gif";
+import ImgGif4 from "../../assets/images/nft/gif/img-4.gif";
 import avatar8 from "../../assets/images/users/avatar-8.jpg";
 import avatar10 from "../../assets/images/users/avatar-10.jpg";
 import avatar1 from "../../assets/images/users/avatar-1.jpg";
@@ -86,7 +84,7 @@ const topartWork = [
     },
     {
         id: 8,
-        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+        img: ImgGif5,
         title: "Evolved Reality",
         sales: "513,794",
         collection: "870,000",
@@ -97,7 +95,7 @@ const topartWork = [
 const featuredNFTData = [
     {
         id: 1,
-        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+        img: ImgGif3,
         likes: "37.41k",
         title: "Walking On Air",
         category: "Artwork",
@@ -115,7 +113,7 @@ const featuredNFTData = [
     },
     {
         id: 3,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: ImgGif1,
         likes: "8.42k",
         title: "Patterns Arts & Culture",
         category: "Artwork",
@@ -124,7 +122,7 @@ const featuredNFTData = [
     },
     {
         id: 4,
-        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+        img: ImgGif4,
         likes: "15.93k",
         title: "Evolved Reality",
         category: "Video",
@@ -197,7 +195,7 @@ const recentNFTsData = [
     },
     {
         id: 2, 
-        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+        img: ImgGif5,
         title: "Long-tailed Macaque",
         category: "Games",
         icon: ltcCoin,
@@ -268,7 +266,7 @@ const topCollectionData = [
     },
     {
         id: 3,
-        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+        img: ImgGif5,
         category: "3d Style",
         items: "4781+",
     },

@@ -7,6 +7,8 @@ import Countdown from "react-countdown"
 import comingsoon from '../../../assets/images/comingsoon.png';
 
 const ComingSoon = () => {
+    document.title = "Coming Soon | Velzon - React Admin & Dashboard Template";
+
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
         if (completed) {
             // Render a completed state
@@ -31,12 +33,10 @@ const ComingSoon = () => {
         }
     }
 
-document.title ="Coming Soon | Velzon - React Admin & Dashboard Template";
-
     return (
-        <React.Fragment>            
+        <React.Fragment>
             <ParticlesAuth>
-                <div className="auth-page-content mt-lg-5">
+                <div className="auth-page-content">
                     <Container>
                         <Row>
                             <Col lg={12}>
@@ -50,7 +50,7 @@ document.title ="Coming Soon | Velzon - React Admin & Dashboard Template";
                                     <div>
                                         <Row className="justify-content-center mt-5">
                                             <Col lg={8}>
-                                                <Countdown date="2025/01/01" renderer={renderer} />
+                                                <Countdown date="2023/12/31" renderer={renderer} />
                                             </Col>
                                         </Row>
 
@@ -78,4 +78,4 @@ document.title ="Coming Soon | Velzon - React Admin & Dashboard Template";
     )
 }
 
-export default ComingSoon
+export default ComingSoon;

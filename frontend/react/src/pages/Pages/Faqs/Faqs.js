@@ -114,8 +114,7 @@ const Faqs = () => {
     setcol10(false)
     setcol11(false)
   }
-
-document.title="FAQs | Velzon - React Admin & Dashboard Template";
+    document.title="FAQs | Velzon - React Admin & Dashboard Template";
 
   return (
     <React.Fragment>
@@ -136,15 +135,15 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     </div>
                                                 </div>
                                             </Col>
-                                            <Col xxl={3} className=" ms-auto">
+                                            <div className="col-xxl-3 ms-auto">
                                                 <div className="mb-n5 pb-1 faq-img d-none d-xxl-block">
                                                     <img src={faqImg} alt="" className="img-fluid"/>
                                                 </div>
-                                            </Col>
+                                            </div>
                                         </Row>
                                     </div>                                    
                                 </Card>                              
-                                <Row className="justify-content-evenly mb-4">
+                                <Row className="justify-content-evenly">
                                     <Col lg={4}>
                                         <div className="mt-3">
                                             <div className="d-flex align-items-center mb-2">
@@ -152,7 +151,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <i className="ri-question-line fs-24 align-middle text-success me-1"></i>
                                                 </div>
                                                 <div className="flex-grow-1">
-                                                    <h5 className="fs-16 mb-0 fw-semibold">General Questions</h5>
+                                                    <h5 className="fs-14 mb-0">General Questions</h5>
                                                 </div>
                                             </div>
 
@@ -162,7 +161,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col1 }
                                                         )}
                                                         type="button"
@@ -183,7 +182,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                       className={classnames(
                                                         "accordion-button",
-                                                        "fw-medium",
+                                                        "fw-semibold",
                                                         { collapsed: !col2 }
                                                       )}
                                                       type="button"
@@ -204,7 +203,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                       className={classnames(
                                                         "accordion-button",
-                                                        "fw-medium",
+                                                        "fw-semibold",
                                                         { collapsed: !col3 }
                                                       )}
                                                       type="button"
@@ -225,7 +224,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                       className={classnames(
                                                         "accordion-button",
-                                                        "fw-medium",
+                                                        "fw-semibold",
                                                         { collapsed: !col4 }
                                                       )}
                                                       type="button"
@@ -252,7 +251,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <i className="ri-user-settings-line fs-24 align-middle text-success me-1"></i>
                                                 </div>
                                                 <div className="flex-grow-1">
-                                                    <h5 className="fs-16 mb-0 fw-semibold">Manage Account</h5>
+                                                    <h5 className="fs-14 mb-0">Manage Account</h5>
                                                 </div>
                                             </div>
 
@@ -262,7 +261,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col5 }
                                                         )}
                                                         type="button"
@@ -283,7 +282,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col6 }
                                                         )}
                                                         type="button"
@@ -304,7 +303,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col7 }
                                                         )}
                                                         type="button"
@@ -325,7 +324,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col8 }
                                                         )}
                                                         type="button"
@@ -352,7 +351,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <i className="ri-shield-keyhole-line fs-24 align-middle text-success me-1"></i>
                                                 </div>
                                                 <div className="flex-grow-1">
-                                                    <h5 className="fs-16 mb-0 fw-semibold">Privacy &amp; Security</h5>
+                                                    <h5 className="fs-14 mb-0">Privacy &amp; Security</h5>
                                                 </div>
                                             </div>
 
@@ -362,7 +361,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col9 }
                                                         )}
                                                         type="button"
@@ -383,7 +382,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col10 }
                                                         )}
                                                         type="button"
@@ -404,7 +403,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col11 }
                                                         )}
                                                         type="button"
@@ -425,7 +424,7 @@ document.title="FAQs | Velzon - React Admin & Dashboard Template";
                                                     <button
                                                         className={classnames(
                                                           "accordion-button",
-                                                          "fw-medium",
+                                                          "fw-semibold",
                                                           { collapsed: !col12 }
                                                         )}
                                                         type="button"

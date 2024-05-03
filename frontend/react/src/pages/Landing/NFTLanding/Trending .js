@@ -16,15 +16,21 @@ import Img04 from "../../../assets/images/nft/img-04.jpg";
 import Img05 from "../../../assets/images/nft/img-05.jpg";
 import Img06 from "../../../assets/images/nft/img-06.jpg";
 
+import GifImg01 from "../../../assets/images/nft/gif/img-1.gif";
+import GifImg02 from "../../../assets/images/nft/gif/img-2.gif";
+import GifImg03 from "../../../assets/images/nft/gif/img-3.gif";
+import GifImg04 from "../../../assets/images/nft/gif/img-4.gif";
+import GifImg05 from "../../../assets/images/nft/gif/img-5.gif";
+
 const Trending = () => {
     return (
         <React.Fragment>
             <section className="section bg-light" id="categories">
-                <Container fluid>
+                <Container fluid> 
                     <Row className="justify-content-center">
                         <Col lg={5}>
                             <div className="text-center mb-5">
-                                <h2 className="mb-3 fw-semibold lh-base">Trending All Categories</h2>
+                                <h2 className="mb-3 fw-bold lh-base">Trending All Categories</h2>
                                 <p className="text-muted">The process of creating an NFT may cost less than a dollar, but the process of selling it can cost up to a thousand dollars. For example, Allen Gannett, a software developer.</p>
                             </div>
                         </Col>
@@ -57,24 +63,24 @@ const Trending = () => {
                                     },
                                 }}
                                 loop={true}
-                                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                                autoplay={{ delay: 2500, disableOnInteraction: false }} 
                                 className="mySwiper swiper mySwiper pb-4">
                                 <div className="swiper-wrapper">
                                     <SwiperSlide>
                                         <Card>
                                             <CardBody>
                                                 <Row className="g-1 mb-3">
-                                                    <Col className='col-6'>
+                                                    <Col lg={6}>
                                                         <img src={Img06} alt="" className="img-fluid rounded" />
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-2.gif"} alt="" className="img-fluid rounded mt-1" />
+                                                        <img src={GifImg02} alt="" className="img-fluid rounded mt-1" />
                                                     </Col>
-                                                    <Col className='col-6'>
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-5.gif"} alt="" className="img-fluid rounded mb-1" />
+                                                    <Col lg={6}>
+                                                        <img src={GifImg05} alt="" className="img-fluid rounded mb-1" />
                                                         <img src={Img03} alt="" className="img-fluid rounded" />
                                                     </Col>
                                                 </Row>
-                                                <Link to="#" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
-                                                <h5 className="mb-0 fs-16"><Link to="#">Artwork <span className="badge bg-success-subtle text-success">206</span></Link></h5>
+                                                <Link to="#!" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
+                                                <h5 className="mb-0 fs-16"><Link to="#!" className="text-body">Artwork <span className="badge bg-success-subtle text-success">206</span></Link></h5>
                                             </CardBody>
                                         </Card>
                                     </SwiperSlide>
@@ -82,17 +88,17 @@ const Trending = () => {
                                         <Card>
                                             <CardBody>
                                                 <Row className="g-1 mb-3">
-                                                    <Col className='col-6'>
+                                                    <Col lg={6}>
                                                         <img src={Img05} alt="" className="img-fluid rounded" />
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-1.gif"} alt="" className="img-fluid rounded mt-1" />
+                                                        <img src={GifImg01} alt="" className="img-fluid rounded mt-1" />
                                                     </Col>
-                                                    <Col className='col-6'>
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-1.gif"} alt="" className="img-fluid rounded mb-1" />
+                                                    <Col lg={6}>
+                                                        <img src={GifImg04} alt="" className="img-fluid rounded mb-1" />
                                                         <img src={Img04} alt="" className="img-fluid rounded" />
                                                     </Col>
                                                 </Row>
-                                                <Link to="#" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
-                                                <h5 className="mb-0 fs-16"><Link to="#">Crypto Card <span className="badge bg-success-subtle text-success">743</span></Link></h5>
+                                                <Link to="#!" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
+                                                <h5 className="mb-0 fs-16"><Link to="#!" className="text-body">Crypto Card <span className="badge bg-success-subtle text-success">743</span></Link></h5>
                                             </CardBody>
                                         </Card>
                                     </SwiperSlide>
@@ -100,17 +106,17 @@ const Trending = () => {
                                         <Card>
                                             <CardBody>
                                                 <Row className="g-1 mb-3">
-                                                    <Col className='col-6'>
+                                                    <Col lg={6}>
                                                         <img src={Img02} alt="" className="img-fluid rounded" />
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-3.gif"} alt="" className="img-fluid rounded mt-1" />
+                                                        <img src={GifImg03} alt="" className="img-fluid rounded mt-1" />
                                                     </Col>
-                                                    <Col className='col-6'>
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-1.gif"} alt="" className="img-fluid rounded mb-1" />
+                                                    <Col lg={6}>
+                                                        <img src={GifImg01} alt="" className="img-fluid rounded mb-1" />
                                                         <img src={Img01} alt="" className="img-fluid rounded" />
                                                     </Col>
                                                 </Row>
-                                                <Link to="#" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
-                                                <h5 className="mb-0 fs-16"><Link to="#">Music <span className="badge bg-success-subtle text-success">679</span></Link></h5>
+                                                <Link to="#!" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
+                                                <h5 className="mb-0 fs-16"><Link to="#!" className="text-body">Music <span className="badge bg-success-subtle text-success">679</span></Link></h5>
                                             </CardBody>
                                         </Card>
                                     </SwiperSlide>
@@ -118,17 +124,17 @@ const Trending = () => {
                                         <Card>
                                             <CardBody>
                                                 <Row className="g-1 mb-3">
-                                                    <Col className='col-6'>
+                                                    <Col lg={6}>
                                                         <img src={Img03} alt="" className="img-fluid rounded" />
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-5.gif"} alt="" className="img-fluid rounded mt-1" />
+                                                        <img src={GifImg05} alt="" className="img-fluid rounded mt-1" />
                                                     </Col>
-                                                    <Col className='col-6'>
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-2.gif"} alt="" className="img-fluid rounded mb-1" />
+                                                    <Col lg={6}>
+                                                        <img src={GifImg02} alt="" className="img-fluid rounded mb-1" />
                                                         <img src={Img05} alt="" className="img-fluid rounded" />
                                                     </Col>
                                                 </Row>
-                                                <Link to="#" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
-                                                <h5 className="mb-0 fs-16"><Link to="#">Games <span className="badge bg-success-subtle text-success">341</span></Link></h5>
+                                                <Link to="#!" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
+                                                <h5 className="mb-0 fs-16"><Link to="#!" className="text-body">Games <span className="badge bg-success-subtle text-success">341</span></Link></h5>
                                             </CardBody>
                                         </Card>
                                     </SwiperSlide>
@@ -136,17 +142,17 @@ const Trending = () => {
                                         <Card>
                                             <CardBody>
                                                 <Row className="g-1 mb-3">
-                                                    <Col className='col-6'>
+                                                    <Col lg={6}>
                                                         <img src={Img02} alt="" className="img-fluid rounded" />
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-3.gif"} alt="" className="img-fluid rounded mt-1" />
+                                                        <img src={GifImg03} alt="" className="img-fluid rounded mt-1" />
                                                     </Col>
-                                                    <Col className='col-6'>
-                                                        <img src={"https://img.themesbrand.com/velzon/images/img-1.gif"} alt="" className="img-fluid rounded mb-1" />
+                                                    <Col lg={6}>
+                                                        <img src={GifImg01} alt="" className="img-fluid rounded mb-1" />
                                                         <img src={Img01} alt="" className="img-fluid rounded" />
                                                     </Col>
                                                 </Row>
-                                                <Link to="#" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
-                                                <h5 className="mb-0 fs-16"><Link to="#">Photography <span className="badge bg-success-subtle text-success">1452</span></Link></h5>
+                                                <Link to="#!" className="float-end"> View All <i className="ri-arrow-right-line align-bottom"></i></Link>
+                                                <h5 className="mb-0 fs-16"><Link to="#!" className="text-body">Photography <span className="badge bg-success-subtle text-success">1452</span></Link></h5>
                                             </CardBody>
                                         </Card>
                                     </SwiperSlide>

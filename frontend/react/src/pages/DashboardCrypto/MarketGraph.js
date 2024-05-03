@@ -10,12 +10,13 @@ const MarketGraph = () => {
 
     const [chartData, setchartData] = useState([]);
 
-    const marketgraphData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.DashboardCrypto,
         (marketData) => marketData.marketData
       );
+      
     // Inside your component
-    const marketData = useSelector(marketgraphData);
+    const  marketData = useSelector(selectDashboardData);
 
 
     useEffect(() => {
@@ -29,7 +30,6 @@ const MarketGraph = () => {
     useEffect(() => {
         dispatch(getMarketChartsData("all"));
     }, [dispatch]);
-
     return (
         <React.Fragment>
             <Row>
@@ -90,7 +90,7 @@ const MarketGraph = () => {
                         </CardBody>
                         <div className="card-body p-0 pb-3">
                             <div id="Market_chart" className="apex-charts" dir="ltr">
-                                <MarkerCharts series={chartData} dataColors='["--vz-success", "--vz-danger"]'/>
+                                <MarkerCharts series={chartData} dataColors='["--vz-success", "--vz-danger"]' />
                             </div>
                         </div>
                     </Card>

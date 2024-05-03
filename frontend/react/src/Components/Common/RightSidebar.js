@@ -3,9 +3,8 @@ import {
     Offcanvas,
     OffcanvasHeader,
     OffcanvasBody,
-    Collapse,
+    Collapse
 } from "reactstrap";
-import withRouter from './withRouter';
 
 //redux
 import {
@@ -22,7 +21,6 @@ import {
     changeSidebarVisibility
     // resetValue
 } from "../../slices/thunks";
-
 import { useSelector, useDispatch } from "react-redux";
 
 //import Constant
@@ -51,11 +49,10 @@ import img03 from "../../assets/images/sidebar/img-3.jpg";
 import img04 from "../../assets/images/sidebar/img-4.jpg";
 import { createSelector } from 'reselect';
 
-const RightSidebar = (props) => {
+const RightSidebar = () => {
     const dispatch = useDispatch();
 
     const [show, setShow] = useState(false);
-
     function tog_show() {
         setShow(!show);
         dispatch(changeSidebarTheme("gradient"));
@@ -67,8 +64,6 @@ const RightSidebar = (props) => {
             document.getElementById("sidebar-color-light").checked = false;
         }
     });
-
-
     const selectLayoutState = (state) => state.Layout;
     const selectLayoutProperties = createSelector(
         selectLayoutState,
@@ -85,8 +80,9 @@ const RightSidebar = (props) => {
             preloader: layout.preloader,
             sidebarVisibilitytype: layout.sidebarVisibilitytype,
         })
-    );
-    // Inside your component
+      );
+
+      // Inside your component
     const {
         layoutType,
         leftSidebarType,
@@ -112,6 +108,7 @@ const RightSidebar = (props) => {
     };
 
     const scrollFunction = () => {
+
         const element = document.getElementById("back-to-top");
         if (element) {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -127,7 +124,7 @@ const RightSidebar = (props) => {
         document.documentElement.scrollTop = 0;
     };
 
-    const pathName = props.router.location.pathname;
+    const pathName = window.location.pathname;
 
     useEffect(() => {
         const preloader = document.getElementById("preloader");
@@ -159,11 +156,11 @@ const RightSidebar = (props) => {
 
             <div>
                 <div className="customizer-setting d-none d-md-block">
-                    <div onClick={toggleLeftCanvas} className="btn-info rounded-pill shadow-lg btn btn-icon btn-lg p-2 rounded-pill">
+                    <div onClick={toggleLeftCanvas} className="btn-info rounded-pill shadow-lg btn btn-icon btn-lg p-2">
                         <i className='mdi mdi-spin mdi-cog-outline fs-22'></i>
                     </div>
                 </div>
-                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction='end'>
+                <Offcanvas isOpen={open} toggle={toggleLeftCanvas} direction="end" className="offcanvas-end border-0">
                     <OffcanvasHeader className="d-flex align-items-center bg-primary bg-gradient p-3 offcanvas-header-dark" toggle={toggleLeftCanvas}>
                         <span className="m-0 me-2 text-white">Theme Customizer</span>
                     </OffcanvasHeader>
@@ -457,7 +454,7 @@ const RightSidebar = (props) => {
                                         </div>
                                     </div>
                                 </div>}
-                                {(layoutType !== layoutTypes.TWOCOLUMN) && (
+                                {layoutType !== layoutTypes.TWOCOLUMN && (
                                     <React.Fragment>
                                         {(layoutType === layoutTypes.VERTICAL || layoutType === layoutTypes.HORIZONTAL) && (<div id="layout-width">
                                             <h6 className="mt-4 mb-0 fw-semibold text-uppercase">Layout Width</h6>
@@ -817,7 +814,7 @@ const RightSidebar = (props) => {
                                             </div>
                                         </div>
 
-                                        {layoutType !== "semibox" && (<div id="sidebar-view">
+                                        <div id="sidebar-view">
                                             <h6 className="mt-4 mb-0 fw-semibold text-uppercase">Sidebar View</h6>
                                             <p className="text-muted">Choose Default or Detached Sidebar view.</p>
 
@@ -897,7 +894,7 @@ const RightSidebar = (props) => {
                                                     <h5 className="fs-13 text-center mt-2">Detached</h5>
                                                 </div>
                                             </div>
-                                        </div>)}
+                                        </div>
                                     </React.Fragment>
                                 )}
 
@@ -983,7 +980,7 @@ const RightSidebar = (props) => {
                                                     <h5 className="fs-13 text-center mt-2">Dark</h5>
                                                 </div>
 
-                                                 <div className="col-4">
+                                                <div className="col-4">
                                                     <button
                                                         className={classnames(
                                                             "btn btn-link avatar-md w-100 p-0 overflow-hidden border ",
@@ -993,6 +990,7 @@ const RightSidebar = (props) => {
                                                         data-bs-target="#collapseBgGradient"
                                                         data-bs-toggle="collapse"
                                                         aria-controls="collapseBgGradient"
+                                                        checked={leftSidebarType === leftSidebarTypes.GRAD}
                                                         onClick={tog_show}
                                                     >
                                                         <span className="d-flex gap-1 h-100">
@@ -1092,6 +1090,7 @@ const RightSidebar = (props) => {
                                                 </div>
                                             </Collapse>
                                         </div>
+
                                         <div id="sidebar-img">
                                             <h6 className="mt-4 mb-0 fw-semibold text-uppercase">Sidebar Images</h6>
                                             <p className="text-muted">Choose a image of Sidebar.</p>
@@ -1191,7 +1190,6 @@ const RightSidebar = (props) => {
                                         </div>
                                     </React.Fragment>
                                 )}
-
                                 <div id="preloader-menu">
                                     <h6 className="mt-4 mb-0 fw-semibold text-uppercase">Preloader</h6>
                                     <p className="text-muted">Choose a preloader.</p>
@@ -1283,11 +1281,10 @@ const RightSidebar = (props) => {
                         </SimpleBar>
 
                     </OffcanvasBody>
-
                 </Offcanvas>
             </div>
         </React.Fragment>
     );
 };
 
-export default withRouter(RightSidebar);
+export default RightSidebar;

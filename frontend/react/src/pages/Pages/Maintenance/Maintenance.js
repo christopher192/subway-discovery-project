@@ -7,11 +7,11 @@ import ParticlesAuth from "../../../pages/AuthenticationInner/ParticlesAuth";
 import maintenanceImg from '../../../assets/images/maintenance.png';
 
 const Maintenance = () => {
-    document.title ="Maintenance | Velzon - React Admin & Dashboard Template";
+    document.title="Maintenance | Velzon - React Admin & Dashboard Template";
     return (
-        <React.Fragment>            
+        <React.Fragment>
             <ParticlesAuth>
-                <div className="auth-page-content mt-lg-5">
+                <div className="auth-page-content">
                     <Container>
                         <Row>
                             <Col lg={12}>

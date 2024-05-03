@@ -102,11 +102,10 @@ const ExploreNow = () => {
                                         </div>
                                     </div>
 
-                                    <UncontrolledCollapse toggler="#filter-collapse" defaultOpen>
+                                    <UncontrolledCollapse className="collaps show" id="collapseExample" toggler="#filter-collapse" defaultOpen>
                                         <Row className="row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 mt-3 g-3">
                                             <Col>
                                                 <h6 className="text-uppercase fs-12 mb-2">Search</h6>
-
                                                 <input
                                                     type="text"
                                                     className="form-control"
@@ -232,7 +231,7 @@ const ExploreNow = () => {
                                     <div className="bg-overlay"></div>
                                     <div className="place-bid-btn">
 
-                                        <Link to="#" className="btn btn-success">
+                                        <Link to="#!" className="btn btn-success">
                                             <i className="ri-auction-fill align-bottom me-1"></i> Place
                                             Bid
                                         </Link>

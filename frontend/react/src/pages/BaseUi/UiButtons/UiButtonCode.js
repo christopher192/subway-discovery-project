@@ -519,19 +519,19 @@ const ghostButtonsCode =
     `
 <!-- Ghost Buttons -->
 
-<Button color="primary" outline className="btn btn-ghost-primary">Primary</Button>
+<Button color="primary" outline className="btn btn-ghost-primary waves-effect waves-light">Primary</Button>
 
-<Button color="secondary" outline className="btn btn-ghost-secondary">Secondary</Button>
+<Button color="secondary" outline className="btn btn-ghost-secondary waves-effect waves-light">Secondary</Button>
 
-<Button color="success" outline className="btn btn-ghost-success">Success</Button>
+<Button color="success" outline className="btn btn-ghost-success waves-effect waves-light">Success</Button>
 
-<Button color="info" outline className="btn btn-ghost-info">Info</Button>
+<Button color="info" outline className="btn btn-ghost-info waves-effect waves-light">Info</Button>
 
-<Button color="warning" outline className="btn btn-ghost-warning">Warning</Button>
+<Button color="warning" outline className="btn btn-ghost-warning waves-effect waves-light">Warning</Button>
 
-<Button color="danger" outline className="btn btn-ghost-danger">Danger</Button>
+<Button color="danger" outline className="btn btn-ghost-danger waves-effect waves-light">Danger</Button>
 
-<Button color="dark" outline className="btn btn-ghost-dark">Dark</Button>
+<Button color="dark" outline className="btn btn-ghost-dark waves-effect waves-light">Dark</Button>
 `;
 
 const GhostButtonsExample = () => (
@@ -542,8 +542,7 @@ const GhostButtonsExample = () => (
     />
 );
 
-
-// Ghost Buttons
+// Loading Buttons
 const loadingbuttonsCode =
     `
 <!-- Load More Buttons -->
@@ -626,6 +625,7 @@ const LoadingbuttonsExample = () => (
         plugins={["line-numbers"]}
     />
 );
+
 
 // Border Buttons
 const borderButtonsCode =
@@ -726,82 +726,108 @@ const CustomToggleButtonsExample = () => (
     />
 );
 
-const baseclassButtonsCode =
+// focusring button
+
+const FocusButtonCode =
 `
-<button type="button" className="btn">Base class</button>
-`;
-
-const BaseClassExample = () => (
-    <PrismCode
-        code={baseclassButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
-);
-
-const customsizing =
-`
-<button type="button" className="btn btn-primary" style={{ '--tb-btn-padding-y': '.25rem', '--tb-btn-padding-x': '.5rem', '--tb-btn-font-size': '.75rem', }}>
-    Custom button
-</button>
-`;
-
-const CustomSizeExample = () => (
-    <PrismCode
-        code={customsizing}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
-);
-
-const focusringcode =
-`
-<Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
-    Focus ring
+<Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2"> 
+    Focus ring 
 </Link>
-
-<Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style={{ '--vz-focus-ring-color': 'rgba(118, 93, 255, .25)', }}>
+                                        
+<Link href="#!" className="d-inline-flex focus-ring-primary focus-ring py-1 px-2 text-decoration-none border rounded-2">
     Custom focus ring
 </Link>
 
-<Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style={{ '--vz-focus-ring-x': '10px', '--vz-focus-ring-y': '10px', '--vz-focus-ring-blur': '4px', }}>
+<Link href="#!" className="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
     Blurry offset focus ring
 </Link>
 `;
-
-const FocusRingExample = () => (
+const FocusButtonExample = () => (
     <PrismCode
-        code={focusringcode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
-);
-
-const focusringutility =
-`
-<p><Link href="#!" className="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Primary focus</Link></p>
-
-<p><Link href="#!" className="d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2">Secondary focus</Link></p>
-
-<p><Link href="#!" className="d-inline-flex focus-ring focus-ring-success py-1 px-2 text-decoration-none border rounded-2">Success focus</Link></p>
-
-<p className="mb-lg-0"><Link href="#!" className="d-inline-flex focus-ring focus-ring-danger py-1 px-2 text-decoration-none border rounded-2">Danger focus</Link></p>
-
-<p><Link href="#!" className="d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2">Warning focus</Link></p>
-
-<p><Link href="#!" className="d-inline-flex focus-ring focus-ring-info py-1 px-2 text-decoration-none border rounded-2">Info focus</Link></p>
-
-<p><Link href="#!" className="d-inline-flex focus-ring focus-ring-light py-1 px-2 text-decoration-none border rounded-2">Light focus</Link></p>
-
-<p className="mb-0"><Link href="#!" className="d-inline-flex focus-ring focus-ring-dark py-1 px-2 text-decoration-none border rounded-2">Dark focus</Link></p>
-`
-const FocusRingUtilityExample = () => (
-    <PrismCode
-        code={focusringutility}
+        code={FocusButtonCode}
         language={("js", "css", "html")}
         plugins={["line-numbers"]}
     />
 );
 
 
-export { DefaultButtonsExample, OutlineButtonsExample, RoundedButtonsExample, SoftButtonsExample, GradientButtonsExample, AnimationButtonsExample, LabelButtonsExample, SizeButtonsExample, WidthButtonsExample, TagButtonsExample, GridButtonsExample, CheckButtonsExample, GroupButtonsExample, IconButtonsExample, ToolbarButtonsExample, GroupsizingButtonsExample, VerticalButtonsExample, GhostButtonsExample, LoadingbuttonsExample, BorderButtonsExample, CustomToggleButtonsExample, BaseClassExample, CustomSizeExample, FocusRingExample, FocusRingUtilityExample };
+// focus utilities
+const FocusUtilitiesCode =
+`
+<Link href="#!" className="d-inline-flex focus-ring focus-ring-primary py-1 px-2 text-decoration-none border rounded-2">Primary
+     focus</Link><
+ <Link href="#!" className="d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2">Secondary
+     focus</Link>
+ <Link href="#!" className="d-inline-flex focus-ring focus-ring-success py-1 px-2 text-decoration-none border rounded-2">Success
+     focus</Link>
+ <Link href="#!" className="d-inline-flex focus-ring focus-ring-danger py-1 px-2 text-decoration-none border rounded-2">Danger
+     focus</Link>
+ <Link href="#!" className="d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2">Warning
+    focus</Link>
+<Link href="#!" className="d-inline-flex focus-ring focus-ring-info py-1 px-2 text-decoration-none border rounded-2">Info
+    focus</Link>
+<Link href="#!" className="d-inline-flex focus-ring focus-ring-light py-1 px-2 text-decoration-none border rounded-2">Light
+    focus</Link>
+<Link href="#!" className="d-inline-flex focus-ring focus-ring-dark py-1 px-2 text-decoration-none border rounded-2">Dark
+    focus</Link>
+`;
+
+const FocusUtilitiesExample = () => (
+    <PrismCode
+        code={FocusUtilitiesCode}
+        language={("js", "css", "html")}
+        plugins={["line-numbers"]}
+    />
+);
+// Base class
+const BaseClasscode =
+`
+<div className="card-header align-items-center d-flex">
+<h4 className="card-title mb-0 flex-grow-1">Base class</h4>
+<div className="flex-shrink-0">
+<div className="form-check form-switch form-switch-right form-switch-md">
+<label for="base-class" className="form-label text-muted">Show Code</label>
+<input className="form-check-input code-switcher" type="checkbox" id="base-class" />
+</div>
+</div>
+</div>
+<div className="card-body">
+<p className="text-muted">
+Bootstrap has a base <code>.btn</code> class that sets up basic styles such as padding and content alignment. By default, <code>.btn</code> controls have a transparent border and background color, and lack any explicit focus and hover styles.
+</p>
+<div className="live-preview">
+<div className="d-flex flex-wrap gap-2">
+<button type="button" className="btn">Base class</button>
+</div>
+</div>
+</div>
+`;
+const BaseClassExample = () => (
+    <PrismCode
+        code={BaseClasscode}
+        language={("js", "css", "html")}
+        plugins={["line-numbers"]}
+    />
+);
+
+const CustomSizingCode =
+` <p className="text-muted">
+You can even roll your own custom sizing with CSS variables:
+</p>
+<div className="live-preview">
+    <button type="button" className="btn btn-primary" style={{'--tb-btn-padding-y': '.25rem',
+'--tb-btn-padding-x': '.5rem',
+'--tb-btn-font-size': '.75rem',}}>
+        Custom button
+    </button>
+</div>`
+
+const CustomSizingExample = () => (
+    <PrismCode
+    code={CustomSizingCode}
+    language={("js", "css", "html")}
+    plugins={["line-numbers"]}
+/>
+)
+
+export {BaseClassExample, CustomSizingExample, FocusUtilitiesExample,FocusButtonExample,DefaultButtonsExample, OutlineButtonsExample, RoundedButtonsExample, SoftButtonsExample, GradientButtonsExample, AnimationButtonsExample, LabelButtonsExample, SizeButtonsExample, WidthButtonsExample, TagButtonsExample, GridButtonsExample, CheckButtonsExample, GroupButtonsExample, IconButtonsExample, ToolbarButtonsExample, GroupsizingButtonsExample, VerticalButtonsExample, GhostButtonsExample, LoadingbuttonsExample, BorderButtonsExample, CustomToggleButtonsExample };

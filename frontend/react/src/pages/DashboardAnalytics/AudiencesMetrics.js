@@ -7,17 +7,17 @@ import { getAudiencesMetricsChartsData } from "../../slices/thunks";
 import { createSelector } from 'reselect';
 
 const AudiencesMetrics = () => {
-
     const dispatch = useDispatch();
 
     const [chartData, setchartData] = useState([]);
 
-    const audiencesData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.DashboardAnalytics,
         (audiencesMetricsData) => audiencesMetricsData.audiencesMetricsData
       );
+      
     // Inside your component
-    const audiencesMetricsData = useSelector(audiencesData);
+    const  audiencesMetricsData   = useSelector(selectDashboardData);
 
     useEffect(() => {
         setchartData(audiencesMetricsData);
@@ -30,8 +30,6 @@ const AudiencesMetrics = () => {
     useEffect(() => {
         dispatch(getAudiencesMetricsChartsData("all"));
     }, [dispatch]);
-
-
     return (
         <React.Fragment>
             <Col xl={6}>
@@ -64,7 +62,7 @@ const AudiencesMetrics = () => {
                                             duration={3}
                                         />
                                     </span>
-                                        <span className="text-success ms-1 fs-12">49%<i className="ri-arrow-right-up-line ms-1 align-middle"></i></span>
+                                        <span className="text-success ms-1 fs-12"> 49%<i className="ri-arrow-right-up-line ms-1 align-middle"></i></span>
                                     </h5>
                                     <p className="text-muted mb-0">Avg. Session</p>
                                 </div>
@@ -79,7 +77,7 @@ const AudiencesMetrics = () => {
                                             separator=","
                                         />
                                     </span>
-                                        <span className="text-success ms-1 fs-12">60%<i className="ri-arrow-right-up-line ms-1 align-middle"></i></span>
+                                        <span className="text-success ms-1 fs-12"> 60%<i className="ri-arrow-right-up-line ms-1 align-middle"></i></span>
                                     </h5>
                                     <p className="text-muted mb-0">Conversion Rate</p>
                                 </div>
@@ -99,7 +97,7 @@ const AudiencesMetrics = () => {
                                                 duration={3}
                                             />
                                         </span>sec
-                                        <span className="text-success ms-1 fs-12">37%<i className="ri-arrow-right-up-line ms-1 align-middle"></i></span>
+                                        <span className="text-success ms-1 fs-12"> 37%<i className="ri-arrow-right-up-line ms-1 align-middle"></i></span>
                                     </h5>
                                     <p className="text-muted mb-0">Avg. Session Duration</p>
                                 </div>
@@ -108,7 +106,9 @@ const AudiencesMetrics = () => {
                     </CardHeader>
                     <CardBody className="p-0 pb-2">
                         <div>
-                            <AudiencesCharts series={chartData} dataColors='["--vz-success", "--vz-light"]' />
+                            <div id="audiences_metrics_charts" className="apex-charts" dir="ltr">
+                                <AudiencesCharts series={chartData} dataColors='["--vz-success", "--vz-light"]' />
+                            </div>
                         </div>
                     </CardBody>
                 </Card>

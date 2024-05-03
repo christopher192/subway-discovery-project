@@ -302,7 +302,7 @@ const [modal_togFirst, setmodal_togFirst] = useState(false);
         <lord-icon
             src="https://cdn.lordicon.com/tdrtiskw.json"
             trigger="loop"
-            colors="primary:#f7b84b,secondary:#405189"
+            colors="primary:#e8bc52,secondary:#6691e7"
             style={{ width: "130px", height: "130px" }}>
         </lord-icon>
         <div className="mt-4 pt-4">
@@ -337,7 +337,7 @@ const [modal_togFirst, setmodal_togFirst] = useState(false);
         <lord-icon
             src="https://cdn.lordicon.com/zpxybbhl.json"
             trigger="loop"
-            colors="primary:#405189,secondary:#0ab39c"
+            colors="primary:#6691e7,secondary:#13c56b"
             style={{ width: "150px", height: "150px" }}>
         </lord-icon>
         <div className="mt-4 pt-3">

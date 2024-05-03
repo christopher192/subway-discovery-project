@@ -1,10 +1,10 @@
-    import React from 'react'
-    import UiContent from '../../../Components/Common/UiContent';
-    import { Card, CardBody, Col, Container, Row } from 'reactstrap';
-    import BreadCrumb from '../../../Components/Common/BreadCrumb';
-    import { Link } from 'react-router-dom';
-    import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
-    import { ColorExample, DefaultLinkExample, OffsetExample, OpacityExample, OpacityHoverExample, UtilitiesExample, UtilityOpacityExample } from './UiLinkCode';
+import React from 'react'
+import UiContent from '../../../Components/Common/UiContent';
+import { Card, CardBody, Col, Container, Row } from 'reactstrap';
+import BreadCrumb from '../../../Components/Common/BreadCrumb';
+import { Link } from 'react-router-dom';
+import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
+import { ColorExample, DefaultLinkExample, OffsetExample, OpacityExample, OpacityHoverExample, UtilitiesExample, UtilityOpacityExample } from './UiLinkCode';
 
 const UiLink = () => {
     document.title = "Link | Velzon - React Admin & Dashboard Template";
@@ -13,7 +13,7 @@ const UiLink = () => {
             <UiContent />
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="Colored Links" pageTitle="Base UI" />
+                    <BreadCrumb title="Colored Link" pageTitle="Base UI" />
                     <Row>
                         <Col lg={6}>
                             <Card>
@@ -28,7 +28,7 @@ const UiLink = () => {
                                         <p><Link to="#" className="link-warning">Warning link</Link></p>
                                         <p><Link to="#" className="link-info">Info link</Link></p>
                                         <p><Link to="#" className="link-light">Light link</Link></p>
-                                        <p><Link to="#" className="text-body">Dark link</Link></p>
+                                        <p><Link to="#" className="text-dark">Dark link</Link></p>
                                         <p><Link to="#" className="link-body-emphasis mb-0">Emphasis link</Link></p>
                                     </div>
                                     <div className="d-none code-view">
@@ -55,7 +55,7 @@ const UiLink = () => {
                                         <p><Link to="#" className="link-warning link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Warning link</Link></p>
                                         <p><Link to="#" className="link-info link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Info link</Link></p>
                                         <p><Link to="#" className="link-light link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Light link</Link></p>
-                                        <p><Link to="#" className="text-body link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Dark link</Link></p>
+                                        <p><Link to="#" className="text-dark link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-100-hover">Dark link</Link></p>
                                         <p><Link to="#" className="link-body-emphasis link-offset-2 text-decoration-underline link-underline-opacity-25 link-underline-opacity-75-hover mb-0">Emphasis link</Link></p>
                                     </div>
                                     <div className="d-none code-view">

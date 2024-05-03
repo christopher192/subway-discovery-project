@@ -11,7 +11,7 @@ const UpcomingActivities = () => {
                     <CardHeader className="align-items-center d-flex">
                         <h4 className="card-title mb-0 flex-grow-1">Upcoming Activities</h4>
                         <div className="flex-shrink-0">
-                            <UncontrolledDropdown className="card-header-dropdown" >
+                            <UncontrolledDropdown className="card-header-dropdown" direction="start">
                                 <DropdownToggle className="text-reset dropdown-btn" tag="a" role="button">
                                     <span className="text-muted fs-18"><i className="mdi mdi-dots-vertical"></i></span>
                                 </DropdownToggle>
@@ -36,7 +36,7 @@ const UpcomingActivities = () => {
                                             </div>
                                         </div>
                                         <div className="col">
-                                            <h5 className="text-muted mt-0 mb-1 fs-13">{item.time}</h5>
+                                            <h5 className="text-muted mt-0 mb-1 fs-12 fw-semibold">{item.time}</h5>
                                             <Link to="#" className="text-reset fs-14 mb-0">{item.caption}</Link>
                                         </div>
                                         <div className="col-sm-auto">

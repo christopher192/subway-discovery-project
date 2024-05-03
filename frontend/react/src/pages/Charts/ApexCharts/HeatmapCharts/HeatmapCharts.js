@@ -97,7 +97,7 @@ const BasicHeatmap = ({ dataColors }) => {
         dataLabels: {
             enabled: false
         },
-        colors: [chartHeatMapBasicColors[0]],
+        colors: chartHeatMapBasicColors,
         title: {
             text: 'HeatMap Chart (Single color)',
             style: {
@@ -239,7 +239,7 @@ const MultipleHeatmap = ({ dataColors }) => {
         dataLabels: {
             enabled: false
         },
-        colors: [chartHeatMapMultipleColors[0], chartHeatMapMultipleColors[1], chartHeatMapMultipleColors[2], chartHeatMapMultipleColors[3], chartHeatMapMultipleColors[4], chartHeatMapMultipleColors[5], chartHeatMapMultipleColors[6], chartHeatMapMultipleColors[7]],
+        colors: chartHeatMapMultipleColors,
         xaxis: {
             type: 'category',
             categories: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30']

@@ -9,10 +9,8 @@ import PreviewCardHeader from '../../../Components/Common/PreviewCardHeader';
 
 import { PopoversExample, TooltipsExample, BreadcrumbExample, PaginationExample, SpinnersExample } from './UiGeneralCode';
 import { Link } from 'react-router-dom';
-
-
 const UiGeneral = () => {
-    document.title="General | Velzon - React Admin & Dashboard Template";
+document.title="General | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <UiContent />
@@ -294,7 +292,7 @@ const UiGeneral = () => {
                                                     <p className="text-muted">Use <code>pagination-separated</code> class to pagination class to set custom separated pagination.</p>
 
                                                     {/* <!-- Custom Separated Pagination Large --> */}
-                                                    <Pagination size='lg' className="pagination-lg pagination-separated">
+                                                    <Pagination size='lg' className=" pagination-lg pagination-separated">
                                                         <PaginationItem disabled> <PaginationLink to="#"> ← </PaginationLink> </PaginationItem>
                                                         <PaginationItem> <PaginationLink to="#"> 1 </PaginationLink> </PaginationItem>
                                                         <PaginationItem active> <PaginationLink to="#"> 2 </PaginationLink> </PaginationItem>

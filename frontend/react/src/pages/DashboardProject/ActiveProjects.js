@@ -52,7 +52,7 @@ const ActiveProjects = () => {
                                                 </div>))}
                                             </div>
                                         </td>
-                                        <td><span className={"badge bg-" + item.badgeClass+"-subtle text-"+item.badgeClass+""}>{item.badge}</span></td>
+                                        <td><span className={"badge bg-" + item.badgeClass+"-subtle text-"+item.badgeClass}>{item.badge}</span></td>
                                         <td className="text-muted">{item.dueDate}</td>
                                     </tr>))}
                                 </tbody>

@@ -1,5 +1,8 @@
 // Variables
 
+//Google Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
 //
 // custom-variables
 //
@@ -10,8 +13,8 @@ $variable-prefix:             vz-; // Deprecated in v5.2.0 for the shorter `$pre
 $prefix:                      $variable-prefix;
 
 // Font Family
-$font-family-primary:                             'Poppins', sans-serif;
-$font-family-secondary:                           'hkgrotesk', sans-serif;
+$font-family-primary:                             'Rubik', sans-serif;
+$font-family-secondary:                           'Montserrat', sans-serif;
 
 //custom variables managed by
 //light mode
@@ -23,6 +26,7 @@ $sidebar-img:                                     true;
 $topbar-dark-mode:                                true;
 $sidebar-dark-mode:                               true;
 $sidebar-gradient-dark-mode:                      false;
+
 
 // Variables
 //
@@ -40,7 +44,7 @@ $gray-400: #ced4da;
 $gray-500: #adb5bd;
 $gray-600: #878a99;
 $gray-700: #495057;
-$gray-800: #343a40;
+$gray-800: #363d48;
 $gray-900: #212529;
 $black:    #000;
 
@@ -61,16 +65,16 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:       #3577f1;
+$blue:       #6691e7;
 $indigo:     #405189;
-$purple:     #6559cc;
+$purple:     #865ce2;
 $pink:       #f672a7;
-$red:        #f06548;
+$red:        #ed5e5e;
 $orange:     #f1963b;
-$yellow:     #f7b84b;
-$green:      #0ab39c;
+$yellow:     #e8bc52;
+$green:      #13c56b;
 $teal:       #02a8b5;
-$cyan:       #299cdb;
+$cyan:       #50c3e6;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -199,7 +203,6 @@ $cyan-600: shade-color($cyan, 20%);
 $cyan-700: shade-color($cyan, 40%);
 $cyan-800: shade-color($cyan, 60%);
 $cyan-900: shade-color($cyan, 80%);
-
 $blues: (
   "blue-100": $blue-100,
   "blue-200": $blue-200,
@@ -322,14 +325,15 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $indigo;
-$secondary:     $blue;
+$primary:       $blue;
+$secondary:     $purple;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
-$dark:          $gray-900;
+$dark:          $gray-800;
+
 
 
 
@@ -458,7 +462,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   #f3f3f9;
+$body-bg:                   #f3f6f9;
 $body-color:                $gray-900;
 $body-text-align:           null;
 
@@ -637,15 +641,15 @@ $font-family-code:            var(--#{$prefix}font-monospace);
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null;
-$font-size-base:              0.8125rem; // Assumes the browser default, typically `16px`
+$font-size-base:              0.825rem; // Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875;
 $font-size-lg:                $font-size-base * 1.25;
 
 $font-weight-lighter:         lighter;
 $font-weight-light:           300;
 $font-weight-normal:          400;
-$font-weight-medium:          500;
-$font-weight-semibold:        600;
+$font-weight-medium:          400;
+$font-weight-semibold:        500;
 $font-weight-bold:            700;
 $font-weight-bolder:          bolder;
 
@@ -676,9 +680,9 @@ $font-sizes: (
 
 // scss-docs-start headings-variables
 $headings-margin-bottom:      $spacer * .5;
-$headings-font-family:        $font-family-primary;
+$headings-font-family:        $font-family-secondary;
 $headings-font-style:         null;
-$headings-font-weight:        500;
+$headings-font-weight:        600;
 $headings-line-height:        1.2;
 $headings-color:              $gray-700;
 // scss-docs-end headings-variables
@@ -971,7 +975,6 @@ $input-height-sm:                       add($input-line-height * 1em, add($input
 $input-height-lg:                       add($input-line-height * 1em, add($input-padding-y-lg * 2, $input-height-border, false));
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-
 $form-color-width:                      3rem;
 // scss-docs-end form-input-variables
 
@@ -1144,24 +1147,25 @@ $form-invalid-border-color:         $form-feedback-invalid-color;
 // scss-docs-end form-validation-colors
 
 // scss-docs-start form-validation-states
-$form-validation-states: (
-  "valid": (
-    "color": var(--#{$prefix}form-valid-color),
-    "icon": $form-feedback-icon-valid,
-    "tooltip-color": #fff,
-    "tooltip-bg-color": var(--#{$prefix}success),
-    "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity),
-    // "border-color": var(--#{$prefix}form-valid-border-color),
-  ),
-  "invalid": (
-    "color": var(--#{$prefix}form-invalid-color),
-    "icon": $form-feedback-icon-invalid,
-    "tooltip-color": #fff,
-    "tooltip-bg-color": var(--#{$prefix}danger),
-    "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
-    // "border-color": var(--#{$prefix}form-invalid-border-color),
-  )
-);
+
+  $form-validation-states: (
+    "valid": (
+      "color": var(--#{$prefix}form-valid-color),
+      "icon": $form-feedback-icon-valid,
+      "tooltip-color": #fff,
+      "tooltip-bg-color": var(--#{$prefix}success),
+      "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity),
+      "border-color": var(--#{$prefix}form-valid-border-color),
+    ),
+    "invalid": (
+      "color": var(--#{$prefix}form-invalid-color),
+      "icon": $form-feedback-icon-invalid,
+      "tooltip-color": #fff,
+      "tooltip-bg-color": var(--#{$prefix}danger),
+      "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
+      "border-color": var(--#{$prefix}form-invalid-border-color),
+    )
+  );
 // scss-docs-end form-validation-states
 
 // Z-index master list
@@ -1498,7 +1502,6 @@ $popover-arrow-height:              .5rem;
 $popover-arrow-color:               $popover-bg;
 $popover-arrow-outer-color:         var(--#{$prefix}border-color-translucent);
 // fusv-enable
-
 
 // Toasts
 

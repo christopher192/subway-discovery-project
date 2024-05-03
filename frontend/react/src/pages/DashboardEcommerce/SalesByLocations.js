@@ -23,9 +23,9 @@ const SalesByLocations = () => {
                         <div
                             data-colors='["--vz-light", "--vz-success", "--vz-primary"]'
                             style={{ height: "269px" }} dir="ltr">
-                             <div id="world_map_line_markers" className="custom-vector-map">
-                                        <VectorMap {...world} />
-                                    </div>
+                           <div id="world_map_line_markers" className="custom-vector-map">
+                                <VectorMap {...world} />
+                            </div>
                         </div>
 
                         <div className="px-2 py-2 mt-1">

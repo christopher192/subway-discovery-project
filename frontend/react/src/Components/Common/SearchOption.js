@@ -79,9 +79,9 @@ const SearchOption = () => {
                         </div>
 
                         <div className="dropdown-item bg-transparent text-wrap">
-                            <Link to="/" className="btn btn-soft-secondary btn-sm rounded-pill">how to setup <i
+                            <Link to="/" className="btn btn-soft-secondary btn-sm btn-rounded">how to setup <i
                                 className="mdi mdi-magnify ms-1"></i></Link>
-                            <Link to="/" className="btn btn-soft-secondary btn-sm rounded-pill">buttons <i
+                            <Link to="/" className="btn btn-soft-secondary btn-sm btn-rounded">buttons <i
                                 className="mdi mdi-magnify ms-1"></i></Link>
                         </div>
 
@@ -111,6 +111,7 @@ const SearchOption = () => {
                         <div className="dropdown-header mt-2">
                             <h6 className="text-overflow text-muted mb-2 text-uppercase">Members</h6>
                         </div>
+
 
                         <div className="notification-list">
 

@@ -19,9 +19,9 @@ const TicketDescription = () => {
             <Col xxl={9}>
                 <Card>
                     <CardBody className="p-4">
-                        <h6 className="fw-semibold text-uppercase mb-3">Ticket Discripation</h6>
+                        <h6 className="text-uppercase mb-3">Ticket Discripation</h6>
                         <p className="text-muted">It would also help to know what the errors are - it could be something simple like a message saying delivery is not available which could be a problem with your shipping templates. Too much or too little spacing, as in the example below, can make things unpleasant for the reader. The goal is to make your text as comfortable to read as possible. On the note of consistency, color consistency is a MUST. If you’re not trying to create crazy contrast in your design, then a great idea would be for you to use a color palette throughout your entire design. It will subconsciously interest viewers and also is very pleasing to look at. <Link to="#" className="link-secondary text-decoration-underline">Example</Link></p>
-                        <h6 className="fw-semibold text-uppercase mb-3">Create an Excellent UI for a Dashboard</h6>
+                        <h6 className="text-uppercase mb-3">Create an Excellent UI for a Dashboard</h6>
                         <ul className="text-muted vstack gap-2 mb-4">
                             <li>Pick a Dashboard Type</li>
                             <li>Categorize information when needed</li>
@@ -30,7 +30,7 @@ const TicketDescription = () => {
                             <li>On using the right graphs</li>
                         </ul>
                         <div className="mt-4">
-                            <h6 className="fw-semibold text-uppercase mb-3">Here is the code you've requsted</h6>
+                            <h6 className="text-uppercase mb-3">Here is the code you've requsted</h6>
                             <div>
                                 <pre className="language-markup rounded-2"><code><TicketCodeExample /></code></pre>
                             </div>

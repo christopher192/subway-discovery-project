@@ -32,11 +32,11 @@ import { productsData } from "../../../common/data";
 import { getProducts as onGetProducts, deleteProducts } from "../../../slices/thunks";
 import { isEmpty } from "lodash";
 import Select from "react-select";
+import { toast, ToastContainer } from 'react-toastify';
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
 import { createSelector } from "reselect";
 
 const SingleOptions = [
@@ -50,12 +50,14 @@ const SingleOptions = [
 const EcommerceProducts = (props) => {
   const dispatch = useDispatch();
 
-  const selectecomproductData = createSelector(
+  const selectDashboardData = createSelector(
     (state) => state.Ecommerce,
     (products) => products.products
   );
+  
 // Inside your component
-const products = useSelector(selectecomproductData);
+const products  = useSelector(selectDashboardData);
+
 
   const [productList, setProductList] = useState([]);
   const [activeTab, setActiveTab] = useState("1");
@@ -91,20 +93,9 @@ const products = useSelector(selectecomproductData);
     }
   };
 
-  const [cate, setCate] = useState("all");
-
-  const categories = (category) => {
-    let filteredProducts = products;
-    if (category !== "all") {
-      filteredProducts = products.filter((product) => product.category === category);
-    }
-    setProductList(filteredProducts);
-    setCate(category);
-  };
-
   useEffect(() => {
-    onUpdate([0, 2000]);
-  }, []);
+    onUpdate([0, 2000])
+  }, [])
 
   const onUpdate = (value) => {
     setProductList(
@@ -114,6 +105,16 @@ const products = useSelector(selectecomproductData);
         document.getElementById("maxCost").value = value[1],
       )
     );
+  };
+  const [cate, setCate] = useState("all");
+
+  const categories = (category) => {
+    let filteredProducts = products;
+    if (category !== "all") {
+      filteredProducts = products.filter((product) => product.category === category);
+    }
+    setProductList(filteredProducts);
+    setCate(category);
   };
 
   const [ratingvalues, setRatingvalues] = useState([]);
@@ -158,17 +159,15 @@ const products = useSelector(selectecomproductData);
     setDeleteModal(true);
   };
 
-  const handleDeleteProduct = () => {
+  const handleDeleteOrder = () => {
     if (product) {
       dispatch(deleteProducts(product._id));
       setDeleteModal(false);
     }
   };
 
-
-  const [dele, setDele] = useState(0);
-
   // Displat Delete Button
+  const [dele, setDele] = useState(0);
   const displayDelete = () => {
     const ele = document.querySelectorAll(".productCheckBox:checked");
     const del = document.getElementById("selection-element");
@@ -323,7 +322,7 @@ const products = useSelector(selectecomproductData);
 
       <DeleteModal
         show={deleteModal}
-        onDeleteClick={handleDeleteProduct}
+        onDeleteClick={handleDeleteOrder}
         onCloseClick={() => setDeleteModal(false)}
       />
       <DeleteModal
@@ -480,7 +479,6 @@ const products = useSelector(selectecomproductData);
                   </h2>
                   <UncontrolledCollapse
                     toggler="#flush-headingBrands"
-                    defaultOpen
                   >
                     <div
                       id="flush-collapseBrands"
@@ -827,12 +825,12 @@ const products = useSelector(selectecomproductData);
             </Card>
           </Col>
 
-          <Col xl={9} lg={8}>
+          <div className="col-xl-9 col-lg-8">
             <div>
-              <Card>
+              <div className="card">
                 <div className="card-header border-0">
-                  <Row className=" align-items-center">
-                    <Col>
+                  <div className="row align-items-center">
+                    <div className="col">
                       <Nav
                         className="nav-tabs-custom card-header-tabs border-bottom-0"
                         role="tablist"
@@ -885,8 +883,8 @@ const products = useSelector(selectecomproductData);
                             Draft
                           </NavLink>
                         </NavItem>
-                        </Nav>
-                    </Col>
+                      </Nav>
+                    </div>
                     <div className="col-auto">
                       <div id="selection-element">
                         <div className="my-n1 d-flex align-items-center text-muted">
@@ -906,7 +904,7 @@ const products = useSelector(selectecomproductData);
                         </div>
                       </div>
                     </div>
-                  </Row>
+                  </div>
                 </div>
                 <div className="card-body pt-0">
                   {productList && productList.length > 0 ? (
@@ -939,7 +937,6 @@ const products = useSelector(selectecomproductData);
                     </div>
                   )}
                 </div>
-
                 {/* <div className="card-body">
                   <TabContent className="text-muted">
                     <TabPane>
@@ -947,13 +944,14 @@ const products = useSelector(selectecomproductData);
                         id="table-product-list-all"
                         className="table-card gridjs-border-none pb-2"
                       >
+
                       </div>
                     </TabPane>
                   </TabContent>
                 </div> */}
-              </Card>
+              </div>
             </div>
-          </Col>
+          </div>
         </Row>
       </Container>
     </div>

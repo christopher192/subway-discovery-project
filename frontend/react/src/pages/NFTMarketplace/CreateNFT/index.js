@@ -41,7 +41,7 @@ const CreateNFT = () => {
                                                     allowMultiple={true}
                                                     maxFiles={3}
                                                     name="filepond"
-                                                    className="filepond filepond-input-multiple mb-0"
+                                                    className="filepond filepond-input-multiple"
                                                 />
                                             </Col>
                                             <Col lg={12}>
@@ -49,8 +49,8 @@ const CreateNFT = () => {
                                                 <input type="text" className="form-control" id="productName" placeholder="Enter product name" />
                                             </Col>
                                             <Col lg={12}>
-                                                <label htmlFor="discription" className="form-label">Description</label>
-                                                <textarea className="form-control" id="discription" rows="3" placeholder="Enter description"></textarea>
+                                                <label htmlFor="discription" className="form-label">Discription</label>
+                                                <textarea className="form-control" id="discription" rows="3" placeholder="Enter discription"></textarea>
                                             </Col>
                                             <Col lg={12}>
                                                 <label htmlFor="externalLink" className="form-label">External link</label>

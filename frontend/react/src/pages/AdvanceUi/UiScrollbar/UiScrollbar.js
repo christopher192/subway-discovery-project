@@ -15,10 +15,8 @@ import avatar4 from "../../../assets/images/users/avatar-4.jpg";
 import avatar5 from "../../../assets/images/users/avatar-5.jpg";
 import avatar8 from "../../../assets/images/users/avatar-8.jpg";
 
-
 const UiScrollbar = () => {
-
-document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
+    document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
     return (
         <React.Fragment>
             <div className="page-content">
@@ -36,7 +34,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                     <p className="text-muted">Use <code>SimpleBar</code> attribute and add <code>max-height: **px</code> to set default scrollbar.</p>
 
                                     <div className="mx-n3">
-                                        <SimpleBar style={{ maxHeight: "220px" }}  className="px-3">
+                                        <SimpleBar style={{ maxHeight: "220px" }} className="px-3">
                                             <p>If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing</p>
                                             <p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.</p>
                                             <p>The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
@@ -106,11 +104,11 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
 
                                         <CardBody>
                                             <p className="text-muted">Use <code>data-simplebar-track="primary"</code> attribute to set primary color simplebar track.</p>
-                                            
-                                            <div className="mx-n3">                                                
+
+                                            <div className="mx-n3">
                                                 <SimpleBar autoHide={false} className="simplebar-track-primary" style={{ maxHeight: "275px" }}>
-                                                    
-                                                    <Link to="#" className="text-reset notification-item d-block dropdown-item">
+
+                                                    <Link to="#!" className="text-reset notification-item d-block dropdown-item">
                                                         <div className="d-flex">
                                                             <div className="flex-shrink-0 avatar-xs me-3">
                                                                 <span className="avatar-title bg-info-subtle text-info rounded-circle fs-16">
@@ -129,13 +127,13 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                         </div>
                                                     </Link>
 
-                                                    <Link to="#" className="text-reset notification-item d-block dropdown-item active">
+                                                    <Link to="#!" className="text-reset notification-item d-block dropdown-item active">
                                                         <div className="d-flex">
                                                             <div className="flex-shrink-0 avatar-xs me-3">
                                                                 <img src={avatar2} className="rounded-circle img-fluid" alt="user-pic" />
                                                             </div>
                                                             <div className="flex-grow-1 text-muted">
-                                                                <h6 className="mb-1 fs-14">Angela Bernier</h6>
+                                                                <h6 className="mb-1 fs-13">Angela Bernier</h6>
                                                                 <p className="mb-0">Answered to your comment on the cash flow forecast's graph 🔔.</p>
                                                             </div>
 
@@ -147,7 +145,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                         </div>
                                                     </Link>
 
-                                                    <Link to="#" className="text-reset notification-item d-block dropdown-item">
+                                                    <Link to="#!" className="text-reset notification-item d-block dropdown-item">
                                                         <div className="d-flex">
                                                             <div className="flex-shrink-0 avatar-xs me-3">
                                                                 <span className="avatar-title bg-danger-subtle text-danger rounded-circle fs-16">
@@ -165,13 +163,13 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                         </div>
                                                     </Link>
 
-                                                    <Link to="#" className="text-reset notification-item d-block dropdown-item">
+                                                    <Link to="#!" className="text-reset notification-item d-block dropdown-item">
                                                         <div className="d-flex">
                                                             <div className="flex-shrink-0 avatar-xs me-3">
                                                                 <img src={avatar8} className="rounded-circle img-fluid" alt="user-pic" />
                                                             </div>
                                                             <div className="flex-grow-1 text-muted">
-                                                                <h6 className="mb-1 fs-14">Maureen Gibson</h6>
+                                                                <h6 className="mb-1 fs-13">Maureen Gibson</h6>
                                                                 <p className="mb-0">We talked about a project on linkedin.</p>
                                                             </div>
                                                             <div className="flex-shrink-0 ms-2">
@@ -181,7 +179,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                             </div>
                                                         </div>
                                                     </Link>
-                                                    <Link to="#" className="text-reset notification-item d-block dropdown-item">
+                                                    <Link to="#!" className="text-reset notification-item d-block dropdown-item">
                                                         <div className="d-flex">
                                                             <div className="flex-shrink-0 avatar-xs me-3">
                                                                 <span className="avatar-title bg-info-subtle text-info rounded-circle fs-16">
@@ -218,7 +216,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                             <p className="text-muted">Use <code>data-simplebar-track="secondary"</code> attribute to set secondary color simplebar track.</p>
 
                                             <div className="mx-n3">
-                                                <SimpleBar autoHide={false} className="simplebar-track-secondary" style={{ maxHeight: "275px" }}>
+                                                <SimpleBar autoHide={false} className="simplebar-track-secondary" style={{ maxHeight: "255px" }}>
                                                     <div className="list-group list-group-flush">
                                                         <Link to="#" className="list-group-item text-muted py-3">
                                                             <div className="d-flex align-items-start">
@@ -231,7 +229,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 </div>
 
                                                                 <div className="flex-grow-1 overflow-hidden">
-                                                                    <h5 className="text-truncate fs-14 mb-1">Michael Johnston</h5>
+                                                                    <h5 className="text-truncate fs-13 mb-1">Michael Johnston</h5>
                                                                     <p className="text-truncate mb-0">New updates for ABC Theme</p>
                                                                 </div>
                                                                 <div className="fs-11">06 mins</div>
@@ -248,7 +246,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 </div>
 
                                                                 <div className="flex-grow-1 overflow-hidden">
-                                                                    <h5 className="text-truncate fs-14 mb-1">Darren James</h5>
+                                                                    <h5 className="text-truncate fs-13 mb-1">Darren James</h5>
                                                                     <p className="text-truncate mb-0">Bug Report - abc theme</p>
                                                                 </div>
                                                                 <div className="fs-11">12 mins</div>
@@ -265,7 +263,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 </div>
 
                                                                 <div className="flex-grow-1 overflow-hidden">
-                                                                    <h5 className="text-truncate fs-14 mb-1">Patricia Shelton</h5>
+                                                                    <h5 className="text-truncate fs-13 mb-1">Patricia Shelton</h5>
                                                                     <p className="text-truncate mb-0">Nice to meet you</p>
                                                                 </div>
                                                                 <div className="fs-11">28 mins</div>
@@ -283,7 +281,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 </div>
 
                                                                 <div className="flex-grow-1 overflow-hidden">
-                                                                    <h5 className="text-truncate fs-14 mb-1">Thomas McNeil</h5>
+                                                                    <h5 className="text-truncate fs-13 mb-1">Thomas McNeil</h5>
                                                                     <p className="text-truncate mb-0">This theme is awesome!</p>
                                                                 </div>
                                                                 <div className="fs-11">02 hrs</div>
@@ -301,7 +299,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 </div>
 
                                                                 <div className="flex-grow-1 overflow-hidden">
-                                                                    <h5 className="text-truncate fs-14 mb-1">Carolyn Jones</h5>
+                                                                    <h5 className="text-truncate fs-13 mb-1">Carolyn Jones</h5>
                                                                     <p className="text-truncate mb-0">I've finished it! See you so</p>
                                                                 </div>
                                                                 <div className="fs-11">03 hrs</div>
@@ -318,7 +316,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 </div>
 
                                                                 <div className="flex-grow-1 overflow-hidden">
-                                                                    <h5 className="text-truncate fs-14 mb-1">Michael Johnston</h5>
+                                                                    <h5 className="text-truncate fs-13 mb-1">Michael Johnston</h5>
                                                                     <p className="text-truncate mb-0">New updates for ABC Theme</p>
                                                                 </div>
                                                                 <div className="fs-11">03 hrs</div>
@@ -430,7 +428,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                             <p className="text-muted">Use <code>data-simplebar-track="info"</code> attribute to set info color simplebar track.</p>
 
                                             <div className="mx-n3">
-                                                <SimpleBar autoHide={false} className="simplebar-track-info" style={{ maxHeight: "238px" }}>
+                                                <SimpleBar autoHide={false} className="simplebar-track-info" style={{ maxHeight: "220px" }}>
                                                     <ol className="list-group list-group-flush list-group-numbered">
                                                         <li className="list-group-item d-flex align-items-center">
                                                             A list item
@@ -480,7 +478,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                         </div>
                                                         <div className="flex-grow-1">
                                                             <div>
-                                                                <h5 className="fs-14 mb-1">Esther James</h5>
+                                                                <h5 className="fs-13 mb-1">Esther James</h5>
                                                                 <p className="fs-13 text-muted mb-0">Frontend Developer</p>
                                                             </div>
                                                         </div>
@@ -495,7 +493,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                         </div>
                                                         <div className="flex-grow-1">
                                                             <div>
-                                                                <h5 className="fs-14 mb-1">Jacqueline Steve</h5>
+                                                                <h5 className="fs-13 mb-1">Jacqueline Steve</h5>
                                                                 <p className="fs-13 text-muted mb-0">UI/UX Designer</p>
                                                             </div>
                                                         </div>
@@ -510,7 +508,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                         </div>
                                                         <div className="flex-grow-1">
                                                             <div>
-                                                                <h5 className="fs-14 mb-1">George Whalen</h5>
+                                                                <h5 className="fs-13 mb-1">George Whalen</h5>
                                                                 <p className="fs-13 text-muted mb-0">Backend Developer</p>
                                                             </div>
                                                         </div>
@@ -524,7 +522,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                         </div>
                                                         <div className="flex-grow-1">
                                                             <div>
-                                                                <h5 className="fs-14 mb-1">Carl Lynch</h5>
+                                                                <h5 className="fs-13 mb-1">Carl Lynch</h5>
                                                                 <p className="fs-13 text-muted mb-0">Frontend Developer</p>
                                                             </div>
                                                         </div>
@@ -556,11 +554,11 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                             </div>
                                                         </div>
                                                         <div className="flex-grow-1 overflow-hidden">
-                                                            <h5 className="fs-14 mb-1">ABC Project Customization</h5>
+                                                            <h5 className="fs-13 mb-1">ABC Project Customization</h5>
                                                             <p className="text-muted mb-0">04 Members</p>
                                                         </div>
                                                         <div className="flex-shrink-0 align-self-start ms-2">
-                                                            <div className="badge bg-warning-subtle  text-warning fs-10">Inprogress</div>
+                                                            <div className="badge bg-warning-subtle text-warning fs-10">Inprogress</div>
                                                         </div>
                                                     </Link>
                                                     <Link to="#" className="d-flex align-items-center py-2">
@@ -570,11 +568,11 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                             </div>
                                                         </div>
                                                         <div className="flex-grow-1 overflow-hidden">
-                                                            <h5 className="fs-14 mb-1">Client - John</h5>
+                                                            <h5 className="fs-13 mb-1">Client - John</h5>
                                                             <p className="text-muted mb-0">02 Members</p>
                                                         </div>
                                                         <div className="flex-shrink-0 align-self-start ms-2">
-                                                            <div className="badge bg-warning-subtle  text-warning fs-10">Inprogress</div>
+                                                            <div className="badge bg-warning-subtle text-warning fs-10">Inprogress</div>
                                                         </div>
                                                     </Link>
                                                     <Link to="#" className="d-flex align-items-center py-2">
@@ -584,7 +582,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                             </div>
                                                         </div>
                                                         <div className="flex-grow-1 overflow-hidden">
-                                                            <h5 className="fs-14 mb-1">Brand logo Design</h5>
+                                                            <h5 className="fs-13 mb-1">Brand logo Design</h5>
                                                             <p className="text-muted mb-0">01 Members</p>
                                                         </div>
                                                         <div className="flex-shrink-0 align-self-start ms-2">
@@ -598,11 +596,11 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                             </div>
                                                         </div>
                                                         <div className="flex-grow-1 overflow-hidden">
-                                                            <h5 className="fs-14 mb-1">Project update</h5>
+                                                            <h5 className="fs-13 mb-1">Project update</h5>
                                                             <p className="text-muted mb-0">03 Members</p>
                                                         </div>
                                                         <div className="flex-shrink-0 align-self-start ms-2">
-                                                            <div className="badge bg-warning-subtle  text-warning fs-10">Inprogress</div>
+                                                            <div className="badge bg-warning-subtle text-warning fs-10">Inprogress</div>
                                                         </div>
                                                     </Link>
                                                     <Link to="#" className="d-flex align-items-center py-2">
@@ -612,7 +610,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                             </div>
                                                         </div>
                                                         <div className="flex-grow-1 overflow-hidden">
-                                                            <h5 className="fs-14 mb-1">Chat App</h5>
+                                                            <h5 className="fs-13 mb-1">Chat App</h5>
                                                             <p className="text-muted mb-0">05 Members</p>
                                                         </div>
                                                         <div className="flex-shrink-0 align-self-start ms-2">
@@ -634,7 +632,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                         <CardBody>
                                             <p className="text-muted">Use <code>data-simplebar-track="dark"</code> attribute to set dark color simplebar track.</p>
 
-                                            <div className="mx-n3">                                                
+                                            <div className="mx-n3">
                                                 <SimpleBar autoHide={false} className="simplebar-track-dark" style={{ maxHeight: "220px" }}>
 
                                                     <ul className="list-group list-group-flush">
@@ -652,7 +650,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 <p className="text-muted mb-4">It will be as simple as in fact, It will seem like simplified</p>
                                                                 <div className="d-flex align-items-start">
                                                                     <div className="flex-grow-1">
-                                                                        <h5 className="fs-14 mb-0">Michael Lemire</h5>
+                                                                        <h5 className="fs-13 mb-0">Michael Lemire</h5>
                                                                     </div>
 
                                                                     <div className="flex-shrink-0">
@@ -694,7 +692,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 <p className="text-muted mb-4">Sed ut perspiciatis iste error sit</p>
                                                                 <div className="d-flex align-items-start">
                                                                     <div className="flex-grow-1">
-                                                                        <h5 className="fs-14 mb-0">Carl Lynch</h5>
+                                                                        <h5 className="fs-13 mb-0">Carl Lynch</h5>
                                                                     </div>
 
                                                                     <div className="flex-shrink-0">
@@ -737,7 +735,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 <p className="text-muted mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
                                                                 <div className="d-flex align-items-start">
                                                                     <div className="flex-grow-1">
-                                                                        <h5 className="fs-14 mb-0">Joyce White</h5>
+                                                                        <h5 className="fs-13 mb-0">Joyce White</h5>
                                                                     </div>
 
                                                                     <div className="flex-shrink-0">
@@ -780,7 +778,7 @@ document.title="Scrollbar | Velzon - React Admin & Dashboard Template";
                                                                 <p className="text-muted mb-4">Ut enim ad minima veniam, quis nostrum ullam corporis suscipit consequatur nisi ut</p>
                                                                 <div className="d-flex align-items-start">
                                                                     <div className="flex-grow-1">
-                                                                        <h5 className="fs-14 mb-0">Etta Smith</h5>
+                                                                        <h5 className="fs-13 mb-0">Etta Smith</h5>
                                                                     </div>
 
                                                                     <div className="flex-shrink-0">

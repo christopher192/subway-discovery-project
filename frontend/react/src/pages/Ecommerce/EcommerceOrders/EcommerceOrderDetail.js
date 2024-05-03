@@ -34,10 +34,11 @@ const EcommerceOrderDetail = (props) => {
     setcol3(!col3);
   }
 
-document.title ="Order Details | Velzon - React Admin & Dashboard Template";
+  document.title="Order Details | Velzon - React Admin & Dashboard Template";
+
   return (
     <div className="page-content">
-      <Container fluid>        
+      <Container fluid>
         <BreadCrumb title="Order Details" pageTitle="Ecommerce" />
 
         <Row>
@@ -158,7 +159,7 @@ document.title ="Order Details | Velzon - React Admin & Dashboard Template";
                               </div>
                             </div>
                             <div className="flex-grow-1 ms-3">
-                              <h6 className="fs-15 mb-0 fw-semibold">
+                              <h6 className="fs-14 mb-0">
                                 Order Placed -{" "}
                                 <span className="fw-normal">
                                   Wed, 15 Dec 2021
@@ -180,7 +181,7 @@ document.title ="Order Details | Velzon - React Admin & Dashboard Template";
                           </p>
 
                           <h6 className="mb-1">
-                            Seller has processed your order.
+                            Seller has proccessed your order.
                           </h6>
                           <p className="text-muted mb-0">
                             Thu, 16 Dec 2021 - 5:48AM
@@ -206,7 +207,7 @@ document.title ="Order Details | Velzon - React Admin & Dashboard Template";
                               </div>
                             </div>
                             <div className="flex-grow-1 ms-3">
-                              <h6 className="fs-15 mb-1 fw-semibold">
+                              <h6 className="fs-14 mb-1">
                                 Packed -{" "}
                                 <span className="fw-normal">
                                   Thu, 16 Dec 2021
@@ -249,7 +250,7 @@ document.title ="Order Details | Velzon - React Admin & Dashboard Template";
                               </div>
                             </div>
                             <div className="flex-grow-1 ms-3">
-                              <h6 className="fs-15 mb-1 fw-semibold">
+                              <h6 className="fs-14 mb-1">
                                 Shipping -{" "}
                                 <span className="fw-normal">
                                   Thu, 16 Dec 2021
@@ -287,7 +288,7 @@ document.title ="Order Details | Velzon - React Admin & Dashboard Template";
                               </div>
                             </div>
                             <div className="flex-grow-1 ms-3">
-                              <h6 className="fs-14 mb-0 fw-semibold">
+                              <h6 className="fs-14 mb-0">
                                 Out For Delivery
                               </h6>
                             </div>
@@ -308,7 +309,7 @@ document.title ="Order Details | Velzon - React Admin & Dashboard Template";
                               </div>
                             </div>
                             <div className="flex-grow-1 ms-3">
-                              <h6 className="fs-14 mb-0 fw-semibold">
+                              <h6 className="fs-14 mb-0">
                                 Delivered
                               </h6>
                             </div>

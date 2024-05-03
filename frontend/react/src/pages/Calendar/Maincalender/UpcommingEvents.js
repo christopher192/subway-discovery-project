@@ -47,12 +47,8 @@ function UpcommingEvents(props) {
   };
 
   const category = props.event.className.split("-");
-  var endUpdatedDay = "";
-  if (props.event.end) {
-    endUpdatedDay = new Date(props.event.end);
-    var updatedDay = endUpdatedDay.setDate(endUpdatedDay.getDate() - 1);
-  }
-  var e_dt = updatedDay ? updatedDay : undefined;
+
+  var e_dt = props.event.end ? props.event.end : null;
   if (e_dt === "Invalid Date" || e_dt === undefined) {
     e_dt = null;
   } else {
@@ -68,7 +64,7 @@ function UpcommingEvents(props) {
   }
 
   const st_date = props.event.start ? str_dt(props.event.start) : null;
-  const ed_date = updatedDay ? str_dt(updatedDay) : null;
+  const ed_date = props.event.end ? str_dt(props.event.end) : null;
   if (st_date === ed_date) {
     e_dt = null;
   }
@@ -89,7 +85,7 @@ function UpcommingEvents(props) {
 
   var end_dt = e_dt ? " to " + e_dt : "";
   var e_time_s = tConvert(getTime(props.event.start));
-  var e_time_e = tConvert(getTime(updatedDay));
+  var e_time_e = tConvert(getTime(props.event.end));
 
   if (e_time_s === e_time_e) {
     e_time_s = "Full day event";

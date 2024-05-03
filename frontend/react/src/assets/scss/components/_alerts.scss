@@ -129,7 +129,7 @@
     .alert{
         &.alert-#{$color} {
             .btn-close::after{
-                color: $value;
+                color: var(--#{$prefix}#{$color});
             }
         }
         

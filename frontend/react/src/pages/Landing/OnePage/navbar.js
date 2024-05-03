@@ -10,6 +10,7 @@ import logolight from "../../../assets/images/logo-light.png";
 const Navbar = () => {
     const [isOpenMenu, setisOpenMenu] = useState(false);
     const [navClass, setnavClass] = useState("");
+    const [activeLink, setActiveLink] = useState();
 
     const toggle = () => setisOpenMenu(!isOpenMenu);
 
@@ -26,7 +27,6 @@ const Navbar = () => {
         }
     }
 
-    const [activeLink, setActiveLink] = useState();
     useEffect(() => {
         const activation = (event) => {
             const target = event.target;
@@ -38,7 +38,7 @@ const Navbar = () => {
                 }
             }
         };
-        const defaultLink = document.querySelector('.navbar li.a.active');
+        const defaultLink = document.querySelector('.navbar li a.active');
         if (defaultLink) {
             defaultLink?.classList.add("active")
             setActiveLink(defaultLink)
@@ -90,25 +90,25 @@ const Navbar = () => {
                             id="navbar-example"
                         >
                             <li className="nav-item">
-                                <NavLink href="#hero">Home</NavLink>
+                                <NavLink className="fs-15 fw-semibold" href="#hero">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#services">Services</NavLink>
+                                <NavLink className="fs-15 fw-semibold" href="#services">Services</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#features">Features</NavLink>
+                                <NavLink className="fs-15 fw-semibold" href="#features">Features</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#plans">Plans</NavLink>
+                                <NavLink className="fs-15 fw-semibold" href="#plans">Plans</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#reviews">Reviews</NavLink>
+                                <NavLink className="fs-15 fw-semibold" href="#reviews">Reviews</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#team">Team</NavLink>
+                                <NavLink className="fs-15 fw-semibold" href="#team">Team</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink href="#contact">Contact</NavLink>
+                                <NavLink className="fs-15 fw-semibold" href="#contact">Contact</NavLink>
                             </li>
                         </Scrollspy>
 

@@ -19,42 +19,42 @@ const jobWidgets = [
     lable: "TOTAL JOBS",
     jobs: "36,894",
     series: [95],
-    color: "#09b39b",
+    color:  "rgba(19, 197, 107, 0.85)",
   },
   {
     id: 2,
     lable: "APPLY JOBS",
     jobs: "28,410",
     series: [97],
-    color: "#09b39b",
+    color:  "rgba(19, 197, 107, 0.85)",
   },
   {
     id: 3,
     lable: "NEW JOBS",
     jobs: "4,305",
     series: [80],
-    color: "#09b39b",
+    color: "rgba(19, 197, 107, 0.85)",
   },
   {
     id: 4,
     lable: "INTERVIEW",
     jobs: "5,021",
     series: [89],
-    color: "#f06548",
+    color:"#f7666e",
   },
   {
     id: 5,
     lable: "HIRED",
     jobs: "3,948",
     series: [64],
-    color: "#09b39b",
+    color:  "rgba(19, 197, 107, 0.85)",
   },
   {
     id: 6,
     lable: "REJECTED",
     jobs: "1,340",
     series: [20],
-    color: "#f06548",
+    color:"#f7666e",
   },
 ];
 
@@ -64,35 +64,35 @@ const featuredCompany = [
     img: img1,
     lable: "Force Medicines",
     city: " Cullera, Spain",
-    bgColor : "secondary"
+    bgcolor:"secondary",
   },
   {
     id: 2,
     img: img3,
     lable: "Syntyce Solutions",
     city: "Mughairah, UAE",
-    bgColor : "warning"
+    bgcolor:"warning",
   },
   {
     id: 3,
     img: img2,
     lable: "Moetic Fashion",
     city: "Mughairah, UAE",
-    bgColor : "primary"
+    bgcolor:"primary",
   },
   {
     id: 4,
     img: img4,
     lable: "Meta4Systems",
     city: "Germany",
-    bgColor : "danger"
+    bgcolor:"danger",
   },
   {
     id: 5,
     img: img5,
     lable: "Themesbrand",
     city: " Limestone, US",
-    bgColor : "danger"
+    bgcolor:"danger",
   },
 ];
 
@@ -107,8 +107,7 @@ const recentApplicants = [
     city: "California, US",
     type: "Full Time",
     typeColor: "success",
-    rating: "5.0",
-    ratingDetails : "(245 Rating)"
+    rating: "5.0(245 Rating)",
   },
   {
     id: 2,
@@ -120,8 +119,7 @@ const recentApplicants = [
     city: "Mughairah, UAE",
     type: "Freelancer",
     typeColor: "secondary",
-    rating: "4.7",
-    ratingDetails : "(1.34 Rating)"
+    rating: "4.7(1.34 Rating)",
   },
   {
     id: 3,
@@ -133,8 +131,7 @@ const recentApplicants = [
     city: "4,305",
     type: "Part Time",
     typeColor: "danger",
-    rating: "4.5",
-    ratingDetails : "(2.93 Rating)"
+    rating: "4.5(2.93 Rating)",
   },
   {
     id: 4,
@@ -146,8 +143,7 @@ const recentApplicants = [
     city: "Germany",
     type: "Part Time",
     typeColor: "danger",
-    rating: "2.3",
-    ratingDetails : "(4.5 Rating)"
+    rating: "2.3(4.5 Rating)",
   },
   {
     id: 5,
@@ -159,8 +155,7 @@ const recentApplicants = [
     city: " Limestone, US",
     type: "Full Time",
     typeColor: "success",
-    rating: "4.5",
-    ratingDetails : "(645 Rating)"
+    rating: "4.5(645 Rating)",
   },
   {
     id: 6,
@@ -172,8 +167,7 @@ const recentApplicants = [
     city: " Limestone, US",
     type: "Freelancer",
     typeColor: "secondary",
-    rating: "4.5",
-    ratingDetails : "(12 Rating)"
+    rating: "4.5(12 Rating)",
   },
   {
     id: 7,
@@ -185,8 +179,7 @@ const recentApplicants = [
     city: " Limestone, US",
     type: "Part Time",
     typeColor: "danger",
-    rating: "2.5",
-    ratingDetails : "(6.3 Rating)"
+    rating: "2.5(6.3 Rating)",
   },
   {
     id: 8,
@@ -198,8 +191,7 @@ const recentApplicants = [
     city: " Limestone, US",
     type: "Full Time",
     typeColor: "success",
-    rating: "4.7",
-    ratingDetails : "(23 Rating)"
+    rating: "4.7(23 Rating)",
   },
 ];
 export { jobWidgets, featuredCompany, recentApplicants };

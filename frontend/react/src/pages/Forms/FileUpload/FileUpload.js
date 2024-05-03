@@ -41,12 +41,15 @@ const FileUpload = () => {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
   }
-  document.title ="File Upload | Velzon - React Admin & Dashboard Template";
+
+  document.title="File Upload | Velzon - React Admin & Dashboard Template";
+
   return (
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
           <BreadCrumb title="File Upload" pageTitle="Forms" />
+
           <Row>
             <Col lg={12}>
               <Card>

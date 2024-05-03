@@ -24,15 +24,15 @@ import { createSelector } from 'reselect';
 const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
     const dispatch = useDispatch();
 
-
-    const selectDashboardData = createSelector(
+    const sidebarVisibilityData = createSelector(
         (state) => state.Layout,
-        (state) => ({
-            sidebarVisibilitytype: state.sidebarVisibilitytype})
+        (sidebarVisibilitytype) => sidebarVisibilitytype.sidebarVisibilitytype
       );
+       
     // Inside your component
-    const {sidebarVisibilitytype} = useSelector(selectDashboardData);
+    const sidebarVisibilitytype = useSelector(sidebarVisibilityData);
     
+
 
     const [search, setSearch] = useState(false);
     const toogleSearch = () => {
@@ -71,7 +71,6 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
             document.body.classList.contains('twocolumn-panel') ? document.body.classList.remove('twocolumn-panel') : document.body.classList.add('twocolumn-panel');
         }
     };
-
 
     return (
         <React.Fragment>

@@ -47,6 +47,7 @@ const EcommerceWidgets = () => {
         document.getElementById("notification-overlay").style.visibility = "hidden";
         document.getElementById("notification-overlay").style.opacity = "0";
     }
+    
     return (
         <React.Fragment>
             <Row>
@@ -87,9 +88,9 @@ const EcommerceWidgets = () => {
                                         </div>
                                         <div className="pt-3">
                                             <h5 className="text-secondary">$99.94</h5>
-                                            <Link to="#">
+                                            <a href="#!">
                                                 <h6 className="fs-15 lh-base text-truncate mb-0">350 ml Glass Grocery Container</h6>
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -100,9 +101,9 @@ const EcommerceWidgets = () => {
                                         </div>
                                         <div className="pt-3">
                                             <h5 className="text-secondary">$99.94</h5>
-                                            <Link to="#">
+                                            <a href="#!">
                                                 <h6 className="fs-15 lh-base text-truncate mb-0">Fabric Dual Tone Living Room Chair</h6>
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -113,9 +114,9 @@ const EcommerceWidgets = () => {
                                         </div>
                                         <div className="pt-3">
                                             <h5 className="text-secondary">$99.94</h5>
-                                            <Link to="#">
+                                            <a href="#!">
                                                 <h6 className="fs-15 lh-base text-truncate mb-0">Crux Motorsports Helmet</h6>
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -126,9 +127,9 @@ const EcommerceWidgets = () => {
                                         </div>
                                         <div className="pt-3">
                                             <h5 className="text-secondary">$99.94</h5>
-                                            <Link to="#">
+                                            <a href="#!">
                                                 <h6 className="fs-15 lh-base text-truncate mb-0">Half Sleeve T-Shirts (Blue)</h6>
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -216,7 +217,7 @@ const EcommerceWidgets = () => {
                                 </div>
                             </div>
 
-                            <Link to="#" className="btn btn-soft-danger d-block">Add to Cart</Link>
+                            <Link to="#!" className="btn btn-soft-danger d-block">Add to Cart</Link>
 
                         </CardBody>
                     </Card>
@@ -387,7 +388,7 @@ const EcommerceWidgets = () => {
                                 </div>
                             </div>
 
-                            <Link to="#" className="btn btn-soft-danger d-block">Add to Cart</Link>
+                            <Link to="#!" className="btn btn-soft-danger d-block">Add to Cart</Link>
 
                         </CardBody>
                     </Card>
@@ -505,7 +506,7 @@ const EcommerceWidgets = () => {
                                     </div>
             
                                     <div>
-                                        <button type="button" className="btn btn-success rounded-pill w-sm"><i className="ri-add-fill me-1 align-bottom"></i> Follow</button>
+                                        <button type="button" className="btn btn-danger rounded-pill w-sm"><i className="ri-add-fill me-1 align-bottom"></i> Follow</button>
                                     </div>
                                 </div>
                             </div>

@@ -11,7 +11,7 @@ const FeaturedCompanies = () => {
           <CardHeader className="align-items-center d-flex">
             <h4 className="card-title mb-0 flex-grow-1">Featured Companies</h4>
             <div className="flex-shrink-0">
-              <Link to="#" className="btn btn-soft-primary btn-sm">
+              <Link to="#!" className="btn btn-soft-primary btn-sm">
                 View All Companies{" "}
                 <i className="ri-arrow-right-line align-bottom"></i>
               </Link>
@@ -27,7 +27,7 @@ const FeaturedCompanies = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="avatar-xs me-2 flex-shrink-0">
-                            <div className={"avatar-title bg-" + company.bgColor + "-subtle rounded"}>
+                            <div className={`avatar-title bg-${company.bgcolor}-subtle rounded`}>
                               <img src={company.img} alt="" height="16" />
                             </div>
                           </div>
@@ -41,29 +41,29 @@ const FeaturedCompanies = () => {
                       <td>
                         <ul className="list-inline mb-0">
                           <li className="list-inline-item">
-                            <Link to="#" className="link-secondary">
+                            <Link to="#!" className="link-secondary">
                               <i className="ri-facebook-fill"></i>
                             </Link>
                           </li>
                           <li className="list-inline-item">
-                            <Link to="#" className="link-danger">
+                            <Link to="#!" className="link-danger">
                               <i className="ri-mail-line"></i>
                             </Link>
                           </li>
                           <li className="list-inline-item">
-                            <Link to="#" className="link-primary">
+                            <Link to="#!" className="link-primary">
                               <i className="ri-global-line"></i>
                             </Link>
                           </li>
                           <li className="list-inline-item">
-                            <Link to="#" className="link-info">
+                            <Link to="#!" className="link-info">
                               <i className="ri-twitter-line"></i>
                             </Link>
                           </li>
                         </ul>
                       </td>
                       <td>
-                        <Link to="#" className="btn btn-link btn-sm">
+                        <Link to="#!" className="btn btn-link btn-sm">
                           View More{" "}
                           <i className="ri-arrow-right-line align-bottom"></i>
                         </Link>

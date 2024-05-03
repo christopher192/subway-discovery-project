@@ -17,12 +17,13 @@ const UsersByDevice = () => {
 
     const [chartData, setchartData] = useState([]);
 
-    const userdeviceData = createSelector(
+    const selectDashboardData = createSelector(
         (state) => state.DashboardAnalytics,
         (userDeviceData) => userDeviceData.userDeviceData
       );
+      
     // Inside your component
-    const userDeviceData = useSelector(userdeviceData);
+    const userDeviceData= useSelector(selectDashboardData);
 
 
     useEffect(() => {
@@ -60,7 +61,7 @@ const UsersByDevice = () => {
                         </div>
                     </CardHeader>
                     <CardBody>
-                        <div>
+                        <div dir="ltr">
                             <UsersByDeviceCharts series={chartData} dataColors='["--vz-primary", "--vz-warning", "--vz-info"]' />
                         </div>
 

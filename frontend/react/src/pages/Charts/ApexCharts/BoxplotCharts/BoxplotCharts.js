@@ -3,7 +3,6 @@ import ReactApexChart from "react-apexcharts";
 
 import getChartColorsArray from "../../../../Components/Common/ChartsDynamicColor";
 
-// Candlestick Chart 
 const Basic = ({ dataColors }) => {
   var chartBoxBasicColors = getChartColorsArray(dataColors);
   const series = [
@@ -66,7 +65,7 @@ const Basic = ({ dataColors }) => {
     },
     stroke: {
       colors: [chartBoxBasicColors[2]]
-  }
+  },
   };
 
   return (
@@ -82,7 +81,6 @@ const Basic = ({ dataColors }) => {
   );
 };
 
-// Scatter Chart
 const Scatter = ({ dataColors }) => {
   var chartBoxBasicColors = getChartColorsArray(dataColors);
   const series = [
@@ -175,7 +173,7 @@ const Scatter = ({ dataColors }) => {
     },
     stroke: {
       colors: [chartBoxBasicColors[4]]
-  },
+    },
     tooltip: {
       shared: !1,
       intersect: !0

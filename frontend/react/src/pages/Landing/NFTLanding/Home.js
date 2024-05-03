@@ -11,7 +11,7 @@ const Home = () => {
                 <Row className="justify-content-center">
                     <Col lg={8} sm={10}>
                         <div className="text-center">
-                            <h1 className="display-4 fw-medium mb-4 lh-base text-white">Discover Digital Art & Collect <span className="text-success">NFT Marketplace</span></h1>
+                            <h1 className="display-4 fw-semibold mb-4 lh-base text-white">Discover Digital Art & Collect <span className="text-success">NFT Marketplace</span></h1>
                             <p className="lead text-white-50 lh-base mb-4 pb-2">Can artwork be NFT? NFTs (non-fungible tokens) are one-of-a-kind digital assets. Given they're digital in nature, can physical works of art be turned into NFTs?.</p>
 
                             <div className="hstack gap-2 justify-content-center">

@@ -22,7 +22,7 @@ const RemixIcons = () => {
           iconData += '<div class="col-xl-3 col-lg-4 col-sm-6">' +
             '<i class="ri-' + k + '-line"></i> ri-' + k + '-line' +
             '</div><div class="col-xl-3 col-lg-4 col-sm-6">' +
-            '<i class="ri-' + k + '-fill"></i> ri-' + k + '-fill'+
+            '<i class="ri-' + k + '-fill"></i>ri-' + k + '-fill' +
             '</div>';
         });
       }
@@ -30,8 +30,8 @@ const RemixIcons = () => {
     });
     document.getElementById("all-icon").innerHTML = iconData;
   });
+  document.title="Remix Icons | Velzon - React Admin & Dashboard Template";
 
-document.title ="Remix Icons | Velzon - React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <div className="page-content">

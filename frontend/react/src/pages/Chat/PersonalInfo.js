@@ -155,7 +155,7 @@ const PersonalInfo = ({ show, onCloseClick, currentuser, cuurentiseImg }) => {
               Online
             </p>
           </div>
-          <div className="d-flex gap-2 justify-content-center">
+          <div className="d-flex gap-3 justify-content-center">
             <button
               type="button"
               className="btn avatar-xs p-0"

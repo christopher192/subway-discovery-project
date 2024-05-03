@@ -122,7 +122,7 @@ const FindJob = () => {
                 <h5 className="fs-12 text-uppercase text-success fw-semibold">
                   Hot Featured Company
                 </h5>
-                <h1 className="mb-3 ff-secondary fw-bold text-capitalize lh-base">
+                <h1 className="mb-3 fw-semibold text-capitalize lh-base">
                   Get <span className="text-primary">10,000+</span> Featured
                   Companies
                 </h1>
@@ -196,7 +196,7 @@ const FindJob = () => {
                       <span className="badge bg-primary-subtle text-primary">
                         Freelance
                       </span>
-                      <span className="badge bg-danger-subtle  text-danger">Urgent</span>
+                      <span className="badge bg-danger-subtle text-danger">Urgent</span>
                     </div>
 
                     <div className="mt-4 hstack gap-2">
@@ -209,7 +209,7 @@ const FindJob = () => {
                     </div>
                   </CardBody>
                 </Card>
-                <Card className="shadow-lg mb-0 features-company-widgets rounded-3 card-bg-fill bg-info">
+                <Card className="shadow-lg mb-0 features-company-widgets rounded-3 bg-info">
                   <CardBody>
                     <h5 className="text-white fs-16 mb-4">
                       10,000+ Featured Companies

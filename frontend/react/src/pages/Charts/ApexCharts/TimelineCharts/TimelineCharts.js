@@ -440,7 +440,6 @@ const Advanced = ({ dataColors }) => {
     );
 };
 
-
 // Multiple series � Group rows
 
 const MultipleSeries = ({ dataColors }) => {
@@ -624,26 +623,27 @@ const MultipleSeries = ({ dataColors }) => {
             type: "datetime",
         },
         tooltip: {
-            custom: function ({ series, seriesIndex, dataPointIndex, w }) {
-                const fromYear = new Date(series[seriesIndex].data[dataPointIndex].y[0]).getFullYear();
-                const toYear = new Date(series[seriesIndex].data[dataPointIndex].y[1]).getFullYear();
+            custom: function (opts) {
+                const fromYear = new Date(opts.y1).getFullYear()
+                const toYear = new Date(opts.y2).getFullYear()
+                const values = opts.ctx.rangeBar.getTooltipValues(opts)
 
                 return (
                     '<div class="apexcharts-tooltip-rangebar">' +
                     '<div> <span class="series-name" style="color: ' +
-                    w.config.colors[seriesIndex] +
+                    values.color +
                     '">' +
-                    (series[seriesIndex].name ? series[seriesIndex].name : '') +
+                    (values.seriesName ? values.seriesName : '') +
                     '</span></div>' +
                     '<div> <span class="category">' +
-                    w.globals.labels[dataPointIndex] +
+                    values.ylabel +
                     ' </span> <span class="value start-value">' +
                     fromYear +
                     '</span> <span class="separator">-</span> <span class="value end-value">' +
                     toYear +
                     '</span></div>' +
                     '</div>'
-                );
+                )
             }
         },
         colors: chartMultiSeriesColors,
@@ -661,8 +661,7 @@ const MultipleSeries = ({ dataColors }) => {
         </React.Fragment>
     );
 };
-
-const Dumbbell = ({ dataColors }) => {
+const DumbBell = ({ dataColors }) => {
     var dumbbellChartColors = getChartColorsArray(dataColors);
     const series = [
         {
@@ -698,8 +697,7 @@ const Dumbbell = ({ dataColors }) => {
             ]
         }
     ];
-
-    const options = {
+    var options = {
         chart: {
             height: 350,
             type: 'rangeBar',
@@ -745,8 +743,7 @@ const Dumbbell = ({ dataColors }) => {
                 }
             }
         }
-    }
-
+    };
     return (
         <React.Fragment>
             <ReactApexChart dir="ltr"
@@ -758,8 +755,7 @@ const Dumbbell = ({ dataColors }) => {
             />
         </React.Fragment>
     );
-}
-
+    }
 
 export {
     Basic,
@@ -767,5 +763,5 @@ export {
     MultiSeries,
     Advanced,
     MultipleSeries,
-    Dumbbell
+    DumbBell
 };
