@@ -36,3 +36,7 @@ For the web scraping process and data population, please refer to `scraping.ipyn
 <ins>Step 4: Backend Implementation</ins>
 <br>
 To execute the API, refer to the `backend/api.py` file. Once running, the data can be accessed locally at http://127.0.0.1:5000/get_outlets.
+
+## <ins>Result</ins>
+
+## <ins>Issue/ Challenge</ins>
