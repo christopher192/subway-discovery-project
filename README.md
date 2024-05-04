@@ -13,3 +13,10 @@ Technologies Used:
 - LLM: LLAMA
 
 ## <ins>Instruction</ins>
+Follow these steps to run the project.
+
+<ins>Step 1</ins>
+Set up your Conda environment and install the necessary libraries, execute the following command in your command prompt:
+`conda create --name yourenv python=3.10
+conda activate yourenv
+pip install -r requirements.txt`
