@@ -12,6 +12,13 @@ Technologies Used:
 - Frontend Development: React.js (Velzon Template)
 - LLM: LLAMA
 
+## <ins>Methodology/ Approach</ins>
+The Haversine formula has been utilized to calculate the radius of locations in order to determine if they intersect. For further reference, the source can be accessed via https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/. Similar calculation have been applied in `frontend/react/src/pages/Home/index.js`
+
+Google Maps API within React.js has been utilized to visualize the geolocation. Below is the code snippet used to represent a radius of 1 kilometer, where 1000 units equal 1 kilometer.
+<br>
+![alt text](images/radius.PNG)
+
 ## <ins>Instruction</ins>
 Follow these steps to run the project.
 
