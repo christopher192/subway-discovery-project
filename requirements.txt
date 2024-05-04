@@ -3,3 +3,4 @@ selenium
 requests
 Flask
 transformers
+Flask-Cors
