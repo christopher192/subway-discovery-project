@@ -60,7 +60,7 @@ To launch the user interface, navigate to the `frontend/react` directory. Use `y
 
 ## <ins>Result</ins>
 Here is a look at the user interface for the map visualization of outlets.
-![alt text](images/ui.png)
+![alt text](images/ui-web.png)
 
 Below is the full visual representation of the geolocation of Subway outlets, including their radius and intersections.
 ![alt text](images/map-visualization.png)
