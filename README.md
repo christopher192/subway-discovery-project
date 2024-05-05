@@ -17,7 +17,17 @@ The Haversine formula has been utilized to calculate the radius of locations in 
 
 Google Maps API within React.js has been utilized to visualize the geolocation. Below is the code snippet used to represent a radius of 1 kilometer, where 1000 units equal 1 kilometer.
 <br>
-![alt text](images/radius.PNG)
+```
+    <Circle
+        key = {index}
+        radius = {1000} // 1km
+        center = {{ lat: outlet.latitude, lng: outlet.longitude }}
+        strokeColor = '#FF0000'
+        strokeOpacity = {0.8}
+        strokeWeight = {2}
+        fillColor = {outlet.intersectedOutlets.length > 0 ? '#00FF00' : 'transparent'}
+    />
+```
 
 ## <ins>Instruction</ins>
 Follow these steps to run the project.
@@ -45,5 +55,8 @@ For the web scraping process and data population, please refer to `scraping.ipyn
 To execute the API, refer to the `backend/api.py` file. Once running, the data can be accessed locally at http://127.0.0.1:5000/get_outlets.
 
 ## <ins>Result</ins>
+Below is the visual representation of the geolocation of Subway outlets, including their radius and intersections.
+![alt text](images/map-visualization.png)
 
 ## <ins>Issue/ Challenge</ins>
+To be continue..
