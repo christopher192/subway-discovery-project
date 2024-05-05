@@ -144,7 +144,7 @@ const Home = (props) => {
                                     <h4 className="card-title mb-0">Subway (Kuala Lumpur)</h4>
                                 </CardHeader>
                                 <CardBody>
-                                    <div id = "gmaps-markers" className = "gmaps" style = {{ position: "relative" }}>
+                                    <div id = "gmaps-markers" className = "gmaps" style = {{ position: "relative", height: 500 }}>
                                         {updatedOutlets !== null && (
                                             <Map
                                                 google = {props.google}

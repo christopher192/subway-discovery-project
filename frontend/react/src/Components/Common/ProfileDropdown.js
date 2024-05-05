@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
 //import images
-import avatar1 from "../../assets/images/users/avatar-1.jpg";
+import avatar1 from "../../assets/images/users/user-dummy-img.jpg";
 import { createSelector } from 'reselect';
 
 const ProfileDropdown = () => {
@@ -42,8 +42,9 @@ const ProfileDropdown = () => {
                         <img className="rounded-circle header-profile-user" src={avatar1}
                             alt="Header Avatar" />
                         <span className="text-start ms-xl-2">
-                            <span className="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{userName}</span>
-                            <span className="d-none d-xl-block ms-1 fs-12 user-name-sub-text">Founder</span>
+                            {/* <span className="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{userName}</span> */}
+                            <span className="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Admin</span>
+                            <span className="d-none d-xl-block ms-1 fs-12 user-name-sub-text">Administrator</span>
                         </span>
                     </span>
                 </DropdownToggle>

@@ -54,8 +54,15 @@ For the web scraping process and data population, please refer to `scraping.ipyn
 <br>
 To execute the API, refer to the `backend/api.py` file. Once running, the data can be accessed locally at http://127.0.0.1:5000/get_outlets.
 
+<ins>Step 5: Frontend Implementation</ins>
+<br>
+To launch the user interface, navigate to the `frontend/react` directory. Use `yarn install` followed by `yarn start` for setup and launch. Please avoid using `pip install` as it may lead to significant errors.
+
 ## <ins>Result</ins>
-Below is the visual representation of the geolocation of Subway outlets, including their radius and intersections.
+Here is a look at the user interface for the map visualization of outlets.
+![alt text](images/ui.png)
+
+Below is the full visual representation of the geolocation of Subway outlets, including their radius and intersections.
 ![alt text](images/map-visualization.png)
 
 ## <ins>Issue/ Challenge</ins>
