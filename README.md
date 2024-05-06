@@ -66,4 +66,4 @@ Below is the full visual representation of the geolocation of Subway outlets, in
 ![alt text](images/map-visualization.png)
 
 ## <ins>Issue/ Challenge</ins>
-To be continue..
+The intersection logic (Haversine formula) used to determine if two circles (representing outlets) intersect within a 1 km radius, is not precise. The condition `distance <= 1` is supposed to check if the distance between two outlets is less than or equal to 1 kilometer, but it fails to do so accurately. However, through experimentation, it was found that the condition `distance <= 2` correctly identifies the intersection. Further investigation will be carried out to address this discrepancy thoroughly.
