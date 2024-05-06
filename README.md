@@ -70,3 +70,4 @@ The intersection logic (Haversine formula) used to determine if two circles (rep
 
 ## <ins>Ongoing Checklist</ins>
 - LLM (LLaMA) chatbot to answer user`s specific question.
+- Geolocation Analytics using Microsoft Power BI [@GuoDongDaXia](https://github.com/GuoDongDaXia)
