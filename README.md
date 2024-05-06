@@ -10,7 +10,7 @@ Technologies Used:
 - Web Scraping: Selenium, BeautifulSoup4
 - Backend Development: Flask
 - Frontend Development: React.js (Velzon Template)
-- LLM: LLAMA
+- LLM: LLaMA
 
 ## <ins>Methodology/ Approach</ins>
 The Haversine formula has been utilized to calculate the radius of locations in order to determine if they intersect. For further reference, the source can be accessed via https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/. Similar calculation have been applied in `frontend/react/src/pages/Home/index.js`
@@ -69,4 +69,4 @@ Below is the full visual representation of the geolocation of Subway outlets, in
 The intersection logic (Haversine formula) used to determine if two circles (representing outlets) intersect within a 1 km radius, is not precise. The condition `distance <= 1` is supposed to check if the distance between two outlets is less than or equal to 1 kilometer, but it fails to do so accurately. However, through experimentation, it was found that the condition `distance <= 2` correctly identifies the intersection. Further investigation will be carried out to address this discrepancy thoroughly.
 
 ## <ins>Ongoing Checklist</ins>
-- LLM (LLAMA) chatbot to answer user`s specific question.
+- LLM (LLaMA) chatbot to answer user`s specific question.
