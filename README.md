@@ -56,7 +56,7 @@ To execute the API, refer to the `backend/api.py` file. Once running, the data c
 
 <ins>Step 5: Frontend Implementation</ins>
 <br>
-To launch the user interface, navigate to the `frontend/react` directory. Use `yarn install` followed by `yarn start` for setup and launch. Please avoid using `pip install` as it may lead to significant errors.
+To launch the user interface, navigate to the `frontend/react` directory. Use `yarn install` followed by `yarn start` for setup and launch. Please avoid using `npm install` as it may lead to significant errors.
 
 ## <ins>Result</ins>
 Here is a look at the user interface for the map visualization of outlets.
